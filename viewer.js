@@ -51,6 +51,7 @@ const keys = new Set();
 const clock = new THREE.Clock();
 const tour = { playing: false, seconds: 0 };
 const totalSeconds = 90;
+const layoutRevision = '2026-09-30-cinema-paris';
 let metadata = {};
 let chapters = [];
 let orderedRoute = null;
@@ -825,14 +826,14 @@ window.addEventListener('resize', () => {
 
 async function loadGallery() {
   [metadata, chapters, orderedRoute] = await Promise.all([
-    './data/artworks_en.json', './data/chapters_en.json', './data/ordered_route_v16.json',
+    './data/artworks_en.json', './data/chapters_en.json', `./data/ordered_route_v16.json?v=${layoutRevision}`,
   ].map(async (url) => {
     const response = await fetch(url);
     if (!response.ok) throw new Error(`Could not load ${url}`);
     return response.json();
   }));
   updateCameraFraming();
-  const gltf = await new GLTFLoader().loadAsync('./assets/gallery_v16.glb', (event) => {
+  const gltf = await new GLTFLoader().loadAsync(`./assets/gallery_v16.glb?v=${layoutRevision}`, (event) => {
     if (event.total) loadProgress.textContent = `${Math.floor((event.loaded / event.total) * 100)}%`;
   });
   const curatedSlots = new Set(Object.entries(metadata).filter(([, entry]) => entry.image).map(([slot]) => slot));
