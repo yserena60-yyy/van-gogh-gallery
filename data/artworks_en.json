@@ -1,0 +1,370 @@
+{
+  "02 | South 01": {
+    "title": "Nursery on Schenkweg",
+    "date": "1882 · work on paper",
+    "body": "A study of the trees and roads at the edge of The Hague. This early drawing is not a work from his childhood.",
+    "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 1972.118.281",
+    "source": "https://www.metmuseum.org/art/collection/search/335538",
+    "image": "./assets/nursery-schenkweg-1882.jpg"
+  },
+  "02 | South 02": {
+    "title": "Gardener by an Apple Tree",
+    "date": "1883 · lithograph",
+    "body": "A print of an ordinary worker bending beside a fruit tree. The subject reflects his sustained interest in labour.",
+    "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 2021.241",
+    "source": "https://www.metmuseum.org/art/collection/search/849054",
+    "image": "./assets/gardener-apple-tree-1883.jpg"
+  },
+  "02 | South 03": {
+    "title": "Avenue of Pollard Birches and Poplars",
+    "date": "1884 · work on paper",
+    "body": "Repeated pen strokes pull the eye down a quiet avenue at Nuenen.",
+    "credit": "The Art Institute of Chicago · Public-domain image via Wikimedia Commons · 2022.74",
+    "source": "https://www.artic.edu/artworks/202382",
+    "image": "./assets/pollard-birches-poplar-1884.jpg"
+  },
+  "02 | South 04": {
+    "title": "A Peasant Woman Digging in Front of Her Cottage",
+    "date": "1885 · oil on canvas",
+    "body": "The peasant woman, modest cottage, and soil join in an image of rural life rather than a pastoral idyll.",
+    "credit": "The Art Institute of Chicago · Public-domain image via Wikimedia Commons · 1968.92",
+    "source": "https://www.artic.edu/artworks/28862",
+    "image": "./assets/peasant-digging-cottage-1885.jpg"
+  },
+  "02 | South 05": {
+    "title": "The Potato Peeler",
+    "date": "1885 · oil on canvas",
+    "body": "An everyday task illuminated in dark brown tones. Vincent painted a Paris self-portrait on the reverse of this canvas later.",
+    "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 67.187.70b",
+    "source": "https://www.metmuseum.org/art/collection/search/438722",
+    "image": "./assets/potato-peeler-1885.jpg"
+  },
+  "02 | South 06": {
+    "title": "The Potato Eaters (lithograph)",
+    "date": "1885 · lithograph",
+    "body": "Vincent made this lithograph himself. It is distinct from the oil painting of the same subject.",
+    "credit": "National Gallery of Art, Washington · Open Access / CC0 · 1951.10.33",
+    "source": "https://www.nga.gov/artworks/39824-potato-eaters",
+    "image": "./assets/potato-eaters-lithograph-1885.jpg"
+  },
+  "01 | Fan 01 | painting": {
+    "title": "Road in Etten",
+    "date": "1881 · work on paper",
+    "body": "Made after Vincent began to study drawing in earnest. His childhood and earlier occupations are told through archival material and film, not through later paintings.",
+    "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 459193",
+    "source": "https://www.metmuseum.org/art/collection/search/459193",
+    "image": "./assets/etten-road-1881.jpg"
+  },
+  "03 | South 01": {
+    "title": "Montmartre Windmill",
+    "date": "1886 · oil on canvas",
+    "body": "Montmartre windmills became a testing ground for brighter colour and a lighter touch.",
+    "credit": "Image: Wikimedia Commons · Public domain; see source page for version and collection",
+    "source": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Le_Moulin_de_la_Galette_(1886)_-_Berlin.jpg",
+    "image": "./assets/paris-moulin-1886.jpg"
+  },
+  "03 | South 02": {
+    "title": "Self-Portrait with a Straw Hat",
+    "date": "1887 · oil on canvas",
+    "body": "One of many Paris self-portraits in which Vincent experimented with colour and expression.",
+    "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 436532",
+    "source": "https://www.metmuseum.org/art/collection/search/436532",
+    "image": "./assets/paris-self-portrait-1887.jpg"
+  },
+  "03 | South 03": {
+    "title": "Sunflowers (Paris)",
+    "date": "1887 · oil on canvas",
+    "body": "Cut sunflower heads laid on a table, not the later Arles sunflowers arranged in a vase.",
+    "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 436524",
+    "source": "https://www.metmuseum.org/art/collection/search/436524",
+    "image": "./assets/paris-sunflowers-1887.jpg"
+  },
+  "03 | South 04": {
+    "title": "Portrait of Julien Tanguy",
+    "date": "1887–1888 · oil on canvas",
+    "body": "Japanese prints behind Père Tanguy show how Vincent absorbed new colour and compositional ideas in Paris.",
+    "credit": "Image: Wikimedia Commons · Public domain; see source page for version and collection",
+    "source": "https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Portrait_of_Pere_Tanguy_1887-8.JPG",
+    "image": "./assets/paris-pere-tanguy-1887.jpg"
+  },
+  "03 | South 05": {
+    "title": "Bridge in the Rain (after Hiroshige)",
+    "date": "1887 · oil on canvas",
+    "body": "A painted interpretation of a print by Hiroshige, rather than an original view of Japan.",
+    "credit": "Image: Wikimedia Commons · Public domain",
+    "source": "https://www.vangoghmuseum.nl/en/collection/s0114V1962",
+    "image": "./assets/paris-bridge-rain-1887.jpg"
+  },
+  "03 | North 01": {
+    "title": "Flowering Plum Orchard (after Hiroshige)",
+    "date": "1887 · oil on canvas",
+    "body": "Seen alongside Bridge in the Rain, this work explores Japanese outlines, colour fields, and framing.",
+    "credit": "Image: Wikimedia Commons · Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Japonaiserie_Flowering_Plum_Tree_(after_Hiroshige)_1887_van_Gogh.jpg",
+    "image": "./assets/paris-plum-1887.jpg"
+  },
+  "04 | Fan 01 | painting": {
+    "title": "The Flowering Orchard",
+    "date": "1888 · oil on canvas",
+    "body": "Spring blossoms and a clear sky mark Vincent’s arrival in the south of France.",
+    "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 436527",
+    "source": "https://www.metmuseum.org/art/collection/search/436527",
+    "image": "./assets/arles-flowering-orchard-1888.jpg"
+  },
+  "04 | Fan 02 | painting": {
+    "title": "Oleanders",
+    "date": "1888 · oil on canvas",
+    "body": "Flowers and tabletop objects show the increasingly bold colours of the Arles period.",
+    "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 436530",
+    "source": "https://www.metmuseum.org/art/collection/search/436530",
+    "image": "./assets/arles-oleanders-1888.jpg"
+  },
+  "04 | Fan 03 | painting": {
+    "title": "The Yellow House",
+    "date": "1888 · oil on canvas",
+    "body": "The house embodied his hope of making a shared place for artists to live and work.",
+    "credit": "Image: Wikimedia Commons · Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_The_yellow_house_('The_street').jpg",
+    "image": "./assets/arles-yellow-house-1888.jpg"
+  },
+  "04 | Fan 04 | painting": {
+    "title": "Café Terrace at Night",
+    "date": "1888 · oil on canvas",
+    "body": "A street illuminated at night; it is a different painting from the indoor Night Café.",
+    "credit": "Image: Wikimedia Commons · Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vincent_Willem_van_Gogh_-_Cafe_Terrace_at_Night_(Yorck).jpg",
+    "image": "./assets/arles-cafe-terrace-1888.jpg"
+  },
+  "04 | Fan 05 | painting": {
+    "title": "The Night Café",
+    "date": "1888 · oil on canvas",
+    "body": "An interior night scene whose strong red and green contrasts create a charged atmosphere.",
+    "credit": "Image: Wikimedia Commons · Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Le_café_de_nuit_(The_Night_Café)_by_Vincent_van_Gogh.jpeg",
+    "image": "./assets/arles-night-cafe-1888.jpg"
+  },
+  "04 | South 01": {
+    "title": "Madame Roulin and Her Baby",
+    "date": "1888 · oil on canvas",
+    "body": "One of the portraits of the Roulin family, people Vincent knew during his time in Arles.",
+    "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 459123",
+    "source": "https://www.metmuseum.org/art/collection/search/459123",
+    "image": "./assets/arles-madame-roulin-baby-1888.jpg"
+  },
+  "04 | South 02": {
+    "title": "Street in Saintes-Maries-de-la-Mer",
+    "date": "1888 · work on paper",
+    "body": "A work on paper from his visit to the Mediterranean coast at Saintes-Maries-de-la-Mer.",
+    "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 336318",
+    "source": "https://www.metmuseum.org/art/collection/search/336318",
+    "image": "./assets/arles-saintes-maries-1888.jpg"
+  },
+  "05 | South 01": {
+    "title": "Van Gogh's Chair",
+    "date": "1888 · oil on canvas",
+    "body": "A plain wooden chair with Vincent’s pipe and tobacco; a counterpart to Gauguin’s chair.",
+    "credit": "Image: Wikimedia Commons · Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Van_Gogh's_Chair.jpg",
+    "image": "./assets/arles-van-gogh-chair-1888.jpg"
+  },
+  "05 | South 02": {
+    "title": "Gauguin's Chair",
+    "date": "1888 · oil on canvas",
+    "body": "A darker armchair, books, and candlelight contrast with the chair Vincent painted for himself.",
+    "credit": "Image: Wikimedia Commons · Public domain",
+    "source": "https://www.vangoghmuseum.nl/en/collection/s0048V1962",
+    "image": "./assets/arles-gauguin-chair-1888.jpg"
+  },
+  "05 | South 03": {
+    "title": "The Lullaby (Augustine Roulin)",
+    "date": "1889 · oil on canvas",
+    "body": "A portrait of Madame Roulin made after Vincent’s crisis, distinct from the 1888 mother-and-baby portrait.",
+    "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 437984",
+    "source": "https://www.metmuseum.org/art/collection/search/437984",
+    "image": "./assets/arles-berceuse-1889.jpg"
+  },
+  "05 | South 04": {
+    "title": "The Woman from Arles (Madame Ginoux)",
+    "date": "1888–1889 · oil on canvas",
+    "body": "A portrait of the café owner, in the version held by The Metropolitan Museum of Art.",
+    "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 436529",
+    "source": "https://www.metmuseum.org/art/collection/search/436529",
+    "image": "./assets/arles-arlesienne-1888-89.jpg"
+  },
+  "05 | South 05": {
+    "title": "Self-Portrait with Bandaged Ear",
+    "date": "1889 · oil on canvas",
+    "body": "A self-portrait during recovery, with a Japanese print behind him; the pipe version is a separate work.",
+    "credit": "Image: Wikimedia Commons · Public domain; see source page for version details",
+    "source": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Self-Portrait_with_Bandaged_Ear_1889_-_Google_Art_Project.jpg",
+    "image": "./assets/arles-bandaged-ear-1889.jpg"
+  },
+  "06 | Curved wall -1 0": {
+    "title": "Wheat Field with Cypresses",
+    "date": "1889 · oil on canvas",
+    "body": "Wheat, clouds, and cypresses show the rhythmic brushwork of the Saint-Rémy period.",
+    "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 436535",
+    "source": "https://www.metmuseum.org/art/collection/search/436535",
+    "image": "./assets/st-remy-wheat-field-cypresses-1889.jpg"
+  },
+  "06 | Curved wall -1 1": {
+    "title": "Olive Trees",
+    "date": "1889 · oil on canvas",
+    "body": "Olive groves became a repeated subject for observing light and season.",
+    "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 437998",
+    "source": "https://www.metmuseum.org/art/collection/search/437998",
+    "image": "./assets/st-remy-olive-trees-1889.jpg"
+  },
+  "06 | Curved wall -1 2": {
+    "title": "Irises (in a vase)",
+    "date": "1890 · oil on canvas",
+    "body": "An arrangement of irises in a vase, not the broad garden view displayed nearby.",
+    "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 436528",
+    "source": "https://www.metmuseum.org/art/collection/search/436528",
+    "image": "./assets/st-remy-irises-1890.jpg"
+  },
+  "06 | Curved wall -1 3": {
+    "title": "Cypresses",
+    "date": "1889 · oil on canvas",
+    "body": "A monumental cypress studied within the landscape of southern France.",
+    "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 437980",
+    "source": "https://www.metmuseum.org/art/collection/search/437980",
+    "image": "./assets/st-remy-cypresses-1889.jpg"
+  },
+  "06 | Curved wall -1 4": {
+    "title": "First Steps, after Millet",
+    "date": "1890 · oil on canvas",
+    "body": "An interpretation after Millet, translating a printed source into Vincent’s own painted language.",
+    "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 436526",
+    "source": "https://www.metmuseum.org/art/collection/search/436526",
+    "image": "./assets/st-remy-first-steps-1890.jpg"
+  },
+  "06 | Curved wall 1 0": {
+    "title": "Corridor in the Asylum",
+    "date": "1889 · oil on paper",
+    "body": "An actual corridor at the asylum, set against landscapes shaped by observation and imagination.",
+    "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 336327",
+    "source": "https://www.metmuseum.org/art/collection/search/336327",
+    "image": "./assets/st-remy-asylum-corridor-1889.jpg"
+  },
+  "06 | Curved wall 1 1": {
+    "title": "Women Picking Olives",
+    "date": "1889 · oil on canvas",
+    "body": "Labourers become part of the moving rhythm of the olive trees.",
+    "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 436536",
+    "source": "https://www.metmuseum.org/art/collection/search/436536",
+    "image": "./assets/st-remy-women-picking-olives-1889.jpg"
+  },
+  "06 | Curved wall 1 2": {
+    "title": "The Starry Night",
+    "date": "1889 · oil on canvas",
+    "body": "An imagined night sky composed with memories of the view from Saint-Rémy.",
+    "credit": "Image: Wikimedia Commons · Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+    "image": "./assets/st-remy-starry-night-1889.jpg"
+  },
+  "07 | Horizon -1 0": {
+    "title": "Portrait of Doctor Gachet or Man with a Pipe",
+    "date": "1890 · etching",
+    "body": "An etching of Doctor Gachet, distinct from the two celebrated oil portraits.",
+    "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 849056",
+    "source": "https://www.metmuseum.org/art/collection/search/849056",
+    "image": "./assets/auvers-gachet-etching-1890.jpg"
+  },
+  "07 | Horizon -1 1": {
+    "title": "The Church at Auvers",
+    "date": "1890 · oil on canvas",
+    "body": "The village landmark is transformed by animated lines and colour.",
+    "credit": "Image: Wikimedia Commons · Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_The_Church_in_Auvers-sur-Oise,_View_from_the_Chevet_-_Google_Art_Project.jpg",
+    "image": "./assets/auvers-church-1890.jpg"
+  },
+  "07 | Horizon -1 2": {
+    "title": "Daubigny's Garden",
+    "date": "1890 · oil on canvas",
+    "body": "One version of a garden Vincent painted several times at Auvers.",
+    "credit": "Image: Wikimedia Commons · Public domain",
+    "source": "https://www.vangoghmuseum.nl/en/collection/s0104V1962",
+    "image": "./assets/auvers-daubigny-garden-1890.jpg"
+  },
+  "07 | Horizon -1 3": {
+    "title": "Wheatfield under Thunderclouds",
+    "date": "1890 · oil on canvas",
+    "body": "A wide wheatfield under dark clouds, opening the landscape horizontally.",
+    "credit": "Image: Wikimedia Commons · Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Wheatfield_under_thunderclouds_-_Google_Art_Project.jpg",
+    "image": "./assets/auvers-thunderclouds-1890.jpg"
+  },
+  "07 | Horizon -1 4": {
+    "title": "Wheatfield with Crows",
+    "date": "1890 · oil on canvas",
+    "body": "Often mistaken for an established final painting; that identification is not certain.",
+    "credit": "Image: Wikimedia Commons · Public domain",
+    "source": "https://www.vangoghmuseum.nl/en/collection/s0149V1962",
+    "image": "./assets/auvers-wheatfield-crows-1890.jpg"
+  },
+  "07 | Horizon 1 0": {
+    "title": "Tree Roots",
+    "date": "1890 · oil on canvas",
+    "body": "Possibly among Vincent’s last paintings. The intertwined roots resist a single, definitive interpretation.",
+    "credit": "Image: Wikimedia Commons · Public domain",
+    "source": "https://www.vangoghmuseum.nl/en/collection/s0195V1962",
+    "image": "./assets/auvers-tree-roots-1890.jpg"
+  },
+  "02 | North 01": {
+    "title": "Sorrow",
+    "date": "1882 · work on paper",
+    "body": "A drawing of Sien, identified here as the F929 / JH129 version rather than every work of the same subject.",
+    "credit": "Image: Wikimedia Commons · Public domain; source file credits Christie's",
+    "source": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Sorrow_-_F929_JH129.jpg",
+    "image": "./assets/hague-sorrow-1882.jpg"
+  },
+  "02 | North 02": {
+    "title": "The Potato Eaters (oil painting)",
+    "date": "1885 · oil on canvas",
+    "body": "The lamplit peasant family brings together studies of faces, interiors, and rural labour from his Nuenen years.",
+    "credit": "Image: Wikimedia Commons · Public domain; original held by the Van Gogh Museum",
+    "source": "https://www.vangoghmuseum.nl/en/collection/s0005V1962",
+    "image": "./assets/nederland-potato-eaters-oil-1885.jpg"
+  },
+  "04 | South 03": {
+    "title": "Sunflowers (Arles, London version)",
+    "date": "1888 · oil on canvas",
+    "body": "Sunflowers in a vase painted for the Yellow House; separate from the cut Paris sunflower studies.",
+    "credit": "Image: Wikimedia Commons · Public domain; The National Gallery, London, NG3863",
+    "source": "https://www.nationalgallery.org.uk/paintings/vincent-van-gogh-sunflowers",
+    "image": "./assets/arles-sunflowers-london-1888.jpg"
+  },
+  "04 | South 04": {
+    "title": "Starry Night over the Rhône",
+    "date": "1888 · oil on canvas",
+    "body": "The Rhône at night, with lamplight reflected in the water. Not the later Starry Night of Saint-Rémy.",
+    "credit": "Image: Wikimedia Commons · Public domain; original held by the Musée d'Orsay",
+    "source": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+    "image": "./assets/arles-starry-night-rhone-1888.jpg"
+  },
+  "05 | South 06": {
+    "title": "The Red Vineyard",
+    "date": "1888 · oil on canvas",
+    "body": "Autumn grape harvest in interwoven reds and yellows, painted during Gauguin’s stay in Arles.",
+    "credit": "Image: Wikimedia Commons · Public domain; source file names the Pushkin Museum",
+    "source": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Red_Vineyard_at_Arles_(1888).jpg",
+    "image": "./assets/arles-red-vineyard-1888.jpg"
+  },
+  "06 | Curved wall 1 3": {
+    "title": "Almond Blossom",
+    "date": "1890 · oil on canvas",
+    "body": "Flowering branches painted for Vincent’s newborn nephew, also named Vincent.",
+    "credit": "Image: Wikimedia Commons · Public domain; original held by the Van Gogh Museum",
+    "source": "https://www.vangoghmuseum.nl/en/collection/s0176V1962",
+    "image": "./assets/st-remy-almond-blossom-1890.jpg"
+  },
+  "06 | Curved wall 1 4": {
+    "title": "Irises (garden)",
+    "date": "1889 · oil on canvas",
+    "body": "Irises growing in the asylum garden; a different work from the vase of flowers.",
+    "credit": "Image: Getty Open Content, via Wikimedia Commons · Public domain; Getty collection 826",
+    "source": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Irises_(1889).jpg",
+    "image": "./assets/st-remy-irises-field-1889.jpg"
+  }
+}
