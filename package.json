@@ -1,0 +1,12 @@
+{
+  "name": "van-gogh-interactive-gallery",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  }
+}

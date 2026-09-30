@@ -1,0 +1,14 @@
+/node_modules/
+/.npm-cache/
+/dist/
+*.log
+*.blend
+*.blend1
+.DS_Store
+Thumbs.db
+/assets/*.glb
+!/assets/gallery_v16.glb
+/data/*.json
+!/data/artworks_en.json
+!/data/chapters_en.json
+!/data/ordered_route_v16.json

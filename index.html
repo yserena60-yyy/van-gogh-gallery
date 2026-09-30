@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vincent van Gogh · A Life Through Art</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./node_modules/three/build/three.module.js",
+        "three/addons/": "./node_modules/three/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <main id="viewer" aria-label="Interactive Van Gogh gallery">
+    <div id="loading" role="status">Loading the gallery… <span id="load-progress">0%</span></div>
+    <div class="masthead">
+      <span class="eyebrow">VINCENT VAN GOGH · INTERACTIVE STUDY</span>
+      <strong>A Life Through Art</strong>
+      <span id="exhibit-status" class="disclaimer">Loading seven chapters…</span>
+    </div>
+    <button id="catalog-toggle" class="catalog-toggle" type="button" aria-controls="catalogue" aria-expanded="false">Seven Halls · Catalogue</button>
+    <aside id="catalogue" class="catalogue" aria-label="Seven-hall catalogue" aria-hidden="true" inert>
+      <header class="catalog-header">
+        <span class="eyebrow">CHAPTERS &amp; WORKS</span>
+        <button id="catalog-close" class="close" type="button" aria-label="Close catalogue">×</button>
+        <h2>A Life Through Art</h2>
+        <p id="catalog-count"></p>
+        <p class="catalog-note">A curated route through verified images and future series leads, not a complete catalogue of every work. Missing images are never replaced by another painting.</p>
+      </header>
+      <div class="catalog-search-wrap">
+        <label for="catalog-search">Find a work, series, or chapter</label>
+        <input id="catalog-search" type="search" placeholder="Search: sunflowers, wheatfields…">
+      </div>
+      <nav id="chapter-nav" class="chapter-nav" aria-label="Choose a gallery hall"></nav>
+      <div id="catalog-content" class="catalog-content" aria-live="polite"></div>
+    </aside>
+    <div class="toolbar">
+      <button id="previous-artwork" type="button" disabled>← Previous</button>
+      <span id="guide-position" aria-live="polite">Gallery-view route · Follow the left wall</span>
+      <button id="next-artwork" type="button" disabled>Next →</button>
+      <button id="tour-toggle" type="button" disabled>Play 90-second tour</button>
+      <label for="tour-progress">Tour progress</label>
+      <input id="tour-progress" type="range" min="0" max="90" value="0" step="0.1" aria-label="Tour progress in seconds">
+      <span id="tour-time">00:00 / 01:30</span>
+    </div>
+    <div class="tip">Wide gallery views · Follow the left wall · Halls 01–07 · ←/→ browse works · Hover for details · Click for artwork + story · W/A/S/D to walk</div>
+    <div class="film-controls">
+      <input id="film-input" type="file" accept="video/mp4,video/webm,video/ogg" aria-label="Choose an opening film">
+      <label class="film-upload" for="film-input">Choose opening film</label>
+      <span id="film-status" role="status">No film selected</span>
+      <button id="film-toggle" type="button" hidden>Play film</button>
+    </div>
+    <aside id="art-card" class="art-card" aria-live="polite" aria-hidden="true" aria-labelledby="card-title" inert>
+      <button id="card-close" class="close" type="button" aria-label="Close artwork card">×</button>
+      <div class="card-content">
+        <span id="card-chapter" class="eyebrow"></span>
+        <h1 id="card-title"></h1>
+        <p id="card-date" class="meta"></p>
+        <p id="card-body"></p>
+        <p id="card-credit" class="credit"></p>
+        <a id="card-source" class="source-link" href="#" target="_blank" rel="noopener noreferrer" hidden>View artwork and image source ↗</a>
+      </div>
+      <p class="hint">Click the painting for an immersive view</p>
+    </aside>
+    <section id="art-immersive" class="art-immersive" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="immersive-title" inert hidden>
+      <div class="immersive-panel">
+        <button id="immersive-close" class="immersive-close" type="button" aria-label="Close immersive artwork view">×</button>
+        <figure class="immersive-figure">
+          <img id="immersive-image" alt="">
+          <figcaption id="immersive-caption"></figcaption>
+        </figure>
+        <div class="immersive-content">
+          <span id="immersive-chapter" class="eyebrow"></span>
+          <h2 id="immersive-title"></h2>
+          <p id="immersive-date" class="immersive-date"></p>
+          <div class="immersive-rule"></div>
+          <p id="immersive-body" class="immersive-body"></p>
+          <p id="immersive-credit" class="immersive-credit"></p>
+          <a id="immersive-source" href="#" target="_blank" rel="noopener noreferrer" hidden>View artwork and image source ↗</a>
+        </div>
+      </div>
+    </section>
+    <div id="error" role="alert" hidden></div>
+  </main>
+  <script type="module" src="./viewer.js"></script>
+</body>
+</html>
