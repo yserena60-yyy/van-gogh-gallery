@@ -1,0 +1,334 @@
+[
+  {
+    "id": "01",
+    "title": "Origins and Uncertainty",
+    "years": "1853–1881",
+    "intro": "The opening film follows Vincent from childhood through work, faith, and his decision to draw.",
+    "groups": [
+      {
+        "title": "Film and archives",
+        "items": [
+          {
+            "title": "Road in Etten",
+            "slot": "01 | Fan 01 | painting"
+          }
+        ]
+      },
+      {
+        "title": "The first drawings",
+        "items": [
+          "Birthplace, family, school, art trade, and the Borinage: archival film and documents."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "02",
+    "title": "Earth and Labour",
+    "years": "1881–1885",
+    "intro": "Drawings and dark-toned paintings trace his attention to ordinary workers and rural life.",
+    "groups": [
+      {
+        "title": "The Hague and Sien",
+        "items": [
+          {
+            "title": "Sorrow",
+            "slot": "02 | North 01"
+          },
+          {
+            "title": "Nursery on Schenkweg",
+            "slot": "02 | South 01"
+          },
+          {
+            "title": "Gardener by an Apple Tree",
+            "slot": "02 | South 02"
+          },
+          {
+            "title": "Avenue of Pollard Birches and Poplars",
+            "slot": "02 | South 03"
+          }
+        ]
+      },
+      {
+        "title": "Nuenen and The Potato Eaters",
+        "items": [
+          {
+            "title": "A Peasant Woman Digging in Front of Her Cottage",
+            "slot": "02 | South 04"
+          },
+          {
+            "title": "The Potato Peeler",
+            "slot": "02 | South 05"
+          },
+          {
+            "title": "The Potato Eaters (lithograph)",
+            "slot": "02 | South 06"
+          },
+          {
+            "title": "The Potato Eaters (oil painting)",
+            "slot": "02 | North 02"
+          },
+          "Weavers, peasant heads, and preparatory studies: further works await verified images."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "03",
+    "title": "The Paris Transformation",
+    "years": "1886–1888",
+    "intro": "Self-portraits, flowers, Montmartre, and Japanese prints mark a brighter palette.",
+    "groups": [
+      {
+        "title": "Montmartre and self-portraits",
+        "items": [
+          {
+            "title": "Montmartre Windmill",
+            "slot": "03 | South 01"
+          },
+          {
+            "title": "Self-Portrait with a Straw Hat",
+            "slot": "03 | South 02"
+          },
+          {
+            "title": "Portrait of Julien Tanguy",
+            "slot": "03 | South 04"
+          }
+        ]
+      },
+      {
+        "title": "Flowers and Japanese influences",
+        "items": [
+          {
+            "title": "Sunflowers (Paris)",
+            "slot": "03 | South 03"
+          },
+          {
+            "title": "Bridge in the Rain (after Hiroshige)",
+            "slot": "03 | South 05"
+          },
+          {
+            "title": "Flowering Plum Orchard (after Hiroshige)",
+            "slot": "03 | North 01"
+          },
+          "Additional plaster-cast studies, flower still lifes, and Paris self-portraits await verified images."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "04",
+    "title": "Arles: Toward the Sun",
+    "years": "1888",
+    "intro": "Orchards, wheatfields, the Yellow House, night scenes, and portraits fill a luminous southern gallery.",
+    "groups": [
+      {
+        "title": "Spring and summer",
+        "items": [
+          {
+            "title": "The Flowering Orchard",
+            "slot": "04 | Fan 01 | painting"
+          },
+          {
+            "title": "Oleanders",
+            "slot": "04 | Fan 02 | painting"
+          },
+          {
+            "title": "Street in Saintes-Maries-de-la-Mer",
+            "slot": "04 | South 02"
+          }
+        ]
+      },
+      {
+        "title": "The Yellow House and the night",
+        "items": [
+          {
+            "title": "The Yellow House",
+            "slot": "04 | Fan 03 | painting"
+          },
+          {
+            "title": "Café Terrace at Night",
+            "slot": "04 | Fan 04 | painting"
+          },
+          {
+            "title": "The Night Café",
+            "slot": "04 | Fan 05 | painting"
+          }
+        ]
+      },
+      {
+        "title": "People of Arles",
+        "items": [
+          {
+            "title": "Starry Night over the Rhône",
+            "slot": "04 | South 04"
+          },
+          {
+            "title": "Sunflowers (Arles, London version)",
+            "slot": "04 | South 03"
+          },
+          {
+            "title": "Madame Roulin and Her Baby",
+            "slot": "04 | South 01"
+          },
+          "Further orchards, harvest scenes, bridges, sunflowers, and Roulin family portraits await verified images."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "05",
+    "title": "Companionship and Crisis",
+    "years": "1888–1889",
+    "intro": "The collaboration with Gauguin, its breakdown, and the aftermath in Arles.",
+    "groups": [
+      {
+        "title": "Two chairs, two artists",
+        "items": [
+          {
+            "title": "The Red Vineyard",
+            "slot": "05 | South 06"
+          },
+          {
+            "title": "Van Gogh's Chair",
+            "slot": "05 | South 01"
+          },
+          {
+            "title": "Gauguin's Chair",
+            "slot": "05 | South 02"
+          }
+        ]
+      },
+      {
+        "title": "After the crisis",
+        "items": [
+          {
+            "title": "The Lullaby (Augustine Roulin)",
+            "slot": "05 | South 03"
+          },
+          {
+            "title": "The Woman from Arles (Madame Ginoux)",
+            "slot": "05 | South 04"
+          },
+          {
+            "title": "Self-Portrait with Bandaged Ear",
+            "slot": "05 | South 05"
+          },
+          "Arles hospital works and other self-portrait versions await verified images; motives surrounding the ear incident remain uncertain."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "06",
+    "title": "Saint-Rémy: Inner Skies",
+    "years": "1889–1890",
+    "intro": "A garden, enclosed fields, cypresses, stars, and interpretations after earlier artists.",
+    "groups": [
+      {
+        "title": "Fields, trees, and sky",
+        "items": [
+          {
+            "title": "Wheat Field with Cypresses",
+            "slot": "06 | Curved wall -1 0"
+          },
+          {
+            "title": "Cypresses",
+            "slot": "06 | Curved wall -1 3"
+          },
+          {
+            "title": "The Starry Night",
+            "slot": "06 | Curved wall 1 2"
+          },
+          {
+            "title": "Olive Trees",
+            "slot": "06 | Curved wall -1 1"
+          }
+        ]
+      },
+      {
+        "title": "Garden and asylum",
+        "items": [
+          {
+            "title": "Women Picking Olives",
+            "slot": "06 | Curved wall 1 1"
+          },
+          {
+            "title": "Irises (in a vase)",
+            "slot": "06 | Curved wall -1 2"
+          },
+          {
+            "title": "Irises (garden)",
+            "slot": "06 | Curved wall 1 4"
+          }
+        ]
+      },
+      {
+        "title": "Working after Millet",
+        "items": [
+          {
+            "title": "Corridor in the Asylum",
+            "slot": "06 | Curved wall 1 0"
+          },
+          {
+            "title": "Almond Blossom",
+            "slot": "06 | Curved wall 1 3"
+          },
+          {
+            "title": "First Steps, after Millet",
+            "slot": "06 | Curved wall -1 4"
+          },
+          "Further olive groves, enclosed wheatfields, and works after Millet, Delacroix, and Rembrandt await verified images."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "07",
+    "title": "Auvers and Afterlife",
+    "years": "1890 onward",
+    "intro": "Auvers portraits and wide landscapes lead into the documented story of death and the work’s later reception.",
+    "groups": [
+      {
+        "title": "People and village",
+        "items": [
+          {
+            "title": "Portrait of Doctor Gachet or Man with a Pipe",
+            "slot": "07 | Horizon -1 0"
+          },
+          {
+            "title": "The Church at Auvers",
+            "slot": "07 | Horizon -1 1"
+          }
+        ]
+      },
+      {
+        "title": "Wheatfields and roots",
+        "items": [
+          {
+            "title": "Daubigny's Garden",
+            "slot": "07 | Horizon -1 2"
+          },
+          {
+            "title": "Wheatfield under Thunderclouds",
+            "slot": "07 | Horizon -1 3"
+          }
+        ]
+      },
+      {
+        "title": "Afterlife archive",
+        "items": [
+          {
+            "title": "Wheatfield with Crows",
+            "slot": "07 | Horizon -1 4"
+          },
+          {
+            "title": "Tree Roots",
+            "slot": "07 | Horizon 1 0"
+          },
+          "27 July 1890: Vincent was wounded; 29 July: he died. Theo and later Jo van Gogh-Bonger preserved and promoted his work."
+        ]
+      }
+    ]
+  }
+]
