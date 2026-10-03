@@ -1,0 +1,16 @@
+{
+  "title": "The Early Years",
+  "file": "./assets/van-gogh-early-years.mp4",
+  "durationSeconds": 182.417,
+  "openingFadeSeconds": 1.2,
+  "version": "2026-10-02-v5",
+  "film": "User-created film, supplied for this exhibition. English subtitles are burned into the image.",
+  "editing": "Visual fade from black at time zero. The original shot timing and restored dissolve near eight seconds are preserved. Audio is unchanged from the approved piano edit v4. No added pencil, pen or paper foley.",
+  "music": {
+    "title": "Calm Piano 1 (Vaporware)",
+    "creator": "The Cynic Project / cynicmusic",
+    "license": "CC0",
+    "source": "https://opengameart.org/content/calm-piano-1-vaporware"
+  },
+  "reuse": "The CC0 designation applies to the piano track only, not to the complete film or narration."
+}

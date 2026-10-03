@@ -1,0 +1,80 @@
+{
+  "title": "London story exhibit material credits",
+  "images": [
+    {
+      "id": "house-open-photo",
+      "label": "87 Hackford Road · Udimu, 17 May 2016",
+      "type": "Modern photograph · Not London in 1873",
+      "url": "https://commons.wikimedia.org/wiki/File:Houseshackfordroad.JPG",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Houseshackfordroad.JPG",
+      "creator": "Udimu",
+      "date": "2016-05-17",
+      "localImage": "./assets/story-house-2016.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "rights": "Source record explicitly states CC BY-SA 4.0",
+      "changes": "Original 2816 × 2112 photograph copied without additional cropping or re-encoding; resized only by the browser for display.",
+      "sha256": "48e08ca77b67cd2f7928e644c5810d7a564d4b72f49c7259ea81c00c04149625"
+    },
+    {
+      "id": "portrait",
+      "label": "Portrait · Vincent aged nineteen · January 1873",
+      "type": "Verified photographic portrait · Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_January_1873-cropped.jpeg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Vincent_van_Gogh_January_1873-cropped.jpeg",
+      "license": "Public domain",
+      "creator": "Jacobus Marinus Wilhelmus de Louw",
+      "date": "January 1873",
+      "localImage": "./assets/story-vincent-nineteen.jpg",
+      "rights": "Commons marks the historic photograph public domain",
+      "changes": "Source’s existing crop copied without additional cropping or re-encoding; original dimensions 988 × 1118. Resized only within the composed wall display.",
+      "sha256": "0a128caa3b87668ddb9556b22a7653d443a0123f6698af297a39d32fa0e31be9"
+    }
+  ],
+  "typesetLetterExcerpts": {
+    "license": "CC BY-SA 1.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0/",
+    "attribution": "Vincent van Gogh; English version as published by WebExhibits. Short quotations newly typeset for this gallery.",
+    "reuseBasis": "https://www.webexhibits.org/vangogh/about/credits.html",
+    "qualification": "WebExhibits distinguishes public-domain letters from edited or translated letters licensed CC BY-SA 1.0. No blanket public-domain claim is made for its translations. These excerpt panels retain attribution and are offered under CC BY-SA 1.0.",
+    "changes": "New typography and excerpt selection, not a manuscript reproduction. Scholarly dates and letter numbers differ from WebExhibits numbering. Surrounding independent summaries are not part of the quoted translation.",
+    "excerpts": [
+      {
+        "chapter": "home",
+        "view": "home",
+        "text": "Oh! Old man, I so want that you come here to see my new lodgings",
+        "attribution": "Vincent to Theo · London, 13 September 1873 · Letter 13",
+        "source": "translation-13"
+      },
+      {
+        "chapter": "life",
+        "view": "january",
+        "text": "I've got a delightful home",
+        "attribution": "Vincent to Theo · London, beginning of January 1874 · Letter 17",
+        "source": "translation-17"
+      },
+      {
+        "chapter": "life",
+        "view": "april",
+        "text": "He that sincerely loves nature, finds pleasure everywhere.",
+        "attribution": "Vincent to Theo · London, 30 April 1874 · Letter 22",
+        "source": "translation-22"
+      },
+      {
+        "chapter": "art",
+        "view": "art",
+        "text": "You must write me sometime whom you like best among the older painters as well as among the moderns.",
+        "attribution": "Vincent to Theo · London, 19 November 1873 · Letter 15",
+        "source": "translation-15"
+      }
+    ]
+  },
+  "wallComposition": {
+    "file": "./assets/story-london-wall.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "London story wall composition; public-domain January 1873 portrait by J. M. W. de Louw. Exhibit layout and independent summaries prepared for this gallery.",
+    "changes": "Historic portrait resized and placed within an English exhibition layout. No historical reconstruction or AI-generated archival image."
+  },
+  "publicationNote": "Keep all source, attribution and licence links. Two photographs are embedded: the public-domain nineteen-year-old portrait and Udimu’s unmodified 17 May 2016 house photograph under CC BY-SA 4.0. Four short WebExhibits English excerpts are typeset under the reuse terms recorded here, with CC BY-SA 1.0 applied to the panels. Original relationship and household cards replace the locket and insurance photographs; they are reading aids, not archives. The scholarly edition’s facsimiles and full translations, Tom Parsons and Claire Zhao photographs, locket and Jacquet reproduction remain source references; their redistribution permission is not assumed."
+}

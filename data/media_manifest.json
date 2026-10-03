@@ -1,0 +1,244 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "path": "assets/gallery_v21.glb",
+      "bytes": 101765892,
+      "sha256": "136e7cab63af10d26d5bca2becef4c6de8df75503d85203208eb92d06240ddba",
+      "parts": [
+        {
+          "path": "assets/media-parts/gallery-v21.001.bin",
+          "bytes": 4194304,
+          "sha256": "5239c06d825d8c8ebfab3edb832b9d3baab1373d3cc582fff40e5efee489a1d5"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.002.bin",
+          "bytes": 4194304,
+          "sha256": "d81d93a434041c23087aa6b5ea4779dc5e6867dbefa3e1b226aa66a346c5f789"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.003.bin",
+          "bytes": 4194304,
+          "sha256": "37d96434d1af06e862d1aca207f16362b2d3f267706e5c13d1546ae65163cb7b"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.004.bin",
+          "bytes": 4194304,
+          "sha256": "155721e20cffc701fbcfa7bdabce5bae02d778adf0a40bf6f066a54ffdc8e1b1"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.005.bin",
+          "bytes": 4194304,
+          "sha256": "0dc4d062125ae557e760c2abf8c917e4d52b281878f74e14185d623f69b22120"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.006.bin",
+          "bytes": 4194304,
+          "sha256": "931cd450bed270fee222c260924c9b5eeee68e0c42612f268611293c3af3a837"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.007.bin",
+          "bytes": 4194304,
+          "sha256": "01a755224cf9ff155136495d28d1aaf55fcf7e7d094fd9a47368a6fb4f3e2eba"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.008.bin",
+          "bytes": 4194304,
+          "sha256": "48dc2ff8e6f7fc5616dfb373022d826f0eb2d3fb71dd25c3d2f24f2d666ca49a"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.009.bin",
+          "bytes": 4194304,
+          "sha256": "c0b2f30b4ce2f6ffdc47d3329ecdb92839fa5c8628363970dcd593cc46c912b9"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.010.bin",
+          "bytes": 4194304,
+          "sha256": "9e04024bf5967e5b40dc70c7031aad4e3b364bb60ad8dd38dfc658fe78c11697"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.011.bin",
+          "bytes": 4194304,
+          "sha256": "a977b356f18ccb07e73f9528d40d3e588c99a417d0f897e4ae6b6f497134ded9"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.012.bin",
+          "bytes": 4194304,
+          "sha256": "3dd904744d9e5bd814ec629daff1f48d693b1a6e871852158da8a76bea4653e3"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.013.bin",
+          "bytes": 4194304,
+          "sha256": "ea9cd09838855c32a84195c81df5860b0ff222e8582a587f4258aba032dcf6a4"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.014.bin",
+          "bytes": 4194304,
+          "sha256": "f09a99a4a38544ae7d502fa425d8f98181a2e8ab5f210fffa46bc72baf7a9d6c"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.015.bin",
+          "bytes": 4194304,
+          "sha256": "6373b05b48e0bbb4cc004af3711a27565f4004305db14a491974907a2dcd0fe2"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.016.bin",
+          "bytes": 4194304,
+          "sha256": "fb1fea412aac8d1c6c81fb9e5c3491c6365e790ded9f58e0a89d57df65b700d3"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.017.bin",
+          "bytes": 4194304,
+          "sha256": "6fcc8e40b9bcbcd5da95800580400a53d6ca8fdbd72fe3dd731e7aab1ab3be7b"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.018.bin",
+          "bytes": 4194304,
+          "sha256": "a7fdf9da9ab11cd10391441e1a597d6358346db1a045d7c1249f150ab5430bc9"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.019.bin",
+          "bytes": 4194304,
+          "sha256": "d41c671d664019b87a8fa98e450ac71023ff9d22f2019bc1fff14dcfe1f6dd0b"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.020.bin",
+          "bytes": 4194304,
+          "sha256": "fdcd74c909d0439c0bf8dd91574b7e80614f7486b8aa7eab94cb8157e144a113"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.021.bin",
+          "bytes": 4194304,
+          "sha256": "3bbc381562e91e47ba44884992dccd0f7a9d026a16dd356c52ae7a52344e07b6"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.022.bin",
+          "bytes": 4194304,
+          "sha256": "0b53cd46bbaa74074ae5648ea69996c31edfbacf68b5dfe3b9b8b064d2ef540f"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.023.bin",
+          "bytes": 4194304,
+          "sha256": "ee9b3d98e47be1fe563b76ce027bb38499ae071b0f888127a2e25e7304fdffe4"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.024.bin",
+          "bytes": 4194304,
+          "sha256": "c6d4e43428bddc4a58c01968ddc02cdbb6c90ff1440fb703dd8e32c3d6dcb925"
+        },
+        {
+          "path": "assets/media-parts/gallery-v21.025.bin",
+          "bytes": 1102596,
+          "sha256": "07429f227f20bd1c84c736bec2dd47e6bc3c0276249cb467c4ec2e24fb382b42"
+        }
+      ]
+    },
+    {
+      "path": "assets/van-gogh-early-years.mp4",
+      "bytes": 82276126,
+      "sha256": "74fb7a85654d4960849bdf2f72ff431311f06993cfe6247412786ddd282f758d",
+      "parts": [
+        {
+          "path": "assets/media-parts/van-gogh-early-years.001.bin",
+          "bytes": 4194304,
+          "sha256": "ea89c23db2267c189c9f5c4c336d64f303a5292e045d5b3827a33f07e1e2e3b2"
+        },
+        {
+          "path": "assets/media-parts/van-gogh-early-years.002.bin",
+          "bytes": 4194304,
+          "sha256": "b9609c76398b0c59f6dc277d440dffd681c1efba623eba58860a4cefdab45c9f"
+        },
+        {
+          "path": "assets/media-parts/van-gogh-early-years.003.bin",
+          "bytes": 4194304,
+          "sha256": "d31805aec575b3f1789ef2187348d86a9997421fb74ed0a82e5757e55485c8c3"
+        },
+        {
+          "path": "assets/media-parts/van-gogh-early-years.004.bin",
+          "bytes": 4194304,
+          "sha256": "0161c058a71f53283dbcfc70252fe8bfdd19d5b2477c8a1be722648593a3cf4a"
+        },
+        {
+          "path": "assets/media-parts/van-gogh-early-years.005.bin",
+          "bytes": 4194304,
+          "sha256": "3fb350ff0084125ab5f8605e27413778ea30f24f5436ad290020f51e4d7e2899"
+        },
+        {
+          "path": "assets/media-parts/van-gogh-early-years.006.bin",
+          "bytes": 4194304,
+          "sha256": "c867dbe4a972523c800fced9a402ba436232d2aa033329ab8c11fb751b52f9d2"
+        },
+        {
+          "path": "assets/media-parts/van-gogh-early-years.007.bin",
+          "bytes": 4194304,
+          "sha256": "fcf9ca62c3a8466d1d03fcb9a9973fa1976205d210e42066be913ed25599c1da"
+        },
+        {
+          "path": "assets/media-parts/van-gogh-early-years.008.bin",
+          "bytes": 4194304,
+          "sha256": "d517a8219947a837066629ebc19a991c2b985bb76f28c01122ff9e48c56c3c2c"
+        },
+        {
+          "path": "assets/media-parts/van-gogh-early-years.009.bin",
+          "bytes": 4194304,
+          "sha256": "aa684b62abf94b45a38285ace03d9009cfc105263bde1d17e6e4131650182182"
+        },
+        {
+          "path": "assets/media-parts/van-gogh-early-years.010.bin",
+          "bytes": 4194304,
+          "sha256": "92b6aef35ea124b6deacccf55836adc0243c14f50e666a0d73d837bcc61d9d85"
+        },
+        {
+          "path": "assets/media-parts/van-gogh-early-years.011.bin",
+          "bytes": 4194304,
+          "sha256": "b01318d5971f88cd35d36821c18e5abcf0fc56d4e44e865de2225684787166da"
+        },
+        {
+          "path": "assets/media-parts/van-gogh-early-years.012.bin",
+          "bytes": 4194304,
+          "sha256": "b4c1ccccb38b2fc0e081f7ee3f96c469d19991cc12cded50800e89a324211ee8"
+        },
+        {
+          "path": "assets/media-parts/van-gogh-early-years.013.bin",
+          "bytes": 4194304,
+          "sha256": "ebf5c527275e8bb81861a5e68ba6c1ed2ba42463253730a327e3aa5fd0912354"
+        },
+        {
+          "path": "assets/media-parts/van-gogh-early-years.014.bin",
+          "bytes": 4194304,
+          "sha256": "b2bab86de3c8d6b32d377e28079dd9f83f37982e22706438ffea2fa746091d70"
+        },
+        {
+          "path": "assets/media-parts/van-gogh-early-years.015.bin",
+          "bytes": 4194304,
+          "sha256": "80301a281ce86349485d401e231141cd13d57b4802c8f9eb61742b99e454b821"
+        },
+        {
+          "path": "assets/media-parts/van-gogh-early-years.016.bin",
+          "bytes": 4194304,
+          "sha256": "58cd2f2906d41ea52e0d03893e4e9602ef1e0c6e5d7be4c2671e8b73622b0040"
+        },
+        {
+          "path": "assets/media-parts/van-gogh-early-years.017.bin",
+          "bytes": 4194304,
+          "sha256": "71cb3f69fbc24aa4d4ee0520781a739f4895daebf3daecd78da14b5b5cccdf64"
+        },
+        {
+          "path": "assets/media-parts/van-gogh-early-years.018.bin",
+          "bytes": 4194304,
+          "sha256": "a1b7b979bf364943ffd3cf57d533bfd086693fd8536b0aa3605fb088bb0a48c0"
+        },
+        {
+          "path": "assets/media-parts/van-gogh-early-years.019.bin",
+          "bytes": 4194304,
+          "sha256": "9d1241eb0f929bc2587a18a5a9e90ebfdb438b4e9a9a464f43c938b9fb5579bd"
+        },
+        {
+          "path": "assets/media-parts/van-gogh-early-years.020.bin",
+          "bytes": 2584350,
+          "sha256": "4736144046cf6afab588cd672dbc77ea61e17832309df0b2bd3cb2659abc44ec"
+        }
+      ]
+    }
+  ]
+}

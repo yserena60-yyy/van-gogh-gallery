@@ -3,21 +3,44 @@
     "id": "01",
     "title": "Origins and Uncertainty",
     "years": "1853–1881",
-    "intro": "The opening film follows Vincent from childhood through work, faith, and his decision to draw.",
+    "intro": "The opening film follows Vincent from childhood through work, faith, and his decision to draw. Browse highlights first, then switch wall sets for additional verified individual works.",
     "groups": [
       {
-        "title": "Film and archives",
+        "title": "Landscape, gardens and open air",
         "items": [
           {
             "title": "Road in Etten",
-            "slot": "01 | Fan 01 | painting"
+            "workId": "met-459193",
+            "date": "1881 · work on paper",
+            "museumId": "1975.1.774",
+            "institution": "The Metropolitan Museum of Art"
           }
         ]
       },
       {
-        "title": "The first drawings",
+        "title": "People and portraits",
         "items": [
-          "Birthplace, family, school, art trade, and the Borinage: archival film and documents."
+          {
+            "title": "Boy with a Sickle",
+            "workId": "kmm-km111847",
+            "date": "last week of October - 1 November 1881",
+            "fNumber": "F851",
+            "museumId": "KM 111.847",
+            "institution": "Kröller-Müller Museum"
+          }
+        ]
+      },
+      {
+        "title": "Research leads — not installed",
+        "items": [
+          "Birthplace, family and school maps",
+          "Goupil employment archives",
+          "Borinage ministry archives",
+          "Letters to Theo and letter sketches",
+          "Early miners and coal-carriers",
+          "Figures at the hearth and roads to the mine",
+          "Early drawings after Millet: Sower and Angelus",
+          "Early digging, hearth and potato-peeling subjects"
         ]
       }
     ]
@@ -25,50 +48,821 @@
   {
     "id": "02",
     "title": "Earth and Labour",
-    "years": "1881–1885",
-    "intro": "Drawings and dark-toned paintings trace his attention to ordinary workers and rural life.",
+    "years": "1881–early 1886",
+    "intro": "Drawings and dark-toned paintings trace his attention to ordinary workers and rural life. Browse highlights first, then switch wall sets for additional verified individual works.",
     "groups": [
       {
-        "title": "The Hague and Sien",
+        "title": "People and portraits",
         "items": [
           {
             "title": "Sorrow",
-            "slot": "02 | North 01"
+            "workId": "highlight-02",
+            "date": "1882 · work on paper",
+            "fNumber": "F929",
+            "institution": "Private collection"
           },
           {
-            "title": "Nursery on Schenkweg",
-            "slot": "02 | South 01"
+            "title": "A Peasant Woman Digging in Front of Her Cottage",
+            "workId": "aic-28862",
+            "date": "1885 · oil on canvas",
+            "museumId": "1968.92",
+            "institution": "Art Institute of Chicago"
           },
           {
-            "title": "Gardener by an Apple Tree",
-            "slot": "02 | South 02"
+            "title": "The Potato Eaters (lithograph)",
+            "workId": "highlight-08",
+            "date": "1885 · lithograph",
+            "fNumber": "F1661",
+            "museumId": "1951.10.33",
+            "institution": "National Gallery of Art, Washington"
           },
           {
-            "title": "Avenue of Pollard Birches and Poplars",
-            "slot": "02 | South 03"
+            "title": "The Potato Eaters (oil painting)",
+            "workId": "vgm-s0005v1962",
+            "date": "1885 · oil on canvas",
+            "fNumber": "F0082",
+            "museumId": "s0005V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Head of a Woman",
+            "workId": "vgm-s0004v1962r",
+            "date": "May 1885",
+            "fNumber": "F0388r",
+            "museumId": "s0004V1962r",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Head of a Woman",
+            "workId": "vgm-s0006v1962",
+            "date": "April 1885",
+            "fNumber": "F0160",
+            "museumId": "s0006V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Woman Sewing",
+            "workId": "vgm-s0007v1962",
+            "date": "March-April 1885",
+            "fNumber": "F0071",
+            "museumId": "s0007V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Portrait of an Old Woman",
+            "workId": "vgm-s0010v1962",
+            "date": "December 1885",
+            "fNumber": "F0174",
+            "museumId": "s0010V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Woman with a Mourning Shawl",
+            "workId": "vgm-s0058v1962",
+            "date": "March-May 1885",
+            "fNumber": "F0161",
+            "museumId": "s0058V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Head of a Woman",
+            "workId": "vgm-s0059v1962",
+            "date": "December 1885",
+            "fNumber": "F0206",
+            "museumId": "s0059V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Portrait of an Old Man",
+            "workId": "vgm-s0061v1962",
+            "date": "December 1885",
+            "fNumber": "F0205",
+            "museumId": "s0061V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Head of a Woman",
+            "workId": "vgm-s0062v1962",
+            "date": "March 1885",
+            "fNumber": "F0080a",
+            "museumId": "s0062V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Head of a Man",
+            "workId": "vgm-s0068v1962r",
+            "date": "March-May 1885",
+            "fNumber": "F0179r",
+            "museumId": "s0068V1962r",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Head of a Man",
+            "workId": "vgm-s0069v1962",
+            "date": "November 1884-February 1885",
+            "fNumber": "F0164",
+            "museumId": "s0069V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Head of a Woman",
+            "workId": "vgm-s0072v1962",
+            "date": "November 1884-January 1885",
+            "fNumber": "F0156",
+            "museumId": "s0072V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Woman Winding Yarn",
+            "workId": "vgm-s0073v1962",
+            "date": "March 1885",
+            "fNumber": "F0036",
+            "museumId": "s0073V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Head of a Skeleton with a Burning Cigarette",
+            "workId": "vgm-s0083v1962",
+            "date": "January-February 1886",
+            "fNumber": "F0212",
+            "museumId": "s0083V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Head of a Woman",
+            "workId": "vgm-s0084v1962",
+            "date": "March-May 1885",
+            "fNumber": "F0069",
+            "museumId": "s0084V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Head of a Woman",
+            "workId": "vgm-s0097v1962r",
+            "date": "March-May 1885",
+            "fNumber": "F0269r",
+            "museumId": "s0097V1962r",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Head of a Woman",
+            "workId": "vgm-s0132v1962",
+            "date": "March 1885",
+            "fNumber": "F0070a",
+            "museumId": "s0132V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Study for 'The Potato Eaters'",
+            "workId": "vgm-s0135v1962r",
+            "date": "April 1885",
+            "fNumber": "F0077r",
+            "museumId": "s0135V1962r",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Head of a Woman (Gordina de Groot)",
+            "workId": "vgm-s0139v1962",
+            "date": "March 1885",
+            "fNumber": "F0130",
+            "museumId": "s0139V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Portrait of a Woman",
+            "workId": "vgm-s0143v1962",
+            "date": "December 1885",
+            "fNumber": "F0207a",
+            "museumId": "s0143V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Head of a Woman",
+            "workId": "vgm-s0343v1966",
+            "date": "November 1884-May 1885",
+            "fNumber": "F0159",
+            "museumId": "s0343V1966",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Woman Lifting Potatoes",
+            "workId": "vgm-s0452s1995",
+            "date": "July-August 1885",
+            "fNumber": "F0147",
+            "museumId": "s0452S1995",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Head of a Man",
+            "workId": "vgm-d0040v1971",
+            "date": "December 1885",
+            "fNumber": "F1358",
+            "museumId": "d0040V1971",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Head of a Woman",
+            "workId": "vgm-d0203v1962",
+            "date": "December 1882-January 1883",
+            "fNumber": "F0931",
+            "museumId": "d0203V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Peasant Woman Cooking by a Fireplace",
+            "workId": "met-436531",
+            "date": "1885",
+            "museumId": "1984.393",
+            "institution": "The Metropolitan Museum of Art"
+          },
+          {
+            "title": "Peasant Woman Kneeling and Pulling Carrots",
+            "workId": "met-829372",
+            "date": "1885",
+            "museumId": "2025.233.1",
+            "institution": "The Metropolitan Museum of Art"
+          },
+          {
+            "title": "The Potato Eaters",
+            "workId": "kmm-km109982",
+            "date": "April-May 1885",
+            "fNumber": "F78",
+            "museumId": "KM 109.982",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Head of a Woman Wearing a White Cap",
+            "workId": "kmm-km100285",
+            "date": "November 1884 - May 1885",
+            "fNumber": "F85",
+            "museumId": "KM 100.285",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Head of a Woman",
+            "workId": "kmm-km102906",
+            "date": "c. 15 May 1885",
+            "fNumber": "F86",
+            "museumId": "KM 102.906",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Head of a Man",
+            "workId": "kmm-km104691",
+            "date": "March-April 1885",
+            "fNumber": "F168",
+            "museumId": "KM 104.691",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Head of a Woman",
+            "workId": "kmm-km104790",
+            "date": "November 1884 - May 1885",
+            "fNumber": "F151",
+            "museumId": "KM 104.790",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Head of a Woman",
+            "workId": "kmm-km105591",
+            "date": "November 1884 - January 1885",
+            "fNumber": "F154",
+            "museumId": "KM 105.591",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Head of a Woman",
+            "workId": "kmm-km107308",
+            "date": "March-April 1885",
+            "fNumber": "F153",
+            "museumId": "KM 107.308",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Girl in a Wood",
+            "workId": "kmm-km107592",
+            "date": "August 1882",
+            "fNumber": "F8",
+            "museumId": "KM 107.592",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Woman with a Broom",
+            "workId": "kmm-km108559",
+            "date": "March-April 1885",
+            "fNumber": "F152",
+            "museumId": "KM 108.559",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Head of a Man with a Pipe",
+            "workId": "kmm-km109928",
+            "date": "November 1884 - May 1885",
+            "fNumber": "F169",
+            "museumId": "KM 109.928",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Head of a Woman",
+            "workId": "kmm-km110977",
+            "date": "March-April 1885",
+            "fNumber": "F150",
+            "museumId": "KM 110.977",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Woman at Table",
+            "workId": "kmm-km111052",
+            "date": "March-April 1885",
+            "fNumber": "F72",
+            "museumId": "KM 111.052",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Head of a Woman",
+            "workId": "kmm-km111262",
+            "date": "November 1884 - May 1885",
+            "fNumber": "F74",
+            "museumId": "KM 111.262",
+            "institution": "Kröller-Müller Museum"
           }
         ]
       },
       {
-        "title": "Nuenen and The Potato Eaters",
+        "title": "Landscape, gardens and open air",
         "items": [
           {
-            "title": "A Peasant Woman Digging in Front of Her Cottage",
-            "slot": "02 | South 04"
+            "title": "Nursery on Schenkweg",
+            "workId": "met-335538",
+            "date": "1882 · work on paper",
+            "museumId": "1972.118.281",
+            "institution": "The Metropolitan Museum of Art"
+          },
+          {
+            "title": "Avenue of Pollard Birches and Poplars",
+            "workId": "aic-202382",
+            "date": "1884 · work on paper",
+            "museumId": "2022.74",
+            "institution": "Art Institute of Chicago"
+          },
+          {
+            "title": "Bobbin Winder",
+            "workId": "vgm-s0054v1962",
+            "date": "March-April 1885",
+            "fNumber": "F0175",
+            "museumId": "s0054V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "The De Ruijterkade in Amsterdam",
+            "workId": "vgm-s0085v1962",
+            "date": "October 1885",
+            "fNumber": "F0211",
+            "museumId": "s0085V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Beer Tankards",
+            "workId": "vgm-s0096v1962",
+            "date": "September-October 1885",
+            "fNumber": "F0049",
+            "museumId": "s0096V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Flying Fox",
+            "workId": "vgm-s0136v1973",
+            "date": "October-November 1884",
+            "fNumber": "F0177a",
+            "museumId": "s0136V1973",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Avenue of Poplars in Autumn",
+            "workId": "vgm-s0141m1977",
+            "date": "October 1884",
+            "fNumber": "F0122",
+            "museumId": "s0141M1977",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Basket of Apples",
+            "workId": "vgm-s0150v1962",
+            "date": "September 1885",
+            "fNumber": "F0101",
+            "museumId": "s0150V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Basket of Apples",
+            "workId": "vgm-s0151v1962",
+            "date": "September 1885",
+            "fNumber": "F0099",
+            "museumId": "s0151V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "View of the Sea at Scheveningen",
+            "workId": "vgm-s0416n1990",
+            "date": "August 1882",
+            "fNumber": "F0004",
+            "museumId": "s0416N1990",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Pollard Willow",
+            "workId": "vgm-d1172s2012",
+            "date": "July 1882",
+            "fNumber": "F0947",
+            "museumId": "d1172S2012",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Winter Garden",
+            "workId": "vgm-d0365v1962",
+            "date": "March 1884",
+            "fNumber": "F1128",
+            "museumId": "d0365V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "At Eternity's Gate",
+            "workId": "met-849052",
+            "date": "November 26−27, 1882",
+            "museumId": "2021.240",
+            "institution": "The Metropolitan Museum of Art"
+          },
+          {
+            "title": "Tetards (Pollards)",
+            "workId": "aic-31640",
+            "date": "1884",
+            "museumId": "1969.268",
+            "institution": "Art Institute of Chicago"
+          },
+          {
+            "title": "Lane of Poplars at Sunset",
+            "workId": "kmm-km100120",
+            "date": "October 1884",
+            "fNumber": "F123",
+            "museumId": "KM 100.120",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Autumn Landscape",
+            "workId": "kmm-km103463",
+            "date": "November 1885",
+            "fNumber": "F44",
+            "museumId": "KM 103.463",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Fisherman",
+            "workId": "kmm-km104318",
+            "date": "early August 1883",
+            "fNumber": "F5",
+            "museumId": "KM 104.318",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Man at Table",
+            "workId": "kmm-km105938",
+            "date": "March-April 1885",
+            "fNumber": "F167",
+            "museumId": "KM 105.938",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Fisherman's Wife",
+            "workId": "kmm-km108683",
+            "date": "early August 1883",
+            "fNumber": "F6",
+            "museumId": "KM 108.683",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Edge of a Wood",
+            "workId": "kmm-km109023",
+            "date": "August-September 1883",
+            "fNumber": "F192",
+            "museumId": "KM 109.023",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Oxcart",
+            "workId": "kmm-km110256",
+            "date": "July 1884",
+            "fNumber": "F38",
+            "museumId": "KM 110.256",
+            "institution": "Kröller-Müller Museum"
+          }
+        ]
+      },
+      {
+        "title": "Work and daily life",
+        "items": [
+          {
+            "title": "Gardener by an Apple Tree",
+            "workId": "met-849054",
+            "date": "1883 · lithograph",
+            "museumId": "2021.241",
+            "institution": "The Metropolitan Museum of Art"
           },
           {
             "title": "The Potato Peeler",
-            "slot": "02 | South 05"
+            "workId": "met-438722",
+            "date": "1885 · oil on canvas",
+            "museumId": "67.187.70b",
+            "institution": "The Metropolitan Museum of Art"
           },
           {
-            "title": "The Potato Eaters (lithograph)",
-            "slot": "02 | South 06"
+            "title": "Women on the Peat Moor",
+            "workId": "vgm-s0129v1962",
+            "date": "October 1883",
+            "fNumber": "F0019",
+            "museumId": "s0129V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
           },
           {
-            "title": "The Potato Eaters (oil painting)",
-            "slot": "02 | North 02"
+            "title": "Farm with Stacks of Peat",
+            "workId": "vgm-s0130v1962",
+            "date": "October 1883",
+            "fNumber": "F0022",
+            "museumId": "s0130V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
           },
-          "Weavers, peasant heads, and preparatory studies: further works await verified images."
+          {
+            "title": "Basket of Potatoes",
+            "workId": "vgm-s0152v1962",
+            "date": "September 1885",
+            "fNumber": "F0116",
+            "museumId": "s0152V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Basket of Potatoes",
+            "workId": "vgm-s0153v1962",
+            "date": "September 1885",
+            "fNumber": "F0100",
+            "museumId": "s0153V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Baskets of Potatoes",
+            "workId": "vgm-s0154v1962",
+            "date": "September 1885",
+            "fNumber": "F0107",
+            "museumId": "s0154V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Burning Weeds",
+            "workId": "met-849055",
+            "date": "mid-July, 1883",
+            "museumId": "2021.242",
+            "institution": "The Metropolitan Museum of Art"
+          },
+          {
+            "title": "Digger",
+            "workId": "kmm-km102175",
+            "date": "August 1885",
+            "fNumber": "F166",
+            "museumId": "KM 102.175",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Sheaves of Wheat",
+            "workId": "kmm-km102692",
+            "date": "July-August 1885",
+            "fNumber": "F193",
+            "museumId": "KM 102.692",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Peasants Planting Potatoes",
+            "workId": "kmm-km105684",
+            "date": "August-September 1884",
+            "fNumber": "F41",
+            "museumId": "KM 105.684",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Loom with Weaver",
+            "workId": "kmm-km105976",
+            "date": "June-July 1884",
+            "fNumber": "F37",
+            "museumId": "KM 105.976",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Peasant Women Digging Up Potatoes",
+            "workId": "kmm-km106520",
+            "date": "August 1885",
+            "fNumber": "F97",
+            "museumId": "KM 106.520",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Loom with Weaver",
+            "workId": "kmm-km107755",
+            "date": "April-May 1884",
+            "fNumber": "F30",
+            "museumId": "KM 107.755",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Loom with Weaver",
+            "workId": "kmm-km111301",
+            "date": "April-May 1884",
+            "fNumber": "F35",
+            "museumId": "KM 111.301",
+            "institution": "Kröller-Müller Museum"
+          }
+        ]
+      },
+      {
+        "title": "Flowers and still lifes",
+        "items": [
+          {
+            "title": "Birds' Nests",
+            "workId": "vgm-s0001v1962",
+            "date": "September-October 1885",
+            "fNumber": "F0111",
+            "museumId": "s0001V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Still Life with Bible",
+            "workId": "vgm-s0008v1962",
+            "date": "October 1885",
+            "fNumber": "F0117",
+            "museumId": "s0008V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Vase with Honesty",
+            "workId": "vgm-s0009v1962",
+            "date": "Autumn-Winter 1884",
+            "fNumber": "F0076",
+            "museumId": "s0009V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Still Life with Brass Cauldron and Jug",
+            "workId": "vgm-s0052v1962",
+            "date": "September 1885",
+            "fNumber": "F0051",
+            "museumId": "s0052V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Still Life with Bottles and Earthenware",
+            "workId": "vgm-s0060v1962r",
+            "date": "November 1884-April 1885",
+            "fNumber": "F0061r",
+            "museumId": "s0060V1962r",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Still Life with Vegetables and Fruit",
+            "workId": "vgm-s0070v1962",
+            "date": "Autumn 1884",
+            "fNumber": "F0103",
+            "museumId": "s0070V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Birds' Nests",
+            "workId": "vgm-s0071v1962r",
+            "date": "September-October 1885",
+            "fNumber": "F0109r",
+            "museumId": "s0071V1962r",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Still Life with Cabbage and Clogs",
+            "workId": "vgm-s0137v1962",
+            "date": "November-December 1881",
+            "fNumber": "F0001",
+            "museumId": "s0137V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Still Life with Earthenware and Bottles",
+            "workId": "vgm-s0138v1962",
+            "date": "September-October 1885",
+            "fNumber": "F0053",
+            "museumId": "s0138V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Birds' Nests",
+            "workId": "kmm-km100451",
+            "date": "late September - early October 1885",
+            "fNumber": "F112",
+            "museumId": "KM 100.451",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Still Life with Apples and Pumpkins",
+            "workId": "kmm-km102578",
+            "date": "September 1885",
+            "fNumber": "F106",
+            "museumId": "KM 102.578",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Still Life with a Bearded-Man Jar",
+            "workId": "kmm-km104313",
+            "date": "November 1884-April 1885",
+            "fNumber": "F52",
+            "museumId": "KM 104.313",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Still Life with Straw Hat",
+            "workId": "kmm-km109323",
+            "date": "late November-mid-December 1881",
+            "fNumber": "F62",
+            "museumId": "KM 109.323",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Birds' Nests",
+            "workId": "kmm-km109945",
+            "date": "late September - early October 1885",
+            "fNumber": "F108",
+            "museumId": "KM 109.945",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Still Life with Jars",
+            "workId": "kmm-km110381",
+            "date": "September-October 1885",
+            "fNumber": "F50",
+            "museumId": "KM 110.381",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Still Life with Clogs",
+            "workId": "kmm-km111332",
+            "date": "late November - mid-December 1881",
+            "fNumber": "F63",
+            "museumId": "KM 111.332",
+            "institution": "Kröller-Müller Museum"
+          }
+        ]
+      },
+      {
+        "title": "Town, rooms and buildings",
+        "items": [
+          {
+            "title": "The Old Church Tower at Nuenen ('The Peasants' Churchyard')",
+            "workId": "vgm-s0002v1962",
+            "date": "May-June 1885",
+            "fNumber": "F0084",
+            "museumId": "s0002V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Congregation Leaving the Reformed Church in Nuenen",
+            "workId": "vgm-s0003v1962",
+            "date": "January-February 1884 and Autumn 1885",
+            "fNumber": "F0025",
+            "museumId": "s0003V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Cottages",
+            "workId": "vgm-s0053v1962",
+            "date": "September-November 1883",
+            "fNumber": "F0017",
+            "museumId": "s0053V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "The Cottage",
+            "workId": "vgm-s0087v1962",
+            "date": "May 1885",
+            "fNumber": "F0083",
+            "museumId": "s0087V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "The Vicarage at Nuenen",
+            "workId": "vgm-s0140v1962",
+            "date": "September-October 1885",
+            "fNumber": "F0182",
+            "museumId": "s0140V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Houses Seen from the Back",
+            "workId": "vgm-s0142v1962",
+            "date": "December 1885-February 1886",
+            "fNumber": "F0260",
+            "museumId": "s0142V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          }
         ]
       }
     ]
@@ -77,41 +871,885 @@
     "id": "03",
     "title": "The Paris Transformation",
     "years": "1886–1888",
-    "intro": "Self-portraits, flowers, Montmartre, and Japanese prints mark a brighter palette.",
+    "intro": "Self-portraits, flowers, Montmartre, and Japanese prints mark a brighter palette. Browse highlights first, then switch wall sets for additional verified individual works.",
     "groups": [
       {
-        "title": "Montmartre and self-portraits",
+        "title": "Town, rooms and buildings",
         "items": [
           {
             "title": "Montmartre Windmill",
-            "slot": "03 | South 01"
+            "workId": "highlight-10",
+            "date": "1886 · oil on canvas",
+            "fNumber": "F228",
+            "institution": "Alte Nationalgalerie, Berlin"
           },
           {
-            "title": "Self-Portrait with a Straw Hat",
-            "slot": "03 | South 02"
+            "title": "Montmartre: Windmills and Allotments",
+            "workId": "vgm-s0015v1962",
+            "date": "March-April 1887",
+            "fNumber": "F0346",
+            "museumId": "s0015V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
           },
           {
-            "title": "Portrait of Julien Tanguy",
-            "slot": "03 | South 04"
+            "title": "The Bridge at Courbevoie",
+            "workId": "vgm-s0086v1962",
+            "date": "May-July 1887",
+            "fNumber": "F0304",
+            "museumId": "s0086V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Boulevard de Clichy",
+            "workId": "vgm-s0094v1962",
+            "date": "March-April 1887",
+            "fNumber": "F0292",
+            "museumId": "s0094V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Café Table with Absinthe",
+            "workId": "vgm-s0186v1962",
+            "date": "February-March 1887",
+            "fNumber": "F0339",
+            "museumId": "s0186V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
           }
         ]
       },
       {
-        "title": "Flowers and Japanese influences",
+        "title": "Self-portraits",
+        "items": [
+          {
+            "title": "Self-Portrait with a Straw Hat",
+            "workId": "met-436532",
+            "date": "1887 · oil on canvas",
+            "museumId": "67.187.70a",
+            "institution": "The Metropolitan Museum of Art"
+          },
+          {
+            "title": "Self-Portrait as a Painter",
+            "workId": "vgm-s0022v1962",
+            "date": "December 1887-February 1888",
+            "fNumber": "F0522",
+            "museumId": "s0022V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Self-Portrait with Grey Felt Hat",
+            "workId": "vgm-s0016v1962",
+            "date": "September-October 1887",
+            "fNumber": "F0344",
+            "museumId": "s0016V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Self-Portrait with Straw Hat",
+            "workId": "vgm-s0060v1962v",
+            "date": "July-August 1887",
+            "fNumber": "F0061v",
+            "museumId": "s0060V1962v",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Self-Portrait",
+            "workId": "vgm-s0065v1962",
+            "date": "March-June 1887",
+            "fNumber": "F0356",
+            "museumId": "s0065V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Self-Portrait with Straw Hat and Pipe",
+            "workId": "vgm-s0068v1962v",
+            "date": "July-August 1887",
+            "fNumber": "F0179v",
+            "museumId": "s0068V1962v",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Self-Portrait",
+            "workId": "vgm-s0071v1962v",
+            "date": "July-August 1887",
+            "fNumber": "F0109v",
+            "museumId": "s0071V1962v",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Self-Portrait",
+            "workId": "vgm-s0097v1962v",
+            "date": "July-August 1887",
+            "fNumber": "F0269v",
+            "museumId": "s0097V1962v",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Self-Portrait",
+            "workId": "vgm-s0135v1962v",
+            "date": "July-August 1887",
+            "fNumber": "F0077v",
+            "museumId": "s0135V1962v",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Self-Portrait",
+            "workId": "vgm-s0155v1962",
+            "date": "March-June 1887",
+            "fNumber": "F0267",
+            "museumId": "s0155V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Self-Portrait",
+            "workId": "vgm-s0156v1962",
+            "date": "Summer 1887",
+            "fNumber": "F0296",
+            "museumId": "s0156V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Self-Portrait or Portrait of Theo van Gogh",
+            "workId": "vgm-s0157v1962",
+            "date": "Summer 1887",
+            "fNumber": "F0294",
+            "museumId": "s0157V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Self-Portrait with Pipe",
+            "workId": "vgm-s0158v1962",
+            "date": "September-November 1886",
+            "fNumber": "F0180",
+            "museumId": "s0158V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Self-Portrait",
+            "workId": "vgm-s0159v1962",
+            "date": "March-June 1886",
+            "fNumber": "F0208",
+            "museumId": "s0159V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Self-Portrait as a Painter",
+            "workId": "vgm-s0160v1962",
+            "date": "September-November 1886",
+            "fNumber": "F0181",
+            "museumId": "s0160V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Self-Portrait with Glass",
+            "workId": "vgm-s0161v1962",
+            "date": "January 1887",
+            "fNumber": "F0263a",
+            "museumId": "s0161V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Self-Portrait with Felt Hat",
+            "workId": "vgm-s0162v1962",
+            "date": "December 1886-January 1887",
+            "fNumber": "F0208a",
+            "museumId": "s0162V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Self-Portrait with Pipe and Straw Hat",
+            "workId": "vgm-s0163v1962",
+            "date": "September-October 1887",
+            "fNumber": "F0524",
+            "museumId": "s0163V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Self-Portrait with Straw Hat",
+            "workId": "vgm-s0164v1962",
+            "date": "August-September 1887",
+            "fNumber": "F0469",
+            "museumId": "s0164V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Self-Portrait",
+            "workId": "aic-80607",
+            "date": "1887",
+            "museumId": "1954.326",
+            "institution": "Art Institute of Chicago"
+          },
+          {
+            "title": "Self-Portrait",
+            "workId": "kmm-km105833",
+            "date": "April-June 1887",
+            "fNumber": "F380",
+            "museumId": "KM 105.833",
+            "institution": "Kröller-Müller Museum"
+          }
+        ]
+      },
+      {
+        "title": "People and portraits",
+        "items": [
+          {
+            "title": "Portrait of Julien Tanguy",
+            "workId": "highlight-12",
+            "date": "1887–1888 · oil on canvas",
+            "fNumber": "F363",
+            "institution": "Paris, Musée Rodin"
+          },
+          {
+            "title": "In the Café: Agostina Segatori in Le Tambourin",
+            "workId": "vgm-s0017v1962",
+            "date": "January-March 1887",
+            "fNumber": "F0370",
+            "museumId": "s0017V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Portrait of a Woman",
+            "workId": "vgm-s0074v1962",
+            "date": "March-June 1886",
+            "fNumber": "F0215d",
+            "museumId": "s0074V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Plaster Cast of a Woman's Torso",
+            "workId": "vgm-s0075v1962",
+            "date": "February-March 1887",
+            "fNumber": "F0216i",
+            "museumId": "s0075V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Nude Girl, Seated",
+            "workId": "vgm-s0090v1962",
+            "date": "April-June 1886",
+            "fNumber": "F0215",
+            "museumId": "s0090V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Portrait of a Woman",
+            "workId": "vgm-s0091v1962",
+            "date": "March-June 1886",
+            "fNumber": "F0215c",
+            "museumId": "s0091V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Portrait of Agostina Segatori",
+            "workId": "vgm-s0093v1962",
+            "date": "January-February 1887",
+            "fNumber": "F0215b",
+            "museumId": "s0093V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Portrait of Etienne-Lucien Martin",
+            "workId": "vgm-s0125v1962",
+            "date": "November 1887",
+            "fNumber": "F0289",
+            "museumId": "s0125V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Portrait of Léonie Rose Charbuy-Davy",
+            "workId": "vgm-s0165v1962",
+            "date": "March-April 1887",
+            "fNumber": "F0369",
+            "museumId": "s0165V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Plaster Cast of a Woman's Torso",
+            "workId": "vgm-s0199v1962",
+            "date": "February-March 1887",
+            "fNumber": "F0216g",
+            "museumId": "s0199V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Plaster Cast of a Woman's Torso",
+            "workId": "vgm-s0200v1962",
+            "date": "February-March 1887",
+            "fNumber": "F0216h",
+            "museumId": "s0200V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          }
+        ]
+      },
+      {
+        "title": "Flowers and still lifes",
         "items": [
           {
             "title": "Sunflowers (Paris)",
-            "slot": "03 | South 03"
+            "workId": "met-436524",
+            "date": "1887 · oil on canvas",
+            "museumId": "49.41",
+            "institution": "The Metropolitan Museum of Art"
           },
           {
+            "title": "Allotment with Sunflower",
+            "workId": "vgm-s0004v1962v",
+            "date": "July 1887",
+            "fNumber": "F0388v",
+            "museumId": "s0004V1962v",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Shoes",
+            "workId": "vgm-s0011v1962",
+            "date": "September-November 1886",
+            "fNumber": "F0255",
+            "museumId": "s0011V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Quinces, Lemons, Pears and Grapes",
+            "workId": "vgm-s0023v1962",
+            "date": "September-October 1887",
+            "fNumber": "F0383",
+            "museumId": "s0023V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Sunflowers Gone to Seed",
+            "workId": "vgm-s0121v1962",
+            "date": "August-September 1887",
+            "fNumber": "F0377",
+            "museumId": "s0121V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Skull",
+            "workId": "vgm-s0123v1962",
+            "date": "May 1887",
+            "fNumber": "F0297",
+            "museumId": "s0123V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Shoes",
+            "workId": "vgm-s0127v1962",
+            "date": "January-February 1887",
+            "fNumber": "F0331",
+            "museumId": "s0127V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Skull",
+            "workId": "vgm-s0128v1962",
+            "date": "May 1887",
+            "fNumber": "F0297a",
+            "museumId": "s0128V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Vase with Gladioli and Chinese Asters",
+            "workId": "vgm-s0144v1962",
+            "date": "August-September 1886",
+            "fNumber": "F0248a",
+            "museumId": "s0144V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Vase with Chinese Asters and Gladioli",
+            "workId": "vgm-s0177v1962",
+            "date": "August-September 1886",
+            "fNumber": "F0234",
+            "museumId": "s0177V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Glass with Yellow Roses",
+            "workId": "vgm-s0178v1962",
+            "date": "June-July 1886",
+            "fNumber": "F0218",
+            "museumId": "s0178V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Small Bottle with Peonies and Blue Delphiniums",
+            "workId": "vgm-s0182v1962",
+            "date": "June-July 1886",
+            "fNumber": "F0243a",
+            "museumId": "s0182V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Flowerpot with Garlic Chives",
+            "workId": "vgm-s0183v1962",
+            "date": "January-February 1887",
+            "fNumber": "F0337",
+            "museumId": "s0183V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Flame Nettle in a Flowerpot",
+            "workId": "vgm-s0185v1962",
+            "date": "June-July 1886",
+            "fNumber": "F0281",
+            "museumId": "s0185V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Grapes",
+            "workId": "vgm-s0194v1962",
+            "date": "September-October 1887",
+            "fNumber": "F0603",
+            "museumId": "s0194V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Grapes, Lemons, Pears, and Apples",
+            "workId": "aic-64957",
+            "date": "1887",
+            "fNumber": "F382",
+            "museumId": "1949.215",
+            "institution": "Art Institute of Chicago"
+          },
+          {
+            "title": "Four Sunflowers Gone to Seed",
+            "workId": "kmm-km105570",
+            "date": "August-October 1887",
+            "fNumber": "F452",
+            "museumId": "KM 105.570",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Still Life with Plaster Statuette",
+            "workId": "kmm-km105676",
+            "date": "late 1887",
+            "fNumber": "F360",
+            "museumId": "KM 105.676",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Flowers in a Blue Vase",
+            "workId": "kmm-km107055",
+            "date": "c. June 1887",
+            "fNumber": "F323",
+            "museumId": "KM 107.055",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Roses and Peonies",
+            "workId": "kmm-km109371",
+            "date": "June 1886",
+            "fNumber": "F249",
+            "museumId": "KM 109.371",
+            "institution": "Kröller-Müller Museum"
+          }
+        ]
+      },
+      {
+        "title": "Translations after other artists",
+        "items": [
+          {
             "title": "Bridge in the Rain (after Hiroshige)",
-            "slot": "03 | South 05"
+            "workId": "vgm-s0114v1962",
+            "date": "1887 · oil on canvas",
+            "fNumber": "F0372",
+            "museumId": "s0114V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
           },
           {
             "title": "Flowering Plum Orchard (after Hiroshige)",
-            "slot": "03 | North 01"
+            "workId": "vgm-s0115v1962",
+            "date": "1887 · oil on canvas",
+            "fNumber": "F0371",
+            "museumId": "s0115V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
           },
-          "Additional plaster-cast studies, flower still lifes, and Paris self-portraits await verified images."
+          {
+            "title": "Courtesan (after Eisen)",
+            "workId": "vgm-s0116v1962",
+            "date": "October-November 1887",
+            "fNumber": "F0373",
+            "museumId": "s0116V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          }
+        ]
+      },
+      {
+        "title": "Landscape, gardens and open air",
+        "items": [
+          {
+            "title": "Garden with Courting Couples: Square Saint-Pierre",
+            "workId": "vgm-s0019v1962",
+            "date": "May 1887",
+            "fNumber": "F0314",
+            "museumId": "s0019V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "The Hill of Montmartre with Stone Quarry",
+            "workId": "vgm-s0012v1962",
+            "date": "June-July 1886",
+            "fNumber": "F0230",
+            "museumId": "s0012V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "View of Paris",
+            "workId": "vgm-s0013v1962",
+            "date": "June-July 1886",
+            "fNumber": "F0261",
+            "museumId": "s0013V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Impasse des Deux Frères",
+            "workId": "vgm-s0014v1962",
+            "date": "February-April 1887",
+            "fNumber": "F0347",
+            "museumId": "s0014V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Montmartre: Behind the Moulin de la Galette",
+            "workId": "vgm-s0018v1962",
+            "date": "July 1887",
+            "fNumber": "F0316",
+            "museumId": "s0018V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Carafe and Dish with Citrus Fruit",
+            "workId": "vgm-s0020v1962",
+            "date": "February-March 1887",
+            "fNumber": "F0340",
+            "museumId": "s0020V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Piles of French Novels",
+            "workId": "vgm-s0021v1962",
+            "date": "October-November 1887",
+            "fNumber": "F0358",
+            "museumId": "s0021V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "By the Seine",
+            "workId": "vgm-s0055v1962",
+            "date": "May-July 1887",
+            "fNumber": "F0299",
+            "museumId": "s0055V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Torso of Venus",
+            "workId": "vgm-s0056v1962",
+            "date": "June 1886",
+            "fNumber": "F0216a",
+            "museumId": "s0056V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "View from Theo's Apartment",
+            "workId": "vgm-s0057v1962",
+            "date": "March-April 1887",
+            "fNumber": "F0341",
+            "museumId": "s0057V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Basket of Hyacinth Bulbs",
+            "workId": "vgm-s0063v1962",
+            "date": "January-February 1887",
+            "fNumber": "F0336",
+            "museumId": "s0063V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "The Hill of Montmartre with Stone Quarry",
+            "workId": "vgm-s0064v1962",
+            "date": "June-July 1886",
+            "fNumber": "F0229",
+            "museumId": "s0064V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Trees and Undergrowth",
+            "workId": "vgm-s0066v1962",
+            "date": "July 1887",
+            "fNumber": "F0309a",
+            "museumId": "s0066V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Bank of the Seine",
+            "workId": "vgm-s0077v1962",
+            "date": "May-July 1887",
+            "fNumber": "F0293",
+            "museumId": "s0077V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Trees",
+            "workId": "vgm-s0078v1962",
+            "date": "July 1887",
+            "fNumber": "F0307",
+            "museumId": "s0078V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Undergrowth",
+            "workId": "vgm-s0079v1962",
+            "date": "July 1887",
+            "fNumber": "F0308",
+            "museumId": "s0079V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Path in the Woods",
+            "workId": "vgm-s0080v1962",
+            "date": "May 1887-July 1887",
+            "fNumber": "F0309",
+            "museumId": "s0080V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Red Cabbages and Garlic",
+            "workId": "vgm-s0082v1962",
+            "date": "October-November 1887",
+            "fNumber": "F0374",
+            "museumId": "s0082V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Torso of Venus",
+            "workId": "vgm-s0089v1962",
+            "date": "June 1886",
+            "fNumber": "F0216b",
+            "museumId": "s0089V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Path in Montmartre",
+            "workId": "vgm-s0092v1962",
+            "date": "April-May 1886",
+            "fNumber": "F0232",
+            "museumId": "s0092V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "View from Vincent's Studio",
+            "workId": "vgm-s0095v1962",
+            "date": "June 1886",
+            "fNumber": "F0231",
+            "museumId": "s0095V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Square Saint-Pierre at Sunset",
+            "workId": "vgm-s0098v1962",
+            "date": "May 1887",
+            "fNumber": "F0275",
+            "museumId": "s0098V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Kingfisher by the Waterside",
+            "workId": "vgm-s0100v1962",
+            "date": "July-August 1887",
+            "fNumber": "F0028",
+            "museumId": "s0100V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Torso of Venus",
+            "workId": "vgm-s0101v1962",
+            "date": "June 1886",
+            "fNumber": "F0216d",
+            "museumId": "s0101V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Kneeling Ecorché",
+            "workId": "vgm-s0102v1962",
+            "date": "June 1886",
+            "fNumber": "F0216f",
+            "museumId": "s0102V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Male Torso",
+            "workId": "vgm-s0103v1962",
+            "date": "June 1886",
+            "fNumber": "F0216e",
+            "museumId": "s0103V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Prawns and Mussels",
+            "workId": "vgm-s0122v1962",
+            "date": "September-November 1886",
+            "fNumber": "F0256",
+            "museumId": "s0122V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "A Crab on its Back",
+            "workId": "vgm-s0124v1962",
+            "date": "August-September 1887",
+            "fNumber": "F0605",
+            "museumId": "s0124V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Horse Chestnut Tree in Blossom",
+            "workId": "vgm-s0126v1962",
+            "date": "May 1887",
+            "fNumber": "F0270a",
+            "museumId": "s0126V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Apples",
+            "workId": "vgm-s0131v1962",
+            "date": "September-October 1887",
+            "fNumber": "F0254",
+            "museumId": "s0131V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Exterior of a Restaurant in Asnières",
+            "workId": "vgm-s0134v1962",
+            "date": "May - June 1887",
+            "fNumber": "F0321",
+            "museumId": "s0134V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Basket of Crocus Bulbs",
+            "workId": "vgm-s0179v1962",
+            "date": "January-Februari 1887",
+            "fNumber": "F0334",
+            "museumId": "s0179V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Basket of Pansies",
+            "workId": "vgm-s0180v1962",
+            "date": "May 1887",
+            "fNumber": "F0244",
+            "museumId": "s0180V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Three Novels",
+            "workId": "vgm-s0181v1962",
+            "date": "January-February 1887",
+            "fNumber": "F0335",
+            "museumId": "s0181V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Dish with Citrus Fruit",
+            "workId": "vgm-s0193v1962",
+            "date": "February-March 1887",
+            "fNumber": "F0338",
+            "museumId": "s0193V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Wheatfield with Partridge",
+            "workId": "vgm-s0197v1962",
+            "date": "June-July 1887",
+            "fNumber": "F0310",
+            "museumId": "s0197V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Torso of Venus",
+            "workId": "vgm-s0201v1962",
+            "date": "June 1886",
+            "fNumber": "F0216j",
+            "museumId": "s0201V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Horse",
+            "workId": "vgm-s0202v1962",
+            "date": "June 1886",
+            "fNumber": "F0216c",
+            "museumId": "s0202V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Fishing in Spring, the Pont de Clichy (Asnières)",
+            "workId": "aic-109314",
+            "date": "1887",
+            "museumId": "1965.1169",
+            "institution": "Art Institute of Chicago"
+          },
+          {
+            "title": "Terrace and Observation Deck at the Moulin de Blute-Fin, Montmartre",
+            "workId": "aic-27954",
+            "date": "Early 1887",
+            "museumId": "1926.202",
+            "institution": "Art Institute of Chicago"
+          },
+          {
+            "title": "Smoked Herrings",
+            "workId": "kmm-km101004",
+            "date": "Summer 1886",
+            "fNumber": "F203",
+            "museumId": "KM 101.004",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Moulin de la Galette",
+            "workId": "kmm-km103198",
+            "date": "mid-October 1886",
+            "fNumber": "F227",
+            "museumId": "KM 103.198",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Recumbent Nude",
+            "workId": "kmm-km104783",
+            "date": "early 1887",
+            "fNumber": "F329",
+            "museumId": "KM 104.783",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Patch of Grass",
+            "workId": "kmm-km105264",
+            "date": "April-June 1887",
+            "fNumber": "F583",
+            "museumId": "KM 105.264",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Basket of Apples",
+            "workId": "kmm-km108800",
+            "date": "September-October 1887",
+            "fNumber": "F378",
+            "museumId": "KM 108.800",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "The Hill of Montmartre",
+            "workId": "kmm-km109824",
+            "date": "April-May 1886",
+            "fNumber": "F266",
+            "museumId": "KM 109.824",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Interior of a Restaurant",
+            "workId": "kmm-km110328",
+            "date": "summer 1887",
+            "fNumber": "F342",
+            "museumId": "KM 110.328",
+            "institution": "Kröller-Müller Museum"
+          }
         ]
       }
     ]
@@ -120,58 +1758,349 @@
     "id": "04",
     "title": "Arles: Toward the Sun",
     "years": "1888",
-    "intro": "Orchards, wheatfields, the Yellow House, night scenes, and portraits fill a luminous southern gallery.",
+    "intro": "Orchards, wheatfields, the Yellow House, night scenes, and portraits fill a luminous southern gallery. Browse highlights first, then switch wall sets for additional verified individual works.",
     "groups": [
       {
-        "title": "Spring and summer",
+        "title": "Flowers and still lifes",
         "items": [
           {
             "title": "The Flowering Orchard",
-            "slot": "04 | Fan 01 | painting"
-          },
-          {
-            "title": "Oleanders",
-            "slot": "04 | Fan 02 | painting"
-          },
-          {
-            "title": "Street in Saintes-Maries-de-la-Mer",
-            "slot": "04 | South 02"
-          }
-        ]
-      },
-      {
-        "title": "The Yellow House and the night",
-        "items": [
-          {
-            "title": "The Yellow House",
-            "slot": "04 | Fan 03 | painting"
-          },
-          {
-            "title": "Café Terrace at Night",
-            "slot": "04 | Fan 04 | painting"
-          },
-          {
-            "title": "The Night Café",
-            "slot": "04 | Fan 05 | painting"
-          }
-        ]
-      },
-      {
-        "title": "People of Arles",
-        "items": [
-          {
-            "title": "Starry Night over the Rhône",
-            "slot": "04 | South 04"
+            "workId": "met-436527",
+            "date": "1888 · oil on canvas",
+            "museumId": "56.13",
+            "institution": "The Metropolitan Museum of Art"
           },
           {
             "title": "Sunflowers (Arles, London version)",
-            "slot": "04 | South 03"
+            "workId": "highlight-23",
+            "date": "1888 · oil on canvas",
+            "fNumber": "F454",
+            "museumId": "NG3863",
+            "institution": "London, The National Gallery"
           },
           {
-            "title": "Madame Roulin and Her Baby",
-            "slot": "04 | South 01"
+            "title": "Field with Poppies",
+            "workId": "vgm-s0033v1962",
+            "date": "May 1888",
+            "fNumber": "F0576",
+            "museumId": "s0033V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
           },
-          "Further orchards, harvest scenes, bridges, sunflowers, and Roulin family portraits await verified images."
+          {
+            "title": "Field with Irises near Arles",
+            "workId": "vgm-s0037v1962",
+            "date": "May 1888",
+            "fNumber": "F0409",
+            "museumId": "s0037V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Sprig of Flowering Almond in a Glass",
+            "workId": "vgm-s0184v1962",
+            "date": "March 1888",
+            "fNumber": "F0392",
+            "museumId": "s0184V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Shoes",
+            "workId": "met-436533",
+            "date": "1888",
+            "museumId": "1992.374",
+            "institution": "The Metropolitan Museum of Art"
+          }
+        ]
+      },
+      {
+        "title": "Landscape, gardens and open air",
+        "items": [
+          {
+            "title": "Oleanders",
+            "workId": "met-436530",
+            "date": "1888 · oil on canvas",
+            "museumId": "62.24",
+            "institution": "The Metropolitan Museum of Art"
+          },
+          {
+            "title": "Starry Night over the Rhône",
+            "workId": "highlight-22",
+            "date": "1888 · oil on canvas",
+            "fNumber": "F474",
+            "institution": "Paris, Musée d'Orsay"
+          },
+          {
+            "title": "The White Orchard",
+            "workId": "vgm-s0024v1962",
+            "date": "April 1888",
+            "fNumber": "F0403",
+            "museumId": "s0024V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "The Pink Peach Tree",
+            "workId": "vgm-s0025v1962",
+            "date": "April-May 1888",
+            "fNumber": "F0404",
+            "museumId": "s0025V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "The Pink Orchard",
+            "workId": "vgm-s0026v1962",
+            "date": "beginning of April 1888",
+            "fNumber": "F0555",
+            "museumId": "s0026V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Fishing Boats on the Beach at Les Saintes-Maries-de-la-Mer",
+            "workId": "vgm-s0028v1962",
+            "date": "June 1888",
+            "fNumber": "F0413",
+            "museumId": "s0028V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Peach Tree in Blossom",
+            "workId": "vgm-s0035v1962",
+            "date": "April 1888",
+            "fNumber": "F0557",
+            "museumId": "s0035V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Small Pear Tree in Blossom",
+            "workId": "vgm-s0039v1962",
+            "date": "April 1888",
+            "fNumber": "F0405",
+            "museumId": "s0039V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Ploughed Fields ('The Furrows')",
+            "workId": "vgm-s0040v1962",
+            "date": "September 1888",
+            "fNumber": "F0574",
+            "museumId": "s0040V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "The Zouave",
+            "workId": "vgm-s0067v1962",
+            "date": "June 1888",
+            "fNumber": "F0423",
+            "museumId": "s0067V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Seascape near Les Saintes-Maries-de-la-Mer",
+            "workId": "vgm-s0117v1962",
+            "date": "June 1888",
+            "fNumber": "F0415",
+            "museumId": "s0117V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "View of a Butcher's Shop",
+            "workId": "vgm-s0119v1962",
+            "date": "February 1888",
+            "fNumber": "F0389",
+            "museumId": "s0119V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Wheatfield",
+            "workId": "vgm-s0146v1962",
+            "date": "June 1888",
+            "fNumber": "F0411",
+            "museumId": "s0146V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "The Zouave",
+            "workId": "met-335536",
+            "date": "ca. June 20, 1888",
+            "museumId": "62.151",
+            "institution": "The Metropolitan Museum of Art"
+          },
+          {
+            "title": "Wheat Field",
+            "workId": "met-335537",
+            "date": "July 1888",
+            "museumId": "64.125.3",
+            "institution": "The Metropolitan Museum of Art"
+          },
+          {
+            "title": "The Poet's Garden",
+            "workId": "aic-14586",
+            "date": "1888",
+            "museumId": "1933.433",
+            "institution": "Art Institute of Chicago"
+          },
+          {
+            "title": "View of Saintes-Maries-de-la-Mer",
+            "workId": "kmm-km106327",
+            "date": "1-3 June 1888",
+            "fNumber": "F416",
+            "museumId": "KM 106.327",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Pink Peach Trees ('Souvenir de Mauve')",
+            "workId": "kmm-km108317",
+            "date": "c. 30 March 1888",
+            "fNumber": "F394",
+            "museumId": "KM 108.317",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Path in the Park",
+            "workId": "kmm-km100251",
+            "date": "c. 17-18 September 1888",
+            "fNumber": "F470",
+            "museumId": "KM 100.251",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Pollard Willows at Sunset",
+            "workId": "kmm-km107313",
+            "date": "March 1888",
+            "fNumber": "F572",
+            "museumId": "KM 107.313",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Orchard Bordered by Cypresses",
+            "workId": "kmm-km108685",
+            "date": "April 1888",
+            "fNumber": "F513",
+            "museumId": "KM 108.685",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Wheat Stacks in Provence",
+            "workId": "kmm-km108785",
+            "date": "c. 12-13 June 1888",
+            "fNumber": "F425",
+            "museumId": "KM 108.785",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Basket of Lemons and Bottle",
+            "workId": "kmm-km111196",
+            "date": "May 1888",
+            "fNumber": "F384",
+            "museumId": "KM 111.196",
+            "institution": "Kröller-Müller Museum"
+          }
+        ]
+      },
+      {
+        "title": "Town, rooms and buildings",
+        "items": [
+          {
+            "title": "Street in Saintes-Maries-de-la-Mer",
+            "workId": "met-336318",
+            "date": "1888 · work on paper",
+            "museumId": "48.190.1",
+            "institution": "The Metropolitan Museum of Art"
+          },
+          {
+            "title": "The Yellow House",
+            "workId": "vgm-s0032v1962",
+            "date": "1888 · oil on canvas",
+            "fNumber": "F0464",
+            "museumId": "s0032V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Café Terrace at Night",
+            "workId": "kmm-km108565",
+            "date": "1888 · oil on canvas",
+            "fNumber": "F467",
+            "museumId": "KM 108.565",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "The Night Café",
+            "workId": "highlight-21",
+            "date": "1888 · oil on canvas",
+            "fNumber": "F463",
+            "institution": "New Haven, Yale University Art Gallery, Bequest of Stephen Carlton Clark, B.A. 1903"
+          },
+          {
+            "title": "The Langlois Bridge",
+            "workId": "vgm-s0027v1962",
+            "date": "March 1888",
+            "fNumber": "F0400",
+            "museumId": "s0027V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Farmhouse in a Wheatfield",
+            "workId": "vgm-s0034v1962",
+            "date": "May 1888",
+            "fNumber": "F0408",
+            "museumId": "s0034V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Bridge at Arles (Pont de Langlois)",
+            "workId": "kmm-km111056",
+            "date": "mid-March 1888",
+            "fNumber": "F397",
+            "museumId": "KM 111.056",
+            "institution": "Kröller-Müller Museum"
+          }
+        ]
+      },
+      {
+        "title": "People and portraits",
+        "items": [
+          {
+            "title": "Madame Roulin and Her Baby",
+            "workId": "met-459123",
+            "date": "1888 · oil on canvas",
+            "museumId": "1975.1.231",
+            "institution": "The Metropolitan Museum of Art"
+          },
+          {
+            "title": "An Old Woman of Arles",
+            "workId": "vgm-s0145v1962",
+            "date": "February 1888",
+            "fNumber": "F0390",
+            "museumId": "s0145V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "The Lover (Portrait of Lieutenant Milliet)",
+            "workId": "kmm-km102392",
+            "date": "late September - early October 1888",
+            "fNumber": "F473",
+            "museumId": "KM 102.392",
+            "institution": "Kröller-Müller Museum"
+          }
+        ]
+      },
+      {
+        "title": "Work and daily life",
+        "items": [
+          {
+            "title": "The Harvest",
+            "workId": "vgm-s0030v1962",
+            "date": "June 1888",
+            "fNumber": "F0412",
+            "museumId": "s0030V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "The Sower",
+            "workId": "kmm-km106399",
+            "date": "c. 17 - 28 June 1888",
+            "fNumber": "F422",
+            "museumId": "KM 106.399",
+            "institution": "Kröller-Müller Museum"
+          }
         ]
       }
     ]
@@ -180,41 +2109,238 @@
     "id": "05",
     "title": "Companionship and Crisis",
     "years": "1888–1889",
-    "intro": "The collaboration with Gauguin, its breakdown, and the aftermath in Arles.",
+    "intro": "The collaboration with Gauguin, its breakdown, and the aftermath in Arles. Browse highlights first, then switch wall sets for additional verified individual works.",
     "groups": [
       {
-        "title": "Two chairs, two artists",
+        "title": "Landscape, gardens and open air",
         "items": [
           {
             "title": "The Red Vineyard",
-            "slot": "05 | South 06"
+            "workId": "highlight-25",
+            "date": "1888 · oil on canvas",
+            "fNumber": "F495",
+            "institution": "Moscow, Pushkin State Museum of Fine Arts"
           },
           {
             "title": "Van Gogh's Chair",
-            "slot": "05 | South 01"
+            "workId": "highlight-26",
+            "date": "1888 · oil on canvas",
+            "fNumber": "F498",
+            "institution": "London, The National Gallery"
           },
           {
             "title": "Gauguin's Chair",
-            "slot": "05 | South 02"
+            "workId": "vgm-s0048v1962",
+            "date": "1888 · oil on canvas",
+            "fNumber": "F0499",
+            "museumId": "s0048V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Orchards in Blossom, View of Arles",
+            "workId": "vgm-s0036v1962",
+            "date": "April 1889",
+            "fNumber": "F0515",
+            "museumId": "s0036V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Orchard in Blossom",
+            "workId": "vgm-s0038v1962",
+            "date": "April 1889",
+            "fNumber": "F0511",
+            "museumId": "s0038V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "The Green Vineyard",
+            "workId": "kmm-km104607",
+            "date": "c. 3 October 1888",
+            "fNumber": "F475",
+            "museumId": "KM 104.607",
+            "institution": "Kröller-Müller Museum"
           }
         ]
       },
       {
-        "title": "After the crisis",
+        "title": "People and portraits",
         "items": [
           {
             "title": "The Lullaby (Augustine Roulin)",
-            "slot": "05 | South 03"
+            "workId": "met-437984",
+            "date": "1889 · oil on canvas",
+            "museumId": "1996.435",
+            "institution": "The Metropolitan Museum of Art"
           },
           {
             "title": "The Woman from Arles (Madame Ginoux)",
-            "slot": "05 | South 04"
+            "workId": "met-436529",
+            "date": "1888–1889 · oil on canvas",
+            "museumId": "51.112.3",
+            "institution": "The Metropolitan Museum of Art"
           },
           {
-            "title": "Self-Portrait with Bandaged Ear",
-            "slot": "05 | South 05"
+            "title": "Portrait of Camille Roulin",
+            "workId": "vgm-s0166v1962",
+            "date": "November-December 1888",
+            "fNumber": "F0538",
+            "museumId": "s0166V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
           },
-          "Arles hospital works and other self-portrait versions await verified images; motives surrounding the ear incident remain uncertain."
+          {
+            "title": "Portrait of Marcelle Roulin",
+            "workId": "vgm-s0167v1962",
+            "date": "December 1888",
+            "fNumber": "F0441",
+            "museumId": "s0167V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Portrait of Gauguin",
+            "workId": "vgm-s0257v1962",
+            "date": "December 1888",
+            "fNumber": "F0546",
+            "museumId": "s0257V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Madame Roulin Rocking the Cradle (La berceuse)",
+            "workId": "aic-27949",
+            "date": "1889",
+            "museumId": "1926.200",
+            "institution": "Art Institute of Chicago"
+          },
+          {
+            "title": "Portrait of Joseph Roulin",
+            "workId": "kmm-km103101",
+            "date": "February-March 1889",
+            "fNumber": "F439",
+            "museumId": "KM 103.101",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "La Berceuse (portrait of Madame Roulin)",
+            "workId": "kmm-km109725",
+            "date": "December 1888 - January 1889",
+            "fNumber": "F504",
+            "museumId": "KM 109.725",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Portrait of Joseph-Michel Ginoux",
+            "workId": "kmm-km103189",
+            "date": "late October - mid-December 1888",
+            "fNumber": "F533",
+            "museumId": "KM 103.189",
+            "institution": "Kröller-Müller Museum"
+          }
+        ]
+      },
+      {
+        "title": "Self-portraits",
+        "items": [
+          {
+            "title": "Self-Portrait with Bandaged Ear",
+            "workId": "highlight-30",
+            "date": "1889 · oil on canvas",
+            "fNumber": "F527",
+            "institution": "London, The Courtauld Gallery, The Samuel Courtauld Trust"
+          },
+          {
+            "title": "Self-Portrait with Bandaged Ear and Pipe",
+            "workId": "letters-f529",
+            "date": "1889",
+            "fNumber": "F529",
+            "museumId": "",
+            "institution": "Private collection"
+          }
+        ]
+      },
+      {
+        "title": "Work and daily life",
+        "items": [
+          {
+            "title": "The Sower",
+            "workId": "vgm-s0029v1962",
+            "date": "November 1888",
+            "fNumber": "F0451",
+            "museumId": "s0029V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Still Life with Potatoes",
+            "workId": "kmm-km108951",
+            "date": "mid-January 1889",
+            "fNumber": "F386",
+            "museumId": "KM 108.951",
+            "institution": "Kröller-Müller Museum"
+          }
+        ]
+      },
+      {
+        "title": "Flowers and still lifes",
+        "items": [
+          {
+            "title": "Sunflowers",
+            "workId": "vgm-s0031v1962",
+            "date": "January 1889",
+            "fNumber": "F0458",
+            "museumId": "s0031V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Still Life with a Plate of Onions",
+            "workId": "kmm-km111075",
+            "date": "early January 1889",
+            "fNumber": "F604",
+            "museumId": "KM 111.075",
+            "institution": "Kröller-Müller Museum"
+          }
+        ]
+      },
+      {
+        "title": "Town, rooms and buildings",
+        "items": [
+          {
+            "title": "The Bedroom",
+            "workId": "vgm-s0047v1962",
+            "date": "October 1888",
+            "fNumber": "F0482",
+            "museumId": "s0047V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Falling Leaves (Les Alyscamps)",
+            "workId": "kmm-km108668",
+            "date": "c. 1 November 1888",
+            "fNumber": "F486",
+            "museumId": "KM 108.668",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Memory of the Garden at Etten",
+            "workId": "letters-f496",
+            "date": "1888",
+            "fNumber": "F496",
+            "museumId": "",
+            "institution": "St Petersburg, State Hermitage Museum"
+          },
+          {
+            "title": "The Courtyard of the Hospital at Arles",
+            "workId": "letters-f519",
+            "date": "1889",
+            "fNumber": "F519",
+            "museumId": "",
+            "institution": "Winterthur, Sammlung Oskar Reinhart"
+          },
+          {
+            "title": "Ward in the Hospital at Arles",
+            "workId": "letters-f646",
+            "date": "1889",
+            "fNumber": "F646",
+            "museumId": "",
+            "institution": "Winterthur, Sammlung Oskar Reinhart"
+          }
         ]
       }
     ]
@@ -223,62 +2349,567 @@
     "id": "06",
     "title": "Saint-Rémy: Inner Skies",
     "years": "1889–1890",
-    "intro": "A garden, enclosed fields, cypresses, stars, and interpretations after earlier artists.",
+    "intro": "A garden, enclosed fields, cypresses, stars, and interpretations after earlier artists. Browse highlights first, then switch wall sets for additional verified individual works.",
     "groups": [
       {
-        "title": "Fields, trees, and sky",
+        "title": "Landscape, gardens and open air",
         "items": [
           {
             "title": "Wheat Field with Cypresses",
-            "slot": "06 | Curved wall -1 0"
+            "workId": "met-436535",
+            "date": "1889 · oil on canvas",
+            "museumId": "1993.132",
+            "institution": "The Metropolitan Museum of Art"
           },
           {
             "title": "Cypresses",
-            "slot": "06 | Curved wall -1 3"
+            "workId": "met-437980",
+            "date": "1889 · oil on canvas",
+            "museumId": "49.30",
+            "institution": "The Metropolitan Museum of Art"
           },
           {
             "title": "The Starry Night",
-            "slot": "06 | Curved wall 1 2"
+            "workId": "highlight-33",
+            "date": "1889 · oil on canvas",
+            "fNumber": "F612",
+            "institution": "New York, The Museum of Modern Art, Acquired through the Lillie P. Bliss Bequest"
           },
           {
             "title": "Olive Trees",
-            "slot": "06 | Curved wall -1 1"
+            "workId": "met-437998",
+            "date": "1889 · oil on canvas",
+            "museumId": "1998.325.1",
+            "institution": "The Metropolitan Museum of Art"
+          },
+          {
+            "title": "Women Picking Olives",
+            "workId": "met-436536",
+            "date": "1889 · oil on canvas",
+            "museumId": "1995.535",
+            "institution": "The Metropolitan Museum of Art"
+          },
+          {
+            "title": "Entrance to a Quarry",
+            "workId": "vgm-s0041v1962",
+            "date": "June 1889",
+            "fNumber": "F0744",
+            "museumId": "s0041V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Olive Grove",
+            "workId": "vgm-s0044v1962",
+            "date": "September 1889",
+            "fNumber": "F0709",
+            "museumId": "s0044V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Olive Grove",
+            "workId": "vgm-s0045v1962",
+            "date": "November 1889",
+            "fNumber": "F0707",
+            "museumId": "s0045V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Undergrowth",
+            "workId": "vgm-s0051v1962",
+            "date": "July 1889",
+            "fNumber": "F0746",
+            "museumId": "s0051V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Landscape with Rabbits",
+            "workId": "vgm-s0099v1962",
+            "date": "December 1889",
+            "fNumber": "F0739",
+            "museumId": "s0099V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Garden with Butterflies",
+            "workId": "vgm-s0110v1962",
+            "date": "Spring 1890",
+            "fNumber": "F0402",
+            "museumId": "s0110V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Undergrowth",
+            "workId": "vgm-s0111v1962",
+            "date": "July 1889",
+            "fNumber": "F0745",
+            "museumId": "s0111V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Reminiscence of Brabant",
+            "workId": "vgm-s0112v1962",
+            "date": "March-April 1890",
+            "fNumber": "F0675",
+            "museumId": "s0112V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Ravine with a Small Stream",
+            "workId": "vgm-s0118v1962",
+            "date": "October 1889",
+            "fNumber": "F0645",
+            "museumId": "s0118V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "A Pair of Leather Clogs",
+            "workId": "vgm-s0120v1962",
+            "date": "Autumn 1889",
+            "fNumber": "F0607",
+            "museumId": "s0120V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Cypresses and Two Women",
+            "workId": "vgm-s0147v1962",
+            "date": "February 1890",
+            "fNumber": "F0621",
+            "museumId": "s0147V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Olive Trees on a Hillside",
+            "workId": "vgm-s0148v1962",
+            "date": "October 1889",
+            "fNumber": "F0716",
+            "museumId": "s0148V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Giant Peacock Moth",
+            "workId": "vgm-s0189v1962",
+            "date": "May-June 1889",
+            "fNumber": "F0610",
+            "museumId": "s0189V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "View of the Alpilles",
+            "workId": "vgm-s0417n1990",
+            "date": "1890",
+            "fNumber": "F0723",
+            "museumId": "s0417N1990",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Chestnut Leaf with Pod and Landscape with Cypresses",
+            "workId": "vgm-d0209v1969r",
+            "date": "June-July 1889",
+            "fNumber": "F1541r",
+            "museumId": "d0209V1969r",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Weeping Tree",
+            "workId": "aic-52733",
+            "date": "1889",
+            "museumId": "1945.31",
+            "institution": "Art Institute of Chicago"
+          },
+          {
+            "title": "Olive Grove",
+            "workId": "kmm-km104278",
+            "date": "July 1889",
+            "fNumber": "F585",
+            "museumId": "KM 104.278",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Enclosed Wheat Field with Rising Sun",
+            "workId": "kmm-km106596",
+            "date": "late May 1889",
+            "fNumber": "F720",
+            "museumId": "KM 106.596",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Country Road in Provence by Night",
+            "workId": "kmm-km108488",
+            "date": "c. 12-15 May 1890",
+            "fNumber": "F683",
+            "museumId": "KM 108.488",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Tree Trunks with Ivy",
+            "workId": "kmm-km100398",
+            "date": "July 1889",
+            "fNumber": "F747",
+            "museumId": "KM 100.398",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Wheat Fields in a Mountainous Landscape",
+            "workId": "kmm-km100443",
+            "date": "late November - early December 1889",
+            "fNumber": "F721",
+            "museumId": "KM 100.443",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Pine Trees at Sunset",
+            "workId": "kmm-km102808",
+            "date": "December 1889",
+            "fNumber": "F652",
+            "museumId": "KM 102.808",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Cypresses with Two Figures",
+            "workId": "kmm-km103931",
+            "date": "June 1889 - February 1890",
+            "fNumber": "F620",
+            "museumId": "KM 103.931",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Olive Grove with Two Olive Pickers",
+            "workId": "kmm-km104796",
+            "date": "December 1889",
+            "fNumber": "F587",
+            "museumId": "KM 104.796",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Wheat Stack under a Cloudy Sky",
+            "workId": "kmm-km109773",
+            "date": "October 1889",
+            "fNumber": "F563",
+            "museumId": "KM 109.773",
+            "institution": "Kröller-Müller Museum"
           }
         ]
       },
       {
-        "title": "Garden and asylum",
+        "title": "Flowers and still lifes",
         "items": [
           {
-            "title": "Women Picking Olives",
-            "slot": "06 | Curved wall 1 1"
-          },
-          {
             "title": "Irises (in a vase)",
-            "slot": "06 | Curved wall -1 2"
+            "workId": "met-436528",
+            "date": "1890 · oil on canvas",
+            "museumId": "58.187",
+            "institution": "The Metropolitan Museum of Art"
           },
           {
             "title": "Irises (garden)",
-            "slot": "06 | Curved wall 1 4"
+            "workId": "highlight-37",
+            "date": "1889 · oil on canvas",
+            "fNumber": "F608",
+            "institution": "Los Angeles, The J. Paul Getty Museum"
+          },
+          {
+            "title": "Almond Blossom",
+            "workId": "vgm-s0176v1962",
+            "date": "1890 · oil on canvas",
+            "fNumber": "F0671",
+            "museumId": "s0176V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Irises",
+            "workId": "vgm-s0050v1962",
+            "date": "May 1890",
+            "fNumber": "F0678",
+            "museumId": "s0050V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Roses",
+            "workId": "vgm-s0187v1962",
+            "date": "May-June 1889",
+            "fNumber": "F0749",
+            "museumId": "s0187V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Butterflies and Poppies",
+            "workId": "vgm-s0188v1962",
+            "date": "May-June 1889",
+            "fNumber": "F0748",
+            "museumId": "s0188V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Wild Roses",
+            "workId": "vgm-s0190v1962",
+            "date": "May-June 1889",
+            "fNumber": "F0597",
+            "museumId": "s0190V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Roses",
+            "workId": "met-436534",
+            "date": "1890",
+            "museumId": "1993.400.5",
+            "institution": "The Metropolitan Museum of Art"
           }
         ]
       },
       {
-        "title": "Working after Millet",
+        "title": "Town, rooms and buildings",
         "items": [
           {
             "title": "Corridor in the Asylum",
-            "slot": "06 | Curved wall 1 0"
+            "workId": "met-336327",
+            "date": "1889 · oil on paper",
+            "museumId": "48.190.2",
+            "institution": "The Metropolitan Museum of Art"
           },
           {
-            "title": "Almond Blossom",
-            "slot": "06 | Curved wall 1 3"
+            "title": "The Garden of Saint Paul's Hospital ('Leaf-Fall')",
+            "workId": "vgm-s0046v1962",
+            "date": "October 1889",
+            "fNumber": "F0651",
+            "museumId": "s0046V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
           },
+          {
+            "title": "Garden of the Asylum",
+            "workId": "vgm-s0196v1962",
+            "date": "November 1889",
+            "fNumber": "F0659",
+            "museumId": "s0196V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Stairs in the Garden of the Asylum",
+            "workId": "vgm-d0438v1962",
+            "date": "May-June 1889",
+            "fNumber": "F1535",
+            "museumId": "d0438V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "The Bedroom",
+            "workId": "aic-28560",
+            "date": "1889",
+            "museumId": "1926.417",
+            "institution": "Art Institute of Chicago"
+          },
+          {
+            "title": "The Garden of the Asylum at Saint-Rémy",
+            "workId": "kmm-km101508",
+            "date": "May 1889",
+            "fNumber": "F734",
+            "museumId": "KM 101.508",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Path in the Garden of the Asylum",
+            "workId": "kmm-km108828",
+            "date": "November 1889",
+            "fNumber": "F733",
+            "museumId": "KM 108.828",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Pine Trees in the Garden of the Asylum",
+            "workId": "kmm-km109315",
+            "date": "November 1889",
+            "fNumber": "F742",
+            "museumId": "KM 109.315",
+            "institution": "Kröller-Müller Museum"
+          }
+        ]
+      },
+      {
+        "title": "Translations after other artists",
+        "items": [
           {
             "title": "First Steps, after Millet",
-            "slot": "06 | Curved wall -1 4"
+            "workId": "met-436526",
+            "date": "1890 · oil on canvas",
+            "museumId": "64.165.2",
+            "institution": "The Metropolitan Museum of Art"
           },
-          "Further olive groves, enclosed wheatfields, and works after Millet, Delacroix, and Rembrandt await verified images."
+          {
+            "title": "The Sheepshearer (after Millet)",
+            "workId": "vgm-s0042v1962",
+            "date": "September 1889",
+            "fNumber": "F0634",
+            "museumId": "s0042V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Peasant Woman Bruising Flax (after Millet)",
+            "workId": "vgm-s0043v1962",
+            "date": "September 1889",
+            "fNumber": "F0697",
+            "museumId": "s0043V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Pietà (after Delacroix)",
+            "workId": "vgm-s0168v1962",
+            "date": "September 1889",
+            "fNumber": "F0630",
+            "museumId": "s0168V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "The Raising of Lazarus (after Rembrandt)",
+            "workId": "vgm-s0169v1962",
+            "date": "May 1890",
+            "fNumber": "F0677",
+            "museumId": "s0169V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "The Woodcutter (after Millet)",
+            "workId": "vgm-s0170v1962",
+            "date": "September 1889",
+            "fNumber": "F0670",
+            "museumId": "s0170V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Thresher (after Millet)",
+            "workId": "vgm-s0171v1962",
+            "date": "September 1889",
+            "fNumber": "F0692",
+            "museumId": "s0171V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Peasant Woman Binding Sheaves (after Millet)",
+            "workId": "vgm-s0172v1962",
+            "date": "September 1889",
+            "fNumber": "F0700",
+            "museumId": "s0172V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "The Sheaf-Binder (after Millet)",
+            "workId": "vgm-s0173v1962",
+            "date": "September 1889",
+            "fNumber": "F0693",
+            "museumId": "s0173V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Evening (after Millet)",
+            "workId": "vgm-s0174v1962",
+            "date": "October-November 1889",
+            "fNumber": "F0647",
+            "museumId": "s0174V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Snow-Covered Field with a Harrow (after Millet)",
+            "workId": "vgm-s0175v1962",
+            "date": "January 1890",
+            "fNumber": "F0632",
+            "museumId": "s0175V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "The Reaper (after Millet)",
+            "workId": "vgm-s0198v1962",
+            "date": "September 1889",
+            "fNumber": "F0687",
+            "museumId": "s0198V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "The Enclosed Wheatfield After a Storm",
+            "workId": "vgm-d0336v1962",
+            "date": "June-July 1889",
+            "fNumber": "F1547",
+            "museumId": "d0336V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "The Drinkers",
+            "workId": "aic-79349",
+            "date": "1890",
+            "museumId": "1953.178",
+            "institution": "Art Institute of Chicago"
+          },
+          {
+            "title": "The Good Samaritan (after Delacroix)",
+            "workId": "kmm-km104010",
+            "date": "early May 1890",
+            "fNumber": "F633",
+            "museumId": "KM 104.010",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "The Sower (after Millet)",
+            "workId": "kmm-km110673",
+            "date": "January 1890",
+            "fNumber": "F689",
+            "museumId": "KM 110.673",
+            "institution": "Kröller-Müller Museum"
+          }
+        ]
+      },
+      {
+        "title": "Work and daily life",
+        "items": [
+          {
+            "title": "Wheatfield with a Reaper",
+            "workId": "vgm-s0049v1962",
+            "date": "September 1889",
+            "fNumber": "F0618",
+            "museumId": "s0049V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Wheat Field with Reaper and Sun",
+            "workId": "kmm-km101173",
+            "date": "late June - early September 1889",
+            "fNumber": "F617",
+            "museumId": "KM 101.173",
+            "institution": "Kröller-Müller Museum"
+          }
+        ]
+      },
+      {
+        "title": "People and portraits",
+        "items": [
+          {
+            "title": "Portrait of a Man",
+            "workId": "vgm-s0081v1962",
+            "date": "October 1889",
+            "fNumber": "F0703",
+            "museumId": "s0081V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Portrait of a One-Eyed Man",
+            "workId": "vgm-s0113v1962",
+            "date": "Autumn 1889",
+            "fNumber": "F0532",
+            "museumId": "s0113V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "L'Arlésienne (Portrait of Madame Ginoux)",
+            "workId": "kmm-km110202",
+            "date": "February 1890",
+            "fNumber": "F541",
+            "museumId": "KM 110.202",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Sorrowing Old Man ('At Eternity's Gate')",
+            "workId": "kmm-km111041",
+            "date": "May 1890",
+            "fNumber": "F702",
+            "museumId": "KM 111.041",
+            "institution": "Kröller-Müller Museum"
+          }
         ]
       }
     ]
@@ -287,46 +2918,204 @@
     "id": "07",
     "title": "Auvers and Afterlife",
     "years": "1890 onward",
-    "intro": "Auvers portraits and wide landscapes lead into the documented story of death and the work’s later reception.",
+    "intro": "Auvers portraits and wide landscapes lead into the documented story of death and the work’s later reception. Browse highlights first, then switch wall sets for additional verified individual works.",
     "groups": [
       {
-        "title": "People and village",
+        "title": "People and portraits",
         "items": [
           {
             "title": "Portrait of Doctor Gachet or Man with a Pipe",
-            "slot": "07 | Horizon -1 0"
+            "workId": "met-849056",
+            "date": "1890 · etching",
+            "museumId": "2021.243",
+            "institution": "The Metropolitan Museum of Art"
           },
           {
-            "title": "The Church at Auvers",
-            "slot": "07 | Horizon -1 1"
+            "title": "Auvers Town Hall and Head of a Man",
+            "workId": "vgm-d0331v1962r",
+            "date": "June-July 1890",
+            "fNumber": "F1630r",
+            "museumId": "d0331V1962r",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Cottages with a Woman Working in the Middle Ground",
+            "workId": "aic-65479",
+            "date": "1890",
+            "museumId": "1949.382",
+            "institution": "Art Institute of Chicago"
+          },
+          {
+            "title": "Portrait of a Young Woman",
+            "workId": "kmm-km106498",
+            "date": "late June - early July 1890",
+            "fNumber": "F518",
+            "museumId": "KM 106.498",
+            "institution": "Kröller-Müller Museum"
+          },
+          {
+            "title": "Portrait of Doctor Gachet",
+            "workId": "letters-f753",
+            "date": "1890",
+            "fNumber": "F753",
+            "museumId": "",
+            "institution": "Private collection"
+          },
+          {
+            "title": "Marguerite Gachet at the Piano",
+            "workId": "letters-f772",
+            "date": "1890",
+            "fNumber": "F772",
+            "museumId": "",
+            "institution": "Kunstmuseum Basel"
+          },
+          {
+            "title": "Portrait of Adeline Ravoux",
+            "workId": "letters-f768",
+            "date": "1890",
+            "fNumber": "F768",
+            "museumId": "",
+            "institution": "Private collection"
+          },
+          {
+            "title": "Portrait of Adeline Ravoux — another version",
+            "workId": "letters-f769",
+            "date": "1890",
+            "fNumber": "F769",
+            "museumId": "",
+            "institution": "Auction Christie's New York, 11 May 1988"
+          },
+          {
+            "title": "Girl against a Background of Wheat",
+            "workId": "letters-f774",
+            "date": "1890",
+            "fNumber": "F774",
+            "museumId": "",
+            "institution": "Las Vegas, Bellagio Gallery of Fine Art"
           }
         ]
       },
       {
-        "title": "Wheatfields and roots",
+        "title": "Town, rooms and buildings",
+        "items": [
+          {
+            "title": "The Church at Auvers",
+            "workId": "highlight-42",
+            "date": "1890 · oil on canvas",
+            "fNumber": "F789",
+            "institution": "Paris, Musée d'Orsay"
+          },
+          {
+            "title": "Farmhouse",
+            "workId": "vgm-s0108v1962",
+            "date": "May-June 1890",
+            "fNumber": "F0806",
+            "museumId": "s0108V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          }
+        ]
+      },
+      {
+        "title": "Landscape, gardens and open air",
         "items": [
           {
             "title": "Daubigny's Garden",
-            "slot": "07 | Horizon -1 2"
+            "workId": "vgm-s0104v1962",
+            "date": "1890 · oil on canvas",
+            "fNumber": "F0765",
+            "museumId": "s0104V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
           },
           {
             "title": "Wheatfield under Thunderclouds",
-            "slot": "07 | Horizon -1 3"
+            "workId": "vgm-s0106v1962",
+            "date": "1890 · oil on canvas",
+            "fNumber": "F0778",
+            "museumId": "s0106V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Wheatfield with Crows",
+            "workId": "vgm-s0149v1962",
+            "date": "1890 · oil on canvas",
+            "fNumber": "F0779",
+            "museumId": "s0149V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Tree Roots",
+            "workId": "vgm-s0195v1962",
+            "date": "1890 · oil on canvas",
+            "fNumber": "F0816",
+            "museumId": "s0195V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Ears of Wheat",
+            "workId": "vgm-s0088v1962",
+            "date": "June 1890",
+            "fNumber": "F0767",
+            "museumId": "s0088V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "View of Auvers-sur-Oise",
+            "workId": "vgm-s0105v1962",
+            "date": "May-June 1890",
+            "fNumber": "F0799",
+            "museumId": "s0105V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Landscape at Twilight",
+            "workId": "vgm-s0107v1962",
+            "date": "June 1890",
+            "fNumber": "F0770",
+            "museumId": "s0107V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          },
+          {
+            "title": "Blossoming Chestnut Trees",
+            "workId": "kmm-km105479",
+            "date": "22-23 May 1890",
+            "fNumber": "F752",
+            "museumId": "KM 105.479",
+            "institution": "Kröller-Müller Museum"
           }
         ]
       },
       {
-        "title": "Afterlife archive",
+        "title": "Flowers and still lifes",
         "items": [
           {
-            "title": "Wheatfield with Crows",
-            "slot": "07 | Horizon -1 4"
-          },
+            "title": "Vase of Flowers",
+            "workId": "vgm-s0109v1962",
+            "date": "May 1890",
+            "fNumber": "F0764a",
+            "museumId": "s0109V1962",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          }
+        ]
+      },
+      {
+        "title": "Work and daily life",
+        "items": [
           {
-            "title": "Tree Roots",
-            "slot": "07 | Horizon 1 0"
-          },
-          "27 July 1890: Vincent was wounded; 29 July: he died. Theo and later Jo van Gogh-Bonger preserved and promoted his work."
+            "title": "Landscape with Peasant Women Harvesting",
+            "workId": "vgm-d0210v1962v",
+            "date": "July 1890",
+            "fNumber": "F1615v",
+            "museumId": "d0210V1962v",
+            "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
+          }
+        ]
+      },
+      {
+        "title": "Research leads — not installed",
+        "items": [
+          "July 1890 injury and death: archival timeline",
+          "Theo, Jo and the posthumous preservation of the work",
+          "Attribution and last-painting research: distinguish evidence from inference"
         ]
       }
     ]

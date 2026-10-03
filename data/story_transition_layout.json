@@ -1,0 +1,27 @@
+{
+  "walkableRegions": [],
+  "obstacles": [
+    {
+      "name": "01 | London narrative wall",
+      "type": "polygon",
+      "polygon": [
+        [
+          -42.4,
+          32.95
+        ],
+        [
+          -42.4,
+          27.05
+        ],
+        [
+          -42.64,
+          27.05
+        ],
+        [
+          -42.64,
+          32.95
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,595 @@
+{
+  "title": "London narrative material and source audit",
+  "mainReadingOrder": [
+    "home",
+    "life",
+    "attachment",
+    "sources"
+  ],
+  "optionalBranches": [
+    "art"
+  ],
+  "verifiedOn": "2026-10-01",
+  "embeddedImages": [
+    {
+      "id": "house-open-photo",
+      "label": "87 Hackford Road · Udimu, 17 May 2016",
+      "type": "Modern photograph · Not London in 1873",
+      "url": "https://commons.wikimedia.org/wiki/File:Houseshackfordroad.JPG",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Houseshackfordroad.JPG",
+      "creator": "Udimu",
+      "date": "2016-05-17",
+      "localImage": "./assets/story-house-2016.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "rights": "Source record explicitly states CC BY-SA 4.0",
+      "changes": "Original 2816 × 2112 photograph copied without additional cropping or re-encoding; resized only by the browser for display.",
+      "sha256": "48e08ca77b67cd2f7928e644c5810d7a564d4b72f49c7259ea81c00c04149625"
+    },
+    {
+      "id": "portrait",
+      "label": "Portrait · Vincent aged nineteen · January 1873",
+      "type": "Verified photographic portrait · Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_January_1873-cropped.jpeg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Vincent_van_Gogh_January_1873-cropped.jpeg",
+      "license": "Public domain",
+      "creator": "Jacobus Marinus Wilhelmus de Louw",
+      "date": "January 1873",
+      "localImage": "./assets/story-vincent-nineteen.jpg",
+      "rights": "Commons marks the historic photograph public domain",
+      "changes": "Source’s existing crop copied without additional cropping or re-encoding; original dimensions 988 × 1118. Resized only within the composed wall display.",
+      "sha256": "0a128caa3b87668ddb9556b22a7653d443a0123f6698af297a39d32fa0e31be9"
+    }
+  ],
+  "embeddedText": {
+    "license": "CC BY-SA 1.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0/",
+    "attribution": "Vincent van Gogh; English version as published by WebExhibits. Short quotations newly typeset for this gallery.",
+    "reuseBasis": "https://www.webexhibits.org/vangogh/about/credits.html",
+    "qualification": "WebExhibits distinguishes public-domain letters from edited or translated letters licensed CC BY-SA 1.0. No blanket public-domain claim is made for its translations. These excerpt panels retain attribution and are offered under CC BY-SA 1.0.",
+    "changes": "New typography and excerpt selection, not a manuscript reproduction. Scholarly dates and letter numbers differ from WebExhibits numbering. Surrounding independent summaries are not part of the quoted translation.",
+    "excerpts": [
+      {
+        "chapter": "home",
+        "view": "home",
+        "text": "Oh! Old man, I so want that you come here to see my new lodgings",
+        "attribution": "Vincent to Theo · London, 13 September 1873 · Letter 13",
+        "source": "translation-13"
+      },
+      {
+        "chapter": "life",
+        "view": "january",
+        "text": "I've got a delightful home",
+        "attribution": "Vincent to Theo · London, beginning of January 1874 · Letter 17",
+        "source": "translation-17"
+      },
+      {
+        "chapter": "life",
+        "view": "april",
+        "text": "He that sincerely loves nature, finds pleasure everywhere.",
+        "attribution": "Vincent to Theo · London, 30 April 1874 · Letter 22",
+        "source": "translation-22"
+      },
+      {
+        "chapter": "art",
+        "view": "art",
+        "text": "You must write me sometime whom you like best among the older painters as well as among the moderns.",
+        "attribution": "Vincent to Theo · London, 19 November 1873 · Letter 15",
+        "source": "translation-15"
+      }
+    ]
+  },
+  "materials": [
+    {
+      "id": "letter-13",
+      "title": "A letter about his new lodgings",
+      "kind": "LETTER 13 · 13 SEPTEMBER 1873",
+      "presentation": "letter",
+      "caption": "A room he wanted to share with his brother.",
+      "credit": "Vincent van Gogh · English version as published by WebExhibits",
+      "source": "translation-13",
+      "rights": "Typeset excerpt, not a manuscript facsimile. Presented under WebExhibits’ stated public-domain / CC BY-SA 1.0 reuse terms; the typeset panel is offered under CC BY-SA 1.0. Date and numbering follow the scholarly edition (WebExhibits: letter 11).",
+      "actions": [
+        {
+          "label": "Read this English Version",
+          "source": "translation-13"
+        },
+        {
+          "label": "Check the Scholarly Edition",
+          "source": "letter-13"
+        }
+      ]
+    },
+    {
+      "id": "official-house",
+      "title": "87 Hackford Road, London",
+      "kind": "MODERN PHOTOGRAPH · 2016",
+      "presentation": "photo",
+      "caption": "A modern view of the house and its street—not a reconstruction of London in 1873.",
+      "image": "./assets/story-house-2016.jpg",
+      "imageCaption": "87 Hackford Road, London · Photographed on 17 May 2016, not in 1873.",
+      "imageCredit": "Photograph: Udimu / Wikimedia Commons · CC BY-SA 4.0 · Unmodified source image",
+      "imageSource": "house-open-photo",
+      "credit": "Photograph: Udimu · 17 May 2016 · Wikimedia Commons",
+      "source": "house-open-photo",
+      "rights": "CC BY-SA 4.0. The original photograph is copied unchanged, with no additional cropping or re-encoding. Only its on-screen display size changes.",
+      "actions": [
+        {
+          "label": "Photo Source & Attribution",
+          "source": "house-open-photo"
+        },
+        {
+          "label": "Explore the House History",
+          "source": "house"
+        }
+      ]
+    },
+    {
+      "id": "letter-17",
+      "title": "Home, art and poetry",
+      "kind": "LETTER 17 · BEGINNING OF JANUARY 1874",
+      "presentation": "letter",
+      "caption": "An ordinary pleasure, in Vincent’s own words.",
+      "credit": "Vincent van Gogh · English version as published by WebExhibits",
+      "source": "translation-17",
+      "rights": "Typeset excerpt, not a manuscript facsimile. Presented under WebExhibits’ stated public-domain / CC BY-SA 1.0 reuse terms; the typeset panel is offered under CC BY-SA 1.0. Date and numbering follow the scholarly edition (WebExhibits: letter 13).",
+      "actions": [
+        {
+          "label": "Read this English Version",
+          "source": "translation-17"
+        },
+        {
+          "label": "Check the Scholarly Edition",
+          "source": "letter-17"
+        }
+      ]
+    },
+    {
+      "id": "letter-22",
+      "title": "Gardens and daily walks",
+      "kind": "LETTER 22 · 30 APRIL 1874",
+      "presentation": "letter",
+      "caption": "Nature, walks and a garden taking shape.",
+      "credit": "Vincent van Gogh · English version as published by WebExhibits",
+      "source": "translation-22",
+      "rights": "Typeset excerpt, not a manuscript facsimile. Presented under WebExhibits’ stated public-domain / CC BY-SA 1.0 reuse terms; the typeset panel is offered under CC BY-SA 1.0. Date and numbering follow the scholarly edition (WebExhibits: letter 16).",
+      "actions": [
+        {
+          "label": "Read this English Version",
+          "source": "translation-22"
+        },
+        {
+          "label": "Check the Scholarly Edition",
+          "source": "letter-22"
+        }
+      ]
+    },
+    {
+      "id": "locket",
+      "title": "People at Hackford Road",
+      "kind": "PEOPLE & EVIDENCE",
+      "presentation": "relationships",
+      "caption": "Choose a name to separate household ties from later interpretations.",
+      "credit": "Original gallery relationship card · Independent summaries of the credited sources",
+      "source": "bailey-2019",
+      "replaces": "locket-photo",
+      "rights": "Original reading aid, not an archival diagram. No locket photograph or substitute portrait is reproduced. The reported correspondence is not represented by an invented manuscript.",
+      "people": [
+        {
+          "id": "vincent",
+          "name": "Vincent van Gogh",
+          "role": "Tenant · Goupil employee",
+          "body": "Vincent rented a room here while working in London. His surviving letters describe the lodgings and his daily life; they do not recount a confession of love.",
+          "sources": [
+            "letter-13",
+            "letter-17",
+            "letter-22"
+          ]
+        },
+        {
+          "id": "ursula",
+          "name": "Sarah Ursula Loyer",
+          "role": "Landlady · Eugénie’s mother",
+          "body": "The widowed Mrs Loyer let rooms and helped run a boys’ school. Jo van Gogh-Bonger’s later memoir called the woman in the love story Ursula; later research questions that identification.",
+          "sources": [
+            "house",
+            "family-memoir",
+            "bailey-2019"
+          ]
+        },
+        {
+          "id": "eugenie",
+          "name": "Eugénie Loyer",
+          "role": "Ursula’s daughter",
+          "body": "Bailey argues that Eugénie was the likely object of Vincent’s affection. Van Gogh House describes the attachment as rumoured. Neither wording establishes a documented romantic relationship.",
+          "sources": [
+            "bailey-2019",
+            "house-london"
+          ]
+        },
+        {
+          "id": "samuel",
+          "name": "Samuel Plowman",
+          "role": "Eugénie’s husband · 1878",
+          "body": "Eugénie married Samuel in 1878. Bailey considers him the likely earlier fiancé mentioned in the family story, but explicitly leaves that identification uncertain.",
+          "sources": [
+            "bailey-2019"
+          ]
+        }
+      ],
+      "connections": [
+        {
+          "from": "vincent",
+          "to": "ursula",
+          "label": "Tenant and landlady",
+          "sources": [
+            "house",
+            "letter-13"
+          ]
+        },
+        {
+          "from": "ursula",
+          "to": "eugenie",
+          "label": "Mother and daughter",
+          "sources": [
+            "house"
+          ]
+        },
+        {
+          "from": "eugenie",
+          "to": "samuel",
+          "label": "Married in 1878",
+          "sources": [
+            "bailey-2019"
+          ]
+        }
+      ],
+      "events": [
+        {
+          "date": "1873–1874",
+          "label": "Contemporary letters",
+          "body": "Lodgings, art, gardening and daily life—not an account of a romantic confession.",
+          "sources": [
+            "letter-13",
+            "letter-17",
+            "letter-22"
+          ]
+        },
+        {
+          "date": "February 1874",
+          "label": "Reported correspondence",
+          "body": "Bailey reports that Anna’s correspondence already mentions Eugénie’s engagement. The original letter is not displayed here.",
+          "sources": [
+            "bailey-2019"
+          ]
+        },
+        {
+          "date": "1878",
+          "label": "Later marriage",
+          "body": "Eugénie marries Samuel Plowman. This does not settle the earlier fiancé’s identity.",
+          "sources": [
+            "bailey-2019"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "label": "Read the Research",
+          "source": "bailey-2019"
+        },
+        {
+          "label": "The House’s Cautious Account",
+          "source": "house-london"
+        }
+      ]
+    },
+    {
+      "id": "insurance",
+      "title": "The Household Behind the Story",
+      "kind": "HOME · SCHOOL · LIVELIHOOD",
+      "presentation": "household",
+      "caption": "A working household, not only the setting of a love story.",
+      "credit": "Original gallery context card · Independently summarised from Van Gogh House London and Letter 13",
+      "source": "house",
+      "replaces": "insurance-photo",
+      "rights": "Original contextual summary, not an insurance facsimile. The discovery is described at the source; the document photograph and unverified document dates are not reproduced.",
+      "sections": [
+        {
+          "title": "Letting Rooms",
+          "body": "For the widowed Sarah Ursula Loyer, taking in lodgers was part of earning a living.",
+          "sources": [
+            "house"
+          ]
+        },
+        {
+          "title": "A Boys’ School",
+          "body": "Vincent’s September 1873 letter mentions the boys’ school in the household. Domestic life and teaching occupied the same address.",
+          "sources": [
+            "letter-13",
+            "house"
+          ]
+        },
+        {
+          "title": "Traces of Everyday Business",
+          "body": "Restoration brought insurance papers bearing Ursula’s signature to light. They are evidence of household administration, not proof of the love story.",
+          "sources": [
+            "house"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "label": "Read the House History",
+          "source": "house"
+        },
+        {
+          "label": "Read Vincent’s Letter",
+          "source": "letter-13"
+        }
+      ]
+    },
+    {
+      "id": "disputed-drawing",
+      "title": "When an Attribution Changes",
+      "kind": "NOT AN AUTHENTICATED VAN GOGH",
+      "caption": "The Hackford Road drawing was once attributed to Vincent. Martin Bailey’s 2023 account reports that the Van Gogh Museum rejected the attribution and presents the drawing as anonymous.",
+      "credit": "Martin Bailey · The Art Newspaper · 1 September 2023",
+      "source": "bailey-2023",
+      "rights": "Research reference only. The drawing is not installed as a confirmed Van Gogh work.",
+      "actions": [
+        {
+          "label": "Read the Attribution History",
+          "source": "bailey-2023"
+        }
+      ]
+    },
+    {
+      "id": "jacquet",
+      "title": "Girl Holding a Sword",
+      "kind": "A PICTURE VINCENT SENT TO THEO",
+      "caption": "Photographic reproduction after Gustave Jean Jacquet’s painting of 1872. Published by Goupil & Cie; preserved in Theo van Gogh’s scrapbook. Vincent mentioned sending it on 30 April 1874. It is not a portrait of Eugénie Loyer.",
+      "credit": "Van Gogh Museum, Vincent van Gogh Foundation · Scholarly edition, Letter 22, note 3, illustration 1698",
+      "source": "jacquet-source",
+      "rights": "View the actual reproduction in the original edition’s image viewer. No substitute painting or fabricated archive image is used.",
+      "actions": [
+        {
+          "label": "View the Reproduction · Note 3",
+          "source": "jacquet-source"
+        }
+      ]
+    },
+    {
+      "id": "letter-15",
+      "title": "Discussing the trade in pictures",
+      "kind": "LETTER 15 · 19 NOVEMBER 1873",
+      "presentation": "letter",
+      "caption": "A young employee learning to look and to share his preferences.",
+      "credit": "Vincent van Gogh · English version as published by WebExhibits",
+      "source": "translation-15",
+      "rights": "Typeset excerpt, not a manuscript facsimile. Presented under WebExhibits’ stated public-domain / CC BY-SA 1.0 reuse terms; the typeset panel is offered under CC BY-SA 1.0. Date and numbering follow the scholarly edition (WebExhibits: letter 12).",
+      "actions": [
+        {
+          "label": "Read this English Version",
+          "source": "translation-15"
+        },
+        {
+          "label": "Check the Scholarly Edition",
+          "source": "letter-15"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "house-open-photo",
+      "label": "87 Hackford Road · Udimu, 17 May 2016",
+      "type": "Modern photograph · Not London in 1873",
+      "url": "https://commons.wikimedia.org/wiki/File:Houseshackfordroad.JPG",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Houseshackfordroad.JPG",
+      "creator": "Udimu",
+      "date": "2016-05-17",
+      "localImage": "./assets/story-house-2016.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "rights": "Source record explicitly states CC BY-SA 4.0",
+      "changes": "Original 2816 × 2112 photograph copied without additional cropping or re-encoding; resized only by the browser for display."
+    },
+    {
+      "id": "translation-13",
+      "label": "WebExhibits · New lodgings · 13 September 1873",
+      "type": "English version · WebExhibits letter 11 / scholarly letter 13",
+      "url": "https://www.webexhibits.org/vangogh/letter/2/011.htm",
+      "license": "CC BY-SA 1.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0/",
+      "rights": "Credits state most letters are public domain and edited/translated letters use CC BY-SA 1.0. Retain attribution and apply CC BY-SA 1.0 to this typeset excerpt; no blanket public-domain claim about translations.",
+      "reuseBasis": "https://www.webexhibits.org/vangogh/about/credits.html",
+      "changes": "Short verbatim excerpt newly typeset; date and numbering follow the modern scholarly edition."
+    },
+    {
+      "id": "translation-15",
+      "label": "WebExhibits · Art trade · 19 November 1873",
+      "type": "English version · WebExhibits letter 12 / scholarly letter 15",
+      "url": "https://www.webexhibits.org/vangogh/letter/2/012.htm",
+      "license": "CC BY-SA 1.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0/",
+      "rights": "Reuse follows the exhibit’s public-domain / CC BY-SA 1.0 terms, with attribution and CC BY-SA 1.0 applied to the typeset excerpt.",
+      "reuseBasis": "https://www.webexhibits.org/vangogh/about/credits.html",
+      "changes": "Short verbatim excerpt newly typeset; date and numbering follow the modern scholarly edition."
+    },
+    {
+      "id": "translation-17",
+      "label": "WebExhibits · Home and art · Beginning of January 1874",
+      "type": "English version · WebExhibits letter 13 / scholarly letter 17",
+      "url": "https://www.webexhibits.org/vangogh/letter/2/013.htm",
+      "license": "CC BY-SA 1.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0/",
+      "rights": "Reuse follows the exhibit’s public-domain / CC BY-SA 1.0 terms, with attribution and CC BY-SA 1.0 applied to the typeset excerpt.",
+      "reuseBasis": "https://www.webexhibits.org/vangogh/about/credits.html",
+      "changes": "Short verbatim excerpt newly typeset; date and numbering follow the modern scholarly edition."
+    },
+    {
+      "id": "translation-22",
+      "label": "WebExhibits · Gardens and walks · 30 April 1874",
+      "type": "English version · WebExhibits letter 16 / scholarly letter 22",
+      "url": "https://www.webexhibits.org/vangogh/letter/2/016.htm",
+      "license": "CC BY-SA 1.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0/",
+      "rights": "Reuse follows the exhibit’s public-domain / CC BY-SA 1.0 terms, with attribution and CC BY-SA 1.0 applied to the typeset excerpt.",
+      "reuseBasis": "https://www.webexhibits.org/vangogh/about/credits.html",
+      "changes": "Short verbatim excerpt newly typeset; date and numbering follow the modern scholarly edition. Independent gardening synopsis is not copied from this translation."
+    },
+    {
+      "id": "translation-credits",
+      "label": "WebExhibits · Exhibit credits and letter reuse terms",
+      "type": "Specific exhibit reuse statement · Not a blanket licence for all linked sources",
+      "url": "https://www.webexhibits.org/vangogh/about/credits.html",
+      "rights": "Credits distinguish public-domain letters from edited/translated letters licensed CC BY-SA 1.0; the site’s general terms are at https://www.webexhibits.org/about/legal.html."
+    },
+    {
+      "id": "letter-13",
+      "label": "Letter 13 · To Theo, 13 September 1873",
+      "type": "Contemporary letter + scholarly annotation",
+      "url": "https://vangoghletters.org/vg/letters/let013/letter.html",
+      "translationUrl": "https://vangoghletters.org/vg/letters/let013/print.html",
+      "rights": "Edition facsimile and full translation: reuse permission unconfirmed"
+    },
+    {
+      "id": "letter-15",
+      "label": "Letter 15 · To Theo, 19 November 1873",
+      "type": "Contemporary letter · Work in the art trade",
+      "url": "https://vangoghletters.org/vg/letters/let015/letter.html",
+      "translationUrl": "https://vangoghletters.org/vg/letters/let015/print.html",
+      "rights": "Edition facsimile and full translation: reuse permission unconfirmed"
+    },
+    {
+      "id": "letter-17",
+      "label": "Letter 17 · To Theo, beginning of January 1874",
+      "type": "Contemporary letter · Home, nature and art",
+      "url": "https://vangoghletters.org/vg/letters/let017/letter.html",
+      "translationUrl": "https://vangoghletters.org/vg/letters/let017/print.html",
+      "rights": "Edition facsimile and full translation: reuse permission unconfirmed"
+    },
+    {
+      "id": "letter-22",
+      "label": "Letter 22 · To Theo, 30 April 1874",
+      "type": "Contemporary letter · Gardening and daily life",
+      "url": "https://vangoghletters.org/vg/letters/let022/letter.html",
+      "translationUrl": "https://vangoghletters.org/vg/letters/let022/print.html",
+      "rights": "Edition facsimile and full translation: reuse permission unconfirmed"
+    },
+    {
+      "id": "house",
+      "label": "Van Gogh House · A History of 87 Hackford Road",
+      "type": "House history and archaeological context",
+      "url": "https://vangoghhouse.co.uk/87-hackford-road/",
+      "rights": "Original-site access"
+    },
+    {
+      "id": "official-house-photo",
+      "label": "Official exterior photograph · Tom Parsons, 2019",
+      "type": "Modern photograph · Not London in 1873",
+      "url": "https://vangoghhouse.co.uk/87-hackford-road/",
+      "imageUrl": "https://vangoghhouse.co.uk/wp-content/uploads/2019/08/TP-VanGogh-0-e1565964114800.jpg",
+      "creator": "Tom Parsons",
+      "date": "2019",
+      "rights": "Copyright credited; no reuse permission confirmed"
+    },
+    {
+      "id": "insurance-photo",
+      "label": "Ursula Loyer’s insurance documents · Claire Zhao, 2019",
+      "type": "Modern photograph of historic documents",
+      "url": "https://vangoghhouse.co.uk/87-hackford-road/",
+      "imageUrl": "https://vangoghhouse.co.uk/wp-content/uploads/2019/08/DSC_4525-e1565965645520.jpg",
+      "creator": "Claire Zhao",
+      "date": "2019",
+      "rights": "Copyright credited; full document dates and reuse permission unconfirmed"
+    },
+    {
+      "id": "locket-photo",
+      "label": "Eugénie and Samuel · Late-nineteenth-century locket",
+      "type": "Later portraits · Descendants’ collection",
+      "url": "https://www.theartnewspaper.com/2019/03/29/mystery-of-van-goghs-love-affair-in-london",
+      "imageUrl": "https://cdn.sanity.io/images/cxgd3urn/production/dbfd21e387b5d727603be414788b63a8bce719eb-931x657.jpg?rect=194,92,697,402&w=1200&h=692&q=85&fit=crop&auto=format",
+      "creator": "Yoke Matze MA",
+      "date": "Late nineteenth century (portraits); article published 29 March 2019",
+      "rights": "Copyright credited; no open reuse licence found"
+    },
+    {
+      "id": "family-memoir",
+      "label": "Jo van Gogh-Bonger · The family account",
+      "type": "Retrospective biographical memoir · Not an eyewitness transcript",
+      "url": "https://www.webexhibits.org/vangogh/memoir/sisterinlaw/4.html",
+      "rights": "Original-source reading; independent synopsis here"
+    },
+    {
+      "id": "bailey-2019",
+      "label": "Martin Bailey · Mystery of Van Gogh’s love affair in London · 29 March 2019",
+      "type": "Named specialist’s research article · Not a peer-reviewed paper",
+      "url": "https://www.theartnewspaper.com/2019/03/29/mystery-of-van-goghs-love-affair-in-london",
+      "rights": "Original-source reading; independent synopsis here"
+    },
+    {
+      "id": "house-london",
+      "label": "Van Gogh House · Van Gogh’s London",
+      "type": "Heritage institution · Affection described as rumoured",
+      "url": "https://vangoghhouse.co.uk/van-goghs-london/",
+      "rights": "Original-source reading; unresolved departure distinguished from interpretation"
+    },
+    {
+      "id": "jacquet-source",
+      "label": "Jacquet reproduction · Letter 22, note 3, illustration 1698",
+      "type": "Image in Theo’s scrapbook · Not a Van Gogh work or Eugénie portrait",
+      "url": "https://vangoghletters.org/vg/letters/let022/letter.html",
+      "rights": "Digital illustration reuse permission unconfirmed; open the source’s image viewer"
+    },
+    {
+      "id": "bailey-2023",
+      "label": "Martin Bailey · Van Gogh in Brixton, 150 years on · 1 September 2023",
+      "type": "Research article · Rejected Hackford Road drawing attribution",
+      "url": "https://www.theartnewspaper.com/2023/09/01/the-story-of-van-gogh-in-brixton-150-years-on",
+      "rights": "Original-source reference; disputed drawing not installed as authentic"
+    },
+    {
+      "id": "portrait",
+      "label": "Portrait · Vincent aged nineteen · January 1873",
+      "type": "Verified photographic portrait · Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_January_1873-cropped.jpeg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Vincent_van_Gogh_January_1873-cropped.jpeg",
+      "license": "Public domain",
+      "creator": "Jacobus Marinus Wilhelmus de Louw",
+      "date": "January 1873",
+      "localImage": "./assets/story-vincent-nineteen.jpg",
+      "rights": "Commons marks the historic photograph public domain",
+      "changes": "Source’s existing crop copied without additional cropping or re-encoding; original dimensions 988 × 1118. Resized only within the composed wall display."
+    },
+    {
+      "id": "portrait-identity",
+      "label": "Van Gogh Museum · Mistaken Identity: Vincent and Theo",
+      "type": "Identity research published 23 April 2019",
+      "url": "https://www.vangoghmuseum.nl/en/about/news-and-press/news/mistaken-identity-vincent-and-theo",
+      "rights": "Museum research reference; no new photograph copied"
+    },
+    {
+      "id": "edition-rights",
+      "label": "Van Gogh Letters · Copyright and credits",
+      "type": "Digital publication rights statement",
+      "url": "https://vangoghletters.org/vg/copyright.html",
+      "rights": "Permission not assumed for the edition’s facsimiles or full English translations"
+    },
+    {
+      "id": "young-vincent",
+      "label": "Van Gogh Museum · Young Vincent",
+      "type": "Museum biography",
+      "url": "https://www.vangoghmuseum.nl/en/art-and-stories/vincents-life-1853-1890/young-vincent",
+      "rights": "Context reference"
+    },
+    {
+      "id": "purpose",
+      "label": "Van Gogh Museum · Vincent’s life, 1853–1890",
+      "type": "Museum biography · The search for a vocation",
+      "url": "https://www.vangoghmuseum.nl/en/art-and-stories/vincents-life-1853-1890",
+      "rights": "Context reference"
+    }
+  ],
+  "publicationNote": "Keep all source, attribution and licence links. Two photographs are embedded: the public-domain nineteen-year-old portrait and Udimu’s unmodified 17 May 2016 house photograph under CC BY-SA 4.0. Four short WebExhibits English excerpts are typeset under the reuse terms recorded here, with CC BY-SA 1.0 applied to the panels. Original relationship and household cards replace the locket and insurance photographs; they are reading aids, not archives. The scholarly edition’s facsimiles and full translations, Tom Parsons and Claire Zhao photographs, locket and Jacquet reproduction remain source references; their redistribution permission is not assumed."
+}

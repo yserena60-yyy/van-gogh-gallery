@@ -1,18 +1,41 @@
 import { copyFile, mkdir, readFile, realpath, rm, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { validateCollection } from './collection.js';
+import { validateStoryExhibit } from './story-data.js';
+import { assembleMedia } from './assemble-media.mjs';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
+await assembleMedia(root);
 const destination = path.resolve(root, 'dist');
 const artworks = JSON.parse(await readFile(path.join(root, 'data/artworks_en.json'), 'utf8'));
-const images = [...new Set(Object.values(artworks).map((artwork) => artwork.image))];
+const collection = JSON.parse(await readFile(path.join(root, 'data/collection_en.json'), 'utf8'));
+const installedCount = validateCollection(collection);
+const story = JSON.parse(await readFile(path.join(root, 'data/story_exhibit_en.json'), 'utf8'));
+const storyCounts = validateStoryExhibit(story);
+const storyImages = [...new Set([story.image, story.poster, ...story.chapters.map((chapter) => chapter.image), ...story.materials.map((material) => material.image), ...story.sources.map((source) => source.localImage)].filter(Boolean))];
+const images = [...new Set([...Object.values(artworks), ...Object.values(collection.works)].map((artwork) => artwork.image))];
 const siteFiles = [
   'style.css',
   'viewer.js',
+  'collection.js',
+  'collection-tour.js',
+  'story.js',
+  'story-data.js',
+  'data/story_exhibit_en.json',
+  'data/story_image_credits.json',
+  'data/story_source_audit.json',
+  'data/story_transition_layout.json',
+  'data/film_credits.json',
+  story.model.split('?')[0].replace(/^\.\//, ''),
+  ...storyImages,
   'data/artworks_en.json',
   'data/chapters_en.json',
-  'data/ordered_route_v16.json',
-  'assets/gallery_v16.glb',
+  'data/ordered_route_v21.json',
+  'data/collection_en.json',
+  'data/collection_audit.json',
+  'assets/gallery_v21.glb',
+  'assets/van-gogh-early-years.mp4',
   ...images,
 ];
 const threeFiles = [
@@ -89,4 +112,5 @@ await writeFile(path.join(destination, 'index.html'), productionHtml);
 await writeFile(path.join(destination, '.nojekyll'), '');
 
 console.log(`Static gallery ready: ${destination}`);
-console.log(`${Object.keys(artworks).length} artwork records; ${images.length} images; ${copies.length + 2} files; ${(totalBytes / 1024 / 1024).toFixed(1)} MiB.`);
+console.log(`London story: ${storyCounts.mainChapters} main chapters, ${storyCounts.chapters - storyCounts.mainChapters} optional branch, ${storyCounts.materials} materials and ${storyCounts.sources} credited source records.`);
+console.log(`${installedCount} installed works; ${Object.keys(artworks).length} highlight positions; ${images.length} images; ${copies.length + 2} files; ${(totalBytes / 1024 / 1024).toFixed(1)} MiB.`);
