@@ -11,8 +11,11 @@ Thumbs.db
 /assets/van-gogh-early-years.mp4
 /data/*.json
 !/data/artworks_en.json
+!/data/artwork_cards_en.json
+!/data/hall_introductions_en.json
 !/data/chapters_en.json
 !/data/ordered_route_v21.json
+!/data/ordered_route_v22.json
 !/data/collection_en.json
 !/data/collection_audit.json
 !/data/story_exhibit_en.json

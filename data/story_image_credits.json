@@ -1,5 +1,5 @@
 {
-  "title": "London story exhibit material credits",
+  "title": "Searching for a Place: story exhibit material credits",
   "images": [
     {
       "id": "house-open-photo",
@@ -29,6 +29,29 @@
       "rights": "Commons marks the historic photograph public domain",
       "changes": "Source’s existing crop copied without additional cropping or re-encoding; original dimensions 988 × 1118. Resized only within the composed wall display.",
       "sha256": "0a128caa3b87668ddb9556b22a7653d443a0123f6698af297a39d32fa0e31be9"
+    },
+    {
+      "id": "miners-image",
+      "label": "Miners, Cuesmes · Drawing reproduction on Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Miners-1880-_Cuesmes.jpg",
+      "type": "Artwork reproduction · Catalogued as 1880 at the linked image source",
+      "localImage": "./assets/story-miners-1880.jpg",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "credit": "Vincent van Gogh · Wikimedia Commons · Public-domain artwork reproduction",
+      "rights": "The Commons record marks this as a faithful reproduction of a public-domain artwork. The 2013 date in its metadata refers to the uploaded reproduction, not the depicted scene. This is not a historical photograph.",
+      "sha256": "e815aebaea317374aa91365bde57b7eb7f9cc5ca67bace8998ac572e85be1887"
+    },
+    {
+      "id": "road-in-etten",
+      "label": "Road in Etten, 1881 · The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/459193",
+      "type": "Primary museum collection record · Accession 1975.1.774",
+      "localImage": "./assets/etten-road-1881.jpg",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 459193",
+      "sha256": "c8cfe6e5ea5de29ad2abc416baed237eb34a260bf3981105f54f8fe0878c1bde"
     }
   ],
   "typesetLetterExcerpts": {
@@ -73,7 +96,7 @@
     "file": "./assets/story-london-wall.jpg",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-    "attribution": "London story wall composition; public-domain January 1873 portrait by J. M. W. de Louw. Exhibit layout and independent summaries prepared for this gallery.",
+    "attribution": "Searching for a Place wall composition; public-domain January 1873 portrait by J. M. W. de Louw. Exhibit layout and independent summaries prepared for this gallery.",
     "changes": "Historic portrait resized and placed within an English exhibition layout. No historical reconstruction or AI-generated archival image."
   },
   "publicationNote": "Keep all source, attribution and licence links. Two photographs are embedded: the public-domain nineteen-year-old portrait and Udimu’s unmodified 17 May 2016 house photograph under CC BY-SA 4.0. Four short WebExhibits English excerpts are typeset under the reuse terms recorded here, with CC BY-SA 1.0 applied to the panels. Original relationship and household cards replace the locket and insurance photographs; they are reading aids, not archives. The scholarly edition’s facsimiles and full translations, Tom Parsons and Claire Zhao photographs, locket and Jacquet reproduction remain source references; their redistribution permission is not assumed."

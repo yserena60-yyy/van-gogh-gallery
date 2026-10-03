@@ -11,7 +11,7 @@
           {
             "title": "Road in Etten",
             "workId": "met-459193",
-            "date": "1881 · work on paper",
+            "date": "1881",
             "museumId": "1975.1.774",
             "institution": "The Metropolitan Museum of Art"
           }
@@ -57,21 +57,21 @@
           {
             "title": "Sorrow",
             "workId": "highlight-02",
-            "date": "1882 · work on paper",
+            "date": "April 1882",
             "fNumber": "F929",
-            "institution": "Private collection"
+            "institution": "Current ownership not independently confirmed"
           },
           {
             "title": "A Peasant Woman Digging in Front of Her Cottage",
             "workId": "aic-28862",
-            "date": "1885 · oil on canvas",
+            "date": "c. 1885",
             "museumId": "1968.92",
             "institution": "Art Institute of Chicago"
           },
           {
-            "title": "The Potato Eaters (lithograph)",
+            "title": "Potato Eaters (lithograph)",
             "workId": "highlight-08",
-            "date": "1885 · lithograph",
+            "date": "April 1885",
             "fNumber": "F1661",
             "museumId": "1951.10.33",
             "institution": "National Gallery of Art, Washington"
@@ -79,7 +79,7 @@
           {
             "title": "The Potato Eaters (oil painting)",
             "workId": "vgm-s0005v1962",
-            "date": "1885 · oil on canvas",
+            "date": "April–May 1885",
             "fNumber": "F0082",
             "museumId": "s0005V1962",
             "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"
@@ -394,14 +394,15 @@
           {
             "title": "Nursery on Schenkweg",
             "workId": "met-335538",
-            "date": "1882 · work on paper",
+            "date": "March–May 1882",
             "museumId": "1972.118.281",
-            "institution": "The Metropolitan Museum of Art"
+            "institution": "The Metropolitan Museum of Art",
+            "fNumber": "F930"
           },
           {
             "title": "Avenue of Pollard Birches and Poplars",
             "workId": "aic-202382",
-            "date": "1884 · work on paper",
+            "date": "March 1884",
             "museumId": "2022.74",
             "institution": "Art Institute of Chicago"
           },
@@ -563,14 +564,14 @@
           {
             "title": "Gardener by an Apple Tree",
             "workId": "met-849054",
-            "date": "1883 · lithograph",
+            "date": "mid-July 1883",
             "museumId": "2021.241",
             "institution": "The Metropolitan Museum of Art"
           },
           {
             "title": "The Potato Peeler",
             "workId": "met-438722",
-            "date": "1885 · oil on canvas",
+            "date": "February–March 1885",
             "museumId": "67.187.70b",
             "institution": "The Metropolitan Museum of Art"
           },
@@ -877,11 +878,12 @@
         "title": "Town, rooms and buildings",
         "items": [
           {
-            "title": "Montmartre Windmill",
+            "title": "Le Moulin de la Galette",
             "workId": "highlight-10",
-            "date": "1886 · oil on canvas",
+            "date": "1886",
             "fNumber": "F228",
-            "institution": "Alte Nationalgalerie, Berlin"
+            "institution": "Alte Nationalgalerie, Staatliche Museen zu Berlin",
+            "museumId": "A II 687"
           },
           {
             "title": "Montmartre: Windmills and Allotments",
@@ -923,7 +925,7 @@
           {
             "title": "Self-Portrait with a Straw Hat",
             "workId": "met-436532",
-            "date": "1887 · oil on canvas",
+            "date": "1887",
             "museumId": "67.187.70a",
             "institution": "The Metropolitan Museum of Art"
           },
@@ -1092,11 +1094,12 @@
         "title": "People and portraits",
         "items": [
           {
-            "title": "Portrait of Julien Tanguy",
+            "title": "Père Tanguy",
             "workId": "highlight-12",
-            "date": "1887–1888 · oil on canvas",
+            "date": "1887",
             "fNumber": "F363",
-            "institution": "Paris, Musée Rodin"
+            "institution": "Musée Rodin, Paris",
+            "museumId": "P.07302"
           },
           {
             "title": "In the Café: Agostina Segatori in Le Tambourin",
@@ -1186,7 +1189,7 @@
           {
             "title": "Sunflowers (Paris)",
             "workId": "met-436524",
-            "date": "1887 · oil on canvas",
+            "date": "late summer 1887",
             "museumId": "49.41",
             "institution": "The Metropolitan Museum of Art"
           },
@@ -1350,7 +1353,7 @@
           {
             "title": "Bridge in the Rain (after Hiroshige)",
             "workId": "vgm-s0114v1962",
-            "date": "1887 · oil on canvas",
+            "date": "October–November 1887",
             "fNumber": "F0372",
             "museumId": "s0114V1962",
             "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)"

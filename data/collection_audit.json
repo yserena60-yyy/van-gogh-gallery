@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-01",
+  "date": "2026-10-03",
   "stats": {
     "installed": 365,
     "originalHighlights": 46,
@@ -129,7 +129,7 @@
     {
       "hall": "01",
       "originalLead": "埃顿的沼泽与风车风景：逐件核对原题",
-      "label": "Etten marsh and windmill subjects",
+      "label": "Road in Etten",
       "status": "selected-series-coverage",
       "matchedIds": [
         "met-459193"
@@ -157,7 +157,7 @@
     {
       "hall": "02",
       "originalLead": "坐在炉边、抱小孩等西恩习作：逐件核对版本",
-      "label": "Sien: seated figures, hearth and mother with child studies",
+      "label": "Sorrow",
       "status": "selected-series-coverage",
       "matchedIds": [
         "highlight-02"
@@ -319,7 +319,7 @@
     {
       "hall": "02",
       "originalLead": "《吃土豆的人》石版画版本",
-      "label": "The Potato Eaters (lithograph)",
+      "label": "Potato Eaters (lithograph)",
       "status": "individual-installed",
       "matchedIds": [
         "highlight-08"
@@ -337,7 +337,7 @@
     {
       "hall": "03",
       "originalLead": "煎饼磨坊",
-      "label": "Montmartre Windmill",
+      "label": "Le Moulin de la Galette",
       "status": "individual-installed",
       "matchedIds": [
         "highlight-10"
@@ -400,7 +400,7 @@
     {
       "hall": "03",
       "originalLead": "唐吉老爹肖像",
-      "label": "Portrait of Julien Tanguy",
+      "label": "Père Tanguy",
       "status": "individual-installed",
       "matchedIds": [
         "highlight-12"

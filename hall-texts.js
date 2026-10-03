@@ -1,0 +1,278 @@
+import * as THREE from 'three';
+
+export function validateHallTexts(data) {
+  if (data?.language !== 'en' || data.halls?.length !== 7) throw new Error('Seven English hall introductions are required');
+  const entries = [data.arrival, ...data.halls, data.departure];
+  const identifiers = new Set();
+  for (const [index, entry] of entries.entries()) {
+    if (!entry || identifiers.has(entry.id) || !entry.paragraphs?.length
+        || entry.paragraphs.some((paragraph) => typeof paragraph !== 'string' || !paragraph.trim() || /[\u3400-\u9fff]/u.test(paragraph))) {
+      throw new Error('Wall-text identifiers and English paragraphs must be complete');
+    }
+    identifiers.add(entry.id);
+    if (index > 0 && index < 8 && (entry.id !== String(index).padStart(2, '0') || !entry.title || !entry.years || !entry.sources?.length)) {
+      throw new Error(`Hall ${index} needs a title, dates and sources`);
+    }
+    const wall = entry.wall;
+    if (![wall?.width, wall?.height, wall?.centerHeight, wall?.viewDistance].every((value) => Number.isFinite(value) && value > 0)) {
+      throw new Error(`Invalid wall dimensions for ${entry.id}`);
+    }
+    if (wall.curve) {
+      if (![...wall.curve.center, ...wall.curve.radii, wall.curve.angle, wall.curve.inset].every(Number.isFinite)
+          || wall.curve.radii.some((radius) => radius <= 0)) throw new Error(`Invalid curved wall for ${entry.id}`);
+    } else if (!wall.position?.every(Number.isFinite) || wall.position.length !== 3
+        || !wall.normal?.every(Number.isFinite) || wall.normal.length !== 3 || Math.abs(Math.hypot(...wall.normal) - 1) > 0.001) {
+      throw new Error(`Invalid wall position for ${entry.id}`);
+    }
+    for (const source of entry.sources ?? []) {
+      if (!source.title || !source.note || new URL(source.url).protocol !== 'https:') throw new Error(`Invalid introduction source for ${entry.id}`);
+    }
+  }
+  if (data.arrival.paragraphs.join('\n') !== 'We know who he would become.\nAs you enter, set that knowledge aside.'
+      || data.departure.paragraphs.join('\n') !== 'We know who he became.\nAs you leave, ask what you have come to know of the person.') {
+    throw new Error('The paired entrance and exit statements must retain the approved wording');
+  }
+  return entries.length;
+}
+
+export function wallTextPose(entry) {
+  const wall = entry.wall;
+  let position;
+  let normal;
+  if (wall.curve) {
+    const { center, radii, angle, inset } = wall.curve;
+    const radians = THREE.MathUtils.degToRad(angle);
+    normal = new THREE.Vector3(-Math.cos(radians) / radii[0], 0, -Math.sin(radians) / radii[1]).normalize();
+    position = new THREE.Vector3(center[0] + radii[0] * Math.cos(radians), wall.centerHeight, center[1] + radii[1] * Math.sin(radians));
+    position.addScaledVector(normal, inset);
+  } else {
+    position = new THREE.Vector3(...wall.position);
+    normal = new THREE.Vector3(...wall.normal).normalize();
+  }
+  return { position, normal, location: position.clone().addScaledVector(normal, wall.viewDistance) };
+}
+
+function linesFor(context, text, width) {
+  const lines = [];
+  let line = '';
+  for (const word of text.split(/\s+/u)) {
+    const candidate = line ? `${line} ${word}` : word;
+    if (line && context.measureText(candidate).width > width) {
+      lines.push(line);
+      line = word;
+    } else line = candidate;
+  }
+  if (line) lines.push(line);
+  return lines;
+}
+
+function wallTexture(entry, renderer) {
+  const canvas = document.createElement('canvas');
+  canvas.width = 2048;
+  canvas.height = Math.round(canvas.width * entry.wall.height / entry.wall.width);
+  const context = canvas.getContext('2d');
+  const padding = 120;
+  const available = canvas.width - padding * 2;
+  const dark = entry.wall.theme === 'dark';
+  const ink = dark ? '#f1ece2' : '#353a35';
+  const secondary = dark ? '#c8ba9e' : '#786e5a';
+  context.textBaseline = 'top';
+  const line = (height) => {
+    context.fillStyle = secondary;
+    context.fillRect(padding, height, 190, 3);
+  };
+  let cursor;
+  if (entry.kind === 'statement') {
+    const blocks = entry.paragraphs.map((paragraph, index) => {
+      const size = Math.round((index === 0 ? 0.27 : 0.22) * canvas.width / entry.wall.width);
+      context.font = `${size}px Georgia, serif`;
+      return { size, lines: linesFor(context, paragraph, available), lineHeight: size * 1.4 };
+    });
+    const gap = canvas.height * 0.09;
+    const totalHeight = blocks.reduce((height, block) => height + block.lines.length * block.lineHeight, 0) + gap;
+    cursor = Math.max(30, (canvas.height - totalHeight) / 2);
+    for (const [index, block] of blocks.entries()) {
+      context.font = `${block.size}px Georgia, serif`;
+      context.fillStyle = ink;
+      for (const text of block.lines) {
+        context.fillText(text, padding, cursor);
+        cursor += block.lineHeight;
+      }
+      if (index === 0) cursor += gap;
+    }
+  } else {
+    context.font = '500 44px "Segoe UI", sans-serif';
+    context.fillStyle = secondary;
+    context.fillText(`HALL ${entry.id}  /  INTRODUCTION`, padding, 70);
+    context.font = '112px Georgia, serif';
+    const title = linesFor(context, entry.title, available);
+    cursor = 164;
+    context.fillStyle = ink;
+    for (const text of title) {
+      context.fillText(text, padding, cursor);
+      cursor += 137;
+    }
+    context.font = '51px "Segoe UI", sans-serif';
+    context.fillStyle = secondary;
+    context.fillText(entry.years, padding, cursor + 13);
+    line(cursor + 109);
+    cursor += 168;
+    let size = 74;
+    let body;
+    do {
+      context.font = `${size}px Georgia, serif`;
+      body = linesFor(context, entry.paragraphs[0], available);
+      if (cursor + body.length * size * 1.45 <= canvas.height - 180) break;
+      size -= 2;
+    } while (size >= 52);
+    if (cursor + body.length * size * 1.45 > canvas.height - 150) throw new Error(`Wall text would overflow in Hall ${entry.id}`);
+    context.fillStyle = ink;
+    for (const text of body) {
+      context.fillText(text, padding, cursor);
+      cursor += size * 1.45;
+    }
+    context.font = '46px "Segoe UI", sans-serif';
+    context.fillStyle = secondary;
+    context.fillText('Read the introduction + sources  →', padding, canvas.height - 91);
+  }
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.colorSpace = THREE.SRGBColorSpace;
+  texture.anisotropy = Math.min(renderer.capabilities.getMaxAnisotropy(), 8);
+  return texture;
+}
+
+function wallGeometry(entry) {
+  const wall = entry.wall;
+  const pose = wallTextPose(entry);
+  const tangent = new THREE.Vector3(pose.normal.z, 0, -pose.normal.x);
+  const positions = [];
+  const coordinates = [];
+  const indices = [];
+  const segments = wall.curve ? 64 : 1;
+  for (let index = 0; index <= segments; index += 1) {
+    const fraction = index / segments;
+    const horizontal = (fraction - 0.5) * wall.width;
+    let point = pose.position.clone().addScaledVector(tangent, horizontal);
+    if (wall.curve) {
+      const { center, radii, angle, inset } = wall.curve;
+      const middle = THREE.MathUtils.degToRad(angle);
+      const speed = Math.hypot(radii[0] * Math.sin(middle), radii[1] * Math.cos(middle));
+      const radians = middle + horizontal / speed;
+      const normal = new THREE.Vector3(-Math.cos(radians) / radii[0], 0, -Math.sin(radians) / radii[1]).normalize();
+      point = new THREE.Vector3(center[0] + radii[0] * Math.cos(radians), wall.centerHeight, center[1] + radii[1] * Math.sin(radians)).addScaledVector(normal, inset);
+    }
+    positions.push(point.x, point.y - wall.height / 2, point.z, point.x, point.y + wall.height / 2, point.z);
+    coordinates.push(fraction, 0, fraction, 1);
+    if (index < segments) {
+      const corner = index * 2;
+      indices.push(corner, corner + 2, corner + 3, corner, corner + 3, corner + 1);
+    }
+  }
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+  geometry.setAttribute('uv', new THREE.Float32BufferAttribute(coordinates, 2));
+  geometry.setIndex(indices);
+  geometry.computeVertexNormals();
+  return geometry;
+}
+
+export function createHallTexts({ data, scene, renderer, pickMeshes, onOpen, onLocate, currentChapter }) {
+  validateHallTexts(data);
+  const entries = [...data.halls, data.departure];
+  const byId = new Map(entries.map((entry) => [entry.id, entry]));
+  const dialog = document.querySelector('#hall-reader');
+  const select = document.querySelector('#hall-reader-select');
+  const title = document.querySelector('#hall-reader-title');
+  const years = document.querySelector('#hall-reader-years');
+  const body = document.querySelector('#hall-reader-copy');
+  const sources = document.querySelector('#hall-reader-sources');
+  const sourceList = document.querySelector('#hall-reader-source-list');
+  const research = document.querySelector('#hall-reader-research');
+  const toggle = document.querySelector('#hall-intro-toggle');
+  let selected = null;
+  let focusBefore = null;
+  for (const entry of entries) {
+    if (entry.wall.wing) {
+      const wing = entry.wall.wing;
+      const mesh = new THREE.Mesh(new THREE.BoxGeometry(wing.width, wing.height, wing.depth), new THREE.MeshStandardMaterial({ color: '#f1eee6', roughness: 0.92 }));
+      mesh.name = `Hall ${entry.id} introduction entry wing`;
+      mesh.position.set(...wing.position);
+      scene.add(mesh);
+      pickMeshes.push(mesh);
+    }
+    const material = new THREE.MeshBasicMaterial({
+      map: wallTexture(entry, renderer), transparent: true, alphaTest: 0.015,
+      depthWrite: false, toneMapped: false, polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -1,
+    });
+    const mesh = new THREE.Mesh(wallGeometry(entry), material);
+    mesh.name = `Wall introduction ${entry.id}`;
+    mesh.userData.hall_text = entry.id;
+    mesh.renderOrder = 1;
+    scene.add(mesh);
+    pickMeshes.push(mesh);
+    const option = document.createElement('option');
+    option.value = entry.id;
+    option.textContent = entry.kind === 'hall' ? `${entry.id} · ${entry.title}` : entry.label;
+    select.append(option);
+  }
+  function show(entry) {
+    selected = entry;
+    select.value = entry.id;
+    title.textContent = entry.kind === 'hall' ? entry.title : entry.label;
+    years.textContent = entry.years ?? 'A Life Through Art';
+    document.querySelector('#hall-reader-eyebrow').textContent = entry.kind === 'hall' ? `HALL ${entry.id} · INTRODUCTION` : 'VINCENT VAN GOGH · A LIFE THROUGH ART';
+    body.classList.toggle('hall-reader-statement', entry.kind === 'statement');
+    body.replaceChildren(...entry.paragraphs.map((paragraph) => {
+      const element = document.createElement('p');
+      element.textContent = paragraph;
+      return element;
+    }));
+    sources.hidden = !entry.sources?.length;
+    sources.open = false;
+    sourceList.replaceChildren(...(entry.sources ?? []).map((source) => {
+      const item = document.createElement('li');
+      const link = document.createElement('a');
+      link.textContent = `${source.title} ↗`;
+      link.href = source.url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      const note = document.createElement('p');
+      note.textContent = source.note;
+      item.append(link, note);
+      return item;
+    }));
+    research.hidden = !entry.researchNote;
+    research.textContent = entry.researchNote ?? '';
+    document.querySelector('.hall-reader-scroll').scrollTop = 0;
+  }
+  function close() {
+    if (!dialog.open) return;
+    dialog.close();
+    if (focusBefore?.isConnected && !focusBefore.closest('[inert]')) focusBefore.focus({ preventScroll: true });
+    else renderer.domElement.focus({ preventScroll: true });
+  }
+  function open(id = currentChapter()) {
+    const entry = byId.get(id === 'arrival' ? '01' : id);
+    if (!entry) return;
+    if (!dialog.open) {
+      focusBefore = document.activeElement;
+      onOpen();
+      show(entry);
+      dialog.showModal();
+      document.querySelector('#hall-reader-close').focus();
+    } else show(entry);
+  }
+  toggle.addEventListener('click', () => open());
+  select.addEventListener('change', () => show(byId.get(select.value)));
+  document.querySelector('#hall-reader-close').addEventListener('click', close);
+  document.querySelector('#hall-reader-back').addEventListener('click', close);
+  document.querySelector('#hall-reader-locate').addEventListener('click', () => { const entry = selected; close(); onLocate(entry); });
+  dialog.addEventListener('cancel', (event) => { event.preventDefault(); event.stopPropagation(); close(); });
+  dialog.addEventListener('click', (event) => {
+    if (event.target !== dialog) return;
+    const bounds = dialog.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) close();
+  });
+  toggle.disabled = false;
+  return { open, close, isOpen: () => dialog.open, entry: (id) => byId.get(id) };
+}

@@ -2,7 +2,11 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { fitPainting, locateWork, readingOrder, validateCollection } from './collection.js';
 import { createCollectionTour } from './collection-tour.js?v=2026-10-02-full-collection-tour';
-import { createStoryReader } from './story.js?v=2026-10-02-full-collection-tour';
+import { createStoryReader } from './story.js?v=2026-10-03-story-entry';
+import { createGalleryEntry } from './gallery-entry.js?v=2026-10-03-story-entry';
+import { createOpeningFilm } from './opening-film.js?v=2026-10-03-story-entry';
+import { createHallTexts, validateHallTexts, wallTextPose } from './hall-texts.js?v=2026-10-03-story-entry';
+import { artworkDate, createArtworkCards } from './artwork-cards.js?v=2026-10-03-immersive-navigation';
 
 const viewer = document.querySelector('#viewer');
 const loading = document.querySelector('#loading');
@@ -11,6 +15,11 @@ const error = document.querySelector('#error');
 const card = document.querySelector('#art-card');
 const immersive = document.querySelector('#art-immersive');
 const immersiveClose = document.querySelector('#immersive-close');
+const immersiveNavigation = document.querySelector('#immersive-navigation');
+const immersivePrevious = document.querySelector('#immersive-previous');
+const immersiveNext = document.querySelector('#immersive-next');
+const immersivePosition = document.querySelector('#immersive-position');
+const immersiveStatus = document.querySelector('#immersive-status');
 const tourButton = document.querySelector('#tour-toggle');
 const tourProgress = document.querySelector('#tour-progress');
 const tourTime = document.querySelector('#tour-time');
@@ -28,10 +37,6 @@ const catalogToggle = document.querySelector('#catalog-toggle');
 const catalogSearch = document.querySelector('#catalog-search');
 const chapterNav = document.querySelector('#chapter-nav');
 const catalogContent = document.querySelector('#catalog-content');
-const filmInput = document.querySelector('#film-input');
-const filmToggle = document.querySelector('#film-toggle');
-const filmStatus = document.querySelector('#film-status');
-const filmControls = document.querySelector('.film-controls');
 const filmVideo = document.querySelector('#opening-film');
 const wallControls = document.querySelector('#wall-controls');
 const wallSelect = document.querySelector('#wall-set');
@@ -66,7 +71,7 @@ const keys = new Set();
 const clock = new THREE.Clock();
 const tour = { playing: false, seconds: 0 };
 const totalSeconds = 90;
-const layoutRevision = '2026-10-02-full-collection-tour';
+const layoutRevision = '2026-10-03-immersive-navigation';
 const dolly = { remaining: 0 };
 const activePointers = new Map();
 let metadata = {};
@@ -89,9 +94,13 @@ let cardLayoutKey = '';
 let cardLimits = {};
 let filmScreen = null;
 let filmPlaceholder = null;
-let filmUrl = null;
-let filmTitle = 'The Early Years';
+let openingFilm = null;
+let hallTexts = null;
+let hallTextStation = null;
 let focusBeforeImmersive = null;
+let immersiveWorkId = null;
+let immersiveBusy = false;
+let immersiveRevision = 0;
 let guideTransitionTimer = null;
 let guideArrival = null;
 let collectionFadeRevision = 0;
@@ -106,8 +115,22 @@ const frameParts = new Map();
 const dynamicLabels = new Map();
 let storyData = null;
 let storyStationActive = false;
+const artworkCards = createArtworkCards({
+  onArtworkChange(entry) {
+    immersiveWorkId = entry.collectionId ?? entry.id ?? null;
+    updateImmersiveNavigation();
+  },
+  onExplore() {
+    if (activeSlot) openImmersive(activeSlot, { storyFirst: true });
+  },
+  onVisit(id) {
+    closeImmersive();
+    return showCollectionWork(id, true);
+  },
+});
 const story = createStoryReader({
   onOpen() {
+    hallTexts?.close();
     filmVideo.pause();
     stopDolly();
     pauseTour();
@@ -129,10 +152,16 @@ const collectionTour = createCollectionTour({
   visit: visitCollectionTourWork,
   onChange: updateTimeline,
 });
+const entry = createGalleryEntry({
+  onBegin({ playFilm }) {
+    returnToOpeningFilm();
+    if (playFilm) openingFilm.open();
+  },
+});
 const projectedCorner = new THREE.Vector3();
 
 function updateWallControls() {
-  if (storyStationActive) {
+  if (storyStationActive || hallTextStation) {
     wallControls.hidden = true;
     return;
   }
@@ -156,14 +185,15 @@ function updateWallControls() {
 }
 
 function updateWorkPosition() {
-  if (storyStationActive) return;
+  if (storyStationActive || hallTextStation) return;
   if (!collection || guidedIndex < 0) return;
   const artwork = orderedRoute.artworks[guidedIndex];
   const entry = metadata[artwork.slot];
   const index = workOrder.indexOf(entry?.collectionId);
   guidePosition.textContent = entry?.image ? `Hall ${artwork.chapter} · ${index + 1}/${workOrder.length} · ${entry.title}` : `Hall ${artwork.chapter} · End of wall set`;
   previousArtwork.disabled = wallBusy || (index <= 0 && !storyData);
-  nextArtwork.disabled = wallBusy || index === workOrder.length - 1;
+  nextArtwork.disabled = wallBusy;
+  nextArtwork.textContent = index === workOrder.length - 1 ? 'Exit reflection →' : 'Next →';
 }
 
 function labelFor(slot, entry, height) {
@@ -202,7 +232,27 @@ async function loadPaintingTexture(entry) {
   return texture;
 }
 
-async function switchWallSet(hallId, page, { automatic = false, isCurrent = () => true, beforeCommit } = {}) {
+function sizeArtworkMount(slot, entry, texture, baseline) {
+  const object = artworkMeshes.get(slot);
+  const base = orderedRoute.artworks.find((artwork) => artwork.slot === slot);
+  const dimensions = baseline && !entry.resizeMount
+    ? { width: base.width, height: base.height }
+    : fitPainting(texture.image.width / texture.image.height, base.displayBounds.width, base.displayBounds.height);
+  object.scale.set(dimensions.width / base.width, dimensions.height / base.height, 1);
+  const dynamicLabel = !baseline || entry.authoredCard || entry.resizeMount;
+  for (const part of frameParts.get(slot)) {
+    if (part.kind === 'label') {
+      part.object.visible = !dynamicLabel;
+      continue;
+    }
+    part.object.scale.copy(part.scale);
+    part.object.scale.x *= (dimensions.width + part.border) / (base.width + part.border);
+    part.object.scale.y *= (dimensions.height + part.border) / (base.height + part.border);
+  }
+  if (dynamicLabel) labelFor(slot, entry, dimensions.height);
+}
+
+async function switchWallSet(hallId, page, { automatic = false, preserveImmersive = false, isCurrent = () => true, beforeCommit } = {}) {
   const hall = collection?.halls.find((item) => item.id === hallId);
   if (!hall || !Number.isInteger(page) || page < 0 || page >= hall.pages.length || wallBusy) return false;
   if ((wallPages.get(hallId) ?? 0) === page) return true;
@@ -210,7 +260,7 @@ async function switchWallSet(hallId, page, { automatic = false, isCurrent = () =
   if (!automatic) pauseTour();
   cancelGuideTransition({ preserveFade: automatic });
   hideCard();
-  closeImmersive();
+  if (!preserveImmersive) closeImmersive();
   keys.clear();
   wallFailure = '';
   for (const pointerId of activePointers.keys()) {
@@ -253,16 +303,7 @@ async function switchWallSet(hallId, page, { automatic = false, isCurrent = () =
       previous.map?.dispose();
       previous.dispose();
       object.material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.FrontSide, toneMapped: false });
-      const base = orderedRoute.artworks.find((artwork) => artwork.slot === slot);
-      const dimensions = page === 0 ? { width: base.width, height: base.height } : fitPainting(texture.image.width / texture.image.height, base.displayBounds.width, base.displayBounds.height);
-      object.scale.set(dimensions.width / base.width, dimensions.height / base.height, 1);
-      for (const part of parts) {
-        if (part.kind === 'label') { part.object.visible = page === 0; continue; }
-        part.object.scale.copy(part.scale);
-        part.object.scale.x *= (dimensions.width + part.border) / (base.width + part.border);
-        part.object.scale.y *= (dimensions.height + part.border) / (base.height + part.border);
-      }
-      if (page !== 0) labelFor(slot, entry, dimensions.height);
+      sizeArtworkMount(slot, entry, texture, page === 0);
       metadata[slot] = entry;
     }
     wallPages.set(hallId, page);
@@ -298,6 +339,15 @@ async function showCollectionWork(id, openCard = false) {
 
 function browseCollection(direction) {
   if (wallBusy) return;
+  if (hallTextStation) {
+    const entry = hallTextStation;
+    if (entry.id === 'arrival') return direction > 0 ? returnToOpeningFilm() : undefined;
+    if (entry.id === 'departure') return direction < 0 ? showCollectionWork(workOrder.at(-1)) : guideToHallText(hallTexts.entry('arrival'));
+    const hall = collection.halls.find((item) => item.id === entry.id);
+    const firstIndex = workOrder.indexOf(hall.pages[0][0]);
+    if (direction > 0) return entry.id === '01' ? returnToOpeningFilm() : showCollectionWork(workOrder[firstIndex]);
+    return firstIndex > 0 ? showCollectionWork(workOrder[firstIndex - 1]) : guideToHallText(hallTexts.entry('arrival'));
+  }
   if (storyStationActive) {
     if (direction > 0) enterEarlyDrawings();
     else returnToOpeningFilm();
@@ -320,7 +370,63 @@ function browseCollection(direction) {
   const hall = collection.halls.find((item) => item.id === currentChapter);
   const first = hall?.pages[wallPages.get(currentChapter) ?? 0][0];
   const next = index === -1 ? Math.max(0, workOrder.indexOf(first)) : Math.max(0, Math.min(workOrder.length - 1, index + direction));
+  if (hallTexts && index === workOrder.length - 1 && direction > 0) return guideToHallText(hallTexts.entry('departure'));
+  if (hallTexts && direction > 0 && index >= 0 && collection.works[workOrder[next]].hall !== collection.works[workOrder[index]].hall) {
+    return guideToHallText(hallTexts.entry(collection.works[workOrder[next]].hall));
+  }
   showCollectionWork(workOrder[next]);
+}
+
+function guideToHallText(entry) {
+  if (!entry || wallBusy || !orderedRoute) return;
+  const pose = wallTextPose(entry);
+  const location = pose.location.setY(orderedRoute.eyeHeight);
+  if (!insideGallery(location.x, location.z)) return;
+  const target = pose.position.setY(orderedRoute.eyeHeight);
+  hallTexts.close();
+  story.close();
+  filmVideo.pause();
+  closeImmersive();
+  if (catalogue.classList.contains('open')) setCatalogueOpen(false);
+  pauseTour();
+  cancelGuideTransition();
+  stopDolly();
+  hideCard();
+  keys.clear();
+  setStoryStationActive(false);
+  hallTextStation = entry;
+  guidedIndex = -1;
+  currentChapter = entry.id === 'arrival' ? '01' : entry.id === 'departure' ? '07' : entry.id;
+  const targetYaw = Math.atan2(target.z - location.z, target.x - location.x);
+  const yawDifference = Math.atan2(Math.sin(targetYaw - yaw), Math.cos(targetYaw - yaw));
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const canGlide = camera.position.distanceTo(location) <= 10 && clearWalkingSegment(camera.position.toArray(), location.toArray());
+  if (!reduced && canGlide) {
+    focusMotion = {
+      elapsed: 0, duration: 1.35, from: camera.position.clone(), to: location,
+      yawFrom: yaw, yawTo: yaw + yawDifference, pitchFrom: pitch, pitchTo: 0, openSlot: null,
+    };
+  } else {
+    const arrive = () => {
+      guideTransitionTimer = null;
+      viewFrom(location.toArray(), target.toArray());
+      renderer.domElement.classList.remove('repositioning');
+    };
+    if (reduced) arrive();
+    else {
+      renderer.domElement.classList.add('repositioning');
+      guideTransitionTimer = window.setTimeout(arrive, 150);
+    }
+  }
+  tour.seconds = entry.id === 'arrival' ? 0 : entry.id === 'departure' ? 85 : orderedRoute.artworks.find((artwork) => artwork.chapter === entry.id)?.routeTime ?? 0;
+  guidePosition.textContent = entry.kind === 'hall' ? `Hall ${entry.id} · ${entry.title} · Introduction` : entry.label;
+  previousArtwork.disabled = entry.id === 'arrival';
+  nextArtwork.disabled = false;
+  nextArtwork.textContent = entry.id === 'departure' ? 'Return to entrance →' : entry.id === '01' || entry.id === 'arrival' ? 'Opening film →' : 'View the artworks →';
+  updateTimeline();
+  updateWallControls();
+  updateFilmControls();
+  renderCatalogue();
 }
 
 function setStoryStationActive(active) {
@@ -349,7 +455,7 @@ function returnToOpeningFilm() {
   tour.seconds = 9;
   positionOnRoute();
   resetGuidedSelection();
-  guidePosition.textContent = 'Hall 01 · Opening film → London story → Early drawings';
+  guidePosition.textContent = 'Hall 01 · Opening film → Searching for a Place → Early Works';
   updateTimeline();
   updateWallControls();
   updateFilmControls();
@@ -357,6 +463,8 @@ function returnToOpeningFilm() {
 
 function guideToStory() {
   if (!storyData || wallBusy) return;
+  hallTexts?.close();
+  hallTextStation = null;
   filmVideo.pause();
   story.close();
   closeImmersive();
@@ -392,7 +500,7 @@ function guideToStory() {
     }
   }
   setStoryStationActive(true);
-  guidePosition.textContent = 'Hall 01 · After the opening film · A Home in London';
+  guidePosition.textContent = 'Hall 01 · After the opening film · Searching for a Place';
   previousArtwork.disabled = false;
   nextArtwork.disabled = false;
   tour.seconds = storyData.station.routeTime;
@@ -546,7 +654,7 @@ function updateTimeline() {
   tourButton.textContent = state.playing ? 'Pause collection' : state.phase === 'error' ? 'Retry collection' : state.phase === 'complete' ? 'Replay collection' : state.index < 0 ? 'Play full collection' : 'Resume collection';
   const entry = collection?.works[workOrder[state.index]];
   tourProgress.setAttribute('aria-valuetext', entry ? `Work ${state.index + 1} of ${state.total}: ${entry.title}` : 'Start of the full collection');
-  let status = `${state.total} verified works · ${state.holdSeconds}s at each stop · Film and London story remain optional`;
+  let status = `${state.total} verified works · ${state.holdSeconds}s at each stop · Film and early-life stories remain optional`;
   if (state.phase === 'loading') status = 'Loading verified artwork images… The tour waits until the entire wall set is ready.';
   if (state.phase === 'moving') status = 'Moving to the next artwork at eye level…';
   if (state.phase === 'holding' && entry) status = `${state.playing ? `${Math.ceil(state.remaining)}s remaining` : 'Paused'} · Hall ${entry.hall} · ${entry.title}`;
@@ -561,6 +669,7 @@ function updateTimeline() {
 
 function resetGuidedSelection() {
   guidedIndex = -1;
+  nextArtwork.textContent = 'Next →';
   guidePosition.textContent = 'Gallery-view route · Follow the left wall';
   previousArtwork.disabled = true;
   nextArtwork.disabled = wallBusy;
@@ -616,6 +725,7 @@ function cancelGuideTransition({ preserveFade = false } = {}) {
 
 function positionOnRoute() {
   if (!orderedRoute) return;
+  hallTextStation = null;
   setStoryStationActive(false);
   stopDolly();
   const waypoints = orderedRoute.camera.waypoints;
@@ -672,15 +782,10 @@ function configureOpeningView() {
 }
 
 function updateFilmControls() {
-  if (!orderedRoute) return;
+  if (!orderedRoute || !openingFilm) return;
   const show = !storyStationActive && orderedRoute.walkableRegions.some((region) =>
     (region.chapter === '00' || region.chapter === '01') && polygonContains(camera.position.x, camera.position.z, region.polygon));
-  if (filmControls.hidden === !show) return;
-  filmControls.hidden = !show;
-  if (!show && filmVideo && !filmVideo.paused) {
-    filmVideo.pause();
-    filmToggle.textContent = 'Play film';
-  }
+  openingFilm.update({ available: show && !hallTextStation, blocked: entry.isOpen() || wallBusy || !immersive.hidden || story.isOpen() || hallTexts?.isOpen() || catalogue.classList.contains('open') });
 }
 
 function hideCard() {
@@ -702,12 +807,13 @@ function showCard(slot) {
   const stage = artworkMeshes.get(slot)?.userData.stage ?? slot.slice(0, 2);
   document.querySelector('#card-chapter').textContent = `Hall ${stage} · ${chapters.find((chapter) => chapter.id === stage)?.title ?? 'Works'}`;
   document.querySelector('#card-title').textContent = entry.title ?? 'Artwork details pending';
-  document.querySelector('#card-date').textContent = entry.date ?? 'Date and medium pending';
+  document.querySelector('#card-date').textContent = artworkDate(entry) ?? 'Date and medium pending';
   document.querySelector('#card-body').textContent = entry.body ?? 'Further interpretation will be added here.';
   document.querySelector('#card-credit').textContent = entry.credit ?? 'Image credit pending';
   const sourceLink = document.querySelector('#card-source');
   sourceLink.hidden = !entry.source;
   if (entry.source) sourceLink.href = entry.source;
+  artworkCards.renderHover(entry);
   card.querySelector('.card-content').scrollTop = 0;
   cardLayoutKey = '';
   positionCard();
@@ -717,7 +823,7 @@ function showCard(slot) {
   card.inert = false;
 }
 
-function openImmersive(slot) {
+function openImmersive(slot, options = {}) {
   story.close();
   const entry = metadata[slot];
   if (!entry?.image) return;
@@ -728,33 +834,78 @@ function openImmersive(slot) {
   keys.clear();
   focusMotion = null;
   cancelGuideTransition();
-  focusBeforeImmersive = document.activeElement;
-  const artwork = orderedRoute.artworks.find((item) => item.slot === slot);
-  const chapter = chapters.find((item) => item.id === artwork?.chapter);
-  const image = document.querySelector('#immersive-image');
-  image.src = entry.image;
-  image.alt = entry.title;
-  document.querySelector('#immersive-caption').textContent = entry.title;
-  document.querySelector('#immersive-chapter').textContent = `HALL ${chapter?.id ?? ''} · ${chapter?.title ?? 'Works'}`;
-  document.querySelector('#immersive-title').textContent = entry.title;
-  document.querySelector('#immersive-date').textContent = entry.date;
-  document.querySelector('#immersive-body').textContent = entry.body;
-  document.querySelector('#immersive-credit').textContent = entry.credit;
-  const link = document.querySelector('#immersive-source');
-  link.hidden = !entry.source;
-  if (entry.source) link.href = entry.source;
+  const alreadyOpen = !immersive.hidden;
+  if (!alreadyOpen) focusBeforeImmersive = document.activeElement;
+  artworkCards.open(entry, options);
   immersive.hidden = false;
   immersive.inert = false;
   immersive.setAttribute('aria-hidden', 'false');
   immersive.querySelector('.immersive-content').scrollTop = 0;
-  immersiveClose.focus();
+  if (!alreadyOpen) immersiveClose.focus();
+}
+
+function updateImmersiveNavigation(message = '') {
+  const index = workOrder.indexOf(immersiveWorkId);
+  immersiveNavigation.hidden = index < 0;
+  immersivePrevious.disabled = immersiveBusy || index <= 0;
+  immersiveNext.disabled = immersiveBusy || index < 0 || index >= workOrder.length - 1;
+  immersivePosition.textContent = index < 0 ? '' : `${index + 1} / ${workOrder.length} · Hall ${collection.works[immersiveWorkId].hall}`;
+  immersiveStatus.textContent = message || (immersiveBusy ? 'Loading artwork…' : 'Tour paused');
+  immersive.setAttribute('aria-busy', String(immersiveBusy));
+}
+
+async function browseImmersive(direction) {
+  if (immersive.hidden || immersiveBusy || wallBusy || ![-1, 1].includes(direction)) return false;
+  const index = workOrder.indexOf(immersiveWorkId);
+  const nextIndex = index + direction;
+  if (index < 0 || nextIndex < 0 || nextIndex >= workOrder.length) return false;
+  const location = locateWork(collection, workOrder[nextIndex]);
+  const stationIndex = orderedRoute.artworks.findIndex((artwork) => artwork.slot === location.slot);
+  if (stationIndex < 0) return false;
+  const ticket = ++immersiveRevision;
+  const isCurrent = () => ticket === immersiveRevision && !immersive.hidden;
+  const focused = document.activeElement;
+  let message = '';
+  immersiveBusy = true;
+  pauseTour();
+  updateImmersiveNavigation();
+  try {
+    const loaded = await switchWallSet(location.hall, location.page, { preserveImmersive: true, isCurrent });
+    if (!isCurrent()) return false;
+    if (!loaded) {
+      message = 'Artwork could not load. Please try again.';
+      return false;
+    }
+    const arrived = await guideTo(stationIndex, false, { instant: true, preserveImmersive: true });
+    if (!arrived || !isCurrent()) return false;
+    openImmersive(location.slot);
+    return true;
+  } catch (cause) {
+    if (isCurrent()) {
+      message = 'Artwork could not load. Please try again.';
+      console.error(cause);
+    }
+    return false;
+  } finally {
+    if (isCurrent()) {
+      immersiveBusy = false;
+      updateImmersiveNavigation(message);
+      if (focused?.isConnected && immersive.contains(focused) && !focused.disabled) focused.focus();
+      else immersiveClose.focus();
+    }
+  }
 }
 
 function closeImmersive() {
   if (immersive.hidden) return;
+  immersiveRevision += 1;
+  immersiveBusy = false;
+  immersiveWorkId = null;
   immersive.hidden = true;
   immersive.inert = true;
   immersive.setAttribute('aria-hidden', 'true');
+  immersive.setAttribute('aria-busy', 'false');
+  artworkCards.close();
   document.querySelector('#immersive-image').removeAttribute('src');
   if (focusBeforeImmersive?.isConnected) focusBeforeImmersive.focus();
   focusBeforeImmersive = null;
@@ -779,6 +930,7 @@ function setCatalogueOpen(open) {
 }
 
 function jumpToChapter(chapter) {
+  if (hallTexts) return guideToHallText(hallTexts.entry(chapter.id));
   setCatalogueOpen(false);
   const index = orderedRoute.artworks.findIndex((item) => item.chapter === chapter.id);
   if (index !== -1) guideTo(index, false);
@@ -883,12 +1035,14 @@ async function visitCollectionTourWork(id, { isCurrent, onPhase }) {
   }
 }
 
-function guideTo(index, openCard = false, { automatic = false, instant = false } = {}) {
+function guideTo(index, openCard = false, { automatic = false, instant = false, preserveImmersive = false } = {}) {
   if (!orderedRoute || wallBusy || index < 0 || index >= orderedRoute.artworks.length) return Promise.resolve(false);
+  hallTexts?.close();
+  hallTextStation = null;
   story.close();
   setStoryStationActive(false);
   stopDolly();
-  closeImmersive();
+  if (!preserveImmersive) closeImmersive();
   if (!automatic) pauseTour();
   hideCard();
   cancelGuideTransition({ preserveFade: automatic });
@@ -977,7 +1131,15 @@ function renderCatalogue() {
     jump.className = 'catalog-jump';
     jump.textContent = `Enter Hall ${chapter.id}`;
     jump.addEventListener('click', () => jumpToChapter(chapter));
-    section.append(heading, years, intro, jump);
+    const actions = document.createElement('div');
+    actions.className = 'catalog-actions';
+    const readIntro = document.createElement('button');
+    readIntro.type = 'button';
+    readIntro.className = 'catalog-jump';
+    readIntro.textContent = 'Read introduction';
+    readIntro.addEventListener('click', () => hallTexts?.open(chapter.id));
+    actions.append(jump, readIntro);
+    section.append(heading, years, intro, actions);
     for (const group of groups) {
       const wrapper = document.createElement('div');
       wrapper.className = 'catalog-group';
@@ -1032,77 +1194,6 @@ catalogToggle.addEventListener('click', () => setCatalogueOpen(!catalogue.classL
 document.querySelector('#catalog-close').addEventListener('click', () => setCatalogueOpen(false));
 catalogSearch.addEventListener('input', renderCatalogue);
 
-function setFilmSource(source, title) {
-  if (!filmScreen) return;
-  filmVideo.pause();
-  filmTitle = title;
-  filmStatus.textContent = 'Loading opening film…';
-  filmToggle.textContent = 'Play film';
-  filmToggle.hidden = false;
-  filmToggle.disabled = true;
-  filmVideo.muted = false;
-  filmVideo.volume = 1;
-  filmVideo.src = source;
-  filmVideo.load();
-  const texture = new THREE.VideoTexture(filmVideo);
-  texture.colorSpace = THREE.SRGBColorSpace;
-  texture.flipY = false;
-  if (filmScreen.material.map) filmScreen.material.map.dispose();
-  filmScreen.material.dispose();
-  filmScreen.material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide, toneMapped: false });
-  if (filmPlaceholder) filmPlaceholder.visible = false;
-}
-
-filmVideo.addEventListener('loadedmetadata', () => {
-  filmStatus.textContent = `${filmTitle} · ${timeLabel(filmVideo.duration)}`;
-  filmToggle.disabled = false;
-});
-
-filmVideo.addEventListener('play', () => {
-  pauseTour();
-  cancelGuideTransition();
-  stopDolly();
-  keys.clear();
-  filmToggle.textContent = 'Pause film';
-});
-
-filmVideo.addEventListener('pause', () => { filmToggle.textContent = 'Play film'; });
-filmVideo.addEventListener('ended', () => { filmToggle.textContent = 'Replay film'; });
-filmVideo.addEventListener('error', () => {
-  filmStatus.textContent = 'Film could not load. Choose an MP4 or WebM file.';
-  filmToggle.disabled = true;
-  if (filmPlaceholder) filmPlaceholder.visible = true;
-});
-
-filmInput.addEventListener('change', () => {
-  const file = filmInput.files?.[0];
-  if (!file || !filmScreen) return;
-  const previousUrl = filmUrl;
-  filmUrl = URL.createObjectURL(file);
-  setFilmSource(filmUrl, file.name);
-  if (previousUrl) URL.revokeObjectURL(previousUrl);
-});
-
-filmToggle.addEventListener('click', async () => {
-  if (!filmVideo) return;
-  if (!filmVideo.paused) {
-    filmVideo.pause();
-    filmToggle.textContent = 'Play film';
-    return;
-  }
-  try {
-    await filmVideo.play();
-    filmToggle.textContent = 'Pause film';
-  } catch (cause) {
-    filmStatus.textContent = 'Film could not play. Try MP4 or WebM.';
-    console.error(cause);
-  }
-});
-
-window.addEventListener('beforeunload', () => {
-  if (filmUrl) URL.revokeObjectURL(filmUrl);
-});
-
 function pickArtwork(event) {
   const bounds = renderer.domElement.getBoundingClientRect();
   pointer.set(
@@ -1115,12 +1206,14 @@ function pickArtwork(event) {
     return true;
   });
   const first = raycaster.intersectObjects(visible, false)[0];
+  if (first?.object.userData.film_screen || first?.object.userData.film_entry) return 'film:opening';
   if (first?.object.userData.story_exhibit) return `story:${first.object.userData.story_exhibit}`;
+  if (first?.object.userData.hall_text) return `intro:${first.object.userData.hall_text}`;
   return first?.object.userData.artwork_slot ?? null;
 }
 
 renderer.domElement.addEventListener('pointermove', (event) => {
-  if (wallBusy || story.isOpen()) return;
+  if (wallBusy || story.isOpen() || hallTexts?.isOpen()) return;
   if (catalogue.classList.contains('open')) return;
   const tracked = activePointers.get(event.pointerId);
   if (tracked) {
@@ -1151,8 +1244,8 @@ renderer.domElement.addEventListener('pointermove', (event) => {
     return;
   }
   if (slot) {
-    if (tour.playing || collectionTour.state().playing) pauseTour();
-    if (slot.startsWith('story:')) hideCard();
+    if (tour.playing) pauseTour();
+    if (slot.startsWith('story:') || slot.startsWith('film:') || slot.startsWith('intro:')) hideCard();
     else showCard(slot);
   } else {
     scheduleCardHide();
@@ -1160,7 +1253,7 @@ renderer.domElement.addEventListener('pointermove', (event) => {
 });
 
 renderer.domElement.addEventListener('pointerdown', (event) => {
-  if (event.button !== 0 || !orderedRoute || wallBusy || !immersive.hidden || story.isOpen()) return;
+  if (event.button !== 0 || entry.isOpen() || !orderedRoute || wallBusy || !immersive.hidden || story.isOpen() || hallTexts?.isOpen()) return;
   if (catalogue.classList.contains('open')) setCatalogueOpen(false);
   stopDolly();
   hideCard();
@@ -1207,7 +1300,9 @@ function finishPointer(event, cancelled = false) {
     renderer.domElement.style.cursor = 'grab';
   }
   if (cancelled) stopDolly();
-  if (openSlot?.startsWith('story:')) story.open();
+  if (openSlot === 'film:opening') openingFilm?.open();
+  else if (openSlot?.startsWith('intro:')) hallTexts?.open(openSlot.slice(6));
+  else if (openSlot?.startsWith('story:')) story.open();
   else if (openSlot) openImmersive(openSlot);
 }
 
@@ -1216,7 +1311,7 @@ renderer.domElement.addEventListener('pointercancel', (event) => finishPointer(e
 renderer.domElement.addEventListener('lostpointercapture', (event) => finishPointer(event, true));
 
 renderer.domElement.addEventListener('wheel', (event) => {
-  if (!orderedRoute || wallBusy || !immersive.hidden || story.isOpen() || catalogue.classList.contains('open') || event.deltaY === 0) return;
+  if (!orderedRoute || wallBusy || !immersive.hidden || story.isOpen() || hallTexts?.isOpen() || catalogue.classList.contains('open') || event.deltaY === 0) return;
   event.preventDefault();
   const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? viewer.clientHeight : 1;
   queueDolly(-event.deltaY * unit * (event.ctrlKey ? 0.025 : 0.008));
@@ -1232,6 +1327,8 @@ card.addEventListener('focusin', cancelCardHide);
 card.addEventListener('focusout', scheduleCardHide);
 document.querySelector('#card-close').addEventListener('click', hideCard);
 immersiveClose.addEventListener('click', closeImmersive);
+immersivePrevious.addEventListener('click', () => browseImmersive(-1));
+immersiveNext.addEventListener('click', () => browseImmersive(1));
 immersive.addEventListener('click', (event) => {
   if (event.target === immersive) closeImmersive();
 });
@@ -1330,7 +1427,29 @@ resetView.addEventListener('click', async () => {
 });
 
 window.addEventListener('keydown', (event) => {
+  if (entry.isOpen()) return;
+  if (openingFilm?.isOpen()) return;
+  if (hallTexts?.isOpen()) return;
   if (story.isOpen()) return;
+  if (!immersive.hidden) {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeImmersive();
+    } else if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      if (!event.target.matches('input, textarea, select, [contenteditable="true"]')) {
+        event.preventDefault();
+        browseImmersive(event.key === 'ArrowLeft' ? -1 : 1);
+      }
+    } else if (event.key === 'Tab') {
+      const controls = [...immersive.querySelectorAll('button:not(:disabled), a[href], summary')].filter((element) => element.getClientRects().length);
+      const current = controls.indexOf(document.activeElement);
+      if (current === -1 || (event.shiftKey && current === 0) || (!event.shiftKey && current === controls.length - 1)) {
+        event.preventDefault();
+        controls[event.shiftKey ? controls.length - 1 : 0]?.focus();
+      }
+    }
+    return;
+  }
   if (event.key === 'Escape') {
     closeImmersive();
     hideCard();
@@ -1344,7 +1463,7 @@ window.addEventListener('keydown', (event) => {
   if (event.code === 'ArrowRight' || event.code === 'ArrowLeft') {
     event.preventDefault();
     if (event.code === 'ArrowRight') nextArtwork.click();
-    else if (guidedIndex < 0) browseCollection(1);
+    else if (guidedIndex < 0 && !hallTextStation) browseCollection(1);
     else previousArtwork.click();
   }
   if (/^Key[WASD]$/.test(event.code)) keys.add(event.code);
@@ -1371,7 +1490,7 @@ function stopDolly() {
 }
 
 function queueDolly(distance) {
-  if (!orderedRoute || wallBusy || !immersive.hidden || story.isOpen() || catalogue.classList.contains('open')
+  if (!orderedRoute || entry.isOpen() || wallBusy || !immersive.hidden || story.isOpen() || hallTexts?.isOpen() || catalogue.classList.contains('open')
       || !Number.isFinite(distance) || distance === 0) return;
   if (tour.playing || collectionTour.state().playing) pauseTour();
   cancelGuideTransition();
@@ -1404,7 +1523,7 @@ function translateDolly(distance) {
 
 function updateDolly(delta) {
   if (!orderedRoute || !dolly.remaining) return;
-  if (!immersive.hidden || story.isOpen() || catalogue.classList.contains('open')) {
+  if (!immersive.hidden || story.isOpen() || hallTexts?.isOpen() || catalogue.classList.contains('open')) {
     stopDolly();
     return;
   }
@@ -1418,7 +1537,7 @@ function updateDolly(delta) {
 }
 
 function moveFreely(delta) {
-  if (!keys.size || !orderedRoute || wallBusy || !immersive.hidden || story.isOpen()) return;
+  if (!keys.size || entry.isOpen() || !orderedRoute || wallBusy || !immersive.hidden || story.isOpen() || hallTexts?.isOpen()) return;
   const forward = new THREE.Vector3(Math.cos(yaw), 0, Math.sin(yaw));
   const right = new THREE.Vector3(-Math.sin(yaw), 0, Math.cos(yaw));
   const direction = new THREE.Vector3();
@@ -1427,6 +1546,11 @@ function moveFreely(delta) {
   if (keys.has('KeyD')) direction.add(right);
   if (keys.has('KeyA')) direction.sub(right);
   if (direction.lengthSq() === 0) return;
+  if (hallTextStation) {
+    hallTextStation = null;
+    resetGuidedSelection();
+    updateWallControls();
+  }
   stopDolly();
   if (tour.playing || collectionTour.state().playing) pauseTour();
   focusMotion = null;
@@ -1504,6 +1628,7 @@ function clearWalkingSegment(start, end) {
 function render() {
   requestAnimationFrame(render);
   const delta = clock.getDelta();
+  if (openingFilm?.isOpen() || hallTexts?.isOpen()) return;
   if (tour.playing) {
     tour.seconds = Math.min(totalSeconds, tour.seconds + delta);
     positionOnRoute();
@@ -1552,18 +1677,36 @@ window.addEventListener('resize', () => {
 
 async function loadGallery() {
   let storyLayout;
-  [metadata, chapters, orderedRoute, collection, storyData, storyLayout] = await Promise.all([
-    './data/artworks_en.json', './data/chapters_en.json', `./data/ordered_route_v21.json?v=${layoutRevision}`, './data/collection_en.json',
+  let hallTextData;
+  let authoredCards;
+  [metadata, chapters, orderedRoute, collection, storyData, storyLayout, hallTextData, authoredCards] = await Promise.all([
+    `./data/artworks_en.json?v=${layoutRevision}`, `./data/chapters_en.json?v=${layoutRevision}`, `./data/ordered_route_v22.json?v=${layoutRevision}`, `./data/collection_en.json?v=${layoutRevision}`,
     `./data/story_exhibit_en.json?v=${layoutRevision}`, `./data/story_transition_layout.json?v=${layoutRevision}`,
+    './data/hall_introductions_en.json?v=2026-10-03-hall-introductions',
+    `./data/artwork_cards_en.json?v=${layoutRevision}`,
   ].map(async (url) => {
     const response = await fetch(url);
     if (!response.ok) throw new Error(`Could not load ${url}`);
     return response.json();
   }));
   validateCollection(collection);
+  validateHallTexts(hallTextData);
+  artworkCards.setData(authoredCards, collection, chapters);
   story.setData(storyData);
   orderedRoute.walkableRegions.push(...storyLayout.walkableRegions);
   orderedRoute.obstacles.push(...storyLayout.obstacles);
+  for (const entry of [hallTextData.arrival, ...hallTextData.halls, hallTextData.departure]) {
+    const wing = entry.wall.wing;
+    if (wing) {
+      const [horizontal, , depth] = wing.position;
+      orderedRoute.obstacles.push({ type: 'polygon', name: `Hall ${entry.id} introduction entry wing`, polygon: [
+        [horizontal - wing.width / 2, depth - wing.depth / 2], [horizontal + wing.width / 2, depth - wing.depth / 2],
+        [horizontal + wing.width / 2, depth + wing.depth / 2], [horizontal - wing.width / 2, depth + wing.depth / 2],
+      ] });
+    }
+    const pose = wallTextPose(entry);
+    if (!insideGallery(pose.location.x, pose.location.z)) throw new Error(`The ${entry.id} introduction viewpoint is not walkable`);
+  }
   if (!insideGallery(storyData.station.position[0], storyData.station.position[2])) throw new Error('The London story viewpoint is not walkable');
   workOrder = readingOrder(collection);
   for (const hall of collection.halls) {
@@ -1571,7 +1714,7 @@ async function loadGallery() {
     hall.pages[0].forEach((id, index) => { metadata[hall.slots[index]] = { ...collection.works[id], collectionId: id }; });
   }
   updateCameraFraming();
-  const gltf = await new GLTFLoader().loadAsync(`./assets/gallery_v21.glb?v=${layoutRevision}`, (event) => {
+  const gltf = await new GLTFLoader().loadAsync(`./assets/gallery_v22.glb?v=${layoutRevision}`, (event) => {
     if (event.total) loadProgress.textContent = `${Math.floor((event.loaded / event.total) * 100)}%`;
   });
   const curatedSlots = new Set(Object.entries(metadata).filter(([, entry]) => entry.image).map(([slot]) => slot));
@@ -1616,6 +1759,7 @@ async function loadGallery() {
     texture.anisotropy = Math.min(renderer.capabilities.getMaxAnisotropy(), 8);
     texture.needsUpdate = true;
     object.material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.FrontSide, toneMapped: false });
+    sizeArtworkMount(slot, entry, texture, true);
   }));
   scene.add(gltf.scene);
   const narrative = await new GLTFLoader().loadAsync(storyData.model);
@@ -1633,7 +1777,59 @@ async function loadGallery() {
   storySurface.material = new THREE.MeshBasicMaterial({ map: storyTexture, side: THREE.FrontSide, toneMapped: false });
   scene.add(narrative.scene);
   configureOpeningView();
-  setFilmSource('./assets/van-gogh-early-years.mp4?v=2026-10-02-v5', 'The Early Years');
+  if (!filmScreen) throw new Error('The opening film screen is missing');
+  openingFilm = createOpeningFilm({
+    viewer, renderer, scene, camera, screen: filmScreen, placeholder: filmPlaceholder, pickMeshes,
+    onExplore() { guideToStory(); story.open(); },
+    onWorks: enterEarlyDrawings,
+    onOpen() {
+      hallTexts?.close();
+      story.close();
+      closeImmersive();
+      if (catalogue.classList.contains('open')) setCatalogueOpen(false);
+      pauseTour();
+      cancelGuideTransition();
+      stopDolly();
+      hideCard();
+      keys.clear();
+      focusMotion = null;
+      for (const pointerId of activePointers.keys()) {
+        if (renderer.domElement.hasPointerCapture(pointerId)) renderer.domElement.releasePointerCapture(pointerId);
+      }
+      activePointers.clear();
+      pinchDistance = null;
+      gestureMoved = false;
+      gestureHadPinch = false;
+      pointerDownSlot = null;
+    },
+  });
+  openingFilm.setSource('./assets/van-gogh-early-years.mp4?v=2026-10-02-v5', 'The Early Years');
+  hallTexts = createHallTexts({
+    data: hallTextData, scene, renderer, pickMeshes,
+    currentChapter: () => hallTextStation?.id ?? (guidedIndex < 0 && !storyStationActive && tour.seconds < 5 ? 'arrival' : currentChapter),
+    onLocate: guideToHallText,
+    onOpen() {
+      filmVideo.pause();
+      openingFilm.close();
+      story.close();
+      closeImmersive();
+      if (catalogue.classList.contains('open')) setCatalogueOpen(false);
+      pauseTour();
+      cancelGuideTransition();
+      stopDolly();
+      hideCard();
+      keys.clear();
+      focusMotion = null;
+      for (const pointerId of activePointers.keys()) {
+        if (renderer.domElement.hasPointerCapture(pointerId)) renderer.domElement.releasePointerCapture(pointerId);
+      }
+      activePointers.clear();
+      pinchDistance = null;
+      gestureMoved = false;
+      gestureHadPinch = false;
+      pointerDownSlot = null;
+    },
+  });
   scene.updateMatrixWorld(true);
   const itemCount = chapters.reduce((total, chapter) => total + chapter.groups.reduce((count, group) => count + group.items.length, 0), 0);
   document.querySelector('#exhibit-status').textContent = `${workOrder.length} verified works · ${curatedSlots.size} highlight positions · Switchable wall sets`;
@@ -1641,6 +1837,7 @@ async function loadGallery() {
   renderCatalogue();
   loading.hidden = true;
   galleryReady = true;
+  entry.setReady();
   tourButton.disabled = false;
   nextArtwork.disabled = false;
   resetView.disabled = false;
@@ -1654,6 +1851,7 @@ measureCardLimits();
 updateTimeline();
 render();
 loadGallery().catch((cause) => {
+  entry.fail();
   loading.hidden = true;
   error.textContent = `Gallery could not load: ${cause.message}. Start with npm start rather than opening this HTML file directly.`;
   error.hidden = false;

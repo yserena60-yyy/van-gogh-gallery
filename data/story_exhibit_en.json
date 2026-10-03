@@ -1,34 +1,90 @@
 {
   "id": "london-transition",
-  "title": "A Home in London",
-  "subtitle": "Work, Affection and the Search for Belonging — 1873–1874",
-  "years": "1873–1874",
-  "eyebrow": "HALL 01 / AFTER THE OPENING FILM",
-  "intro": "Before following Vincent towards the artist he would become, pause here: at a rented room, a garden, and the ordinary hope of feeling at home.",
-  "wallText": "His London letters speak of work, pictures, walks and family. Later accounts add a story of disappointed love. Together, they invite us to look at a young man whose future was still unsettled.",
-  "invitation": "Explore the Story",
+  "title": "Searching for a Place",
+  "subtitle": "Work, Affection and the Search for Belonging · 1869–1881",
+  "years": "1869–1881",
+  "eyebrow": "A LIFE BEFORE PAINTING",
+  "intro": "A home, a livelihood, a relationship, a purpose. Each gives us a way into Vincent’s early life.",
+  "wallText": "Follow the places and people that shaped these years. Letters preserve particular moments. Family recollections and later research offer further accounts, with questions that remain open.",
+  "invitation": "Explore His Early Life",
   "image": "./assets/story-vincent-nineteen.jpg",
   "imageCaption": "Vincent van Gogh, aged nineteen · The Hague, January 1873",
   "imageCredit": "Photograph: J. M. W. de Louw · Public domain",
   "poster": "./assets/story-london-wall.jpg",
   "model": "./assets/story_transition_v20.glb?v=2026-10-01-expanded-first-hall",
-  "readingOrder": ["home", "life", "attachment", "sources"],
+  "readingOrder": [
+    "home",
+    "life",
+    "attachment",
+    "faith",
+    "miners",
+    "drawing"
+  ],
   "station": {
-    "position": [-34, 1.85, 30],
-    "target": [-42.36, 1.85, 30],
+    "position": [
+      -34,
+      1.85,
+      30
+    ],
+    "target": [
+      -42.36,
+      1.85,
+      30
+    ],
     "routeTime": 13.8,
-    "center": [-42.36, 2.62, 30],
-    "normal": [1, 0, 0],
+    "center": [
+      -42.36,
+      2.62,
+      30
+    ],
+    "normal": [
+      1,
+      0,
+      0
+    ],
     "width": 5.2,
     "height": 4.1
   },
-  "timelineTitle": "Searching for a Place",
+  "timelineTitle": "A Life in Motion",
   "timelineSubtitle": "Art, Work and Faith · 1869–1881",
   "timeline": [
-    { "date": "1869–1876", "title": "The Art Trade", "place": "The Hague · London · Paris", "body": "Work at Goupil & Cie brought Vincent into the world of paintings and prints before he became an artist.", "sources": ["young-vincent", "letter-15"] },
-    { "date": "1876–1878", "title": "Teaching & Faith", "place": "England · The Netherlands", "body": "Teaching, religious work and study offered other possible ways to serve and to belong.", "sources": ["purpose"] },
-    { "date": "1878–1880", "title": "The Borinage", "place": "Belgian coal-mining region", "body": "Life among miners deepened his concern for working people. His religious ambitions did not become a lasting vocation.", "sources": ["purpose"] },
-    { "date": "1880–1881", "title": "Learning to Draw", "place": "Brussels · Etten", "body": "He turned increasingly to drawing and to the possibility of a life in art. Continue into Hall 02 to follow that work.", "sources": ["purpose"] }
+    {
+      "date": "1869–1876",
+      "title": "The Art Trade",
+      "place": "The Hague · London · Paris",
+      "body": "Work at Goupil & Cie brought Vincent into the world of paintings and prints before he became an artist.",
+      "sources": [
+        "young-vincent",
+        "letter-15"
+      ]
+    },
+    {
+      "date": "1876–1878",
+      "title": "Teaching & Faith",
+      "place": "England · The Netherlands",
+      "body": "Teaching, religious work and study offered other possible ways to serve and to belong.",
+      "sources": [
+        "purpose"
+      ]
+    },
+    {
+      "date": "1878–1880",
+      "title": "The Borinage",
+      "place": "Belgian coal-mining region",
+      "body": "Life among miners deepened his concern for working people. His religious ambitions did not become a lasting vocation.",
+      "sources": [
+        "purpose"
+      ]
+    },
+    {
+      "date": "1880–1881",
+      "title": "Learning to Draw",
+      "place": "Brussels · Etten",
+      "body": "He turned increasingly to drawing and to the possibility of a life in art. Continue to the Early Works in Hall 01, then follow the route into Hall 02.",
+      "sources": [
+        "purpose"
+      ]
+    }
   ],
   "chapters": [
     {
@@ -45,18 +101,43 @@
         "His letter to Theo that September introduces not a tragic artist, but a young man pleased with his new surroundings—and eager to share them."
       ],
       "sections": [
-        { "title": "A Room and a Household", "paragraphs": [
-          "At Hackford Road, Vincent boarded with the widowed Sarah Ursula Loyer and her daughter, Eugénie. The household also accommodated a small school for boys. For Mrs Loyer, teaching and letting rooms were ways of earning a living.",
-          "On 13 September 1873, Vincent described his new room to Theo. He was glad to have left behind the sloping beams and blue wallpaper with a green border of his previous lodgings. He found the household lively and wished his brother could see it.",
-          "The same letter moves easily from domestic news to an outing on the Thames and an exhibition of Belgian paintings. Home, companionship and pictures belonged to the same conversation."
-        ] }
+        {
+          "title": "A Room and a Household",
+          "paragraphs": [
+            "At Hackford Road, Vincent boarded with the widowed Sarah Ursula Loyer and her daughter, Eugénie. The household also accommodated a small school for boys. For Mrs Loyer, teaching and letting rooms were ways of earning a living.",
+            "On 13 September 1873, Vincent described his new room to Theo. He was glad to have left behind the sloping beams and blue wallpaper with a green border of his previous lodgings. He found the household lively and wished his brother could see it.",
+            "The same letter moves easily from domestic news to an outing on the Thames and an exhibition of Belgian paintings. Home, companionship and pictures belonged to the same conversation."
+          ]
+        }
       ],
-      "quote": { "text": "Oh! Old man, I so want that you come here to see my new lodgings", "attribution": "Vincent to Theo · London, 13 September 1873 · Letter 13", "source": "translation-13" },
-      "materials": ["official-house", "letter-13"],
+      "quote": {
+        "text": "Oh! Old man, I so want that you come here to see my new lodgings",
+        "attribution": "Vincent to Theo · London, 13 September 1873 · Letter 13",
+        "source": "translation-13"
+      },
+      "materials": [
+        "official-house",
+        "letter-13"
+      ],
       "prompt": "Look beyond the famous name. What would you want to tell someone about your first home in a new city?",
-      "actions": [{ "label": "Art Before Painting", "chapter": "art", "description": "Optional branch · Work and the pictures he chose to share" }],
+      "actions": [
+        {
+          "label": "Art Before Painting",
+          "chapter": "art",
+          "description": "Optional branch · Work and the pictures he chose to share"
+        }
+      ],
       "evidence": "The portrait was taken in January 1873, before London. The letter documents his new room and the boys’ school. The house photograph shown here was taken on 17 May 2016, not in 1873. The letter excerpt is a typeset quotation from WebExhibits, not a manuscript image; its wording differs from the modern scholarly translation.",
-      "sources": ["portrait", "portrait-identity", "letter-13", "translation-13", "translation-credits", "house", "house-open-photo", "bailey-2019"]
+      "sources": [
+        "portrait",
+        "portrait-identity",
+        "letter-13",
+        "translation-13",
+        "translation-credits",
+        "house",
+        "house-open-photo",
+        "bailey-2019"
+      ]
     },
     {
       "id": "life",
@@ -77,8 +158,14 @@
             "For him, looking at the world and looking at pictures were connected. Painters could help people notice what they might otherwise overlook.",
             "He also describes the satisfaction of having a comfortable home, alongside nature, art and poetry. Read this letter before the accounts of disappointment: happiness, too, belongs in his biography."
           ],
-          "quote": { "text": "I've got a delightful home", "attribution": "Vincent to Theo · London, beginning of January 1874 · Letter 17", "source": "translation-17" },
-          "materials": ["letter-17"]
+          "quote": {
+            "text": "I've got a delightful home",
+            "attribution": "Vincent to Theo · London, beginning of January 1874 · Letter 17",
+            "source": "translation-17"
+          },
+          "materials": [
+            "letter-17"
+          ]
         },
         {
           "id": "april",
@@ -89,14 +176,33 @@
             "He enjoyed walking between home and the office, a journey he estimated at about forty-five minutes. Yet pleasure in London coexisted with longing for Holland, especially Helvoirt.",
             "These details need not become symbols of his future paintings. They matter first as the activities and attachments of a young man living away from home."
           ],
-          "quote": { "text": "He that sincerely loves nature, finds pleasure everywhere.", "attribution": "Vincent to Theo · London, 30 April 1874 · Letter 22", "source": "translation-22" },
-          "materials": ["letter-22"]
+          "quote": {
+            "text": "He that sincerely loves nature, finds pleasure everywhere.",
+            "attribution": "Vincent to Theo · London, 30 April 1874 · Letter 22",
+            "source": "translation-22"
+          },
+          "materials": [
+            "letter-22"
+          ]
         }
       ],
       "prompt": "What changes when we give his happiness as much attention as his suffering?",
-      "actions": [{ "label": "Art Before Painting", "chapter": "art", "description": "Optional branch · Follow a picture from Vincent to Theo" }],
+      "actions": [
+        {
+          "label": "Art Before Painting",
+          "chapter": "art",
+          "description": "Optional branch · Follow a picture from Vincent to Theo"
+        }
+      ],
       "evidence": "Dates and letter numbers follow the scholarly edition. The typeset quotations use the English version published by WebExhibits, which numbers these letters differently. The surrounding text is an independent summary, not part of the quotation.",
-      "sources": ["letter-17", "letter-22", "translation-17", "translation-22", "translation-credits", "edition-rights"]
+      "sources": [
+        "letter-17",
+        "letter-22",
+        "translation-17",
+        "translation-22",
+        "translation-credits",
+        "edition-rights"
+      ]
     },
     {
       "id": "attachment",
@@ -108,19 +214,35 @@
         "A later family memoir tells of an attachment that was not returned. Research has revisited the woman’s identity and the sequence of events. The familiar story of heartbreak survives—but not as a fully documented scene."
       ],
       "sections": [
-        { "title": "A Story Told Afterwards", "paragraphs": [
-          "In Jo van Gogh-Bonger’s retrospective account, Vincent confessed his love to a woman she called Ursula. She was already engaged to a previous lodger. Jo describes his unsuccessful attempts to change her mind, followed by withdrawal and growing religious preoccupation.",
-          "This is a family account written afterwards, not Vincent’s own description of a confession. It gives the episode emotional force, but should not be read as a transcript of what happened.",
-          "Van Gogh House London takes a more cautious approach: it describes his affection for Eugénie as rumoured and acknowledges that the circumstances of his departure remain unclear. Family correspondence expresses concern, but does not settle every question.",
-          "Here, the story is presented as an unresolved part of his life—not a single explanation for everything that followed."
-        ] }
+        {
+          "title": "A Story Told Afterwards",
+          "paragraphs": [
+            "In Jo van Gogh-Bonger’s retrospective account, Vincent confessed his love to a woman she called Ursula. She was already engaged to a previous lodger. Jo describes his unsuccessful attempts to change her mind, followed by withdrawal and growing religious preoccupation.",
+            "This is a family account written afterwards, not Vincent’s own description of a confession. It gives the episode emotional force, but should not be read as a transcript of what happened.",
+            "Van Gogh House London takes a more cautious approach: it describes his affection for Eugénie as rumoured and acknowledges that the circumstances of his departure remain unclear. Family correspondence expresses concern, but does not settle every question.",
+            "Here, the story is presented as an unresolved part of his life—not a single explanation for everything that followed."
+          ]
+        }
       ],
-      "materials": ["locket"],
+      "materials": [
+        "locket"
+      ],
       "prompt": "A shared address connects people. Does it also prove the story later told about them?",
-      "actions": [{ "label": "Compare the Accounts", "chapter": "sources", "description": "Letters · Family memory · Later research · What remains uncertain" }],
+      "actions": [
+        {
+          "label": "Compare the Accounts",
+          "chapter": "sources",
+          "description": "Letters · Family memory · Later research · What remains uncertain"
+        }
+      ],
       "evidence": "This original relationship card is a reading aid, not a historic document or a picture of a proven couple. Samuel Plowman is the man Eugénie married in 1878; identifying him as the earlier fiancé remains an interpretation. The reported engagement comes from Bailey’s account of Anna’s correspondence, not a manuscript displayed here.",
       "interpretation": true,
-      "sources": ["locket-photo", "family-memoir", "bailey-2019", "house-london"]
+      "sources": [
+        "locket-photo",
+        "family-memoir",
+        "bailey-2019",
+        "house-london"
+      ]
     },
     {
       "id": "sources",
@@ -134,52 +256,78 @@
       "evidenceCards": [
         {
           "id": "letters",
-          "title": "Vincent’s Own Words",
+          "title": "Letters",
           "label": "CONTEMPORARY CORRESPONDENCE",
           "paragraphs": [
             "The letters displayed here describe a new room, a pleasant home, paintings, gardening and daily walks. They give us Vincent’s own account of these parts of his London life.",
             "They do not narrate a romantic confession or rejection. Their silence cannot establish that nothing happened; equally, it does not allow us to supply the missing conversation."
           ],
-          "sources": ["letter-13", "letter-17", "letter-22"]
+          "sources": [
+            "letter-13",
+            "letter-17",
+            "letter-22"
+          ]
         },
         {
           "id": "memory",
-          "title": "Family Memory",
+          "title": "Family Recollections",
           "label": "RETROSPECTIVE FAMILY ACCOUNT",
           "paragraphs": [
             "Jo van Gogh-Bonger’s memoir presents disappointed love as a turning point. Her account links the episode with changes in Vincent’s behaviour and an increasingly religious life.",
             "It preserves a family understanding of his experience. Yet it was written retrospectively, and its naming of the woman as Ursula has become part of the historical debate.",
             "Read it as an influential account—not an eyewitness record of the encounter."
           ],
-          "sources": ["family-memoir"]
+          "sources": [
+            "family-memoir"
+          ]
         },
         {
           "id": "research",
-          "title": "Revisiting the Story",
+          "title": "Later Research",
           "label": "LATER RESEARCH & INTERPRETATION",
           "paragraphs": [
             "In 2019, Van Gogh specialist Martin Bailey revisited the story using census information and correspondence from Vincent’s sister Anna. He argues that Eugénie, rather than her mother, was the likely object of Vincent’s affection.",
             "Bailey reports that Anna’s February 1874 correspondence already mentioned Eugénie’s engagement. This complicates a narrative in which Vincent first discovered it during a confession in August.",
             "Eugénie married Samuel Plowman in 1878. Bailey considers him the likely earlier fiancé, but does not regard that identification as certain. This is a named specialist’s research article, not a peer-reviewed paper."
           ],
-          "sources": ["bailey-2019"]
+          "sources": [
+            "bailey-2019"
+          ]
         },
         {
           "id": "uncertain",
-          "title": "What Remains Uncertain",
+          "title": "Open Questions",
           "label": "UNRESOLVED · CURATORIAL PERSPECTIVE",
           "paragraphs": [
             "The accounts assembled here do not establish the exact words, date or circumstances of a confession, or fully explain Vincent’s departure.",
             "Some narratives connect disappointed love with his turn towards religion. That connection is an interpretation, not a demonstrated psychological cause. Van Gogh House explicitly leaves the circumstances of his departure unresolved.",
             "Uncertainty is not an invitation to invent a scene. It is a reason to leave space around the people involved."
           ],
-          "sources": ["house-london", "family-memoir"]
+          "sources": [
+            "house-london",
+            "family-memoir"
+          ]
         }
       ],
-      "materials": ["insurance", "disputed-drawing"],
+      "materials": [
+        "insurance",
+        "disputed-drawing"
+      ],
       "prompt": "Which details come from a document, which from memory, and which from interpretation?",
       "evidence": "The four cards distinguish evidence types; they are not a vote on which story is true. Full scans of Anna’s relevant letter and the census have not been verified here. No substitute archive pages have been invented.",
-      "sources": ["letter-13", "letter-17", "letter-22", "family-memoir", "bailey-2019", "house-london", "house", "insurance-photo", "bailey-2023", "edition-rights"]
+      "sources": [
+        "letter-13",
+        "letter-17",
+        "letter-22",
+        "family-memoir",
+        "bailey-2019",
+        "house-london",
+        "house",
+        "insurance-photo",
+        "bailey-2023",
+        "edition-rights"
+      ],
+      "branch": true
     },
     {
       "id": "art",
@@ -192,83 +340,716 @@
         "His London correspondence discusses paintings, engravings and photographic reproductions. It also reveals a young man forming preferences and sharing them with his brother."
       ],
       "sections": [
-        { "title": "Business and Enthusiasm", "paragraphs": [
-          "On 19 November 1873, Vincent wrote to Theo about their work for the same firm. He compared the demand for different reproductions, noted sales of engravings after Ingres, and discussed the success of photographs, especially coloured ones.",
-          "He also encouraged Theo to visit museums and read about art. Business and enthusiasm appear together: the letter does not present him as someone who had already rejected the art trade.",
-          "In April 1874, he mentioned sending Theo a photographic reproduction of Gustave Jean Jacquet’s Girl Holding a Sword. Published by Goupil & Cie, the photograph survives in Theo’s scrapbook.",
-          "Placed beside the letter, it offers a concrete example of a picture passing between the brothers. Consider it not as an early Van Gogh work, but as something he chose to share."
-        ] }
+        {
+          "title": "Business and Enthusiasm",
+          "paragraphs": [
+            "On 19 November 1873, Vincent wrote to Theo about their work for the same firm. He compared the demand for different reproductions, noted sales of engravings after Ingres, and discussed the success of photographs, especially coloured ones.",
+            "He also encouraged Theo to visit museums and read about art. Business and enthusiasm appear together: the letter does not present him as someone who had already rejected the art trade.",
+            "In April 1874, he mentioned sending Theo a photographic reproduction of Gustave Jean Jacquet’s Girl Holding a Sword. Published by Goupil & Cie, the photograph survives in Theo’s scrapbook.",
+            "Placed beside the letter, it offers a concrete example of a picture passing between the brothers. Consider it not as an early Van Gogh work, but as something he chose to share."
+          ]
+        }
       ],
-      "quote": { "text": "You must write me sometime whom you like best among the older painters as well as among the moderns.", "attribution": "Vincent to Theo · London, 19 November 1873 · Letter 15", "source": "translation-15" },
-      "materials": ["jacquet", "letter-15"],
+      "quote": {
+        "text": "You must write me sometime whom you like best among the older painters as well as among the moderns.",
+        "attribution": "Vincent to Theo · London, 19 November 1873 · Letter 15",
+        "source": "translation-15"
+      },
+      "materials": [
+        "jacquet",
+        "letter-15"
+      ],
       "prompt": "Before asking what Vincent painted, ask what he chose to look at—and what he wanted someone else to see.",
       "evidence": "The reproduction is after Jacquet’s 1872 painting, not a Van Gogh painting or a portrait of Eugénie. This branch can be visited from the first two chapters without implying that an interest in art followed a rejection.",
-      "sources": ["letter-15", "translation-15", "translation-credits", "letter-22", "jacquet-source", "edition-rights"]
+      "sources": [
+        "letter-15",
+        "translation-15",
+        "translation-credits",
+        "letter-22",
+        "jacquet-source",
+        "edition-rights"
+      ]
+    },
+    {
+      "id": "faith",
+      "title": "Turning to Faith",
+      "subtitle": "Reading, Teaching and a Possible Vocation",
+      "kicker": "ENGLAND · 1876 / FURTHER STUDY · 1877–1878",
+      "image": "./assets/story-vincent-nineteen.jpg",
+      "imageSource": "portrait",
+      "imageCaption": "Vincent van Gogh, aged nineteen. Photograph by J. M. W. de Louw, The Hague, January 1873. This earlier portrait is not a photograph of his religious work in 1876.",
+      "imageCredit": "J. M. W. de Louw · Wikimedia Commons · Public domain",
+      "paragraphs": [
+        "After the art trade, Vincent explored teaching and religious work. In England in 1876, he worked in schools and became involved in preaching. His letter to Theo of 3 November describes his first sermon and includes its text.",
+        "Religion offered a possible direction, but the route was not straightforward. Further study and training preceded his move to the Belgian mining region. Read these changes as successive efforts to find a vocation, rather than as a single consequence of the London attachment."
+      ],
+      "prompt": "What kind of work might give a life purpose?",
+      "evidence": "An independent curatorial summary, grounded in the linked letters and institutional chronology. The portrait dates from January 1873; it is not evidence of an event in 1876. No single psychological cause is asserted.",
+      "sources": [
+        "faith-letter-96",
+        "miners-letter-149",
+        "purpose"
+      ],
+      "materials": [],
+      "actions": []
+    },
+    {
+      "id": "miners",
+      "title": "Among the Miners",
+      "subtitle": "Work, Hardship and an Unsettled Direction",
+      "kicker": "THE BORINAGE · 1878–1880",
+      "image": "./assets/story-miners-1880.jpg",
+      "imageSource": "miners-image",
+      "imageCaption": "Miners, Cuesmes. Catalogued as 1880 at the linked image source. A reproduction of a drawing, not a photograph of the miners.",
+      "imageCredit": "Vincent van Gogh · Wikimedia Commons · Public domain",
+      "paragraphs": [
+        "In December 1878, Vincent wrote to Theo from Wasmes in the Borinage. He described a landscape shaped by coal mining and the difficult conditions in which local people lived and worked.",
+        "Religious work did not become a lasting vocation. The mining region also belongs to the years in which he began to give drawing a more deliberate place in his life. The letter and the drawing offer different kinds of evidence: an account addressed to his brother, and a visual study of working people."
+      ],
+      "prompt": "How does looking closely differ from telling someone else’s story?",
+      "evidence": "The accompanying image is a drawing reproduction labelled Miners, Cuesmes at its source, not a photograph or a reconstructed scene. Contemporary letters should be distinguished from later interpretations of these years.",
+      "sources": [
+        "miners-letter-149",
+        "drawing-letter-158",
+        "miners-image",
+        "purpose"
+      ],
+      "materials": [],
+      "actions": []
+    },
+    {
+      "id": "drawing",
+      "title": "Learning to Draw",
+      "subtitle": "Looking Closely, Learning Slowly",
+      "kicker": "CUESMES · 1880 / ETTEN · 1881",
+      "image": "./assets/etten-road-1881.jpg",
+      "imageSource": "road-in-etten",
+      "imageCaption": "Road in Etten, 1881. Chalk, pencil, pastel and watercolour; underdrawing in pen and brown ink. The Metropolitan Museum of Art, 1975.1.774.",
+      "imageCredit": "The Metropolitan Museum of Art · Open Access / CC0 · 459193",
+      "paragraphs": [
+        "Drawing became a practice to be pursued, not simply an interest. In his letter to Theo of 24 September 1880, Vincent discussed exercises and the work of learning. Observation, copying and repeated study formed part of that process.",
+        "The early works bring us close to the work of learning. Open a drawing to explore its materials, its setting and the evidence behind its story. Road in Etten belongs to the Early Works section of this first hall; further drawings and paintings continue in Hall 02."
+      ],
+      "prompt": "What changes when a familiar road becomes something to study?",
+      "evidence": "This section uses the September 1880 letter and the museum record for Road in Etten. The work is dated 1881; it is not presented as an illustration made for that particular letter.",
+      "sources": [
+        "drawing-letter-158",
+        "road-in-etten",
+        "purpose"
+      ],
+      "materials": [],
+      "actions": []
     }
   ],
   "materials": [
-    { "id": "letter-13", "title": "A letter about his new lodgings", "kind": "LETTER 13 · 13 SEPTEMBER 1873", "presentation": "letter", "caption": "A room he wanted to share with his brother.", "credit": "Vincent van Gogh · English version as published by WebExhibits", "source": "translation-13", "rights": "Typeset excerpt, not a manuscript facsimile. Presented under WebExhibits’ stated public-domain / CC BY-SA 1.0 reuse terms; the typeset panel is offered under CC BY-SA 1.0. Date and numbering follow the scholarly edition (WebExhibits: letter 11).", "actions": [{ "label": "Read this English Version", "source": "translation-13" }, { "label": "Check the Scholarly Edition", "source": "letter-13" }] },
-    { "id": "official-house", "title": "87 Hackford Road, London", "kind": "MODERN PHOTOGRAPH · 2016", "presentation": "photo", "caption": "A modern view of the house and its street—not a reconstruction of London in 1873.", "image": "./assets/story-house-2016.jpg", "imageCaption": "87 Hackford Road, London · Photographed on 17 May 2016, not in 1873.", "imageCredit": "Photograph: Udimu / Wikimedia Commons · CC BY-SA 4.0 · Unmodified source image", "imageSource": "house-open-photo", "credit": "Photograph: Udimu · 17 May 2016 · Wikimedia Commons", "source": "house-open-photo", "rights": "CC BY-SA 4.0. The original photograph is copied unchanged, with no additional cropping or re-encoding. Only its on-screen display size changes.", "actions": [{ "label": "Photo Source & Attribution", "source": "house-open-photo" }, { "label": "Explore the House History", "source": "house" }] },
-    { "id": "letter-17", "title": "Home, art and poetry", "kind": "LETTER 17 · BEGINNING OF JANUARY 1874", "presentation": "letter", "caption": "An ordinary pleasure, in Vincent’s own words.", "credit": "Vincent van Gogh · English version as published by WebExhibits", "source": "translation-17", "rights": "Typeset excerpt, not a manuscript facsimile. Presented under WebExhibits’ stated public-domain / CC BY-SA 1.0 reuse terms; the typeset panel is offered under CC BY-SA 1.0. Date and numbering follow the scholarly edition (WebExhibits: letter 13).", "actions": [{ "label": "Read this English Version", "source": "translation-17" }, { "label": "Check the Scholarly Edition", "source": "letter-17" }] },
-    { "id": "letter-22", "title": "Gardens and daily walks", "kind": "LETTER 22 · 30 APRIL 1874", "presentation": "letter", "caption": "Nature, walks and a garden taking shape.", "credit": "Vincent van Gogh · English version as published by WebExhibits", "source": "translation-22", "rights": "Typeset excerpt, not a manuscript facsimile. Presented under WebExhibits’ stated public-domain / CC BY-SA 1.0 reuse terms; the typeset panel is offered under CC BY-SA 1.0. Date and numbering follow the scholarly edition (WebExhibits: letter 16).", "actions": [{ "label": "Read this English Version", "source": "translation-22" }, { "label": "Check the Scholarly Edition", "source": "letter-22" }] },
     {
-      "id": "locket", "title": "People at Hackford Road", "kind": "PEOPLE & EVIDENCE", "presentation": "relationships", "caption": "Choose a name to separate household ties from later interpretations.",
-      "credit": "Original gallery relationship card · Independent summaries of the credited sources", "source": "bailey-2019", "replaces": "locket-photo", "rights": "Original reading aid, not an archival diagram. No locket photograph or substitute portrait is reproduced. The reported correspondence is not represented by an invented manuscript.",
+      "id": "letter-13",
+      "title": "A letter about his new lodgings",
+      "kind": "LETTER 13 · 13 SEPTEMBER 1873",
+      "presentation": "letter",
+      "caption": "A room he wanted to share with his brother.",
+      "credit": "Vincent van Gogh · English version as published by WebExhibits",
+      "source": "translation-13",
+      "rights": "Typeset excerpt, not a manuscript facsimile. Presented under WebExhibits’ stated public-domain / CC BY-SA 1.0 reuse terms; the typeset panel is offered under CC BY-SA 1.0. Date and numbering follow the scholarly edition (WebExhibits: letter 11).",
+      "actions": [
+        {
+          "label": "Read this English Version",
+          "source": "translation-13"
+        },
+        {
+          "label": "Check the Scholarly Edition",
+          "source": "letter-13"
+        }
+      ]
+    },
+    {
+      "id": "official-house",
+      "title": "87 Hackford Road, London",
+      "kind": "MODERN PHOTOGRAPH · 2016",
+      "presentation": "photo",
+      "caption": "A modern view of the house and its street—not a reconstruction of London in 1873.",
+      "image": "./assets/story-house-2016.jpg",
+      "imageCaption": "87 Hackford Road, London · Photographed on 17 May 2016, not in 1873.",
+      "imageCredit": "Photograph: Udimu / Wikimedia Commons · CC BY-SA 4.0 · Unmodified source image",
+      "imageSource": "house-open-photo",
+      "credit": "Photograph: Udimu · 17 May 2016 · Wikimedia Commons",
+      "source": "house-open-photo",
+      "rights": "CC BY-SA 4.0. The original photograph is copied unchanged, with no additional cropping or re-encoding. Only its on-screen display size changes.",
+      "actions": [
+        {
+          "label": "Photo Source & Attribution",
+          "source": "house-open-photo"
+        },
+        {
+          "label": "Explore the House History",
+          "source": "house"
+        }
+      ]
+    },
+    {
+      "id": "letter-17",
+      "title": "Home, art and poetry",
+      "kind": "LETTER 17 · BEGINNING OF JANUARY 1874",
+      "presentation": "letter",
+      "caption": "An ordinary pleasure, in Vincent’s own words.",
+      "credit": "Vincent van Gogh · English version as published by WebExhibits",
+      "source": "translation-17",
+      "rights": "Typeset excerpt, not a manuscript facsimile. Presented under WebExhibits’ stated public-domain / CC BY-SA 1.0 reuse terms; the typeset panel is offered under CC BY-SA 1.0. Date and numbering follow the scholarly edition (WebExhibits: letter 13).",
+      "actions": [
+        {
+          "label": "Read this English Version",
+          "source": "translation-17"
+        },
+        {
+          "label": "Check the Scholarly Edition",
+          "source": "letter-17"
+        }
+      ]
+    },
+    {
+      "id": "letter-22",
+      "title": "Gardens and daily walks",
+      "kind": "LETTER 22 · 30 APRIL 1874",
+      "presentation": "letter",
+      "caption": "Nature, walks and a garden taking shape.",
+      "credit": "Vincent van Gogh · English version as published by WebExhibits",
+      "source": "translation-22",
+      "rights": "Typeset excerpt, not a manuscript facsimile. Presented under WebExhibits’ stated public-domain / CC BY-SA 1.0 reuse terms; the typeset panel is offered under CC BY-SA 1.0. Date and numbering follow the scholarly edition (WebExhibits: letter 16).",
+      "actions": [
+        {
+          "label": "Read this English Version",
+          "source": "translation-22"
+        },
+        {
+          "label": "Check the Scholarly Edition",
+          "source": "letter-22"
+        }
+      ]
+    },
+    {
+      "id": "locket",
+      "title": "People at Hackford Road",
+      "kind": "PEOPLE & EVIDENCE",
+      "presentation": "relationships",
+      "caption": "Choose a name to separate household ties from later interpretations.",
+      "credit": "Original gallery relationship card · Independent summaries of the credited sources",
+      "source": "bailey-2019",
+      "replaces": "locket-photo",
+      "rights": "Original reading aid, not an archival diagram. No locket photograph or substitute portrait is reproduced. The reported correspondence is not represented by an invented manuscript.",
       "people": [
-        { "id": "vincent", "name": "Vincent van Gogh", "role": "Tenant · Goupil employee", "body": "Vincent rented a room here while working in London. His surviving letters describe the lodgings and his daily life; they do not recount a confession of love.", "sources": ["letter-13", "letter-17", "letter-22"] },
-        { "id": "ursula", "name": "Sarah Ursula Loyer", "role": "Landlady · Eugénie’s mother", "body": "The widowed Mrs Loyer let rooms and helped run a boys’ school. Jo van Gogh-Bonger’s later memoir called the woman in the love story Ursula; later research questions that identification.", "sources": ["house", "family-memoir", "bailey-2019"] },
-        { "id": "eugenie", "name": "Eugénie Loyer", "role": "Ursula’s daughter", "body": "Bailey argues that Eugénie was the likely object of Vincent’s affection. Van Gogh House describes the attachment as rumoured. Neither wording establishes a documented romantic relationship.", "sources": ["bailey-2019", "house-london"] },
-        { "id": "samuel", "name": "Samuel Plowman", "role": "Eugénie’s husband · 1878", "body": "Eugénie married Samuel in 1878. Bailey considers him the likely earlier fiancé mentioned in the family story, but explicitly leaves that identification uncertain.", "sources": ["bailey-2019"] }
+        {
+          "id": "vincent",
+          "name": "Vincent van Gogh",
+          "role": "Tenant · Goupil employee",
+          "body": "Vincent rented a room here while working in London. His surviving letters describe the lodgings and his daily life; they do not recount a confession of love.",
+          "sources": [
+            "letter-13",
+            "letter-17",
+            "letter-22"
+          ]
+        },
+        {
+          "id": "ursula",
+          "name": "Sarah Ursula Loyer",
+          "role": "Landlady · Eugénie’s mother",
+          "body": "The widowed Mrs Loyer let rooms and helped run a boys’ school. Jo van Gogh-Bonger’s later memoir called the woman in the love story Ursula; later research questions that identification.",
+          "sources": [
+            "house",
+            "family-memoir",
+            "bailey-2019"
+          ]
+        },
+        {
+          "id": "eugenie",
+          "name": "Eugénie Loyer",
+          "role": "Ursula’s daughter",
+          "body": "Bailey argues that Eugénie was the likely object of Vincent’s affection. Van Gogh House describes the attachment as rumoured. Neither wording establishes a documented romantic relationship.",
+          "sources": [
+            "bailey-2019",
+            "house-london"
+          ]
+        },
+        {
+          "id": "samuel",
+          "name": "Samuel Plowman",
+          "role": "Eugénie’s husband · 1878",
+          "body": "Eugénie married Samuel in 1878. Bailey considers him the likely earlier fiancé mentioned in the family story, but explicitly leaves that identification uncertain.",
+          "sources": [
+            "bailey-2019"
+          ]
+        }
       ],
       "connections": [
-        { "from": "vincent", "to": "ursula", "label": "Tenant and landlady", "sources": ["house", "letter-13"] },
-        { "from": "ursula", "to": "eugenie", "label": "Mother and daughter", "sources": ["house"] },
-        { "from": "eugenie", "to": "samuel", "label": "Married in 1878", "sources": ["bailey-2019"] }
+        {
+          "from": "vincent",
+          "to": "ursula",
+          "label": "Tenant and landlady",
+          "sources": [
+            "house",
+            "letter-13"
+          ]
+        },
+        {
+          "from": "ursula",
+          "to": "eugenie",
+          "label": "Mother and daughter",
+          "sources": [
+            "house"
+          ]
+        },
+        {
+          "from": "eugenie",
+          "to": "samuel",
+          "label": "Married in 1878",
+          "sources": [
+            "bailey-2019"
+          ]
+        }
       ],
       "events": [
-        { "date": "1873–1874", "label": "Contemporary letters", "body": "Lodgings, art, gardening and daily life—not an account of a romantic confession.", "sources": ["letter-13", "letter-17", "letter-22"] },
-        { "date": "February 1874", "label": "Reported correspondence", "body": "Bailey reports that Anna’s correspondence already mentions Eugénie’s engagement. The original letter is not displayed here.", "sources": ["bailey-2019"] },
-        { "date": "1878", "label": "Later marriage", "body": "Eugénie marries Samuel Plowman. This does not settle the earlier fiancé’s identity.", "sources": ["bailey-2019"] }
+        {
+          "date": "1873–1874",
+          "label": "Contemporary letters",
+          "body": "Lodgings, art, gardening and daily life—not an account of a romantic confession.",
+          "sources": [
+            "letter-13",
+            "letter-17",
+            "letter-22"
+          ]
+        },
+        {
+          "date": "February 1874",
+          "label": "Reported correspondence",
+          "body": "Bailey reports that Anna’s correspondence already mentions Eugénie’s engagement. The original letter is not displayed here.",
+          "sources": [
+            "bailey-2019"
+          ]
+        },
+        {
+          "date": "1878",
+          "label": "Later marriage",
+          "body": "Eugénie marries Samuel Plowman. This does not settle the earlier fiancé’s identity.",
+          "sources": [
+            "bailey-2019"
+          ]
+        }
       ],
-      "actions": [{ "label": "Read the Research", "source": "bailey-2019" }, { "label": "The House’s Cautious Account", "source": "house-london" }]
+      "actions": [
+        {
+          "label": "Read the Research",
+          "source": "bailey-2019"
+        },
+        {
+          "label": "The House’s Cautious Account",
+          "source": "house-london"
+        }
+      ]
     },
     {
-      "id": "insurance", "title": "The Household Behind the Story", "kind": "HOME · SCHOOL · LIVELIHOOD", "presentation": "household", "caption": "A working household, not only the setting of a love story.", "credit": "Original gallery context card · Independently summarised from Van Gogh House London and Letter 13", "source": "house", "replaces": "insurance-photo", "rights": "Original contextual summary, not an insurance facsimile. The discovery is described at the source; the document photograph and unverified document dates are not reproduced.",
+      "id": "insurance",
+      "title": "The Household Behind the Story",
+      "kind": "HOME · SCHOOL · LIVELIHOOD",
+      "presentation": "household",
+      "caption": "A working household, not only the setting of a love story.",
+      "credit": "Original gallery context card · Independently summarised from Van Gogh House London and Letter 13",
+      "source": "house",
+      "replaces": "insurance-photo",
+      "rights": "Original contextual summary, not an insurance facsimile. The discovery is described at the source; the document photograph and unverified document dates are not reproduced.",
       "sections": [
-        { "title": "Letting Rooms", "body": "For the widowed Sarah Ursula Loyer, taking in lodgers was part of earning a living.", "sources": ["house"] },
-        { "title": "A Boys’ School", "body": "Vincent’s September 1873 letter mentions the boys’ school in the household. Domestic life and teaching occupied the same address.", "sources": ["letter-13", "house"] },
-        { "title": "Traces of Everyday Business", "body": "Restoration brought insurance papers bearing Ursula’s signature to light. They are evidence of household administration, not proof of the love story.", "sources": ["house"] }
+        {
+          "title": "Letting Rooms",
+          "body": "For the widowed Sarah Ursula Loyer, taking in lodgers was part of earning a living.",
+          "sources": [
+            "house"
+          ]
+        },
+        {
+          "title": "A Boys’ School",
+          "body": "Vincent’s September 1873 letter mentions the boys’ school in the household. Domestic life and teaching occupied the same address.",
+          "sources": [
+            "letter-13",
+            "house"
+          ]
+        },
+        {
+          "title": "Traces of Everyday Business",
+          "body": "Restoration brought insurance papers bearing Ursula’s signature to light. They are evidence of household administration, not proof of the love story.",
+          "sources": [
+            "house"
+          ]
+        }
       ],
-      "actions": [{ "label": "Read the House History", "source": "house" }, { "label": "Read Vincent’s Letter", "source": "letter-13" }]
+      "actions": [
+        {
+          "label": "Read the House History",
+          "source": "house"
+        },
+        {
+          "label": "Read Vincent’s Letter",
+          "source": "letter-13"
+        }
+      ]
     },
-    { "id": "disputed-drawing", "title": "When an Attribution Changes", "kind": "NOT AN AUTHENTICATED VAN GOGH", "caption": "The Hackford Road drawing was once attributed to Vincent. Martin Bailey’s 2023 account reports that the Van Gogh Museum rejected the attribution and presents the drawing as anonymous.", "credit": "Martin Bailey · The Art Newspaper · 1 September 2023", "source": "bailey-2023", "rights": "Research reference only. The drawing is not installed as a confirmed Van Gogh work.", "actions": [{ "label": "Read the Attribution History", "source": "bailey-2023" }] },
-    { "id": "jacquet", "title": "Girl Holding a Sword", "kind": "A PICTURE VINCENT SENT TO THEO", "caption": "Photographic reproduction after Gustave Jean Jacquet’s painting of 1872. Published by Goupil & Cie; preserved in Theo van Gogh’s scrapbook. Vincent mentioned sending it on 30 April 1874. It is not a portrait of Eugénie Loyer.", "credit": "Van Gogh Museum, Vincent van Gogh Foundation · Scholarly edition, Letter 22, note 3, illustration 1698", "source": "jacquet-source", "rights": "View the actual reproduction in the original edition’s image viewer. No substitute painting or fabricated archive image is used.", "actions": [{ "label": "View the Reproduction · Note 3", "source": "jacquet-source" }] },
-    { "id": "letter-15", "title": "Discussing the trade in pictures", "kind": "LETTER 15 · 19 NOVEMBER 1873", "presentation": "letter", "caption": "A young employee learning to look and to share his preferences.", "credit": "Vincent van Gogh · English version as published by WebExhibits", "source": "translation-15", "rights": "Typeset excerpt, not a manuscript facsimile. Presented under WebExhibits’ stated public-domain / CC BY-SA 1.0 reuse terms; the typeset panel is offered under CC BY-SA 1.0. Date and numbering follow the scholarly edition (WebExhibits: letter 12).", "actions": [{ "label": "Read this English Version", "source": "translation-15" }, { "label": "Check the Scholarly Edition", "source": "letter-15" }] }
+    {
+      "id": "disputed-drawing",
+      "title": "When an Attribution Changes",
+      "kind": "NOT AN AUTHENTICATED VAN GOGH",
+      "caption": "The Hackford Road drawing was once attributed to Vincent. Martin Bailey’s 2023 account reports that the Van Gogh Museum rejected the attribution and presents the drawing as anonymous.",
+      "credit": "Martin Bailey · The Art Newspaper · 1 September 2023",
+      "source": "bailey-2023",
+      "rights": "Research reference only. The drawing is not installed as a confirmed Van Gogh work.",
+      "actions": [
+        {
+          "label": "Read the Attribution History",
+          "source": "bailey-2023"
+        }
+      ]
+    },
+    {
+      "id": "jacquet",
+      "title": "Girl Holding a Sword",
+      "kind": "A PICTURE VINCENT SENT TO THEO",
+      "caption": "Photographic reproduction after Gustave Jean Jacquet’s painting of 1872. Published by Goupil & Cie; preserved in Theo van Gogh’s scrapbook. Vincent mentioned sending it on 30 April 1874. It is not a portrait of Eugénie Loyer.",
+      "credit": "Van Gogh Museum, Vincent van Gogh Foundation · Scholarly edition, Letter 22, note 3, illustration 1698",
+      "source": "jacquet-source",
+      "rights": "View the actual reproduction in the original edition’s image viewer. No substitute painting or fabricated archive image is used.",
+      "actions": [
+        {
+          "label": "View the Reproduction · Note 3",
+          "source": "jacquet-source"
+        }
+      ]
+    },
+    {
+      "id": "letter-15",
+      "title": "Discussing the trade in pictures",
+      "kind": "LETTER 15 · 19 NOVEMBER 1873",
+      "presentation": "letter",
+      "caption": "A young employee learning to look and to share his preferences.",
+      "credit": "Vincent van Gogh · English version as published by WebExhibits",
+      "source": "translation-15",
+      "rights": "Typeset excerpt, not a manuscript facsimile. Presented under WebExhibits’ stated public-domain / CC BY-SA 1.0 reuse terms; the typeset panel is offered under CC BY-SA 1.0. Date and numbering follow the scholarly edition (WebExhibits: letter 12).",
+      "actions": [
+        {
+          "label": "Read this English Version",
+          "source": "translation-15"
+        },
+        {
+          "label": "Check the Scholarly Edition",
+          "source": "letter-15"
+        }
+      ]
+    }
   ],
   "sources": [
-    { "id": "house-open-photo", "label": "87 Hackford Road · Udimu, 17 May 2016", "type": "Modern photograph · Not London in 1873", "url": "https://commons.wikimedia.org/wiki/File:Houseshackfordroad.JPG", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Houseshackfordroad.JPG", "creator": "Udimu", "date": "2016-05-17", "localImage": "./assets/story-house-2016.jpg", "license": "CC BY-SA 4.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/", "rights": "Source record explicitly states CC BY-SA 4.0", "changes": "Original 2816 × 2112 photograph copied without additional cropping or re-encoding; resized only by the browser for display." },
-    { "id": "translation-13", "label": "WebExhibits · New lodgings · 13 September 1873", "type": "English version · WebExhibits letter 11 / scholarly letter 13", "url": "https://www.webexhibits.org/vangogh/letter/2/011.htm", "license": "CC BY-SA 1.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0/", "rights": "Credits state most letters are public domain and edited/translated letters use CC BY-SA 1.0. Retain attribution and apply CC BY-SA 1.0 to this typeset excerpt; no blanket public-domain claim about translations.", "reuseBasis": "https://www.webexhibits.org/vangogh/about/credits.html", "changes": "Short verbatim excerpt newly typeset; date and numbering follow the modern scholarly edition." },
-    { "id": "translation-15", "label": "WebExhibits · Art trade · 19 November 1873", "type": "English version · WebExhibits letter 12 / scholarly letter 15", "url": "https://www.webexhibits.org/vangogh/letter/2/012.htm", "license": "CC BY-SA 1.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0/", "rights": "Reuse follows the exhibit’s public-domain / CC BY-SA 1.0 terms, with attribution and CC BY-SA 1.0 applied to the typeset excerpt.", "reuseBasis": "https://www.webexhibits.org/vangogh/about/credits.html", "changes": "Short verbatim excerpt newly typeset; date and numbering follow the modern scholarly edition." },
-    { "id": "translation-17", "label": "WebExhibits · Home and art · Beginning of January 1874", "type": "English version · WebExhibits letter 13 / scholarly letter 17", "url": "https://www.webexhibits.org/vangogh/letter/2/013.htm", "license": "CC BY-SA 1.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0/", "rights": "Reuse follows the exhibit’s public-domain / CC BY-SA 1.0 terms, with attribution and CC BY-SA 1.0 applied to the typeset excerpt.", "reuseBasis": "https://www.webexhibits.org/vangogh/about/credits.html", "changes": "Short verbatim excerpt newly typeset; date and numbering follow the modern scholarly edition." },
-    { "id": "translation-22", "label": "WebExhibits · Gardens and walks · 30 April 1874", "type": "English version · WebExhibits letter 16 / scholarly letter 22", "url": "https://www.webexhibits.org/vangogh/letter/2/016.htm", "license": "CC BY-SA 1.0", "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0/", "rights": "Reuse follows the exhibit’s public-domain / CC BY-SA 1.0 terms, with attribution and CC BY-SA 1.0 applied to the typeset excerpt.", "reuseBasis": "https://www.webexhibits.org/vangogh/about/credits.html", "changes": "Short verbatim excerpt newly typeset; date and numbering follow the modern scholarly edition. Independent gardening synopsis is not copied from this translation." },
-    { "id": "translation-credits", "label": "WebExhibits · Exhibit credits and letter reuse terms", "type": "Specific exhibit reuse statement · Not a blanket licence for all linked sources", "url": "https://www.webexhibits.org/vangogh/about/credits.html", "rights": "Credits distinguish public-domain letters from edited/translated letters licensed CC BY-SA 1.0; the site’s general terms are at https://www.webexhibits.org/about/legal.html." },
-    { "id": "letter-13", "label": "Letter 13 · To Theo, 13 September 1873", "type": "Contemporary letter + scholarly annotation", "url": "https://vangoghletters.org/vg/letters/let013/letter.html", "translationUrl": "https://vangoghletters.org/vg/letters/let013/print.html", "rights": "Edition facsimile and full translation: reuse permission unconfirmed" },
-    { "id": "letter-15", "label": "Letter 15 · To Theo, 19 November 1873", "type": "Contemporary letter · Work in the art trade", "url": "https://vangoghletters.org/vg/letters/let015/letter.html", "translationUrl": "https://vangoghletters.org/vg/letters/let015/print.html", "rights": "Edition facsimile and full translation: reuse permission unconfirmed" },
-    { "id": "letter-17", "label": "Letter 17 · To Theo, beginning of January 1874", "type": "Contemporary letter · Home, nature and art", "url": "https://vangoghletters.org/vg/letters/let017/letter.html", "translationUrl": "https://vangoghletters.org/vg/letters/let017/print.html", "rights": "Edition facsimile and full translation: reuse permission unconfirmed" },
-    { "id": "letter-22", "label": "Letter 22 · To Theo, 30 April 1874", "type": "Contemporary letter · Gardening and daily life", "url": "https://vangoghletters.org/vg/letters/let022/letter.html", "translationUrl": "https://vangoghletters.org/vg/letters/let022/print.html", "rights": "Edition facsimile and full translation: reuse permission unconfirmed" },
-    { "id": "house", "label": "Van Gogh House · A History of 87 Hackford Road", "type": "House history and archaeological context", "url": "https://vangoghhouse.co.uk/87-hackford-road/", "rights": "Original-site access" },
-    { "id": "official-house-photo", "label": "Official exterior photograph · Tom Parsons, 2019", "type": "Modern photograph · Not London in 1873", "url": "https://vangoghhouse.co.uk/87-hackford-road/", "imageUrl": "https://vangoghhouse.co.uk/wp-content/uploads/2019/08/TP-VanGogh-0-e1565964114800.jpg", "creator": "Tom Parsons", "date": "2019", "rights": "Copyright credited; no reuse permission confirmed" },
-    { "id": "insurance-photo", "label": "Ursula Loyer’s insurance documents · Claire Zhao, 2019", "type": "Modern photograph of historic documents", "url": "https://vangoghhouse.co.uk/87-hackford-road/", "imageUrl": "https://vangoghhouse.co.uk/wp-content/uploads/2019/08/DSC_4525-e1565965645520.jpg", "creator": "Claire Zhao", "date": "2019", "rights": "Copyright credited; full document dates and reuse permission unconfirmed" },
-    { "id": "locket-photo", "label": "Eugénie and Samuel · Late-nineteenth-century locket", "type": "Later portraits · Descendants’ collection", "url": "https://www.theartnewspaper.com/2019/03/29/mystery-of-van-goghs-love-affair-in-london", "imageUrl": "https://cdn.sanity.io/images/cxgd3urn/production/dbfd21e387b5d727603be414788b63a8bce719eb-931x657.jpg?rect=194,92,697,402&w=1200&h=692&q=85&fit=crop&auto=format", "creator": "Yoke Matze MA", "date": "Late nineteenth century (portraits); article published 29 March 2019", "rights": "Copyright credited; no open reuse licence found" },
-    { "id": "family-memoir", "label": "Jo van Gogh-Bonger · The family account", "type": "Retrospective biographical memoir · Not an eyewitness transcript", "url": "https://www.webexhibits.org/vangogh/memoir/sisterinlaw/4.html", "rights": "Original-source reading; independent synopsis here" },
-    { "id": "bailey-2019", "label": "Martin Bailey · Mystery of Van Gogh’s love affair in London · 29 March 2019", "type": "Named specialist’s research article · Not a peer-reviewed paper", "url": "https://www.theartnewspaper.com/2019/03/29/mystery-of-van-goghs-love-affair-in-london", "rights": "Original-source reading; independent synopsis here" },
-    { "id": "house-london", "label": "Van Gogh House · Van Gogh’s London", "type": "Heritage institution · Affection described as rumoured", "url": "https://vangoghhouse.co.uk/van-goghs-london/", "rights": "Original-source reading; unresolved departure distinguished from interpretation" },
-    { "id": "jacquet-source", "label": "Jacquet reproduction · Letter 22, note 3, illustration 1698", "type": "Image in Theo’s scrapbook · Not a Van Gogh work or Eugénie portrait", "url": "https://vangoghletters.org/vg/letters/let022/letter.html", "rights": "Digital illustration reuse permission unconfirmed; open the source’s image viewer" },
-    { "id": "bailey-2023", "label": "Martin Bailey · Van Gogh in Brixton, 150 years on · 1 September 2023", "type": "Research article · Rejected Hackford Road drawing attribution", "url": "https://www.theartnewspaper.com/2023/09/01/the-story-of-van-gogh-in-brixton-150-years-on", "rights": "Original-source reference; disputed drawing not installed as authentic" },
-    { "id": "portrait", "label": "Portrait · Vincent aged nineteen · January 1873", "type": "Verified photographic portrait · Public domain", "url": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_January_1873-cropped.jpeg", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Vincent_van_Gogh_January_1873-cropped.jpeg", "license": "Public domain", "creator": "Jacobus Marinus Wilhelmus de Louw", "date": "January 1873", "localImage": "./assets/story-vincent-nineteen.jpg", "rights": "Commons marks the historic photograph public domain", "changes": "Source’s existing crop copied without additional cropping or re-encoding; original dimensions 988 × 1118. Resized only within the composed wall display." },
-    { "id": "portrait-identity", "label": "Van Gogh Museum · Mistaken Identity: Vincent and Theo", "type": "Identity research published 23 April 2019", "url": "https://www.vangoghmuseum.nl/en/about/news-and-press/news/mistaken-identity-vincent-and-theo", "rights": "Museum research reference; no new photograph copied" },
-    { "id": "edition-rights", "label": "Van Gogh Letters · Copyright and credits", "type": "Digital publication rights statement", "url": "https://vangoghletters.org/vg/copyright.html", "rights": "Permission not assumed for the edition’s facsimiles or full English translations" },
-    { "id": "young-vincent", "label": "Van Gogh Museum · Young Vincent", "type": "Museum biography", "url": "https://www.vangoghmuseum.nl/en/art-and-stories/vincents-life-1853-1890/young-vincent", "rights": "Context reference" },
-    { "id": "purpose", "label": "Van Gogh Museum · Vincent’s life, 1853–1890", "type": "Museum biography · The search for a vocation", "url": "https://www.vangoghmuseum.nl/en/art-and-stories/vincents-life-1853-1890", "rights": "Context reference" }
+    {
+      "id": "house-open-photo",
+      "label": "87 Hackford Road · Udimu, 17 May 2016",
+      "type": "Modern photograph · Not London in 1873",
+      "url": "https://commons.wikimedia.org/wiki/File:Houseshackfordroad.JPG",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Houseshackfordroad.JPG",
+      "creator": "Udimu",
+      "date": "2016-05-17",
+      "localImage": "./assets/story-house-2016.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "rights": "Source record explicitly states CC BY-SA 4.0",
+      "changes": "Original 2816 × 2112 photograph copied without additional cropping or re-encoding; resized only by the browser for display."
+    },
+    {
+      "id": "translation-13",
+      "label": "WebExhibits · New lodgings · 13 September 1873",
+      "type": "English version · WebExhibits letter 11 / scholarly letter 13",
+      "url": "https://www.webexhibits.org/vangogh/letter/2/011.htm",
+      "license": "CC BY-SA 1.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0/",
+      "rights": "Credits state most letters are public domain and edited/translated letters use CC BY-SA 1.0. Retain attribution and apply CC BY-SA 1.0 to this typeset excerpt; no blanket public-domain claim about translations.",
+      "reuseBasis": "https://www.webexhibits.org/vangogh/about/credits.html",
+      "changes": "Short verbatim excerpt newly typeset; date and numbering follow the modern scholarly edition."
+    },
+    {
+      "id": "translation-15",
+      "label": "WebExhibits · Art trade · 19 November 1873",
+      "type": "English version · WebExhibits letter 12 / scholarly letter 15",
+      "url": "https://www.webexhibits.org/vangogh/letter/2/012.htm",
+      "license": "CC BY-SA 1.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0/",
+      "rights": "Reuse follows the exhibit’s public-domain / CC BY-SA 1.0 terms, with attribution and CC BY-SA 1.0 applied to the typeset excerpt.",
+      "reuseBasis": "https://www.webexhibits.org/vangogh/about/credits.html",
+      "changes": "Short verbatim excerpt newly typeset; date and numbering follow the modern scholarly edition."
+    },
+    {
+      "id": "translation-17",
+      "label": "WebExhibits · Home and art · Beginning of January 1874",
+      "type": "English version · WebExhibits letter 13 / scholarly letter 17",
+      "url": "https://www.webexhibits.org/vangogh/letter/2/013.htm",
+      "license": "CC BY-SA 1.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0/",
+      "rights": "Reuse follows the exhibit’s public-domain / CC BY-SA 1.0 terms, with attribution and CC BY-SA 1.0 applied to the typeset excerpt.",
+      "reuseBasis": "https://www.webexhibits.org/vangogh/about/credits.html",
+      "changes": "Short verbatim excerpt newly typeset; date and numbering follow the modern scholarly edition."
+    },
+    {
+      "id": "translation-22",
+      "label": "WebExhibits · Gardens and walks · 30 April 1874",
+      "type": "English version · WebExhibits letter 16 / scholarly letter 22",
+      "url": "https://www.webexhibits.org/vangogh/letter/2/016.htm",
+      "license": "CC BY-SA 1.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/1.0/",
+      "rights": "Reuse follows the exhibit’s public-domain / CC BY-SA 1.0 terms, with attribution and CC BY-SA 1.0 applied to the typeset excerpt.",
+      "reuseBasis": "https://www.webexhibits.org/vangogh/about/credits.html",
+      "changes": "Short verbatim excerpt newly typeset; date and numbering follow the modern scholarly edition. Independent gardening synopsis is not copied from this translation."
+    },
+    {
+      "id": "translation-credits",
+      "label": "WebExhibits · Exhibit credits and letter reuse terms",
+      "type": "Specific exhibit reuse statement · Not a blanket licence for all linked sources",
+      "url": "https://www.webexhibits.org/vangogh/about/credits.html",
+      "rights": "Credits distinguish public-domain letters from edited/translated letters licensed CC BY-SA 1.0; the site’s general terms are at https://www.webexhibits.org/about/legal.html."
+    },
+    {
+      "id": "letter-13",
+      "label": "Letter 13 · To Theo, 13 September 1873",
+      "type": "Contemporary letter + scholarly annotation",
+      "url": "https://vangoghletters.org/vg/letters/let013/letter.html",
+      "translationUrl": "https://vangoghletters.org/vg/letters/let013/print.html",
+      "rights": "Edition facsimile and full translation: reuse permission unconfirmed"
+    },
+    {
+      "id": "letter-15",
+      "label": "Letter 15 · To Theo, 19 November 1873",
+      "type": "Contemporary letter · Work in the art trade",
+      "url": "https://vangoghletters.org/vg/letters/let015/letter.html",
+      "translationUrl": "https://vangoghletters.org/vg/letters/let015/print.html",
+      "rights": "Edition facsimile and full translation: reuse permission unconfirmed"
+    },
+    {
+      "id": "letter-17",
+      "label": "Letter 17 · To Theo, beginning of January 1874",
+      "type": "Contemporary letter · Home, nature and art",
+      "url": "https://vangoghletters.org/vg/letters/let017/letter.html",
+      "translationUrl": "https://vangoghletters.org/vg/letters/let017/print.html",
+      "rights": "Edition facsimile and full translation: reuse permission unconfirmed"
+    },
+    {
+      "id": "letter-22",
+      "label": "Letter 22 · To Theo, 30 April 1874",
+      "type": "Contemporary letter · Gardening and daily life",
+      "url": "https://vangoghletters.org/vg/letters/let022/letter.html",
+      "translationUrl": "https://vangoghletters.org/vg/letters/let022/print.html",
+      "rights": "Edition facsimile and full translation: reuse permission unconfirmed"
+    },
+    {
+      "id": "house",
+      "label": "Van Gogh House · A History of 87 Hackford Road",
+      "type": "House history and archaeological context",
+      "url": "https://vangoghhouse.co.uk/87-hackford-road/",
+      "rights": "Original-site access"
+    },
+    {
+      "id": "official-house-photo",
+      "label": "Official exterior photograph · Tom Parsons, 2019",
+      "type": "Modern photograph · Not London in 1873",
+      "url": "https://vangoghhouse.co.uk/87-hackford-road/",
+      "imageUrl": "https://vangoghhouse.co.uk/wp-content/uploads/2019/08/TP-VanGogh-0-e1565964114800.jpg",
+      "creator": "Tom Parsons",
+      "date": "2019",
+      "rights": "Copyright credited; no reuse permission confirmed"
+    },
+    {
+      "id": "insurance-photo",
+      "label": "Ursula Loyer’s insurance documents · Claire Zhao, 2019",
+      "type": "Modern photograph of historic documents",
+      "url": "https://vangoghhouse.co.uk/87-hackford-road/",
+      "imageUrl": "https://vangoghhouse.co.uk/wp-content/uploads/2019/08/DSC_4525-e1565965645520.jpg",
+      "creator": "Claire Zhao",
+      "date": "2019",
+      "rights": "Copyright credited; full document dates and reuse permission unconfirmed"
+    },
+    {
+      "id": "locket-photo",
+      "label": "Eugénie and Samuel · Late-nineteenth-century locket",
+      "type": "Later portraits · Descendants’ collection",
+      "url": "https://www.theartnewspaper.com/2019/03/29/mystery-of-van-goghs-love-affair-in-london",
+      "imageUrl": "https://cdn.sanity.io/images/cxgd3urn/production/dbfd21e387b5d727603be414788b63a8bce719eb-931x657.jpg?rect=194,92,697,402&w=1200&h=692&q=85&fit=crop&auto=format",
+      "creator": "Yoke Matze MA",
+      "date": "Late nineteenth century (portraits); article published 29 March 2019",
+      "rights": "Copyright credited; no open reuse licence found"
+    },
+    {
+      "id": "family-memoir",
+      "label": "Jo van Gogh-Bonger · The family account",
+      "type": "Retrospective biographical memoir · Not an eyewitness transcript",
+      "url": "https://www.webexhibits.org/vangogh/memoir/sisterinlaw/4.html",
+      "rights": "Original-source reading; independent synopsis here"
+    },
+    {
+      "id": "bailey-2019",
+      "label": "Martin Bailey · Mystery of Van Gogh’s love affair in London · 29 March 2019",
+      "type": "Named specialist’s research article · Not a peer-reviewed paper",
+      "url": "https://www.theartnewspaper.com/2019/03/29/mystery-of-van-goghs-love-affair-in-london",
+      "rights": "Original-source reading; independent synopsis here"
+    },
+    {
+      "id": "house-london",
+      "label": "Van Gogh House · Van Gogh’s London",
+      "type": "Heritage institution · Affection described as rumoured",
+      "url": "https://vangoghhouse.co.uk/van-goghs-london/",
+      "rights": "Original-source reading; unresolved departure distinguished from interpretation"
+    },
+    {
+      "id": "jacquet-source",
+      "label": "Jacquet reproduction · Letter 22, note 3, illustration 1698",
+      "type": "Image in Theo’s scrapbook · Not a Van Gogh work or Eugénie portrait",
+      "url": "https://vangoghletters.org/vg/letters/let022/letter.html",
+      "rights": "Digital illustration reuse permission unconfirmed; open the source’s image viewer"
+    },
+    {
+      "id": "bailey-2023",
+      "label": "Martin Bailey · Van Gogh in Brixton, 150 years on · 1 September 2023",
+      "type": "Research article · Rejected Hackford Road drawing attribution",
+      "url": "https://www.theartnewspaper.com/2023/09/01/the-story-of-van-gogh-in-brixton-150-years-on",
+      "rights": "Original-source reference; disputed drawing not installed as authentic"
+    },
+    {
+      "id": "portrait",
+      "label": "Portrait · Vincent aged nineteen · January 1873",
+      "type": "Verified photographic portrait · Public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_January_1873-cropped.jpeg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Vincent_van_Gogh_January_1873-cropped.jpeg",
+      "license": "Public domain",
+      "creator": "Jacobus Marinus Wilhelmus de Louw",
+      "date": "January 1873",
+      "localImage": "./assets/story-vincent-nineteen.jpg",
+      "rights": "Commons marks the historic photograph public domain",
+      "changes": "Source’s existing crop copied without additional cropping or re-encoding; original dimensions 988 × 1118. Resized only within the composed wall display."
+    },
+    {
+      "id": "portrait-identity",
+      "label": "Van Gogh Museum · Mistaken Identity: Vincent and Theo",
+      "type": "Identity research published 23 April 2019",
+      "url": "https://www.vangoghmuseum.nl/en/about/news-and-press/news/mistaken-identity-vincent-and-theo",
+      "rights": "Museum research reference; no new photograph copied"
+    },
+    {
+      "id": "edition-rights",
+      "label": "Van Gogh Letters · Copyright and credits",
+      "type": "Digital publication rights statement",
+      "url": "https://vangoghletters.org/vg/copyright.html",
+      "rights": "Permission not assumed for the edition’s facsimiles or full English translations"
+    },
+    {
+      "id": "young-vincent",
+      "label": "Van Gogh Museum · Young Vincent",
+      "type": "Museum biography",
+      "url": "https://www.vangoghmuseum.nl/en/art-and-stories/vincents-life-1853-1890/young-vincent",
+      "rights": "Context reference"
+    },
+    {
+      "id": "purpose",
+      "label": "Van Gogh Museum · Vincent’s life, 1853–1890",
+      "type": "Museum biography · The search for a vocation",
+      "url": "https://www.vangoghmuseum.nl/en/art-and-stories/vincents-life-1853-1890",
+      "rights": "Context reference"
+    },
+    {
+      "id": "faith-letter-96",
+      "label": "To Theo, Isleworth, 3 November 1876 · Letter 96",
+      "url": "https://vangoghletters.org/vg/letters/let096/letter.html",
+      "type": "Contemporary letter · Scholarly edition and annotations"
+    },
+    {
+      "id": "miners-letter-149",
+      "label": "To Theo, Wasmes, 26 December 1878 · Letter 149",
+      "url": "https://vangoghletters.org/vg/letters/let149/letter.html",
+      "type": "Contemporary letter · Scholarly edition and annotations"
+    },
+    {
+      "id": "drawing-letter-158",
+      "label": "To Theo, Cuesmes, 24 September 1880 · Letter 158",
+      "url": "https://vangoghletters.org/vg/letters/let158/letter.html",
+      "type": "Contemporary letter · Scholarly edition and annotations"
+    },
+    {
+      "id": "miners-image",
+      "label": "Miners, Cuesmes · Drawing reproduction on Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Miners-1880-_Cuesmes.jpg",
+      "type": "Artwork reproduction · Catalogued as 1880 at the linked image source",
+      "localImage": "./assets/story-miners-1880.jpg",
+      "license": "Public domain",
+      "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "credit": "Vincent van Gogh · Wikimedia Commons · Public-domain artwork reproduction",
+      "rights": "The Commons record marks this as a faithful reproduction of a public-domain artwork. The 2013 date in its metadata refers to the uploaded reproduction, not the depicted scene. This is not a historical photograph."
+    },
+    {
+      "id": "road-in-etten",
+      "label": "Road in Etten, 1881 · The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/459193",
+      "type": "Primary museum collection record · Accession 1975.1.774",
+      "localImage": "./assets/etten-road-1881.jpg",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 459193"
+    }
+  ],
+  "topics": [
+    {
+      "id": "london",
+      "title": "A Home in London",
+      "subtitle": "Work, Affection and Belonging",
+      "location": "87 HACKFORD ROAD · LONDON · 1873–1874",
+      "chapters": [
+        "home",
+        "life",
+        "attachment"
+      ],
+      "summary": "A lodging house, a working life, and the letters and recollections behind an uncertain attachment.",
+      "image": "./assets/story-house-2016.jpg",
+      "imageSource": "house-open-photo",
+      "imageCaption": "87 Hackford Road · Modern exterior photograph, 17 May 2016; not an image from 1873.",
+      "imageCredit": "Udimu · Wikimedia Commons · CC BY-SA 4.0"
+    },
+    {
+      "id": "faith",
+      "title": "Turning to Faith",
+      "subtitle": "Reading, Teaching and a Possible Vocation",
+      "location": "ENGLAND, THE NETHERLANDS AND BELGIUM · 1876–1878",
+      "chapters": [
+        "faith"
+      ],
+      "summary": "Teaching, religious reading and preaching offered possible ways to serve.",
+      "image": "./assets/story-vincent-nineteen.jpg",
+      "imageSource": "portrait",
+      "imageCaption": "Vincent van Gogh, aged nineteen. Photograph by J. M. W. de Louw, The Hague, January 1873. This earlier portrait is not a photograph of his religious work in 1876.",
+      "imageCredit": "J. M. W. de Louw · Wikimedia Commons · Public domain"
+    },
+    {
+      "id": "miners",
+      "title": "Among the Miners",
+      "subtitle": "Work, Hardship and an Unsettled Direction",
+      "location": "THE BORINAGE · 1878–1880",
+      "chapters": [
+        "miners"
+      ],
+      "summary": "Coal-mining communities, religious work and an increasingly uncertain vocation.",
+      "image": "./assets/story-miners-1880.jpg",
+      "imageSource": "miners-image",
+      "imageCaption": "Miners, Cuesmes. Catalogued as 1880 at the linked image source. A reproduction of a drawing, not a photograph of the miners.",
+      "imageCredit": "Vincent van Gogh · Wikimedia Commons · Public domain"
+    },
+    {
+      "id": "drawing",
+      "title": "Learning to Draw",
+      "subtitle": "Looking Closely, Learning Slowly",
+      "location": "CUESMES AND ETTEN · 1880–1881",
+      "chapters": [
+        "drawing"
+      ],
+      "summary": "Observation, materials and repeated exercises lead into the Early Works.",
+      "image": "./assets/etten-road-1881.jpg",
+      "imageSource": "road-in-etten",
+      "imageCaption": "Road in Etten, 1881. Chalk, pencil, pastel and watercolour; underdrawing in pen and brown ink. The Metropolitan Museum of Art, 1975.1.774.",
+      "imageCredit": "The Metropolitan Museum of Art · Open Access / CC0 · 459193"
+    }
   ]
 }

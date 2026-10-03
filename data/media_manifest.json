@@ -2,134 +2,134 @@
   "version": 1,
   "files": [
     {
-      "path": "assets/gallery_v21.glb",
-      "bytes": 101765892,
-      "sha256": "136e7cab63af10d26d5bca2becef4c6de8df75503d85203208eb92d06240ddba",
+      "path": "assets/gallery_v22.glb",
+      "bytes": 101781564,
+      "sha256": "e60b98eb331a1a7cdacf2c11d620f199c9c3e859b331da33edcc7940052d569e",
       "parts": [
         {
-          "path": "assets/media-parts/gallery-v21.001.bin",
+          "path": "assets/media-parts/gallery-v22.001.bin",
           "bytes": 4194304,
-          "sha256": "5239c06d825d8c8ebfab3edb832b9d3baab1373d3cc582fff40e5efee489a1d5"
+          "sha256": "08d19529089975da1869bfd522bcc9d6c0d8188d5d056feeeea3e31860deda97"
         },
         {
-          "path": "assets/media-parts/gallery-v21.002.bin",
+          "path": "assets/media-parts/gallery-v22.002.bin",
           "bytes": 4194304,
-          "sha256": "d81d93a434041c23087aa6b5ea4779dc5e6867dbefa3e1b226aa66a346c5f789"
+          "sha256": "22f998c915d7a91c87f7e01158fc4adeb14391923c296a59eb20127db8f3cd24"
         },
         {
-          "path": "assets/media-parts/gallery-v21.003.bin",
+          "path": "assets/media-parts/gallery-v22.003.bin",
           "bytes": 4194304,
-          "sha256": "37d96434d1af06e862d1aca207f16362b2d3f267706e5c13d1546ae65163cb7b"
+          "sha256": "2915fbcb1eccc378ffb84ebfdeb50f4b676e9fea29f996e0682a22e7cb436005"
         },
         {
-          "path": "assets/media-parts/gallery-v21.004.bin",
+          "path": "assets/media-parts/gallery-v22.004.bin",
           "bytes": 4194304,
-          "sha256": "155721e20cffc701fbcfa7bdabce5bae02d778adf0a40bf6f066a54ffdc8e1b1"
+          "sha256": "f8276c1fe5071dbf9fa4011feca3fd79d95128a49d3f1bfee52fa75834fd2c68"
         },
         {
-          "path": "assets/media-parts/gallery-v21.005.bin",
+          "path": "assets/media-parts/gallery-v22.005.bin",
           "bytes": 4194304,
-          "sha256": "0dc4d062125ae557e760c2abf8c917e4d52b281878f74e14185d623f69b22120"
+          "sha256": "1e32933e29221785430bf0526046475377db1e425ebb21f857fa561023565747"
         },
         {
-          "path": "assets/media-parts/gallery-v21.006.bin",
+          "path": "assets/media-parts/gallery-v22.006.bin",
           "bytes": 4194304,
-          "sha256": "931cd450bed270fee222c260924c9b5eeee68e0c42612f268611293c3af3a837"
+          "sha256": "7a0c28273cdfd12f3b7262e8ad1cdb7a9a6190b4b6ee3d97b8d5f3ed88899dfc"
         },
         {
-          "path": "assets/media-parts/gallery-v21.007.bin",
+          "path": "assets/media-parts/gallery-v22.007.bin",
           "bytes": 4194304,
-          "sha256": "01a755224cf9ff155136495d28d1aaf55fcf7e7d094fd9a47368a6fb4f3e2eba"
+          "sha256": "339f8ceafe8c68c25d8984ed1c49b2f2dd44576f9ac19232f817d2413f2d8344"
         },
         {
-          "path": "assets/media-parts/gallery-v21.008.bin",
+          "path": "assets/media-parts/gallery-v22.008.bin",
           "bytes": 4194304,
-          "sha256": "48dc2ff8e6f7fc5616dfb373022d826f0eb2d3fb71dd25c3d2f24f2d666ca49a"
+          "sha256": "c7a3ade58ed4ab8fd313981238af6cc650bc7c0d1410782e00b6d72c00ab5695"
         },
         {
-          "path": "assets/media-parts/gallery-v21.009.bin",
+          "path": "assets/media-parts/gallery-v22.009.bin",
           "bytes": 4194304,
-          "sha256": "c0b2f30b4ce2f6ffdc47d3329ecdb92839fa5c8628363970dcd593cc46c912b9"
+          "sha256": "4e621678ed81cce193ed7b7e269289ce4032dad2abe1ef4a5f36858c42d22d00"
         },
         {
-          "path": "assets/media-parts/gallery-v21.010.bin",
+          "path": "assets/media-parts/gallery-v22.010.bin",
           "bytes": 4194304,
-          "sha256": "9e04024bf5967e5b40dc70c7031aad4e3b364bb60ad8dd38dfc658fe78c11697"
+          "sha256": "b708a5b6f80e2e4e6c808bbb413f5cf37c298446ebe8e598f05a2f0197e9b4b3"
         },
         {
-          "path": "assets/media-parts/gallery-v21.011.bin",
+          "path": "assets/media-parts/gallery-v22.011.bin",
           "bytes": 4194304,
-          "sha256": "a977b356f18ccb07e73f9528d40d3e588c99a417d0f897e4ae6b6f497134ded9"
+          "sha256": "ac4146be6a2a153d5c786584c42489f87057a05370f867b3f6d267e6cdcc0794"
         },
         {
-          "path": "assets/media-parts/gallery-v21.012.bin",
+          "path": "assets/media-parts/gallery-v22.012.bin",
           "bytes": 4194304,
-          "sha256": "3dd904744d9e5bd814ec629daff1f48d693b1a6e871852158da8a76bea4653e3"
+          "sha256": "9af46e35af63c52efa096a61ceb72c4328094da035889fe559e51f35579edf33"
         },
         {
-          "path": "assets/media-parts/gallery-v21.013.bin",
+          "path": "assets/media-parts/gallery-v22.013.bin",
           "bytes": 4194304,
-          "sha256": "ea9cd09838855c32a84195c81df5860b0ff222e8582a587f4258aba032dcf6a4"
+          "sha256": "0c5b75758b487c6b075888d47d13749976eb9f3a161a180c79a0d912a27804b2"
         },
         {
-          "path": "assets/media-parts/gallery-v21.014.bin",
+          "path": "assets/media-parts/gallery-v22.014.bin",
           "bytes": 4194304,
-          "sha256": "f09a99a4a38544ae7d502fa425d8f98181a2e8ab5f210fffa46bc72baf7a9d6c"
+          "sha256": "28fa15e216140fcba40c2afb475473094b7cde1f3e4bed7c44fbdeb4661128a4"
         },
         {
-          "path": "assets/media-parts/gallery-v21.015.bin",
+          "path": "assets/media-parts/gallery-v22.015.bin",
           "bytes": 4194304,
-          "sha256": "6373b05b48e0bbb4cc004af3711a27565f4004305db14a491974907a2dcd0fe2"
+          "sha256": "564a774cc07112be69b62cbf07b7d593e2e5c6e70bb4f015fac7687d7c7f7fd2"
         },
         {
-          "path": "assets/media-parts/gallery-v21.016.bin",
+          "path": "assets/media-parts/gallery-v22.016.bin",
           "bytes": 4194304,
-          "sha256": "fb1fea412aac8d1c6c81fb9e5c3491c6365e790ded9f58e0a89d57df65b700d3"
+          "sha256": "7b7a9e95f41ae7ebc51f39200b1bc91fd3de321158cb4653febd89b6bcda6731"
         },
         {
-          "path": "assets/media-parts/gallery-v21.017.bin",
+          "path": "assets/media-parts/gallery-v22.017.bin",
           "bytes": 4194304,
-          "sha256": "6fcc8e40b9bcbcd5da95800580400a53d6ca8fdbd72fe3dd731e7aab1ab3be7b"
+          "sha256": "5a2449e6e0b0967e6effe2067ca91067ce389b2830b821b085091309f38ddc0b"
         },
         {
-          "path": "assets/media-parts/gallery-v21.018.bin",
+          "path": "assets/media-parts/gallery-v22.018.bin",
           "bytes": 4194304,
-          "sha256": "a7fdf9da9ab11cd10391441e1a597d6358346db1a045d7c1249f150ab5430bc9"
+          "sha256": "57890164bcfffcd58a6d4e53566c7f02892395b6a7eae09870d345287c883c68"
         },
         {
-          "path": "assets/media-parts/gallery-v21.019.bin",
+          "path": "assets/media-parts/gallery-v22.019.bin",
           "bytes": 4194304,
-          "sha256": "d41c671d664019b87a8fa98e450ac71023ff9d22f2019bc1fff14dcfe1f6dd0b"
+          "sha256": "955229cfc4d7cc1839c74a83ed2535dcd1565909e2192b66bd238f26df9e9eea"
         },
         {
-          "path": "assets/media-parts/gallery-v21.020.bin",
+          "path": "assets/media-parts/gallery-v22.020.bin",
           "bytes": 4194304,
-          "sha256": "fdcd74c909d0439c0bf8dd91574b7e80614f7486b8aa7eab94cb8157e144a113"
+          "sha256": "65cfcf0bc52b424429c691d69570b08cf4a3792398526bbe6003d05670a44720"
         },
         {
-          "path": "assets/media-parts/gallery-v21.021.bin",
+          "path": "assets/media-parts/gallery-v22.021.bin",
           "bytes": 4194304,
-          "sha256": "3bbc381562e91e47ba44884992dccd0f7a9d026a16dd356c52ae7a52344e07b6"
+          "sha256": "a68f3bceba77f0d2fc3b783158b16ced79cf52d7ffbee3edb753f0c16ecdacff"
         },
         {
-          "path": "assets/media-parts/gallery-v21.022.bin",
+          "path": "assets/media-parts/gallery-v22.022.bin",
           "bytes": 4194304,
-          "sha256": "0b53cd46bbaa74074ae5648ea69996c31edfbacf68b5dfe3b9b8b064d2ef540f"
+          "sha256": "aa19d8f3ee0b387488931b5e1c10d6fe00bd11bfa15850e36e02d77dbd9a4ec4"
         },
         {
-          "path": "assets/media-parts/gallery-v21.023.bin",
+          "path": "assets/media-parts/gallery-v22.023.bin",
           "bytes": 4194304,
-          "sha256": "ee9b3d98e47be1fe563b76ce027bb38499ae071b0f888127a2e25e7304fdffe4"
+          "sha256": "f8f0f109f0382be32493515661d46219b3076b7087a55ba43426334b4ed1337d"
         },
         {
-          "path": "assets/media-parts/gallery-v21.024.bin",
+          "path": "assets/media-parts/gallery-v22.024.bin",
           "bytes": 4194304,
-          "sha256": "c6d4e43428bddc4a58c01968ddc02cdbb6c90ff1440fb703dd8e32c3d6dcb925"
+          "sha256": "76f5277d504471cdda240d42a758d1dd214ae6648cf8f6fc1896849aefbe102c"
         },
         {
-          "path": "assets/media-parts/gallery-v21.025.bin",
-          "bytes": 1102596,
-          "sha256": "07429f227f20bd1c84c736bec2dd47e6bc3c0276249cb467c4ec2e24fb382b42"
+          "path": "assets/media-parts/gallery-v22.025.bin",
+          "bytes": 1118268,
+          "sha256": "a2dc3af970a733eb4360e8f65c46c726f46bda500b84c8d46ab3322a2a3692ac"
         }
       ]
     },

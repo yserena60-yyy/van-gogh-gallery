@@ -9,16 +9,23 @@ export function createStoryReader({ onOpen, onContinue }) {
   const progress = document.querySelector('#story-progress');
   const closeButton = document.querySelector('#story-close');
   const timeline = document.querySelector('#story-timeline-list');
+  const timelineTitle = document.querySelector('#story-timeline-title');
   const viewTabs = document.querySelector('#story-view-tabs');
   const imageDialog = document.querySelector('#story-image-dialog');
   const imageButton = document.querySelector('#story-image-button');
-  const returnButton = document.querySelector('#story-branch-return');
+  const topics = document.querySelector('#story-topics');
+  const topicPanel = document.querySelector('#story-topic-panel');
+  const resourceDialog = document.querySelector('#story-resource-dialog');
+  const resourceBody = document.querySelector('#story-resource-body');
+  const topicNext = document.querySelector('#story-topic-next');
   const selectedViews = new Map();
+  const selectedChapters = new Map();
   let data = null;
   let chapterIndex = 0;
-  let branchOrigin = null;
+  let topicIndex = 0;
   let focusBefore = null;
   let imageFocusBefore = null;
+  let resourceFocusBefore = null;
 
   const element = (tag, className, text) => {
     const result = document.createElement(tag);
@@ -46,8 +53,16 @@ export function createStoryReader({ onOpen, onContinue }) {
 
   function navigateChapter(identifier, focusTab = false) {
     const destination = data.chapters.findIndex((chapter) => chapter.id === identifier);
-    if (data.chapters[destination].branch && !data.chapters[chapterIndex].branch) branchOrigin = data.chapters[chapterIndex].id;
+    if (destination < 0) return;
+    if (data.chapters[destination].branch) { openResource(identifier); return; }
+    topicIndex = data.topics.findIndex((topic) => topic.chapters.includes(identifier));
     renderChapter(destination, focusTab);
+  }
+
+  function selectTopic(index, focusTab = false) {
+    const topic = data.topics[index];
+    navigateChapter(selectedChapters.get(topic.id) || topic.chapters[0]);
+    if (focusTab) topics.children[index].focus({ preventScroll: true });
   }
 
   function actionNode(action) {
@@ -78,7 +93,7 @@ export function createStoryReader({ onOpen, onContinue }) {
     image.src = record.image;
     image.alt = record.imageCaption;
     image.decoding = 'async';
-    button.append(image, element('span', '', 'Enlarge photograph'));
+    button.append(image, element('span', '', 'Look closer'));
     button.addEventListener('click', () => openImage(record, button));
     figure.append(button, element('figcaption', '', record.imageCaption));
     return figure;
@@ -190,10 +205,10 @@ export function createStoryReader({ onOpen, onContinue }) {
     if (focusTab) viewTabs.children[index].focus();
   }
 
-  function evidenceCard(card, index) {
+  function evidenceCard(card, index, scope = 'story') {
     const details = element('details', 'story-evidence-card');
-    details.id = `story-evidence-${card.id}`;
-    details.name = 'london-evidence';
+    details.id = `${scope}-evidence-${card.id}`;
+    details.name = `${scope}-evidence`;
     const summary = element('summary');
     const heading = element('span', 'story-evidence-heading');
     heading.append(element('strong', '', card.title), element('small', '', card.label));
@@ -207,20 +222,43 @@ export function createStoryReader({ onOpen, onContinue }) {
     return details;
   }
 
-  function renderChapter(index, focusTab = false) {
+  function renderChapter(index, focusTab = false, scrollToReading = true) {
     chapterIndex = Math.max(0, Math.min(data.chapters.length - 1, index));
     const chapter = data.chapters[chapterIndex];
+    const topic = data.topics[topicIndex];
+    selectedChapters.set(topic.id, chapter.id);
+    [...topics.children].forEach((button, position) => {
+      button.setAttribute('aria-selected', String(position === topicIndex));
+      button.tabIndex = position === topicIndex ? 0 : -1;
+    });
+    topicPanel.setAttribute('aria-labelledby', `story-topic-${topic.id}`);
+    document.querySelector('#story-topic-title').textContent = topic.title;
+    document.querySelector('#story-topic-subtitle').textContent = topic.subtitle;
+    document.querySelector('#story-location').textContent = topic.location;
+    tabs.hidden = topic.chapters.length === 1;
+    tabs.setAttribute('aria-label', `${topic.title} chapters`);
+    tabs.replaceChildren(...topic.chapters.map((identifier, position) => {
+      const record = data.chapters.find((entry) => entry.id === identifier);
+      const button = element('button', '', `${String(position + 1).padStart(2, '0')} · ${record.title}`);
+      button.type = 'button';
+      button.id = `story-tab-${identifier}`;
+      button.setAttribute('role', 'tab');
+      button.setAttribute('aria-controls', 'story-chapter');
+      button.addEventListener('click', () => navigateChapter(identifier));
+      return button;
+    }));
     const buttons = [...tabs.children];
     buttons.forEach((button, position) => {
-      button.setAttribute('aria-selected', String(position === chapterIndex));
-      button.tabIndex = position === chapterIndex ? 0 : -1;
+      button.setAttribute('aria-selected', String(topic.chapters[position] === chapter.id));
+      button.tabIndex = topic.chapters[position] === chapter.id ? 0 : -1;
     });
-    content.setAttribute('aria-labelledby', `story-tab-${chapter.id}`);
+    content.setAttribute('aria-labelledby', tabs.hidden ? 'story-chapter-title' : `story-tab-${chapter.id}`);
     const image = document.querySelector('#story-image');
     document.querySelector('#story-figure').hidden = !chapter.image;
     if (chapter.image) image.src = chapter.image;
     else image.removeAttribute('src');
     image.alt = chapter.imageCaption || '';
+    imageButton.setAttribute('aria-label', `Enlarge ${chapter.title} image`);
     document.querySelector('#story-image-caption').textContent = chapter.imageCaption || '';
     document.querySelector('#story-image-credit').textContent = chapter.imageCredit || '';
     document.querySelector('#story-kicker').textContent = chapter.kicker;
@@ -250,37 +288,71 @@ export function createStoryReader({ onOpen, onContinue }) {
     else {
       renderMaterials(chapter);
     }
-    document.querySelector('#story-evidence-cards').replaceChildren(...(chapter.evidenceCards || []).map(evidenceCard));
+    document.querySelector('#story-evidence-cards').replaceChildren(...(chapter.evidenceCards || []).map((card, position) => evidenceCard(card, position)));
     document.querySelector('#story-question').textContent = chapter.prompt;
     document.querySelector('#story-actions').replaceChildren(...(chapter.actions || []).map(actionNode));
     document.querySelector('#story-evidence').textContent = chapter.evidence;
     document.querySelector('#story-sources').replaceChildren(...chapter.sources.map((identifier) => sourceLink(sourceById(identifier))));
     document.querySelector('#story-source-details').open = false;
-    document.querySelector('#story-view-sources').hidden = chapter.id === 'sources';
     document.querySelector('#story-evidence-label').textContent = chapter.interpretation ? 'INTERPRETATION · NOT A DOCUMENTED SCENE' : 'A NOTE ON THE EVIDENCE';
     const mainIndex = data.readingOrder.indexOf(chapter.id);
     previous.disabled = mainIndex <= 0;
     next.disabled = mainIndex === data.readingOrder.length - 1;
-    previous.hidden = Boolean(chapter.branch);
-    next.hidden = Boolean(chapter.branch);
-    returnButton.hidden = !chapter.branch;
-    const origin = data.chapters.find((entry) => entry.id === branchOrigin) || data.chapters[0];
-    returnButton.textContent = `← Back to ${origin.title}`;
-    progress.textContent = chapter.branch ? 'Optional branch' : `${mainIndex + 1} / ${data.readingOrder.length}`;
-    document.querySelector('#story-scroll').scrollTop = 0;
-    if (focusTab) buttons[chapterIndex].focus();
+    next.textContent = mainIndex < data.readingOrder.length - 1 ? 'Next →' : 'Next';
+    next.setAttribute('aria-label', mainIndex < data.readingOrder.length - 1 ? `Next: ${data.chapters.find((entry) => entry.id === data.readingOrder[mainIndex + 1]).title}` : 'Last chapter');
+    progress.textContent = `${topic.title} · ${topic.chapters.indexOf(chapter.id) + 1} / ${topic.chapters.length}`;
+    topicNext.textContent = topicIndex < data.topics.length - 1 ? `Continue to ${data.topics[topicIndex + 1].title} →` : 'Enter the Early Works →';
+    document.querySelector('#story-continue').hidden = topicIndex === data.topics.length - 1;
+    content.classList.toggle('story-single-chapter', topic.chapters.length === 1);
+    const scroll = document.querySelector('#story-scroll');
+    if (scrollToReading) scroll.scrollTop += topicPanel.getBoundingClientRect().top - scroll.getBoundingClientRect().top - 20;
+    else scroll.scrollTop = 0;
+    if (focusTab) (tabs.hidden ? topics.children[topicIndex] : buttons[topic.chapters.indexOf(chapter.id)]).focus({ preventScroll: true });
+  }
+
+  function openResource(identifier, trigger = document.activeElement) {
+    const chapter = data.chapters.find((entry) => entry.id === identifier && entry.branch);
+    if (!chapter) return;
+    if (!resourceDialog.open) resourceFocusBefore = trigger;
+    document.querySelector('#story-resource-kicker').textContent = chapter.kicker;
+    document.querySelector('#story-resource-title').textContent = chapter.title;
+    resourceBody.replaceChildren(element('h4', '', chapter.subtitle), ...paragraphs(chapter.paragraphs));
+    if (chapter.image) resourceBody.append(imageFigure(chapter));
+    for (const section of chapter.sections || []) resourceBody.append(element('h4', '', section.title), ...paragraphs(section.paragraphs));
+    if (chapter.quote) resourceBody.append(quotation(chapter.quote));
+    resourceBody.append(...(chapter.evidenceCards || []).map((card, position) => evidenceCard(card, position, 'resource')));
+    resourceBody.append(...(chapter.materials || []).map((id) => materialCard(id, chapter.quote)));
+    const actions = element('div', 'story-material-actions');
+    actions.append(...(chapter.actions || []).map(actionNode));
+    resourceBody.append(actions, element('p', 'story-evidence-note', chapter.evidence));
+    const list = element('ul', 'story-sources');
+    const identifiers = [...new Set([...chapter.sources, ...(identifier === 'sources' ? data.chapters[chapterIndex].sources : [])])];
+    list.append(...identifiers.map((id) => sourceLink(sourceById(id))));
+    resourceBody.append(element('h4', '', 'Sources for this reading'), list);
+    resourceBody.scrollTop = 0;
+    if (!resourceDialog.open) resourceDialog.showModal();
+    document.querySelector('#story-resource-close').focus({ preventScroll: true });
+  }
+
+  function closeResource() {
+    if (!resourceDialog.open) return;
+    closeImage();
+    resourceDialog.close();
+    if (resourceFocusBefore?.isConnected) resourceFocusBefore.focus({ preventScroll: true });
+    resourceFocusBefore = null;
   }
 
   function closeImage() {
     if (!imageDialog.open) return;
     imageDialog.close();
-    if (imageFocusBefore?.isConnected) imageFocusBefore.focus();
+    if (imageFocusBefore?.isConnected) imageFocusBefore.focus({ preventScroll: true });
     imageFocusBefore = null;
   }
 
   function close() {
     if (!dialog.open) return;
     closeImage();
+    closeResource();
     dialog.close();
     if (focusBefore?.isConnected && !focusBefore.disabled) focusBefore.focus();
     focusBefore = null;
@@ -296,14 +368,19 @@ export function createStoryReader({ onOpen, onContinue }) {
     select(index, true);
   }
 
-  tabs.addEventListener('keydown', (event) => tabKey(event, tabs.children, chapterIndex, (index, focusTab) => navigateChapter(data.chapters[index].id, focusTab)));
+  topics.addEventListener('keydown', (event) => tabKey(event, topics.children, topicIndex, selectTopic));
+  tabs.addEventListener('keydown', (event) => tabKey(event, tabs.children, data.topics[topicIndex].chapters.indexOf(data.chapters[chapterIndex].id), (index, focusTab) => navigateChapter(data.topics[topicIndex].chapters[index], focusTab)));
   viewTabs.addEventListener('keydown', (event) => tabKey(event, viewTabs.children, selectedViews.get(data.chapters[chapterIndex].id) || 0, renderView));
   previous.addEventListener('click', () => navigateChapter(data.readingOrder[data.readingOrder.indexOf(data.chapters[chapterIndex].id) - 1]));
   next.addEventListener('click', () => navigateChapter(data.readingOrder[data.readingOrder.indexOf(data.chapters[chapterIndex].id) + 1]));
-  returnButton.addEventListener('click', () => navigateChapter(branchOrigin || data.readingOrder[0], true));
+  topicNext.addEventListener('click', () => {
+    if (topicIndex < data.topics.length - 1) { selectTopic(topicIndex + 1, true); return; }
+    close();
+    onContinue();
+  });
   closeButton.addEventListener('click', close);
   dialog.addEventListener('keydown', (event) => {
-    if (imageDialog.open || event.key !== 'Tab') return;
+    if (imageDialog.open || resourceDialog.open || event.key !== 'Tab') return;
     const focusable = [...dialog.querySelectorAll('button:not([disabled]), a[href], summary, [tabindex="0"]')]
       .filter((entry) => entry.getClientRects().length > 0);
     const destination = event.shiftKey && document.activeElement === focusable[0] ? focusable.at(-1)
@@ -313,9 +390,9 @@ export function createStoryReader({ onOpen, onContinue }) {
       destination.focus();
     }
   });
-  dialog.addEventListener('cancel', (event) => { event.preventDefault(); if (!imageDialog.open) close(); });
+  dialog.addEventListener('cancel', (event) => { event.preventDefault(); if (!imageDialog.open && !resourceDialog.open) close(); });
   dialog.addEventListener('click', (event) => {
-    if (imageDialog.open || event.target !== dialog) return;
+    if (imageDialog.open || resourceDialog.open || event.target !== dialog) return;
     const bounds = dialog.getBoundingClientRect();
     if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) close();
   });
@@ -324,7 +401,7 @@ export function createStoryReader({ onOpen, onContinue }) {
     document.querySelector('#story-enlarged-image').src = record.image;
     document.querySelector('#story-enlarged-image').alt = record.imageCaption;
     document.querySelector('#story-enlarged-caption').textContent = record.imageCaption;
-    document.querySelector('#story-enlarged-credit').textContent = record.imageCredit;
+    document.querySelector('#story-enlarged-credit').textContent = record.imageCredit || record.credit;
     const source = sourceById(record.imageSource);
     const links = document.querySelector('#story-enlarged-source');
     links.replaceChildren(externalLink(source, 'View the original image and credit'));
@@ -348,7 +425,23 @@ export function createStoryReader({ onOpen, onContinue }) {
     if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
     else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
   });
-  document.querySelector('#story-view-sources').addEventListener('click', () => navigateChapter('sources', true));
+  document.querySelector('#story-view-sources').addEventListener('click', () => openResource('sources'));
+  document.querySelector('#story-fixed-sources').addEventListener('click', () => openResource('sources'));
+  document.querySelector('#story-resource-close').addEventListener('click', closeResource);
+  document.querySelector('#story-resource-back').addEventListener('click', closeResource);
+  resourceDialog.addEventListener('cancel', (event) => { event.preventDefault(); event.stopPropagation(); if (!imageDialog.open) closeResource(); });
+  resourceDialog.addEventListener('click', (event) => {
+    if (event.target !== resourceDialog || imageDialog.open) return;
+    const bounds = resourceDialog.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) closeResource();
+  });
+  resourceDialog.addEventListener('keydown', (event) => {
+    if (event.key !== 'Tab' || imageDialog.open) return;
+    event.stopPropagation();
+    const focusable = [...resourceDialog.querySelectorAll('button:not([disabled]), a[href], summary')].filter((entry) => entry.getClientRects().length);
+    if (event.shiftKey && document.activeElement === focusable[0]) { event.preventDefault(); focusable.at(-1).focus(); }
+    else if (!event.shiftKey && document.activeElement === focusable.at(-1)) { event.preventDefault(); focusable[0].focus(); }
+  });
   document.querySelector('#story-continue').addEventListener('click', () => { close(); onContinue(); });
 
   return {
@@ -357,15 +450,23 @@ export function createStoryReader({ onOpen, onContinue }) {
       data = value;
       document.querySelector('#story-title').textContent = data.title;
       document.querySelector('#story-years').textContent = data.subtitle;
-      document.querySelector('#story-location').textContent = '87 HACKFORD ROAD · LONDON';
-      tabs.replaceChildren(...data.chapters.map((chapter) => {
-        const button = element('button', chapter.branch ? 'story-optional-tab' : '', chapter.title);
+      timelineTitle.textContent = data.timelineTitle;
+      document.querySelector('#story-intro').replaceChildren(...paragraphs([data.intro, data.wallText]));
+      selectedChapters.clear();
+      selectedViews.clear();
+      topicIndex = 0;
+      topics.replaceChildren(...data.topics.map((topic, index) => {
+        const button = element('button', 'story-topic-card');
         button.type = 'button';
-        button.id = `story-tab-${chapter.id}`;
+        button.id = `story-topic-${topic.id}`;
         button.setAttribute('role', 'tab');
-        button.setAttribute('aria-controls', 'story-chapter');
-        if (chapter.branch) button.append(element('small', '', 'Optional branch'));
-        button.addEventListener('click', () => navigateChapter(chapter.id));
+        button.setAttribute('aria-controls', 'story-topic-panel');
+        const image = element('img');
+        image.src = topic.image;
+        image.alt = topic.imageCaption;
+        image.decoding = 'async';
+        button.append(image, element('strong', '', topic.title), element('span', 'story-topic-summary', topic.summary), element('small', '', topic.imageCredit), element('span', 'story-topic-read', 'Read the story →'));
+        button.addEventListener('click', () => selectTopic(index));
         return button;
       }));
       timeline.replaceChildren(...data.timeline.map((entry) => {
@@ -376,15 +477,13 @@ export function createStoryReader({ onOpen, onContinue }) {
         item.append(sources);
         return item;
       }));
-      renderChapter(0);
+      renderChapter(0, false, false);
     },
     open() {
       if (!data || dialog.open) return;
       focusBefore = document.activeElement;
       onOpen();
-      branchOrigin = null;
       document.querySelector('.story-timeline').open = false;
-      renderChapter(0);
       dialog.showModal();
       closeButton.focus();
     },

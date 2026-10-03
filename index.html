@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vincent van Gogh · A Life Through Art</title>
-  <link rel="stylesheet" href="./style.css?v=2026-10-02-full-collection-tour">
+  <link rel="stylesheet" href="./style.css?v=2026-10-03-immersive-navigation">
   <script type="importmap">
     {
       "imports": {
@@ -51,7 +51,8 @@
       <button id="previous-artwork" type="button" disabled>← Previous</button>
       <span id="guide-position" aria-live="polite">Gallery-view route · Follow the left wall</span>
       <button id="next-artwork" type="button" disabled>Next →</button>
-      <button id="story-go" type="button" aria-pressed="false" disabled>London story</button>
+      <button id="story-go" type="button" aria-pressed="false" disabled>Early life</button>
+      <button id="hall-intro-toggle" type="button" aria-haspopup="dialog" aria-controls="hall-reader" disabled>Room introduction</button>
       <button id="reset-view" type="button" disabled>Reset view</button>
       <div class="tour-controls">
         <label for="tour-mode">Choose tour mode</label>
@@ -75,23 +76,44 @@
     <div class="tip">Scroll / pinch to move closer or farther · Drag to look · Follow the left wall · ←/→ browse works · Click for artwork + story · W/A/S/D to walk</div>
     <div id="story-stop-controls" class="story-stop-controls" hidden>
       <span>Hall 01 · After the opening film</span>
-      <button id="story-explore" type="button">Explore the Story</button>
-      <button id="story-enter-hall" type="button">Early drawings · 1881 →</button>
+      <button id="story-explore" type="button">Searching for a Place</button>
+      <button id="story-enter-hall" type="button">Early Works · 1881 →</button>
     </div>
-    <div class="film-controls">
-      <input id="film-input" type="file" accept="video/mp4,video/webm,video/ogg" aria-label="Choose an opening film">
-      <label class="film-upload" for="film-input">Choose another film</label>
+    <div class="film-controls" hidden>
+      <button id="film-toggle" type="button" aria-haspopup="dialog" aria-controls="film-player" disabled>
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+        <span id="film-label">Play film</span>
+      </button>
       <span id="film-status" role="status">Loading opening film…</span>
-      <button id="film-toggle" type="button" hidden>Play film</button>
     </div>
-    <video id="opening-film" preload="metadata" playsinline hidden aria-hidden="true"></video>
+    <dialog id="film-player" class="film-player" aria-labelledby="film-player-title" aria-describedby="film-player-status">
+      <div class="film-player-panel">
+        <header class="film-player-header">
+          <div><span class="eyebrow">HALL 01 · OPENING FILM</span><h2 id="film-player-title">The Early Years</h2></div>
+          <button id="film-close" type="button" aria-label="Close film and return to the gallery">× <span>Back to gallery</span></button>
+        </header>
+        <video id="opening-film" preload="metadata" playsinline controls aria-label="Opening film"></video>
+        <footer class="film-player-footer">
+          <span id="film-player-status" role="status">Loading opening film…</span>
+        <p id="film-complete" hidden>Continue through the lives, places and decisions behind the early drawings.</p>
+        <div class="film-player-actions">
+          <button id="film-replay" type="button">Play opening film</button>
+          <button id="film-explore" type="button">Explore His Early Life</button>
+          <button id="film-works" type="button">View the Early Works</button>
+          </div>
+        </footer>
+      </div>
+    </dialog>
     <aside id="art-card" class="art-card" aria-live="polite" aria-hidden="true" aria-labelledby="card-title" inert>
       <button id="card-close" class="close" type="button" aria-label="Close artwork card">×</button>
       <div class="card-content">
         <span id="card-chapter" class="eyebrow"></span>
         <h1 id="card-title"></h1>
         <p id="card-date" class="meta"></p>
+        <h2 id="card-label-title" class="card-label-title" hidden></h2>
         <p id="card-body"></p>
+        <blockquote id="card-quote" class="artwork-quote" hidden></blockquote>
+        <button id="card-explore" class="artwork-action" type="button" hidden>Explore the Story →</button>
         <p id="card-credit" class="credit"></p>
         <a id="card-source" class="source-link" href="#" target="_blank" rel="noopener noreferrer" hidden>View artwork and image source ↗</a>
       </div>
@@ -101,44 +123,148 @@
       <div class="immersive-panel">
         <button id="immersive-close" class="immersive-close" type="button" aria-label="Close immersive artwork view">×</button>
         <figure class="immersive-figure">
-          <img id="immersive-image" alt="">
+          <div id="artwork-image-stage" class="artwork-image-stage">
+            <img id="immersive-image" alt="">
+          </div>
+          <div id="artwork-comparison" class="artwork-comparison" hidden></div>
           <figcaption id="immersive-caption"></figcaption>
+          <button id="artwork-zoom" class="artwork-zoom" type="button" aria-pressed="false">Look Closely +</button>
+          <div id="artwork-surround" class="artwork-surround" hidden>
+            <div id="artwork-surround-options" role="group" aria-label="Compare digital picture surrounds"></div>
+            <p>Digital surround demonstration; the artwork itself is unchanged.</p>
+          </div>
         </figure>
         <div class="immersive-content">
+          <button id="artwork-reader-back" class="artwork-reader-back" type="button" hidden></button>
           <span id="immersive-chapter" class="eyebrow"></span>
           <h2 id="immersive-title"></h2>
           <p id="immersive-date" class="immersive-date"></p>
           <div class="immersive-rule"></div>
-          <p id="immersive-body" class="immersive-body"></p>
+          <button id="artwork-explore" class="artwork-action" type="button" aria-expanded="false" aria-controls="artwork-story-reader" hidden>Explore the Story →</button>
+          <div id="artwork-overview">
+            <h3 id="artwork-label-title" class="artwork-label-title" hidden></h3>
+            <p id="immersive-body" class="immersive-body"></p>
+            <blockquote id="artwork-quote" class="artwork-quote" hidden></blockquote>
+          </div>
+          <section id="artwork-story-reader" class="artwork-story-reader" aria-label="Explore the artwork’s story" hidden>
+            <nav id="artwork-story-nav" aria-label="Story chapters"></nav>
+            <article id="artwork-story-article" aria-live="polite" aria-atomic="true">
+              <span id="artwork-story-tag" class="artwork-story-tag"></span>
+              <h3 id="artwork-story-title"></h3>
+              <p id="artwork-story-body" class="immersive-body"></p>
+              <p id="artwork-story-note" class="artwork-evidence" hidden></p>
+              <div class="artwork-looking-prompt">
+                <span class="eyebrow">LOOKING PROMPT</span>
+                <p id="artwork-looking-prompt"></p>
+              </div>
+              <div id="artwork-story-sources"></div>
+            </article>
+            <div class="artwork-chapter-controls">
+              <button id="artwork-story-previous" type="button">← Previous chapter</button>
+              <span id="artwork-story-position"></span>
+              <button id="artwork-story-next" type="button">Next chapter →</button>
+            </div>
+          </section>
+          <div id="artwork-related" class="artwork-related" hidden></div>
+          <details id="artwork-details" class="artwork-details" hidden>
+            <summary>Artwork Details &amp; Sources ↗</summary>
+            <dl id="artwork-detail-fields"></dl>
+            <h3>Evidence &amp; Interpretation</h3>
+            <div id="artwork-evidence"></div>
+            <div id="artwork-related-reading"></div>
+            <h3>Sources &amp; Image Record</h3>
+            <div id="artwork-sources"></div>
+          </details>
           <p id="immersive-credit" class="immersive-credit"></p>
           <a id="immersive-source" href="#" target="_blank" rel="noopener noreferrer" hidden>View artwork and image source ↗</a>
         </div>
+        <nav id="immersive-navigation" class="immersive-navigation" aria-label="Browse artworks in collection order" hidden>
+          <button id="immersive-previous" type="button" title="Previous artwork (Left arrow)">← Previous artwork</button>
+          <div class="immersive-navigation-position">
+            <p id="immersive-position"></p>
+            <p id="immersive-status" role="status" aria-live="polite"></p>
+          </div>
+          <button id="immersive-next" type="button" title="Next artwork (Right arrow)">Next artwork →</button>
+        </nav>
       </div>
     </section>
+    <dialog id="hall-reader" class="hall-reader" aria-labelledby="hall-reader-title" aria-describedby="hall-reader-years">
+      <header class="hall-reader-header">
+        <span id="hall-reader-eyebrow" class="eyebrow">HALL INTRODUCTION</span>
+        <button id="hall-reader-close" type="button" aria-label="Close introduction and return to the gallery">×</button>
+        <label for="hall-reader-select">Choose a wall text</label>
+        <select id="hall-reader-select"></select>
+        <h2 id="hall-reader-title"></h2>
+        <p id="hall-reader-years"></p>
+      </header>
+      <div class="hall-reader-scroll">
+        <div id="hall-reader-copy" class="hall-reader-copy"></div>
+        <p id="hall-reader-research" class="hall-reader-research" hidden></p>
+        <details id="hall-reader-sources" class="hall-reader-sources">
+          <summary>Sources &amp; Further Reading</summary>
+          <ul id="hall-reader-source-list"></ul>
+        </details>
+      </div>
+      <footer class="hall-reader-footer">
+        <button id="hall-reader-back" type="button">Back to gallery</button>
+        <button id="hall-reader-locate" type="button">View this wall →</button>
+      </footer>
+    </dialog>
+    <dialog id="gallery-entry" class="gallery-entry" aria-labelledby="entry-title">
+      <div id="entry-panel" class="entry-panel">
+        <button id="entry-start" class="entry-start" type="button" disabled>
+          <span class="eyebrow">A LIFE THROUGH ART</span>
+          <h1 id="entry-title">Vincent van Gogh</h1>
+          <span id="entry-prompt">Preparing the exhibition…</span>
+        </button>
+        <div id="entry-quote" class="entry-quote" hidden aria-live="polite">
+          <p>We know who he would become.</p>
+          <p>As you enter, set that knowledge aside.</p>
+        </div>
+        <div id="entry-hall" class="entry-hall" hidden>
+          <span class="eyebrow">01 · 1853–1881</span>
+          <h2>Origins and Uncertainty</h2>
+          <p>Before the paintings, a life in search of direction.</p>
+          <button id="entry-watch" type="button">Watch the opening film →</button>
+        </div>
+      </div>
+      <button id="entry-skip" class="entry-skip" type="button" disabled>Enter without the film</button>
+    </dialog>
     <dialog id="story-reader" class="story-reader" aria-labelledby="story-title" aria-describedby="story-years">
       <header class="story-header">
         <div>
           <span class="eyebrow">A LIFE BEFORE PAINTING</span>
-          <h2 id="story-title">A Home in London</h2>
+          <h2 id="story-title">Searching for a Place</h2>
           <p id="story-years"></p>
-          <p id="story-location" class="story-location"></p>
         </div>
-        <button id="story-close" class="story-close" type="button" aria-label="Close story and return to the gallery">×</button>
+        <div class="story-header-actions">
+          <button id="story-fixed-sources" class="story-text-button" type="button" aria-haspopup="dialog" aria-controls="story-resource-dialog">Sources &amp; Versions</button>
+          <button id="story-close" class="story-close" type="button" aria-label="Close story and return to the gallery">×</button>
+        </div>
       </header>
-      <nav id="story-chapters" class="story-chapters" role="tablist" aria-label="London story chapters"></nav>
       <div id="story-scroll" class="story-scroll">
+        <div id="story-intro" class="story-intro"></div>
+        <nav id="story-topics" class="story-topics" role="tablist" aria-label="Early life stories"></nav>
+        <section id="story-topic-panel" role="tabpanel" aria-labelledby="story-topic-home">
+        <header class="story-topic-heading">
+          <div>
+            <h3 id="story-topic-title"></h3>
+            <p id="story-topic-subtitle"></p>
+            <p id="story-location" class="story-location"></p>
+          </div>
+        </header>
+        <nav id="story-chapters" class="story-chapters" role="tablist" aria-label="London story chapters"></nav>
         <section id="story-chapter" class="story-layout" role="tabpanel" tabindex="0">
           <div class="story-media">
             <figure id="story-figure" class="story-figure">
               <button id="story-image-button" class="story-image-button" type="button" aria-label="Enlarge the historic portrait">
                 <img id="story-image" alt="">
-                <span>Enlarge portrait</span>
+                <span>Look closer</span>
               </button>
               <figcaption id="story-image-caption"></figcaption>
               <p id="story-image-credit" class="story-image-credit"></p>
             </figure>
             <div id="story-materials" class="story-materials"></div>
-            <p class="story-source-hint">Open photographs and typeset letter excerpts are displayed here with credits. Relationship and household cards are original reading aids, not historical documents. Source links offer further reading; no AI-generated archive images are used.</p>
           </div>
           <article class="story-copy">
             <span id="story-kicker" class="eyebrow"></span>
@@ -169,8 +295,9 @@
             </details>
           </article>
         </section>
+        </section>
         <details class="story-timeline">
-          <summary>Searching for a Place <span>Art, Work and Faith · 1869–1881</span></summary>
+          <summary>Follow the chronology <span id="story-timeline-title">A Life in Motion · 1869–1881</span></summary>
           <ol id="story-timeline-list"></ol>
         </details>
       </div>
@@ -179,10 +306,18 @@
           <button id="story-previous" type="button">← Previous</button>
           <span id="story-progress" aria-live="polite"></span>
           <button id="story-next" type="button">Next →</button>
-          <button id="story-branch-return" type="button" hidden>← Back to the story</button>
         </div>
-        <button id="story-continue" type="button">Continue to early drawings →</button>
+        <button id="story-topic-next" type="button">Continue to Turning to Faith →</button>
+        <button id="story-continue" type="button">Enter the Early Works →</button>
       </footer>
+      <dialog id="story-resource-dialog" class="story-resource-dialog" aria-labelledby="story-resource-title">
+        <header class="story-resource-header">
+          <div><span id="story-resource-kicker" class="eyebrow"></span><h3 id="story-resource-title"></h3></div>
+          <button id="story-resource-close" class="story-close" type="button" aria-label="Return to the story">×</button>
+        </header>
+        <div id="story-resource-body" class="story-resource-body"></div>
+        <footer><button id="story-resource-back" type="button">← Return to the story</button></footer>
+      </dialog>
       <dialog id="story-image-dialog" class="story-image-dialog" aria-label="Enlarged credited photograph">
         <button id="story-image-close" class="story-close" type="button" aria-label="Close enlarged photograph">×</button>
         <figure>
@@ -195,6 +330,6 @@
     </dialog>
     <div id="error" role="alert" hidden></div>
   </main>
-  <script type="module" src="./viewer.js?v=2026-10-02-opening-film-v5"></script>
+  <script type="module" src="./viewer.js?v=2026-10-03-immersive-navigation"></script>
 </body>
 </html>

@@ -59,6 +59,17 @@ export function validateStoryExhibit(data) {
     if (!record.body || !record.sources?.length) throw new Error(`Missing ${kind} text or sources.`);
     record.sources.forEach(sourceReference);
   };
+  const topicIds = uniqueIds(data.topics, 'story topic');
+  const topicChapters = [];
+  for (const topic of data.topics) {
+    if (!topic.title || !topic.subtitle || !topic.summary || !topic.location || !topic.chapters?.length) throw new Error(`Incomplete story topic: ${topic.id}`);
+    creditedImage(topic, 'topic');
+    for (const identifier of topic.chapters) {
+      if (!data.readingOrder.includes(identifier)) throw new Error(`Invalid topic chapter: ${identifier}`);
+      topicChapters.push(identifier);
+    }
+  }
+  if (topicChapters.join('|') !== data.readingOrder.join('|')) throw new Error('Topics must cover the main reading order exactly once.');
   for (const material of data.materials) {
     sourceReference(material.source);
     if (material.replaces) sourceReference(material.replaces);
@@ -108,5 +119,5 @@ export function validateStoryExhibit(data) {
     for (const card of chapter.evidenceCards || []) card.sources.forEach(sourceReference);
   }
   for (const entry of data.timeline) entry.sources.forEach(sourceReference);
-  return { chapters: chapterIds.size, mainChapters: data.readingOrder.length, materials: materialIds.size, sources: sourceIds.size };
+  return { topics: topicIds.size, chapters: chapterIds.size, mainChapters: data.readingOrder.length, materials: materialIds.size, sources: sourceIds.size };
 }

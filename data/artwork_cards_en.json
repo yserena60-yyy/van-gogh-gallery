@@ -1,0 +1,1246 @@
+{
+  "version": "2026-10-03-authored-artwork-cards",
+  "cards": {
+    "met-459193": {
+      "title": "Road in Etten",
+      "location": "Etten",
+      "date": "1881",
+      "medium": "Chalk, pencil, pastel and watercolour; underdrawing in pen and brown ink",
+      "dimensions": "39.4 × 57.8 cm",
+      "institution": "The Metropolitan Museum of Art",
+      "museumId": "1975.1.774",
+      "fNumber": "",
+      "jhNumber": "",
+      "labelTitle": "",
+      "body": "A man sweeps a road lined with pollard willows. The trees and the narrowing path draw the eye into the distance, while the small working figure gives the landscape a human presence. Vincent made this drawing during his stay in Etten in 1881, when local workers and their everyday tasks became recurring subjects.\n\nSoon after returning, he told Theo how pleased he was to have time to work quietly. He hoped to make many studies and asked his brother to keep him informed about opportunities for a draughtsman. His future was taking shape through repeated practice.\n\nMonths later, he wrote enthusiastically to his friend Anthon van Rappard about the old willows along a local road. He wanted his friend to come and see them too.",
+      "quote": {
+        "text": "“I can’t tell you how beautiful those trees are now.”",
+        "attribution": "Vincent to Anthon van Rappard, 12 October 1881, Letter 174.",
+        "source": {
+          "label": "Van Gogh Letters · Letter 174",
+          "url": "https://vangoghletters.org/vg/letters/let174/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        }
+      },
+      "stories": [
+        {
+          "title": "Time to Work",
+          "tag": "From the Letters",
+          "body": "In late April or early May 1881, Vincent wrote to Theo from Etten. He had arrived only a few days earlier. The countryside delighted him, although the weather did not allow him to draw outdoors every day.\n\nIndoors, he was making studies after Millet. He welcomed the opportunity to work quietly and hoped that each study would help later drawings grow.\n\nHe also asked Theo to look out for a position for a draughtsman. Learning to draw and finding a livelihood were closely connected concerns.",
+          "prompt": "What might an artist learn by drawing the same surroundings repeatedly?",
+          "sources": [
+            {
+              "label": "Van Gogh Letters · Letter 166",
+              "url": "https://vangoghletters.org/vg/letters/let166/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            }
+          ]
+        },
+        {
+          "title": "The Willows Along the Road",
+          "tag": "From the Letters",
+          "body": "In October, Vincent invited Van Rappard to visit while the leaves were falling. He described the old pollard willows beside the road to the station and Leur, and reported making about seven large studies of their trunks.\n\nThe letter contains a small drawing of the tree-lined road. Its accompanying notes connect this subject with several surviving works from Etten, including the drawing displayed here. The larger drawing behind the letter sketch is now untraced.",
+          "prompt": "Look from one trunk to the next. Which shapes repeat, and which remain distinct?",
+          "sources": [
+            {
+              "label": "Van Gogh Letters · Letter 174",
+              "url": "https://vangoghletters.org/vg/letters/let174/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            }
+          ]
+        },
+        {
+          "title": "Learning with a Friend",
+          "tag": "Context from Another Study",
+          "body": "Van Rappard’s comments mattered to Vincent. In a letter dated 15 October 1881, Vincent accepted his friend’s criticism of another study: the sower appeared to be posing, with little sense of the action itself.\n\nVincent understood that he still had work to do. He described his current drawings as studies from a model and expected that depicting convincing movement would take more time.\n\nTheir exchange gives us a glimpse of learning through friendship, criticism and continued practice.",
+          "prompt": "Look at the man with the broom. What gives you a sense of his task?",
+          "sources": [
+            {
+              "label": "Van Gogh Letters · Letter 176",
+              "url": "https://vangoghletters.org/vg/letters/let176/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            }
+          ]
+        }
+      ],
+      "evidence": "The description of the road and its working figure is a curatorial observation. Letters document Vincent’s work in Etten and his interest in the willows. Letter 176 discusses a different study of a sower, not the sweeper shown here. The larger drawing behind the related sketch in Letter 174 is now untraced.",
+      "notes": [],
+      "collectionCredit": "Robert Lehman Collection, 1975",
+      "sources": [
+        {
+          "label": "The Metropolitan Museum of Art · Road in Etten",
+          "url": "https://www.metmuseum.org/art/collection/search/459193",
+          "kind": "Collection record"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 166",
+          "url": "https://vangoghletters.org/vg/letters/let166/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 174",
+          "url": "https://vangoghletters.org/vg/letters/let174/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 176",
+          "url": "https://vangoghletters.org/vg/letters/let176/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 453",
+          "url": "https://vangoghletters.org/vg/letters/let453/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        }
+      ],
+      "related": [],
+      "year": 1881,
+      "physicalObjectId": null,
+      "surroundDemo": false,
+      "relatedReading": {
+        "title": "Related Art · A Road into the Distance",
+        "body": "Place Road in Etten beside Meindert Hobbema’s The Avenue at Middelharnis and compare how each artist organizes a tree-lined road. Notice the spacing of the trunks, the position of the figures and the view towards the horizon.\n\nVincent recommended a Hobbema painting to Theo in 1884. The editors of his letters identify The Avenue at Middelharnis as the probable work. This comparison invites close looking; the later letter leaves the precise source of the 1881 drawing’s composition unresolved.",
+        "sources": [
+          {
+            "label": "Van Gogh Letters · Letter 453",
+            "url": "https://vangoghletters.org/vg/letters/let453/letter.html",
+            "kind": "Artist’s letter and scholarly annotations"
+          }
+        ]
+      }
+    },
+    "highlight-02": {
+      "title": "Sorrow",
+      "location": "The Hague",
+      "date": "April 1882",
+      "medium": "Pencil and wash on paper",
+      "dimensions": "",
+      "institution": "Current ownership not independently confirmed",
+      "museumId": "",
+      "fNumber": "F929",
+      "jhNumber": "JH129",
+      "labelTitle": "",
+      "body": "The woman in this drawing is Clasina Maria Hoornik, known as Sien. When Vincent met her in The Hague, she was pregnant and caring for a young daughter. In a letter to Theo, he described sharing his limited resources with them and working with her as a model throughout the winter. Posing was difficult for Sien, and Vincent acknowledged how much her work had helped him learn.\n\nHer head rests on her arms. A firm line follows the curve of her back. Vincent was exploring how an outline could carry feeling, drawing on his admiration for Millet. He returned to the subject in several versions.\n\nIn July, he described Sorrow as a small beginning in his ambition to make drawings that could move people.",
+      "quote": {
+        "text": "“I want to make drawings that move some people.”",
+        "attribution": "Vincent to Theo, on or about 21 July 1882, Letter 249.",
+        "source": {
+          "label": "Van Gogh Letters · Letter 249",
+          "url": "https://vangoghletters.org/vg/letters/let249/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        }
+      },
+      "stories": [
+        {
+          "title": "Sien, His Model",
+          "tag": "From the Letters",
+          "body": "In May 1882, Vincent finally told Theo about his relationship with Sien. He described paying her rent, sharing food with her and her daughter, and considering marriage.\n\nHe also explained the importance of her work. Sien had learned to pose despite finding it difficult, and the studies helped him develop his drawing. He described the drawings he was sending as made by his model and himself.\n\nThe letter preserves Vincent’s account of their relationship. Sien’s own experience remains less directly accessible through this source.",
+          "prompt": "What changes when you think of Sien as someone participating in the making of this drawing?",
+          "sources": [
+            {
+              "label": "Van Gogh Letters · Letter 224",
+              "url": "https://vangoghletters.org/vg/letters/let224/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            }
+          ]
+        },
+        {
+          "title": "Working Through the Line",
+          "tag": "From the Letters",
+          "body": "In April 1882, Vincent described placing two sheets beneath his drawing paper. As he worked firmly on the outlines, their impressions passed onto the sheets below. He then developed those impressions into further versions.\n\nHis letter moves between artistic ambition and practical concerns. He wanted to make more studies of the nude, while the recurring cost of a model was difficult to meet.\n\nThe different versions preserve a process of observation, repetition and revision.",
+          "prompt": "Follow the line from the shoulder down the back. Where does it become heavier? Where does it soften?",
+          "sources": [
+            {
+              "label": "Van Gogh Letters · Letter 216",
+              "url": "https://vangoghletters.org/vg/letters/let216/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            }
+          ]
+        },
+        {
+          "title": "A Figure and a Landscape",
+          "tag": "From the Letters",
+          "body": "On 1 May 1882, Vincent discussed a larger version of Sorrow alongside a drawing of tree roots in sandy ground. He hoped that both could express something of life’s struggle.\n\nHe also asked Theo to judge whether that feeling came through. His letter records an intention and a question.\n\nThe larger Sorrow described there is now untraced. The drawing displayed in this gallery is another surviving version of the subject.",
+          "prompt": "Look at the figure and the roots together. What connections do you notice in their lines and shapes?",
+          "sources": [
+            {
+              "label": "Van Gogh Letters · Letter 222",
+              "url": "https://vangoghletters.org/vg/letters/let222/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            }
+          ]
+        }
+      ],
+      "evidence": "This is the F929 / JH129 version. Its lower inscription is the title Sorrow. Michelet’s inscription belongs to F929a / JH130, a different surviving version. The larger Sorrow discussed in Letter 222 is now untraced. The related drawing of tree roots dates to 1882, not 1890. The letters preserve Vincent’s account rather than Sien’s own testimony.",
+      "notes": [
+        "Documented in a Christie’s auction catalogue as privately owned. Current ownership has not been independently confirmed for this exhibition. The image source and its public-domain designation are recorded separately."
+      ],
+      "collectionCredit": "",
+      "sources": [
+        {
+          "label": "Van Gogh Letters · Sorrow, F929 / JH129",
+          "url": "https://vangoghletters.org/vg/search/advanced?originaltext=original&translation=translation&annotations=notes&essays=essays&other=other&from=1&to=1&date_from=1872-09-29&date_until=1890-07-31&order=date&workofart_code=i2364",
+          "kind": "Scholarly work identity; current ownership not independently confirmed"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 224",
+          "url": "https://vangoghletters.org/vg/letters/let224/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 216",
+          "url": "https://vangoghletters.org/vg/letters/let216/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 222",
+          "url": "https://vangoghletters.org/vg/letters/let222/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 249",
+          "url": "https://vangoghletters.org/vg/letters/let249/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        },
+        {
+          "label": "Image file · Sorrow, F929 / JH129",
+          "url": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Sorrow_-_F929_JH129.jpg",
+          "kind": "Image identity and public-domain record"
+        }
+      ],
+      "related": [],
+      "year": 1882,
+      "physicalObjectId": null,
+      "surroundDemo": false
+    },
+    "met-335538": {
+      "title": "Nursery on Schenkweg",
+      "location": "The Hague",
+      "date": "March–May 1882",
+      "medium": "Black chalk, graphite, pen, brush, and ink, heightened with white body color on laid paper watermarked ED & CIE (in a cartouche)",
+      "dimensions": "29.6 × 58.5 cm",
+      "institution": "The Metropolitan Museum of Art",
+      "museumId": "1972.118.281",
+      "fNumber": "F930",
+      "jhNumber": "JH138",
+      "labelTitle": "",
+      "body": "A nursery near Vincent’s studio became the subject of this drawing. It belonged to a group of views of The Hague commissioned by his uncle, the art dealer C. M. van Gogh. For the young artist, the work offered an opportunity to earn money through drawing.\n\nBefore sending it away, Vincent revised the foreground following advice from his friend Anthon van Rappard. He looked more closely at the ditch and the water. He felt that these changes helped the scene express spring and a gentle stillness.\n\nPayment arrived in early June, without a letter. Vincent was left wondering whether his uncle liked the drawings and whether more work would follow.",
+      "quote": {
+        "text": "“‘spring’ and a gentle stillness.”",
+        "attribution": "Vincent to Anthon van Rappard, 28 May 1882, Letter 232.",
+        "source": {
+          "label": "Van Gogh Letters · Letter 232",
+          "url": "https://vangoghletters.org/vg/letters/let232/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        }
+      },
+      "stories": [
+        {
+          "title": "An Uncle’s Order",
+          "tag": "From the Letters",
+          "body": "On 11 March 1882, Vincent added unexpected news to a letter to Theo. His uncle had seen some finished drawings and ordered twelve small views of The Hague.\n\nVincent set the price at two and a half guilders for each drawing. His uncle also held out the possibility of another order.\n\nThe news came during a period of financial difficulty. In the same letter, Vincent described the expense of models and the challenge of continuing his studies with very little money.",
+          "prompt": "What might change when a drawing becomes work made for a customer?",
+          "sources": [
+            {
+              "label": "Van Gogh Letters · Letter 210",
+              "url": "https://vangoghletters.org/vg/letters/let210/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            }
+          ]
+        },
+        {
+          "title": "Looking Again",
+          "tag": "From the Letters",
+          "body": "Van Rappard had suggested that Vincent pay closer attention to the ditch and the water in the foreground. Vincent followed his advice and worked on the drawing again.\n\nOn 28 May, as he packed drawings for Amsterdam, he reported the change to his friend. The foreground now showed more clearly, and he felt the nursery conveyed the season and its quiet atmosphere.\n\nTheir exchange preserves a small moment of revision, with a friend helping Vincent see what the drawing still needed.",
+          "prompt": "Look at the foreground water. How does it affect your sense of space and stillness?",
+          "sources": [
+            {
+              "label": "Van Gogh Letters · Letter 232",
+              "url": "https://vangoghletters.org/vg/letters/let232/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            }
+          ]
+        },
+        {
+          "title": "Payment Without a Letter",
+          "tag": "From the Letters",
+          "body": "By 3 June, Vincent had received twenty guilders from his uncle. No message accompanied the payment.\n\nHe had received thirty guilders for the earlier group. He wondered whether the new drawings had disappointed his uncle, but he had no answer. He also acknowledged that he had left the price to his uncle.\n\nVincent remained willing to accept another order. The income could help cover his rent and make daily life easier.",
+          "prompt": "How does this uncertainty change the way you understand the commission?",
+          "sources": [
+            {
+              "label": "Van Gogh Letters · Letter 235",
+              "url": "https://vangoghletters.org/vg/letters/let235/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            }
+          ],
+          "note": "Vincent’s account. His uncle’s response is not established by this letter."
+        }
+      ],
+      "evidence": "This drawing belongs to a later group within Uncle Cor’s commission, not necessarily the initial twelve drawings mentioned in Letter 210. Vincent’s revisions are documented in Letter 232; no before-image has been established here. Letter 235 records Vincent’s uncertainty, not his uncle’s judgement.",
+      "notes": [
+        "The Met dates this sheet to March–May 1882; the National Gallery of Victoria’s exhibition research uses April–May. This gallery follows the Met’s object record. The Rijksmuseum’s related oil painting, SK-A-3662, is a different work."
+      ],
+      "collectionCredit": "Bequest of Walter C. Baker, 1971",
+      "sources": [
+        {
+          "label": "The Metropolitan Museum of Art · Nursery on Schenkweg",
+          "url": "https://www.metmuseum.org/art/collection/search/335538",
+          "kind": "Collection record"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 210",
+          "url": "https://vangoghletters.org/vg/letters/let210/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 232",
+          "url": "https://vangoghletters.org/vg/letters/let232/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 235",
+          "url": "https://vangoghletters.org/vg/letters/let235/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        }
+      ],
+      "related": [],
+      "year": 1882,
+      "physicalObjectId": null,
+      "surroundDemo": false
+    },
+    "met-849054": {
+      "title": "Gardener by an Apple Tree",
+      "location": "The Hague",
+      "date": "mid-July 1883",
+      "medium": "Transfer lithograph with pen and ink",
+      "dimensions": "Sheet: 23.5 × 32.3 cm",
+      "institution": "The Metropolitan Museum of Art",
+      "museumId": "2021.241",
+      "fNumber": "",
+      "jhNumber": "",
+      "labelTitle": "Learning Through Print",
+      "body": "A gardener bends into his work beneath an apple tree. The image grew from an encounter Van Gogh described to Theo in July 1883. After watching a gardener at a home for elderly people, he developed the figure with the help of a familiar model.\n\nMaking the print brought another set of difficulties. Fine lines had to survive transfer and printing, and this particular impression was extensively strengthened by hand. The dark marks around the tree preserve some of that continued work.\n\nHere, an ordinary working body becomes the centre of an experiment involving memory, a sitter, printing materials, and revision.",
+      "quote": null,
+      "stories": [
+        {
+          "title": "A Figure Remembered",
+          "tag": "From the Letters",
+          "body": "In a letter written around 13 July 1883, Van Gogh recalled seeing a gardener during a visit to an institution in The Hague. He had drawn the man from a window and wanted to develop the subject further. His regular model, Adrianus Jacobus Zuyderland, helped him work on the figure. The resulting image brings together something witnessed, something remembered, and something arranged for drawing.",
+          "prompt": "Follow the line from the man’s shoulders through his back to the tool. Where does the body seem to carry the effort?",
+          "sources": [
+            {
+              "label": "Van Gogh Letters · Letter 362",
+              "url": "https://vangoghletters.org/vg/letters/let362/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            }
+          ]
+        },
+        {
+          "title": "The Print Needed More Work",
+          "tag": "Collection Research",
+          "body": "Van Gogh drew on transfer paper, allowing the image to pass into a lithographic printing process. The printed result did not preserve everything he wanted. In the Met’s impression, he returned to the paper with pen and ink, reinforcing parts of the image. The tree’s dark knots are especially useful places to look. This sheet records both the printed image and his response to its limitations.",
+          "prompt": "Examine the darkest passages around the tree. How do they affect the balance between the figure and its surroundings?",
+          "sources": [
+            {
+              "label": "The Metropolitan Museum of Art · Gardener by an Apple Tree",
+              "url": "https://www.metmuseum.org/art/collection/search/849054",
+              "kind": "Collection record"
+            }
+          ]
+        },
+        {
+          "title": "A Reply from Theo",
+          "tag": "From the Letters",
+          "body": "Theo found the effect of the prints somewhat meagre. Vincent’s reply connected the work to the conditions in which he was making it: food, health, money, and the cost of materials. He also discussed small drawings suited to illustrated magazines. The exchange shows him trying to improve an image while finding a practical route for his work to reach other people.",
+          "prompt": "Imagine encountering this image on a magazine page. Which parts would remain immediately legible at a small scale?",
+          "sources": [
+            {
+              "label": "Van Gogh Letters · Letter 363",
+              "url": "https://vangoghletters.org/vg/letters/let363/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            }
+          ]
+        }
+      ],
+      "evidence": "The letters document the encounter, the model, and Van Gogh’s concerns about printing and money. The Met’s research identifies hand retouching in this impression. His hopes for wider circulation do not establish that the work was commercially published.",
+      "notes": [],
+      "collectionCredit": "",
+      "sources": [
+        {
+          "label": "The Metropolitan Museum of Art · Gardener by an Apple Tree",
+          "url": "https://www.metmuseum.org/art/collection/search/849054",
+          "kind": "Collection record"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 362",
+          "url": "https://vangoghletters.org/vg/letters/let362/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 363",
+          "url": "https://vangoghletters.org/vg/letters/let363/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        }
+      ],
+      "related": [],
+      "year": 1883,
+      "physicalObjectId": null,
+      "surroundDemo": false
+    },
+    "aic-202382": {
+      "title": "Avenue of Pollard Birches and Poplars",
+      "location": "Nuenen",
+      "date": "March 1884",
+      "medium": "Reed pen and iron-gall ink on tan laid paper",
+      "dimensions": "19.2 × 26.5 cm",
+      "institution": "Art Institute of Chicago",
+      "museumId": "2022.74",
+      "fNumber": "",
+      "jhNumber": "",
+      "labelTitle": "A Road, a Poem, and the Passing of Time",
+      "body": "Follow the rows of trees towards the small figure on the road. Repeated trunks and closely worked lines carry the eye into the distance.\n\nVan Gogh made this drawing in Nuenen in March 1884. Around this time, he was reading François Coppée, a poet whose attention to ordinary lives interested him. The Art Institute of Chicago suggests a connection with Coppée’s poem Tristement.\n\nThe drawing has also changed materially. Its iron-gall ink has become brown, and some neighbouring lines have blurred together. The sheet we encounter today carries the effects of both Van Gogh’s drawing and the materials’ ageing.",
+      "quote": null,
+      "stories": [
+        {
+          "title": "Reading Beside the Drawing Board",
+          "tag": "Museum Interpretation",
+          "body": "Van Gogh’s letters from February 1884 discuss his admiration for François Coppée. The poet’s treatment of workers and everyday experience mattered to him. The Art Institute connects this drawing with Tristement, a poem describing a mourning widow in a long avenue of partly bare trees. That connection offers a possible literary setting for the image. The surviving evidence leaves the exact relationship open.",
+          "prompt": "How does the small figure change your experience of the road?",
+          "sources": [
+            {
+              "label": "Art Institute of Chicago · Avenue of Pollard Birches and Poplars",
+              "url": "https://www.artic.edu/artworks/202382",
+              "kind": "Collection record"
+            },
+            {
+              "label": "Van Gogh Letters · Letter 430",
+              "url": "https://vangoghletters.org/vg/letters/let430/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            },
+            {
+              "label": "Van Gogh Letters · Letter 431",
+              "url": "https://vangoghletters.org/vg/letters/let431/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            }
+          ]
+        },
+        {
+          "title": "The Colour of Ageing",
+          "tag": "Collection Research",
+          "body": "The drawing’s warm appearance includes changes that occurred after Van Gogh finished it. According to the museum, the ink was originally black. It has become dark brown and contributed a golden tone to the paper. Bleeding has also caused closely spaced hatchings to merge. These changes affect how clearly we see the original line work and how strongly light and dark oppose one another.",
+          "prompt": "Find a densely worked area. Can you distinguish individual lines, or do they now form a continuous tone?",
+          "sources": [
+            {
+              "label": "Art Institute of Chicago · Avenue of Pollard Birches and Poplars",
+              "url": "https://www.artic.edu/artworks/202382",
+              "kind": "Collection record"
+            }
+          ]
+        },
+        {
+          "title": "Following the Road",
+          "tag": "Curatorial Reading",
+          "body": "The avenue gives the viewer a route through the image. Tree trunks establish a rhythm, while the road narrows as it recedes. The figure provides a measure of distance and scale. You can read the scene through that person’s journey, or linger over the repeated shapes of the trees. Both approaches begin with decisions visible on the paper.",
+          "prompt": "Trace the road towards the distance. Which lines guide you, and where does your attention pause?",
+          "sources": [
+            {
+              "label": "Art Institute of Chicago · Avenue of Pollard Birches and Poplars",
+              "url": "https://www.artic.edu/artworks/202382",
+              "kind": "Collection record"
+            }
+          ]
+        }
+      ],
+      "evidence": "Van Gogh’s interest in Coppée is documented in letters. The connection with Tristement is a museum interpretation. The figure’s identity and its relationship to Van Gogh’s personal emotions remain uncertain.",
+      "notes": [],
+      "collectionCredit": "Gift of Richard and Mary L. Gray",
+      "sources": [
+        {
+          "label": "Art Institute of Chicago · Avenue of Pollard Birches and Poplars",
+          "url": "https://www.artic.edu/artworks/202382",
+          "kind": "Collection record"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 430",
+          "url": "https://vangoghletters.org/vg/letters/let430/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 431",
+          "url": "https://vangoghletters.org/vg/letters/let431/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        }
+      ],
+      "related": [],
+      "year": 1884,
+      "physicalObjectId": null,
+      "surroundDemo": false
+    },
+    "aic-28862": {
+      "title": "A Peasant Woman Digging in Front of Her Cottage",
+      "location": "Nuenen",
+      "date": "c. 1885",
+      "medium": "Oil on canvas",
+      "dimensions": "31.3 × 42 cm",
+      "institution": "Art Institute of Chicago",
+      "museumId": "1968.92",
+      "fNumber": "",
+      "jhNumber": "",
+      "labelTitle": "Work at the Edge of Home",
+      "body": "A woman bends towards the soil close to a cottage. Her work, the surrounding ground, and the building share a closely related range of earthy colours.\n\nIn Nuenen, Van Gogh walked through the countryside looking for cottages and people at work. His letters reveal an affection for small dwellings, which he sometimes associated with birds’ nests. That image helps us approach the closeness of shelter and daily labour here.\n\nThe woman’s identity is unknown. Her posture remains visible: a body directing its weight into a familiar task, within a landscape Van Gogh was learning to paint.",
+      "quote": null,
+      "stories": [
+        {
+          "title": "Looking for Cottages",
+          "tag": "From the Letters",
+          "body": "In June 1885, Van Gogh described finding cottages during walks through the countryside. He compared their shapes and weathered roofs with birds’ nests and planned variations on these subjects. The letters show the activity surrounding his pictures: walking, noticing, returning, and choosing what to paint. They provide a context for this work within a wider interest in rural dwellings.",
+          "prompt": "Look at the roof and the cottage’s outline. Which parts give the building its character?",
+          "sources": [
+            {
+              "label": "Van Gogh Letters · Letter 507",
+              "url": "https://vangoghletters.org/vg/letters/let507/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            }
+          ]
+        },
+        {
+          "title": "The Body in the Ground",
+          "tag": "Curatorial Reading",
+          "body": "The woman’s bent posture gives the scene its physical centre. Her upper body leans towards the earth, while the tool extends the action into the ground. Similar colours move through clothing, soil, and cottage. Looking closely at those connections allows us to consider how the painting brings a person’s work and immediate surroundings into one compact composition.",
+          "prompt": "Follow the direction of her back and the tool. How do these lines organise the space around her?",
+          "sources": [
+            {
+              "label": "Art Institute of Chicago · A Peasant Woman Digging in Front of Her Cottage",
+              "url": "https://www.artic.edu/artworks/28862",
+              "kind": "Collection record"
+            }
+          ]
+        },
+        {
+          "title": "A Painting’s Route to Chicago",
+          "tag": "Collection Research",
+          "body": "The museum’s provenance records trace the painting through Van Gogh’s family and the later circulation of his early work. They include his mother, a carpenter in Breda, dealers, collectors, and auctions. The painting eventually entered the Art Institute through Dr. John J. Ireland’s bequest in 1968. These records give the object a history extending far beyond the moment it was painted.",
+          "prompt": "How does knowing a painting’s later journey affect the way you encounter its original subject?",
+          "sources": [
+            {
+              "label": "Art Institute of Chicago · A Peasant Woman Digging in Front of Her Cottage",
+              "url": "https://www.artic.edu/artworks/28862",
+              "kind": "Collection record"
+            }
+          ]
+        }
+      ],
+      "evidence": "The letters illuminate Van Gogh’s broader interest in cottages. They do not establish the sitter’s identity, ownership of the land, or the exact circumstances of this painting. Its date is retained as approximately 1885.",
+      "notes": [
+        "Letter 507 provides context for his interest in cottages; it has not been identified here as a description of this exact canvas."
+      ],
+      "collectionCredit": "Bequest of Dr. John J. Ireland",
+      "sources": [
+        {
+          "label": "Art Institute of Chicago · A Peasant Woman Digging in Front of Her Cottage",
+          "url": "https://www.artic.edu/artworks/28862",
+          "kind": "Collection record"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 507",
+          "url": "https://vangoghletters.org/vg/letters/let507/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        }
+      ],
+      "related": [],
+      "year": 1885,
+      "physicalObjectId": null,
+      "surroundDemo": false
+    },
+    "met-438722": {
+      "title": "The Potato Peeler",
+      "location": "Nuenen",
+      "date": "February–March 1885",
+      "medium": "Oil on canvas",
+      "dimensions": "40.6 × 31.8 cm",
+      "institution": "The Metropolitan Museum of Art",
+      "museumId": "67.187.70b",
+      "fNumber": "",
+      "jhNumber": "",
+      "labelTitle": "A Small Task on a Canvas with Two Lives",
+      "body": "A woman prepares potatoes, absorbed in the work of her hands. Van Gogh painted this study in Nuenen in early 1885, during a period of sustained attention to rural people and their daily activities. The restricted palette and firm, block-like forms belong to that developing practice.\n\nThe same canvas continued to serve him. In Paris in 1887, he painted a self-portrait on its other side.\n\nTurning between the two images brings two moments of his working life into contact. The cloth carries a rural figure study and a later experiment in painting his own face.",
+      "quote": null,
+      "stories": [
+        {
+          "title": "Preparing the Meal",
+          "tag": "Collection Research",
+          "body": "The subject is an everyday action: preparing food before it reaches the table. The woman’s attention is directed towards her hands and the potatoes. This painting belongs to Van Gogh’s studies of peasant life in the months before The Potato Eaters. Together, those works show his interest in the gestures through which people worked, prepared food, and sustained a household.",
+          "prompt": "Where does the woman direct her attention, and how does the painting direct yours?",
+          "sources": [
+            {
+              "label": "The Metropolitan Museum of Art · The Potato Peeler",
+              "url": "https://www.metmuseum.org/art/collection/search/438722",
+              "kind": "Collection record"
+            }
+          ]
+        },
+        {
+          "title": "Building a Figure in Dark Paint",
+          "tag": "Collection Research",
+          "body": "The Met describes the painting through its limited dark palette, coarse handling, and blocky drawing. Those qualities offer a useful way to look at Van Gogh’s work at this stage. Follow the broad shapes that establish the figure, then examine the smaller marks within them. The image records a painter working on how a body can hold together in paint.",
+          "prompt": "Which large shapes make the figure readable before you notice individual details?",
+          "sources": [
+            {
+              "label": "The Metropolitan Museum of Art · The Potato Peeler",
+              "url": "https://www.metmuseum.org/art/collection/search/438722",
+              "kind": "Collection record"
+            }
+          ]
+        },
+        {
+          "title": "The Other Side",
+          "tag": "Collection Research",
+          "body": "In 1887, Van Gogh used the other side of this canvas for Self-Portrait with a Straw Hat. Both paintings remain part of the same physical object. Their shared support makes the passage between Nuenen and Paris unusually tangible. A change in subject and colour can be encountered by turning a single piece of cloth, which continued to be useful in his studio.",
+          "prompt": "Turn the canvas. What changes in the handling of the face, clothing, and surrounding space?",
+          "sources": [
+            {
+              "label": "The Metropolitan Museum of Art · The Potato Peeler",
+              "url": "https://www.metmuseum.org/art/collection/search/438722",
+              "kind": "Collection record"
+            }
+          ]
+        }
+      ],
+      "evidence": "The two images are painted on opposite sides of one canvas. Van Gogh’s financial constraints help explain his broader practice of reusing materials. The exact reason for choosing this particular support is not fully documented.",
+      "notes": [],
+      "collectionCredit": "Bequest of Miss Adelaide Milton de Groot, 1967",
+      "sources": [
+        {
+          "label": "The Metropolitan Museum of Art · The Potato Peeler",
+          "url": "https://www.metmuseum.org/art/collection/search/438722",
+          "kind": "Collection record"
+        }
+      ],
+      "related": [
+        {
+          "id": "met-436532",
+          "label": "View the Other Side",
+          "relation": "Two painted surfaces of the same canvas",
+          "mode": "read"
+        }
+      ],
+      "year": 1885,
+      "physicalObjectId": "met-67-187-70",
+      "surroundDemo": false
+    },
+    "highlight-08": {
+      "title": "Potato Eaters (lithograph)",
+      "location": "Nuenen",
+      "date": "April 1885",
+      "medium": "Crayon lithograph with scraping, printed in dark brown on thin wove paper",
+      "dimensions": "Image: 26.3 × 31.6 cm; sheet: 31.7 × 40.6 cm",
+      "institution": "National Gallery of Art, Washington",
+      "museumId": "1951.10.33",
+      "fNumber": "F1661",
+      "jhNumber": "JH737",
+      "labelTitle": "An Image Sent Ahead",
+      "body": "Before completing the final oil painting of The Potato Eaters, Van Gogh made a lithograph of the subject. In April 1885, he arranged printing in Eindhoven and sent impressions to Theo, hoping the image would reach people who might take an interest in his work.\n\nThe print carries a reversed composition and a reversed signature. It preserves an earlier stage in the subject’s development, along with the practical consequences of printing.\n\nOne impression also became part of a difficult exchange with his friend Anthon van Rappard. Making the image public brought responses that Van Gogh could not control.",
+      "quote": null,
+      "stories": [
+        {
+          "title": "Ordering a Stone",
+          "tag": "From the Letters",
+          "body": "On 13 April 1885, Van Gogh told Theo that he had ordered a lithographic stone in Eindhoven. He described an arrangement covering the stone’s use, preparation, paper, and printing of fifty impressions for three guilders. A few days later, he was sending prints. By 21 April, he asked Theo to give impressions to the dealer Portier. The letters let us follow a project through its actual arrangements.",
+          "prompt": "What changes when an image can be printed in several impressions and sent to different readers?",
+          "sources": [
+            {
+              "label": "Van Gogh Letters · Letter 493",
+              "url": "https://vangoghletters.org/vg/letters/let493/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            },
+            {
+              "label": "Van Gogh Letters · Letter 494",
+              "url": "https://vangoghletters.org/vg/letters/let494/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            },
+            {
+              "label": "Van Gogh Letters · Letter 495",
+              "url": "https://vangoghletters.org/vg/letters/let495/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            }
+          ]
+        },
+        {
+          "title": "The Reversed Image",
+          "tag": "Collection Research",
+          "body": "Printing reversed the image drawn on the stone. The signature near the lower left is reversed too. Van Gogh noticed the change in orientation and wrote that he would like to make a further lithograph with the figures facing the intended way. The sheet allows you to examine a technical problem that he was considering while the painted composition was still developing.",
+          "prompt": "Find the signature, then compare the placement of the figures with the final oil painting.",
+          "sources": [
+            {
+              "label": "National Gallery of Art, Washington · Potato Eaters (lithograph)",
+              "url": "https://www.nga.gov/artworks/39824-potato-eaters",
+              "kind": "Collection record"
+            },
+            {
+              "label": "Van Gogh Letters · Letter 494",
+              "url": "https://vangoghletters.org/vg/letters/let494/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            }
+          ]
+        },
+        {
+          "title": "A Friend’s Severe Criticism",
+          "tag": "From the Letters",
+          "body": "On 24 May 1885, Anthon van Rappard sent Van Gogh a sharply critical letter about the lithograph. He questioned the figures’ movements, anatomy, and the relationship between hands and objects. Van Gogh returned the letter the following day. The exchange contributed to the rupture of their friendship. It exposes a difficult part of artistic work: receiving judgement from someone whose opinion had mattered.",
+          "prompt": "Look at the hands, the coffee pot, and the seated bodies. Which relationships seem convincing, and which remain difficult to read?",
+          "sources": [
+            {
+              "label": "Van Gogh Letters · Letter 503",
+              "url": "https://vangoghletters.org/vg/letters/let503/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            },
+            {
+              "label": "Van Gogh Letters · Letter 504",
+              "url": "https://vangoghletters.org/vg/letters/let504/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            }
+          ]
+        }
+      ],
+      "evidence": "The April letters document printing and circulation before the final oil painting was finished. Van Rappard’s criticism concerned the lithograph. His response should be kept distinct from the reception of the completed canvas.",
+      "notes": [],
+      "collectionCredit": "Rosenwald Collection",
+      "sources": [
+        {
+          "label": "National Gallery of Art, Washington · Potato Eaters (lithograph)",
+          "url": "https://www.nga.gov/artworks/39824-potato-eaters",
+          "kind": "Collection record"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 493",
+          "url": "https://vangoghletters.org/vg/letters/let493/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 494",
+          "url": "https://vangoghletters.org/vg/letters/let494/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 495",
+          "url": "https://vangoghletters.org/vg/letters/let495/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 503",
+          "url": "https://vangoghletters.org/vg/letters/let503/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 504",
+          "url": "https://vangoghletters.org/vg/letters/let504/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        }
+      ],
+      "related": [
+        {
+          "id": "vgm-s0005v1962",
+          "label": "Compare with the Oil Painting",
+          "relation": "A different work of the same subject",
+          "mode": "compare"
+        }
+      ],
+      "year": 1885,
+      "physicalObjectId": null,
+      "surroundDemo": false
+    },
+    "vgm-s0005v1962": {
+      "title": "The Potato Eaters (oil painting)",
+      "location": "Nuenen",
+      "date": "April–May 1885",
+      "medium": "Oil on canvas",
+      "dimensions": "82 × 114 cm",
+      "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)",
+      "museumId": "s0005V1962",
+      "fNumber": "F0082",
+      "jhNumber": "JH0764",
+      "labelTitle": "A Meal He Had Worked Towards",
+      "body": "Five people gather around food and drink beneath a hanging lamp. Their faces and hands carry much of the painting’s weight.\n\nVan Gogh had spent the winter studying heads and hands before attempting this demanding group composition. On 30 April 1885, he told Theo that the painting was still unfinished. He wanted viewers to connect the hands reaching towards the potatoes with the work of cultivating the earth.\n\nThe scene presents his understanding of rural labour and an earned meal. Its rough forms, closely considered colours, and concentrated light belong to a project in which he had invested months of work.",
+      "quote": null,
+      "stories": [
+        {
+          "title": "A Winter of Preparation",
+          "tag": "From the Letters",
+          "body": "Van Gogh described the final painting as the result of a winter spent studying heads and hands. The group scene required him to bring those parts into a shared interior: bodies around a table, gestures towards food, and faces under lamplight. The preparatory work gives the picture a history of repeated looking and practice. Its ambitious composition developed through many smaller acts of painting.",
+          "prompt": "Move from one head to another, then follow the hands. How does the group hold together?",
+          "sources": [
+            {
+              "label": "Van Gogh Letters · Letter 497",
+              "url": "https://vangoghletters.org/vg/letters/let497/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            }
+          ]
+        },
+        {
+          "title": "Hands That Earned the Meal",
+          "tag": "From the Letters",
+          "body": "In his letter of 30 April, Van Gogh explained the connection he wanted viewers to make. The hands reaching into the dish had also worked the soil, and the meal had been earned through that work. This was his interpretation of the subject. The painting invites us to consider how he gave visible form to that idea through the prominence of hands, food, and shared space.",
+          "prompt": "Which hands connect the people to one another, and which connect them to the meal?",
+          "sources": [
+            {
+              "label": "Van Gogh Letters · Letter 497",
+              "url": "https://vangoghletters.org/vg/letters/let497/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            }
+          ]
+        },
+        {
+          "title": "The Colours Around the Painting",
+          "tag": "From the Letters",
+          "body": "Van Gogh cared about the setting in which the painting would be seen. He told Theo that it would work well in a gold frame or against a deep, ripe-wheat tone. He also mentioned blue in the shadows. The surrounding colour was part of his thinking about the image. A digital display can make that concern visible while keeping the painting itself unchanged.",
+          "prompt": "Compare the painting against different surrounds. Where do the faces and shadows become easier to distinguish?",
+          "sources": [
+            {
+              "label": "Van Gogh Letters · Letter 497",
+              "url": "https://vangoghletters.org/vg/letters/let497/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            },
+            {
+              "label": "Van Gogh Letters · Letter 500",
+              "url": "https://vangoghletters.org/vg/letters/let500/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            }
+          ]
+        }
+      ],
+      "evidence": "Van Gogh’s letters explain his intentions and some of his colour decisions. They also record varied responses to the work. His account of rural life expresses a painter’s viewpoint and should be read alongside the people and activities he chose to represent.",
+      "notes": [],
+      "collectionCredit": "",
+      "sources": [
+        {
+          "label": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation) · The Potato Eaters (oil painting)",
+          "url": "https://www.vangoghmuseum.nl/en/collection/s0005V1962",
+          "kind": "Collection record"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 497",
+          "url": "https://vangoghletters.org/vg/letters/let497/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 500",
+          "url": "https://vangoghletters.org/vg/letters/let500/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        }
+      ],
+      "related": [
+        {
+          "id": "highlight-08",
+          "label": "Compare with the Lithograph",
+          "relation": "A different work of the same subject",
+          "mode": "compare"
+        }
+      ],
+      "year": 1885,
+      "physicalObjectId": null,
+      "surroundDemo": true
+    },
+    "highlight-10": {
+      "title": "Le Moulin de la Galette",
+      "location": "Paris",
+      "date": "1886",
+      "medium": "Oil on canvas",
+      "dimensions": "38 × 46.2 cm",
+      "institution": "Alte Nationalgalerie, Staatliche Museen zu Berlin",
+      "museumId": "A II 687",
+      "fNumber": "F228",
+      "jhNumber": "JH1171",
+      "labelTitle": "Painting a New Neighbourhood",
+      "body": "In Paris, Van Gogh found subjects close to the apartment he shared with Theo. Montmartre’s streets and windmills gave him places to return to with his painting materials.\n\nThis view of the Moulin de la Galette records a quiet corner of that neighbourhood. The colours remain restrained, while passages of red, green, blue, and orange reveal his growing interest in how colours act upon one another.\n\nHis Paris work developed through individual pictures like this one. A familiar street became a place to test decisions about light, brushwork, and the organisation of a painted surface.",
+      "quote": null,
+      "stories": [
+        {
+          "title": "Subjects Close to Home",
+          "tag": "Collection Research",
+          "body": "The Moulin de la Galette stood in Montmartre, near the brothers’ home. The neighbourhood supplied Van Gogh with subjects during his Paris years. In this painting, the street, buildings, and windmill establish a modest local scene. Placing the work within that daily geography helps us imagine the practical activity of choosing a subject, going out to paint, and returning to the studio.",
+          "prompt": "Which feature first tells you what kind of place this is?",
+          "sources": [
+            {
+              "label": "Alte Nationalgalerie, Staatliche Museen zu Berlin · Le Moulin de la Galette",
+              "url": "https://id.smb.museum/object/966856",
+              "kind": "Collection record"
+            }
+          ]
+        },
+        {
+          "title": "Colour Decisions in Progress",
+          "tag": "Museum Interpretation",
+          "body": "Berlin’s collection description draws attention to red beside green and blue beside orange. Those relationships can be examined within the painting’s otherwise muted appearance. Look for small areas where a colour gains strength through its neighbour. The picture offers a specific example of the experiments that continued across Van Gogh’s time in Paris.",
+          "prompt": "Find a red or orange passage. What happens when you look at the colour immediately beside it?",
+          "sources": [
+            {
+              "label": "Alte Nationalgalerie, Staatliche Museen zu Berlin · Le Moulin de la Galette",
+              "url": "https://id.smb.museum/object/966856",
+              "kind": "Collection record"
+            }
+          ]
+        },
+        {
+          "title": "Finding This Particular Painting",
+          "tag": "Collection Research",
+          "body": "Van Gogh painted several views associated with the Moulin de la Galette. A title alone can therefore lead to different images. This canvas is identified through its museum inventory and catalogue numbers: A II 687, F228, and JH1171. It entered the Berlin collection in 1929. Keeping those identifiers with the image allows its history and interpretation to remain attached to the correct work.",
+          "prompt": "Notice the arrangement of the windmill, buildings, and street. These features help distinguish this canvas from other views.",
+          "sources": [
+            {
+              "label": "Alte Nationalgalerie, Staatliche Museen zu Berlin · Le Moulin de la Galette",
+              "url": "https://id.smb.museum/object/966856",
+              "kind": "Collection record"
+            }
+          ]
+        }
+      ],
+      "evidence": "The museum documents the work’s identity, acquisition, and colour relationships. Its quiet appearance does not establish Van Gogh’s emotional state or a personal experience of exclusion at this location.",
+      "notes": [
+        "This is the Berlin canvas, F228 / JH1171, acquired in 1929. It is not one of Vincent’s other views of the Moulin de la Galette."
+      ],
+      "collectionCredit": "",
+      "sources": [
+        {
+          "label": "Alte Nationalgalerie, Staatliche Museen zu Berlin · Le Moulin de la Galette",
+          "url": "https://id.smb.museum/object/966856",
+          "kind": "Collection record"
+        }
+      ],
+      "related": [],
+      "year": 1886,
+      "physicalObjectId": null,
+      "surroundDemo": false
+    },
+    "met-436532": {
+      "title": "Self-Portrait with a Straw Hat",
+      "location": "Paris",
+      "date": "1887",
+      "medium": "Oil on canvas",
+      "dimensions": "40.6 × 31.8 cm",
+      "institution": "The Metropolitan Museum of Art",
+      "museumId": "67.187.70a",
+      "fNumber": "",
+      "jhNumber": "",
+      "labelTitle": "His Own Face as Working Material",
+      "body": "A straw hat frames Van Gogh’s face, while short strokes of colour build the head, clothing, and background. During his Paris years, he repeatedly painted himself as he developed his skills in figure painting.\n\nMoney helped shape that practice. His own face was available to study in a mirror, and this portrait was painted on the other side of an earlier peasant study.\n\nThe canvas brings artistic experiment close to the practical life of the studio. A mirror, an existing support, and repeated sessions of looking gave him material for another picture.",
+      "quote": null,
+      "stories": [
+        {
+          "title": "A Model in the Mirror",
+          "tag": "Collection Research",
+          "body": "The Met connects Van Gogh’s Paris self-portraits with his wish to improve as a figure painter while short of funds. Working from a mirror gave him access to a sitter without arranging another person’s time. Each portrait allowed him to reconsider the same familiar features. The face became a subject through which he could test proportion, colour, and the effects of individual brushstrokes.",
+          "prompt": "Where does he give the face firm structure, and where do separate strokes remain especially visible?",
+          "sources": [
+            {
+              "label": "The Metropolitan Museum of Art · Self-Portrait with a Straw Hat",
+              "url": "https://www.metmuseum.org/art/collection/search/436532",
+              "kind": "Collection record"
+            }
+          ]
+        },
+        {
+          "title": "Colour Across the Face",
+          "tag": "Collection Research",
+          "body": "The museum identifies an awareness of Neo-Impressionist technique and colour theory in this portrait. Separate strokes remain visible across the painted surface. Looking closely, you can follow how changes of colour help establish the face and how marks continue into the surrounding space. Step back again and those individual decisions gather into a single, readable head.",
+          "prompt": "Compare the portrait close up and at a distance. Which colours separate, and which seem to combine?",
+          "sources": [
+            {
+              "label": "The Metropolitan Museum of Art · Self-Portrait with a Straw Hat",
+              "url": "https://www.metmuseum.org/art/collection/search/436532",
+              "kind": "Collection record"
+            }
+          ]
+        },
+        {
+          "title": "Evidence in the Weave",
+          "tag": "Collection Research",
+          "body": "Research on the canvas adds information that the painted image alone cannot provide. Automated thread counting and weave analysis connected this support with the same bolt of cloth used for seven other Van Gogh paintings dated between 1885 and 1887. The finding places the portrait within a material network of studio work. The fabric has its own evidence to contribute.",
+          "prompt": "Consider the cloth beneath the paint. What kinds of history might survive in a painting’s support?",
+          "sources": [
+            {
+              "label": "The Metropolitan Museum of Art · Self-Portrait with a Straw Hat",
+              "url": "https://www.metmuseum.org/art/collection/search/436532",
+              "kind": "Collection record"
+            }
+          ]
+        }
+      ],
+      "evidence": "The mirror-based practice, the reused canvas, and the weave analysis are supported by museum research. The portrait does not provide a reliable diagnosis of Van Gogh’s mental health.",
+      "notes": [
+        "Technical research: Charlotte Hale, The Met, 2019. Canvas-weave evidence links the support to seven other paintings from 1885–1887. No simulated X-ray or reconstructed canvas scan is presented."
+      ],
+      "collectionCredit": "Bequest of Miss Adelaide Milton de Groot, 1967",
+      "sources": [
+        {
+          "label": "The Metropolitan Museum of Art · Self-Portrait with a Straw Hat",
+          "url": "https://www.metmuseum.org/art/collection/search/436532",
+          "kind": "Collection record"
+        }
+      ],
+      "related": [
+        {
+          "id": "met-438722",
+          "label": "View the Other Side",
+          "relation": "Two painted surfaces of the same canvas",
+          "mode": "read"
+        }
+      ],
+      "year": 1887,
+      "physicalObjectId": "met-67-187-70",
+      "surroundDemo": false
+    },
+    "highlight-12": {
+      "title": "Père Tanguy",
+      "location": "Paris",
+      "date": "1887",
+      "medium": "Oil on canvas",
+      "dimensions": "92 × 75 cm",
+      "institution": "Musée Rodin, Paris",
+      "museumId": "P.07302",
+      "fNumber": "F363",
+      "jhNumber": "JH1351",
+      "labelTitle": "The Man Who Supplied the Colours",
+      "body": "Julien-François Tanguy sold the materials that made paintings possible. At his small shop on the Rue Clauzel, artists could sometimes exchange their work for supplies. Vincent painted him three times.\n\nHere, Tanguy sits facing us, his hands resting together. Around him, Japanese prints fill the background with colour and images of distant places. The portrait brings a familiar Parisian shopkeeper into the visual world Vincent was studying.\n\nTheir relationship belonged to everyday life, with purchases, assistance, disagreements, and renewed contact. Looking at this painting, we meet someone whose practical support helped sustain an artist’s work.",
+      "quote": null,
+      "stories": [
+        {
+          "title": "A Shop That Kept Artists Working",
+          "tag": "Museum Record · Artist’s Letter",
+          "body": "Paint, canvas, and credit were part of Vincent’s working life in Paris. Tanguy’s shop offered a place where paintings could be exchanged for supplies, connecting an artist’s finished work with the materials needed for the next canvas.\n\nVincent acknowledged Tanguy’s help in a letter written in July 1887. The same letter records irritation and disagreement within that commercial relationship. Assistance existed alongside negotiation. The portrait belongs to this network of ordinary arrangements through which artistic work continued.",
+          "prompt": "Look at Tanguy’s hands. How does their stillness shape your encounter with him?",
+          "sources": [
+            {
+              "label": "Musée Rodin, Paris · Père Tanguy",
+              "url": "https://www.musee-rodin.fr/en/musee/collections/oeuvres/pere-tanguy",
+              "kind": "Collection record"
+            },
+            {
+              "label": "Van Gogh Letters · Letter 571",
+              "url": "https://vangoghletters.org/vg/letters/let571/letter.html",
+              "kind": "Artist’s letter and scholarly annotations"
+            }
+          ]
+        },
+        {
+          "title": "A Portrait Surrounded by Prints",
+          "tag": "Museum Interpretation · Visual Observation",
+          "body": "Japanese prints occupy much of the space around Tanguy. Their colours and flattened forms give the portrait a setting assembled from images Vincent and Theo collected.\n\nThe Musée Rodin interprets the sitter as a kind of Japanese sage. His frontal position and composed hands support that reading. This remains an interpretation of the painting. The documented sitter was a Parisian supplier of artists’ materials, placed within a pictorial world that Vincent was exploring through imported prints.",
+          "prompt": "Follow the boundary between Tanguy’s body and the printed images behind him. Where does the figure seem most solid?",
+          "sources": [
+            {
+              "label": "Musée Rodin, Paris · Père Tanguy",
+              "url": "https://www.musee-rodin.fr/en/musee/collections/oeuvres/pere-tanguy",
+              "kind": "Collection record"
+            }
+          ]
+        },
+        {
+          "title": "A Painting That Stayed with Its Sitter",
+          "tag": "Museum Record · Later Reception",
+          "body": "According to the Musée Rodin, Tanguy kept this portrait during his lifetime. Its later history brought it into another artist’s collection.\n\nAuguste Rodin purchased the painting in 1894. The museum raises the possibility that their shared interest in Japanese art contributed to his attraction to it, while leaving his precise motive open.\n\nThe painting’s journey connects a supplier who supported artists with a sculptor who admired Vincent’s work. Its changing ownership became part of the story through which that work reached later audiences.",
+          "prompt": "Imagine encountering this portrait as a friend, a collector, or a museum visitor. Which details would draw your attention first?",
+          "sources": [
+            {
+              "label": "Musée Rodin, Paris · Père Tanguy",
+              "url": "https://www.musee-rodin.fr/en/musee/collections/oeuvres/pere-tanguy",
+              "kind": "Collection record"
+            }
+          ]
+        }
+      ],
+      "evidence": "Museum records identify Tanguy, his trade, the three portraits, and Rodin’s purchase in 1894. Vincent’s correspondence offers his own account of assistance and disagreement. The description of Tanguy as a Japanese sage is a museum interpretation. The painting does not establish a specific religious identity or reveal everything about the sitter’s relationship with the artist.",
+      "notes": [],
+      "collectionCredit": "",
+      "sources": [
+        {
+          "label": "Musée Rodin, Paris · Père Tanguy",
+          "url": "https://www.musee-rodin.fr/en/musee/collections/oeuvres/pere-tanguy",
+          "kind": "Collection record"
+        },
+        {
+          "label": "Van Gogh Letters · Letter 571",
+          "url": "https://vangoghletters.org/vg/letters/let571/letter.html",
+          "kind": "Artist’s letter and scholarly annotations"
+        }
+      ],
+      "related": [
+        {
+          "id": "vgm-s0114v1962",
+          "label": "Japanese Prints in Vincent’s Paris",
+          "relation": "Another encounter with Japanese images",
+          "mode": "read"
+        }
+      ],
+      "year": 1887,
+      "physicalObjectId": null,
+      "surroundDemo": false
+    },
+    "met-436524": {
+      "title": "Sunflowers (Paris)",
+      "location": "Paris",
+      "date": "late summer 1887",
+      "medium": "Oil on canvas",
+      "dimensions": "43.2 × 61 cm",
+      "institution": "The Metropolitan Museum of Art",
+      "museumId": "49.41",
+      "fNumber": "",
+      "jhNumber": "",
+      "labelTitle": "Two Flowers on a Working Surface",
+      "body": "Two cut sunflower heads fill the foreground. Their petals curl around dense centres, offering Vincent a subject rich in texture, shape, and colour.\n\nHe painted four sunflower still lifes in Paris in late summer 1887. This canvas belongs to that period of repeated looking and experiment. Close to the flowers, individual marks become visible; at a distance, they gather into the weight and structure of the heads.\n\nThese paintings also entered the lives of other artists. Gauguin acquired two smaller works from the Paris group and displayed them in his apartment. An everyday studio subject became part of an artistic relationship.",
+      "quote": null,
+      "stories": [
+        {
+          "title": "A Subject Returned To",
+          "tag": "Museum Record · Visual Observation",
+          "body": "In late summer 1887, Vincent painted four still lifes of sunflowers in Paris. The group includes different arrangements of cut flower heads and a related oil sketch.\n\nReturning to a subject created opportunities to reconsider scale, placement, and the painted surface. Here, two heads occupy a broad horizontal canvas. Their forms provide enough variation for a sustained study.\n\nThe flowers ask us to look closely at ordinary material: petals bending, centres becoming dense, and the uneven outline of a cut plant.",
+          "prompt": "Compare the two flower heads. How do their outlines and centres differ?",
+          "sources": [
+            {
+              "label": "The Metropolitan Museum of Art · Sunflowers (Paris)",
+              "url": "https://www.metmuseum.org/art/collection/search/436524",
+              "kind": "Collection record"
+            }
+          ]
+        },
+        {
+          "title": "Colour Built from Small Marks",
+          "tag": "Visual Observation · Curatorial Reading",
+          "body": "Move closer to the image and the flowers separate into individual touches of paint. The centres, petals, and surrounding surface are built through marks that vary in direction and density.\n\nThis card follows what can be observed in the painting. Colour and texture help the flower heads hold their shape, while the surrounding field gives their irregular edges room to register.\n\nA close view lets us consider Vincent’s decisions at the scale of a brushstroke. A wider view brings those decisions together into the whole arrangement.",
+          "prompt": "Choose one petal and follow its painted marks. Where does their direction change?",
+          "sources": [
+            {
+              "label": "The Metropolitan Museum of Art · Sunflowers (Paris)",
+              "url": "https://www.metmuseum.org/art/collection/search/436524",
+              "kind": "Collection record"
+            }
+          ]
+        },
+        {
+          "title": "The Flowers Gauguin Kept",
+          "tag": "Museum Account · Later Ownership",
+          "body": "The Metropolitan Museum of Art records that Gauguin acquired two smaller paintings from Vincent’s Paris sunflower group. They occupied a prominent place above the bed in his Paris apartment.\n\nThe same account describes their sale in the mid-1890s, when Gauguin raised funds for a voyage to the South Seas.\n\nThis history gives the sunflower paintings a life beyond Vincent’s working space. They became possessions chosen, displayed, and eventually sold by another artist. Their significance included personal appreciation and the practical circumstances of ownership.",
+          "prompt": "How might this painting feel in a domestic room, seen repeatedly over months or years?",
+          "sources": [
+            {
+              "label": "The Metropolitan Museum of Art · Sunflowers (Paris)",
+              "url": "https://www.metmuseum.org/art/collection/search/436524",
+              "kind": "Collection record"
+            }
+          ]
+        }
+      ],
+      "evidence": "The Met dates this painting to late summer 1887 and places it within a group of four Paris sunflower still lifes. Its account also records Gauguin’s ownership and display of two smaller works. Readings of the flowers as signs of mortality are interpretations. No evidence presented here establishes that Vincent intended this painting as a prediction of his own death.",
+      "notes": [],
+      "collectionCredit": "Rogers Fund, 1949",
+      "sources": [
+        {
+          "label": "The Metropolitan Museum of Art · Sunflowers (Paris)",
+          "url": "https://www.metmuseum.org/art/collection/search/436524",
+          "kind": "Collection record"
+        }
+      ],
+      "related": [
+        {
+          "id": "highlight-23",
+          "label": "Follow the Sunflowers to Arles",
+          "relation": "A later sunflower painting in Hall 04",
+          "mode": "visit"
+        }
+      ],
+      "year": 1887,
+      "physicalObjectId": null,
+      "surroundDemo": false
+    },
+    "vgm-s0114v1962": {
+      "title": "Bridge in the Rain (after Hiroshige)",
+      "location": "Paris",
+      "date": "October–November 1887",
+      "medium": "Oil on canvas",
+      "dimensions": "73.3 × 53.8 cm",
+      "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)",
+      "museumId": "s0114V1962",
+      "fNumber": "F0372",
+      "jhNumber": "JH1297",
+      "labelTitle": "Learning from an Image of Rain",
+      "body": "A bridge crosses the picture as people move through a sudden shower. Vincent encountered this scene in a Japanese woodcut by Utagawa Hiroshige.\n\nIn Paris, he translated the printed image into oil paint. He intensified its colours and retained the proportions of the source within a larger canvas. The surrounding border gave him additional space, which he filled with characters copied from other Japanese prints.\n\nThis painting lets us follow a particular act of learning. Vincent studied an image made in another place and medium, then worked through its structure with his own materials. Hiroshige’s design remains essential to that encounter.",
+      "quote": null,
+      "stories": [
+        {
+          "title": "Rain Across Edo",
+          "tag": "Source Artwork · Museum Record",
+          "body": "Hiroshige designed the source print in 1857 as part of his series of views of Edo. The Van Gogh Museum identifies the scene as a sudden evening shower on the Great Bridge near Atake.\n\nThe bridge, river, travellers, and rain belong to that Japanese image. They arrived in Vincent’s working life through a print.\n\nDisplaying the source beside his painting allows us to meet Hiroshige’s design on its own terms and then examine what Vincent retained, enlarged, and changed.",
+          "prompt": "Follow the bridge from one end to the other. How do its angle and the rain lines organise the scene?",
+          "sources": [
+            {
+              "label": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation) · Bridge in the Rain (after Hiroshige)",
+              "url": "https://www.vangoghmuseum.nl/en/collection/s0114V1962",
+              "kind": "Collection record"
+            },
+            {
+              "label": "Hiroshige · Sudden Shower over Shin-Ōhashi Bridge and Atake (1857)",
+              "url": "https://www.vangoghmuseum.nl/en/collection/n0081V1962",
+              "kind": "Source print · woodcut, not an oil painting by Vincent"
+            }
+          ]
+        },
+        {
+          "title": "From Printed Colour to Oil Paint",
+          "tag": "Museum Record · Visual Comparison",
+          "body": "Vincent made the colours more intense as he transferred Hiroshige’s composition into oil paint. The change of medium also gives the image a different surface.\n\nIn the comparison view, follow one area at a time: the sky, the water, the bridge, or the rain. Consider the edges of colour and the marks through which each image was formed.\n\nThe comparison makes his study visible. The source offered a composition to examine, while the canvas required decisions about colour, scale, and painted handling.",
+          "prompt": "Choose the same area in both works. Which changes in colour or surface can you identify?",
+          "sources": [
+            {
+              "label": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation) · Bridge in the Rain (after Hiroshige)",
+              "url": "https://www.vangoghmuseum.nl/en/collection/s0114V1962",
+              "kind": "Collection record"
+            },
+            {
+              "label": "Hiroshige · Sudden Shower over Shin-Ōhashi Bridge and Atake (1857)",
+              "url": "https://www.vangoghmuseum.nl/en/collection/n0081V1962",
+              "kind": "Source print · woodcut, not an oil painting by Vincent"
+            }
+          ]
+        },
+        {
+          "title": "A Border Made from Other Prints",
+          "tag": "Museum Record · Material Choice",
+          "body": "The proportions of Hiroshige’s print differed from Vincent’s standard-sized canvas. To preserve the source image’s proportions, Vincent added a surrounding border.\n\nHe filled that space with Japanese characters copied from other prints. The border therefore joins material from several images around the central scene.\n\nIts construction can be traced without assuming that every character was invented or that the inscriptions form a single continuous text. The museum’s account identifies borrowing from other prints; a fuller reading of the inscriptions requires further specialist research.",
+          "prompt": "Trace the edge of the central image. How does the surrounding border affect the space you see inside it?",
+          "sources": [
+            {
+              "label": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation) · Bridge in the Rain (after Hiroshige)",
+              "url": "https://www.vangoghmuseum.nl/en/collection/s0114V1962",
+              "kind": "Collection record"
+            }
+          ]
+        }
+      ],
+      "evidence": "The Van Gogh Museum identifies Hiroshige’s print as the source and explains Vincent’s stronger colours, standard canvas, added border, and borrowed characters. Claims that the inscriptions were invented from memory or are entirely meaningless are not established by the sources used here. The work records Vincent’s encounter with Japanese printmaking through images available to him in Paris.",
+      "notes": [],
+      "collectionCredit": "Vincent van Gogh Foundation",
+      "sources": [
+        {
+          "label": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation) · Bridge in the Rain (after Hiroshige)",
+          "url": "https://www.vangoghmuseum.nl/en/collection/s0114V1962",
+          "kind": "Collection record"
+        },
+        {
+          "label": "Hiroshige · Sudden Shower over Shin-Ōhashi Bridge and Atake (1857)",
+          "url": "https://www.vangoghmuseum.nl/en/collection/n0081V1962",
+          "kind": "Source print · woodcut, not an oil painting by Vincent"
+        }
+      ],
+      "related": [
+        {
+          "id": "highlight-12",
+          "label": "Return to Père Tanguy",
+          "relation": "Japanese prints in the background of a portrait",
+          "mode": "read"
+        }
+      ],
+      "year": 1887,
+      "physicalObjectId": null,
+      "surroundDemo": false
+    }
+  }
+}
