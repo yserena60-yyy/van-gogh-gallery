@@ -1,0 +1,411 @@
+{
+  "language": "en",
+  "id": "auvers",
+  "hall": "07",
+  "title": "Auvers: The Final Months",
+  "years": "May–July 1890",
+  "eyebrow": "HALL 07 · LIFE, WORK AND THE FINAL DAYS",
+  "readingNote": "Follow the life before comparing the accounts. Source records remain available in every chapter.",
+  "chapters": [
+    {
+      "id": "arrival",
+      "title": "Arriving in Auvers",
+      "subtitle": "A room, a village, a return to work",
+      "paragraphs": [
+        "Vincent arrived in Auvers-sur-Oise on 20 May 1890, after leaving the asylum at Saint-Rémy and visiting Theo’s family in Paris. At the Ravoux inn he rented an attic room. A village near Paris offered a new place to live and subjects he could reach on foot.",
+        "In his first letter from Auvers to Theo and Jo, dated about 21 May, he described thatched roofs and a field of flowering peas with wheat in front. He asked for canvas or drawing paper. These are the practical beginnings of his stay: a new address, things to look at, and materials needed to continue.",
+        "Look at the village as a place he was getting to know, not simply the setting of an ending. The church, roads and houses belonged to a working life that was still unfolding."
+      ],
+      "workIds": [
+        "highlight-42"
+      ],
+      "sourceIds": [
+        "letter-874",
+        "museum-last-days"
+      ],
+      "prompt": "What changes when we meet Auvers first as a place to live and work?"
+    },
+    {
+      "id": "people",
+      "title": "People Around Him",
+      "subtitle": "Care, portraits and hoped-for visits",
+      "paragraphs": [
+        "Dr Paul Gachet was both a physician and an amateur artist. He encouraged Vincent to keep painting and helped him explore etching. Their relationship involved care, conversation and the practical making of images; it should not be reduced to the doctor’s presence at the end.",
+        "On 3 June, Vincent wrote to Theo about Gachet’s portrait and studies in his garden. He discussed working early, the supplies he needed and the possibility of Theo, Jo and their young son visiting. Family remained part of his plans even while they lived elsewhere.",
+        "The portraits bring individual people into these weeks. Gachet appears in a painting and an etching; his daughter Marguerite sits at a piano. Open the object cards to distinguish each work, its medium and the evidence for its story."
+      ],
+      "workIds": [
+        "met-849056",
+        "letters-f753",
+        "letters-f772"
+      ],
+      "sourceIds": [
+        "letter-877",
+        "museum-last-days",
+        "met-gachet"
+      ],
+      "prompt": "Notice the difference between a person in a portrait and the later role assigned to them in a biography."
+    },
+    {
+      "id": "surroundings",
+      "title": "Painting the Surroundings",
+      "subtitle": "Village, garden, field — and the long canvas",
+      "paragraphs": [
+        "Village buildings, gardens and open fields gave Vincent different problems to work on. He used colour and brushwork to organise each view. In the wide landscapes, the long horizontal canvas makes us look across the scene rather than toward a single centre.",
+        "Daubigny’s Garden offers an enclosed, cultivated space; Wheatfield with Crows opens onto fields and paths; Tree Roots brings the eye close to a slope. The change of scale matters before any interpretation of what these works might symbolise.",
+        "These paintings share a period, not a single message. Their surfaces, formats and subjects remain worth looking at on their own terms. Later, an optional comparison asks how knowing the end of his life changes what we see."
+      ],
+      "workIds": [
+        "vgm-s0104v1962",
+        "vgm-s0149v1962",
+        "vgm-s0195v1962"
+      ],
+      "sourceIds": [
+        "museum-auvers",
+        "museum-crows",
+        "museum-roots"
+      ],
+      "prompt": "Follow the edge of the long canvas. How does it organise the space?"
+    },
+    {
+      "id": "july",
+      "title": "July: Work and Worry",
+      "subtitle": "The Letters of July",
+      "paragraphs": [
+        "In July, Vincent continued painting while writing about family, health and the uncertainty of his livelihood. In a letter to Theo and Jo dated on or about 10 July 1890, reassurance and anxiety sit alongside plans and descriptions of new work.",
+        "He associated the wide fields and troubled skies he was painting with sadness and loneliness. In the same letter, he also hoped these works would communicate the health and strength he found in the countryside. Worry did not erase his engagement with painting or with nature.",
+        "Read the letter in its circumstances. It does not establish a fixed motive for what happened later, and a dark sky in a painting is not proof that a death had already been decided upon."
+      ],
+      "workIds": [
+        "vgm-s0149v1962"
+      ],
+      "sourceIds": [
+        "letter-898",
+        "museum-crows"
+      ],
+      "prompt": "How can distress and the sustaining force of work occupy the same letter?"
+    },
+    {
+      "id": "final-days",
+      "title": "The Final Days",
+      "subtitle": "27–30 July 1890",
+      "paragraphs": [
+        "On 27 July 1890, Vincent sustained a gunshot wound. He died on 29 July, with Theo beside him. The Van Gogh Museum presents the shooting as a suicide. Loneliness, uncertainty about the future and concern about burdening Theo are discussed as possible contributing circumstances, not an established list of motives.",
+        "First follow the sequence of the days. Then read the documents and compare later accounts. A letter written close to an event, a memory recorded decades later and a modern research hypothesis offer different kinds of knowledge."
+      ],
+      "workIds": [],
+      "sourceIds": [
+        "museum-last-days",
+        "letter-rm25",
+        "naifeh-smith",
+        "burlington-response"
+      ],
+      "prompt": "Keep the sequence of events separate from explanations of why they occurred."
+    }
+  ],
+  "finalDays": {
+    "contentNote": "Content note: This section discusses suicide and death.",
+    "timelineTitle": "A Wound, a Brother, and a Death",
+    "timeline": [
+      {
+        "date": "27 July 1890",
+        "title": "A wound; a return to the inn",
+        "text": "Vincent returned to the Ravoux inn in the evening with a gunshot wound. This timeline does not reconstruct the shooting.",
+        "sourceIds": [
+          "museum-last-days"
+        ]
+      },
+      {
+        "date": "28 July 1890",
+        "title": "Theo arrives",
+        "text": "After being notified, Theo travelled from Paris to Auvers and stayed with his brother.",
+        "sourceIds": [
+          "museum-last-days"
+        ]
+      },
+      {
+        "date": "29 July 1890",
+        "title": "Vincent dies",
+        "text": "Vincent died in the early hours, with Theo beside him. Contemporary correspondence records the loss; accounts of motive require separate consideration.",
+        "sourceIds": [
+          "museum-last-days"
+        ]
+      },
+      {
+        "date": "30 July 1890",
+        "title": "The funeral in Auvers",
+        "text": "Friends and family gathered for the funeral. The museum’s account discusses correspondence about the funeral alongside later recollections.",
+        "sourceIds": [
+          "museum-last-days"
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "title": "Theo’s correspondence from the final days",
+        "date": "28–29 July 1890",
+        "type": "Contemporary correspondence, presented in a museum account",
+        "paragraphs": [
+          "Theo’s messages to Jo describe his journey to Auvers and the death of his brother. They place us close to the event through a family member who was present. Here they are introduced through the museum’s published account, not through a separately checked original manuscript."
+        ],
+        "sourceIds": [
+          "museum-last-days"
+        ]
+      },
+      {
+        "title": "Émile Bernard writes about the funeral",
+        "date": "31 July 1890",
+        "type": "Contemporary account, presented in a museum account",
+        "paragraphs": [
+          "Bernard’s letter to Albert Aurier, written after the funeral, is discussed in the museum’s account. It concerns the gathering and the paintings surrounding Vincent’s coffin. It is not eyewitness testimony to the shooting."
+        ],
+        "sourceIds": [
+          "museum-last-days"
+        ]
+      }
+    ],
+    "manuscript": {
+      "title": "A Letter Left Unsent",
+      "subtitle": "What the Manuscript Can Tell Us",
+      "recordTitle": "An Unsent Letter to Theo · 23 July 1890",
+      "reference": "RM25 · b700 V/1962 · Van Gogh Museum, Amsterdam",
+      "paragraphs": [
+        "The scholarly letter edition dates this unfinished, unsent manuscript to 23 July 1890 and identifies it as an earlier version of letter 902, sent that day. It concerns family responsibilities, the art trade and Vincent’s investment in his work.",
+        "Theo added a pencil annotation stating that Vincent carried it on 27 July. Possession links the document to that day, but does not establish that it was intended as a farewell. This exhibition therefore does not title it “Suicide Note”."
+      ],
+      "annotationTitle": "Theo’s pencil annotation",
+      "annotation": [
+        {
+          "label": "Who wrote it?",
+          "text": "The letter editors identify the annotation as Theo’s handwriting. It is separate from Vincent’s letter."
+        },
+        {
+          "label": "What does it record?",
+          "text": "Theo’s note says that Vincent carried the manuscript on 27 July, the day of the incident. The editorial record does not establish when Theo added the note."
+        },
+        {
+          "label": "What does it not establish?",
+          "text": "The note records possession, not a stated intention to say goodbye. An unfinished draft is not automatically a suicide note."
+        }
+      ],
+      "sourceIds": [
+        "letter-rm25",
+        "letter-902"
+      ],
+      "displayNote": "Document record and editorial summary only. No manuscript facsimile or invented handwriting is displayed."
+    },
+    "accounts": {
+      "title": "Accounts of His Death",
+      "subtitle": "Evidence, Recollection and Later Hypotheses",
+      "intro": "Comparable questions do not make these accounts equally established. The museum adopts the suicide interpretation; the alternative remains disputed. A source’s date, proximity to the event and access status matter.",
+      "cards": [
+        {
+          "id": "museum",
+          "title": "The Suicide Interpretation",
+          "type": "Museum interpretation",
+          "who": "Van Gogh Museum",
+          "when": "Current institutional account; also presented in the 2023 Auvers exhibition",
+          "argument": "The museum interprets the wound as self-inflicted and Vincent’s death as suicide.",
+          "uses": "Correspondence close to the event, accounts from his circle and later recollections, discussed within the museum’s research narrative.",
+          "limits": "Possible contributing circumstances are not a definitive reconstruction of motive. The shooting itself is not presented here as a witnessed scene.",
+          "access": "The museum’s public narrative was checked. Contemporary letters mentioned there are not all separately reproduced or verified here.",
+          "sourceIds": [
+            "museum-last-days"
+          ],
+          "linkLabel": "Read the Museum Account →"
+        },
+        {
+          "id": "alternative",
+          "title": "An Alternative Shooting Hypothesis",
+          "type": "Later, disputed hypothesis",
+          "who": "Steven Naifeh and Gregory White Smith",
+          "when": "Proposed in their 2011 biography; presented by the authors in a 2014 Vanity Fair article",
+          "argument": "They suggest that Vincent may have been accidentally shot by someone else rather than having shot himself.",
+          "uses": "Later local accounts and recollections associated with René Secrétan, interpreted alongside questions the authors raise about the accepted account.",
+          "limits": "The hypothesis is disputed and is not an established account of a killing. Late recollections are not contemporary eyewitness records of the shooting.",
+          "access": "The authors’ article was checked. Its title is not adopted as a factual description by this exhibition.",
+          "sourceIds": [
+            "naifeh-smith"
+          ],
+          "linkLabel": "Read the Authors’ 2014 Article →"
+        },
+        {
+          "id": "response",
+          "title": "A Scholarly Response",
+          "type": "Scholarly article · bibliographic record",
+          "who": "Louis van Tilborgh and Teio Meedendorp",
+          "when": "July 2013 · The Burlington Magazine",
+          "argument": "“The life and death of Vincent van Gogh” belongs to the scholarly debate about the account of his death.",
+          "uses": "The full article was not accessible for checking, so its detailed evidence and argument are not summarised here.",
+          "limits": "A bibliographic reference is not a substitute for reading the article. This card does not claim to reproduce its rebuttals.",
+          "access": "Publisher access was restricted (HTTP 403 during checking). Only the bibliographic reference and publisher link are provided.",
+          "sourceIds": [
+            "burlington-response"
+          ],
+          "linkLabel": "View the Article Record →"
+        }
+      ]
+    },
+    "paintings": {
+      "title": "Reading the Last Paintings",
+      "subtitle": "How an Ending Shapes What We See",
+      "intro": "Look at the two paintings before choosing a symbolic ending. Dating and order, later interpretations and explanations of the shooting must be kept separate.",
+      "cards": [
+        {
+          "workId": "vgm-s0149v1962",
+          "heading": "Wheatfield with Crows",
+          "date": "July 1890",
+          "record": "The museum calls its identification as Vincent’s last painting a persistent myth: other works followed it.",
+          "interpretation": "The turbulent sky and paths have invited readings of an ending. The museum also connects the countryside with strength; neither crows nor a dark sky establishes intent.",
+          "sourceIds": [
+            "museum-crows",
+            "letter-898"
+          ]
+        },
+        {
+          "workId": "vgm-s0195v1962",
+          "heading": "Tree Roots",
+          "date": "July 1890",
+          "record": "The museum’s collection record describes the work as unfinished and probably his very last painting. This display retains that qualification.",
+          "interpretation": "Tree trunks, roots and a slope are the pictured subject. Calling the work a “last farewell” adds an interpretation that the object record does not establish.",
+          "sourceIds": [
+            "museum-roots"
+          ]
+        }
+      ],
+      "prompt": "How does knowing the end of a life change the way we look at a painting?"
+    }
+  },
+  "ending": {
+    "title": "The Work Remained",
+    "text": "The next gallery follows the paintings and letters into the lives of those who kept, published and shared them. It also considers how Vincent’s life came to be remembered."
+  },
+  "wall": {
+    "width": 3.65,
+    "height": 3.3,
+    "centerHeight": 2.65,
+    "viewDistance": 7.8,
+    "position": [
+      10.378,
+      2.65,
+      42.832
+    ],
+    "normal": [
+      0.934488,
+      0,
+      -0.356
+    ],
+    "invitation": "Read the final days + sources  →",
+    "text": "27–30 July 1890. Follow the days, read an unsent letter and compare accounts of his death. Sources remain visible; the story is not reconstructed as a shooting scene."
+  },
+  "sources": [
+    {
+      "id": "letter-874",
+      "title": "Letter 874 · To Theo and Jo",
+      "date": "On or about 21 May 1890",
+      "type": "Contemporary letter · scholarly edition",
+      "url": "https://vangoghletters.org/vg/letters/let874/letter.html",
+      "note": "New lodgings, local subjects and requests for working materials.",
+      "access": "Public editorial text; manuscript reproduction is not embedded."
+    },
+    {
+      "id": "letter-877",
+      "title": "Letter 877 · To Theo",
+      "date": "3 June 1890",
+      "type": "Contemporary letter · scholarly edition",
+      "url": "https://vangoghletters.org/vg/letters/let877/letter.html",
+      "note": "Gachet’s portrait and garden, materials and a possible family visit.",
+      "access": "Public editorial text; manuscript reproduction is not embedded."
+    },
+    {
+      "id": "letter-898",
+      "title": "Letter 898 · To Theo and Jo",
+      "date": "On or about 10 July 1890",
+      "type": "Contemporary letter · scholarly edition",
+      "url": "https://vangoghletters.org/vg/letters/let898/letter.html",
+      "note": "Family and livelihood concerns alongside continuing work and the sustaining countryside.",
+      "access": "Public editorial text checked; displayed wording is an editorial paraphrase, not the website’s translation."
+    },
+    {
+      "id": "letter-rm25",
+      "title": "RM25 · An unsent letter to Theo",
+      "date": "23 July 1890",
+      "type": "Unsent manuscript · scholarly edition",
+      "url": "https://vangoghletters.org/vg/letters/RM25/letter.html",
+      "note": "Earlier version of letter 902; the editors identify Theo’s pencil annotation about 27 July.",
+      "access": "Public editorial record checked. Manuscript image and website translation are not reproduced."
+    },
+    {
+      "id": "letter-902",
+      "title": "Letter 902 · To Theo",
+      "date": "23 July 1890",
+      "type": "Contemporary letter · scholarly edition",
+      "url": "https://vangoghletters.org/vg/letters/let902/letter.html",
+      "note": "The sent letter related to RM25. The relationship is established by the RM25 editorial record.",
+      "access": "Provided for comparison; no facsimile or extended quotation is embedded."
+    },
+    {
+      "id": "museum-last-days",
+      "title": "Van Gogh Museum · The Last Days of Vincent van Gogh",
+      "date": "Institutional research narrative",
+      "type": "Museum interpretation, with contemporary documents and later recollections",
+      "url": "https://www.vangoghmuseum.nl/en/art-and-stories/stories/the-last-days-of-vincent-van-gogh",
+      "note": "Auvers lodgings, work, the final days, correspondence and the museum’s suicide interpretation. Background factors are presented as possible, not certain motives.",
+      "access": "Public narrative checked. References to documents are attributed to this account unless separately identified."
+    },
+    {
+      "id": "museum-auvers",
+      "title": "Musée d’Orsay · Van Gogh in Auvers-sur-Oise",
+      "date": "The final months · 2023–2024 exhibition",
+      "type": "Museum exhibition research",
+      "url": "https://www.musee-orsay.fr/en/whats-on/exhibitions/van-gogh-auvers-sur-oise-final-months",
+      "note": "People, places and the concentrated artistic work of the Auvers period.",
+      "access": "Existing exhibition source; artwork images are reused from this gallery’s credited collection."
+    },
+    {
+      "id": "met-gachet",
+      "title": "The Met · Portrait of Doctor Gachet or Man with a Pipe",
+      "date": "1890 · Collection record 849056",
+      "type": "Object record",
+      "url": "https://www.metmuseum.org/art/collection/search/849056",
+      "note": "The etching and its printer; distinguishes an impression from the portrait paintings.",
+      "access": "Existing verified object record. Existing image credit: The Metropolitan Museum of Art · Open Access / CC0."
+    },
+    {
+      "id": "museum-crows",
+      "title": "Van Gogh Museum · Wheatfield with Crows",
+      "date": "July 1890 · s0149V1962",
+      "type": "Object record and museum interpretation",
+      "url": "https://www.vangoghmuseum.nl/en/collection/s0149V1962",
+      "note": "Rejects the final-painting myth; discusses sadness, loneliness and the strength of the countryside.",
+      "access": "Public collection text checked; existing gallery image and credit retained."
+    },
+    {
+      "id": "museum-roots",
+      "title": "Van Gogh Museum · Tree Roots",
+      "date": "July 1890 · s0195V1962",
+      "type": "Object record and qualified attribution of order",
+      "url": "https://www.vangoghmuseum.nl/en/collection/s0195V1962",
+      "note": "The collection page says the painting is unfinished and probably his very last. No stronger claim is substituted.",
+      "access": "Public collection text checked; existing gallery image and credit retained."
+    },
+    {
+      "id": "naifeh-smith",
+      "title": "Naifeh and Smith · Their alternative hypothesis",
+      "date": "7 November 2014 · Vanity Fair · December 2014 issue",
+      "type": "Authors’ presentation of a disputed hypothesis first proposed in 2011",
+      "url": "https://www.vanityfair.com/culture/2014/12/vincent-van-gogh-murder-mystery",
+      "note": "A later interpretation using local accounts and late recollections; not an established finding of murder.",
+      "access": "Public article checked. The 2011 proposal and 2014 presentation are distinguished."
+    },
+    {
+      "id": "burlington-response",
+      "title": "Van Tilborgh and Meedendorp · The life and death of Vincent van Gogh",
+      "date": "July 2013 · The Burlington Magazine",
+      "type": "Scholarly article · bibliographic reference",
+      "url": "https://www.burlington.org.uk/archive/article/the-life-and-death-of-vincent-van-gogh",
+      "note": "Listed as a research reference without inventing a detailed rebuttal from inaccessible text.",
+      "access": "Publisher returned HTTP 403. Full text was not checked; the citation follows the supplied proposal."
+    }
+  ]
+}

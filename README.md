@@ -276,6 +276,8 @@ The build validates collection records, artwork cards, hall introductions, story
 
 The model and opening film are stored as lossless binary segments in `assets/media-parts/`. `data/media_manifest.json` records their order, byte counts and SHA-256 checksums. `npm run build` reconstructs the ordinary GLB and MP4 files before producing the site. This does not resize, compress or re-encode them. Restored media, dependencies and build output are ignored by Git.
 
+The media manifest targets the same model version used by the viewer (`assets/gallery_v29.glb`). `.gitattributes` marks every media segment as binary so Git cannot alter its line endings. Authored exhibition data, including `data/auvers_en.json`, is explicitly included in `.gitignore`'s publication allowlist.
+
 `.github/workflows/pages.yml` installs the pinned dependencies, builds `dist/` and deploys it to GitHub Pages on a push to `main`. The repository’s Pages source must be set to **GitHub Actions**. Visitors receive the reconstructed media files, not the binary segments.
 
 The browser exhibition and separately authored Blender scenes are different outputs. Browser interactions, reading panels and the interactive film player do not automatically appear in a Blender-rendered video.
