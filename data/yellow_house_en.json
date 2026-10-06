@@ -1,0 +1,746 @@
+{
+  "schemaVersion": 1,
+  "imageSizes": {
+    "vgm-s0032v1962": [
+      1920,
+      1489
+    ],
+    "highlight-23": [
+      3840,
+      4882
+    ],
+    "highlight-26": [
+      1920,
+      2495
+    ],
+    "vgm-s0048v1962": [
+      1920,
+      2425
+    ],
+    "highlight-30": [
+      1920,
+      2333
+    ],
+    "kmm-km103101": [
+      750,
+      918
+    ],
+    "kmm-km108668": [
+      1920,
+      1524
+    ],
+    "letters-f496": [
+      1920,
+      1507
+    ],
+    "highlight-21": [
+      1920,
+      1516
+    ]
+  },
+  "media": [
+    {
+      "id": "gauguin-alyscamps",
+      "title": "Les Alyscamps",
+      "creator": "Paul Gauguin",
+      "date": "1888",
+      "medium": "Oil on canvas",
+      "dimensions": "92 × 73 cm",
+      "institution": "Musée d’Orsay, Paris",
+      "accession": "RF 1985 68",
+      "image": "./assets/story-gauguin-alyscamps-1888.jpg",
+      "pixels": [
+        2024,
+        2639
+      ],
+      "sourceId": "gauguin-alyscamps",
+      "credit": "Musée d’Orsay · RF 1985 68 · Image: Wikimedia Commons",
+      "rights": "Public domain · Faithful reproduction of a two-dimensional artwork",
+      "rightsUrl": "https://commons.wikimedia.org/wiki/File:Paul_Gauguin_085.jpg"
+    },
+    {
+      "id": "gauguin-vincent-sunflowers",
+      "title": "Vincent van Gogh Painting Sunflowers",
+      "creator": "Paul Gauguin",
+      "date": "December 1888",
+      "medium": "Oil on canvas",
+      "dimensions": "73 × 91 cm",
+      "institution": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation)",
+      "accession": "s0225V1962",
+      "image": "./assets/story-gauguin-vincent-sunflowers-1888.jpg",
+      "pixels": [
+        3116,
+        2481
+      ],
+      "sourceId": "gauguin-portrait",
+      "credit": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation) · Image: Google Art Project / Wikimedia Commons",
+      "rights": "Public domain · Faithful reproduction of a two-dimensional artwork",
+      "rightsUrl": "https://commons.wikimedia.org/wiki/File:Paul_Gauguin_-_Vincent_van_Gogh_painting_sunflowers_-_Google_Art_Project.jpg"
+    }
+  ],
+  "title": "The Yellow House",
+  "subtitle": "Hope, Crisis and the Work of Recovery",
+  "eyebrow": "ARLES · OCTOBER 1888 TO MAY 1889",
+  "introduction": [
+    "In Arles, Vincent hoped to build a place where artists could live and work together. Gauguin’s arrival brought that possibility into the rooms of the Yellow House.",
+    "Their weeks together brought shared subjects, experiments with observation and memory, and uncertainty about the household’s future. On 23 December 1888, Vincent experienced a severe crisis and injured himself.",
+    "Follow the story through their correspondence, the reports of others, and the work Vincent made as he tried to resume his life."
+  ],
+  "contentNote": "This story discusses self-injury and mental distress. No graphic imagery is shown.",
+  "entry": {
+    "title": "A Room for Gauguin",
+    "paragraph": "Vincent prepared the Yellow House for a life shared with another painter. Two sunflower paintings hung in the room intended for Paul Gauguin. The invitation carried his hope that artists could live and work together in the south.",
+    "sources": ["sunflowers", "letter-712", "letter-665"],
+    "workId": "vgm-s0032v1962"
+  },
+  "skipChapter": "returning-to-work",
+  "continueToHall": "06",
+  "chapters": [
+    {
+      "id": "a-place-for-two",
+      "label": "A Place for Two",
+      "title": "Gauguin Arrives",
+      "date": "23 October 1888",
+      "hall": "04",
+      "paragraphs": [
+        "Gauguin arrived in Arles on 23 October 1888. Vincent had prepared the Yellow House and its sunflower paintings for a companion with whom he could live and work.",
+        "The invitation belonged to a larger hope: a community of artists in the south. In the next chapter, enter the daily arrangements and artistic experiments that made this first partnership real."
+      ],
+      "sources": [
+        "letter-665",
+        "letter-712",
+        "sunflowers"
+      ],
+      "workIds": [
+        "vgm-s0032v1962",
+        "highlight-23"
+      ],
+      "readings": []
+    },
+    {
+      "id": "working-side-by-side",
+      "label": "Working Side by Side",
+      "title": "Two Artists in One House",
+      "date": "October–December 1888",
+      "hall": "04",
+      "paragraphs": [
+        "Two painters now shared the Yellow House. Their partnership involved the work of keeping a home, making pictures and talking through what art could become.",
+        "Follow four parts of that shared life: a household becoming a studio, experiments with memory, a portrait of a companion, and the town beyond their door."
+      ],
+      "sources": [
+        "letter-712",
+        "letter-717",
+        "letter-698",
+        "letter-720",
+        "letter-716",
+        "gauguin-portrait"
+      ],
+      "workIds": [
+        "kmm-km108668",
+        "letters-f496",
+        "highlight-21"
+      ],
+      "readingMode": "tabs",
+      "defaultReading": "shared-work",
+      "readingsLabel": "EXPLORE THEIR SHARED LIFE",
+      "readings": [
+        {
+          "id": "shared-work",
+          "label": "A Shared Working Life",
+          "title": "A Household Becoming a Studio",
+          "date": "Late October–early November 1888",
+          "badge": "HOUSEHOLD · WORK · THEO",
+          "paragraphs": [
+            "Theo was part of this household even from Paris. His financial support and his work as an art dealer helped sustain Vincent and his arrangement with Gauguin. Vincent’s letters connect the sale and sending of paintings with the costs of living and working.",
+            "In early November, Vincent listed a chest of drawers, household utensils and twenty metres of canvas bought by Gauguin. They recorded the expenses for later repayment. Gauguin also had plans of his own, including another journey to Martinique.",
+            "Their working days took them to the Alyscamps, an avenue of tombs and tall poplars. Both made paintings there. Compare how the path recedes, how trees divide the surface, and how small the figures become. Neither canvas is simply a copy of what the eye sees."
+          ],
+          "sources": [
+            "letter-712",
+            "letter-717",
+            "kmm-alyscamps",
+            "gauguin-alyscamps"
+          ],
+          "peopleLabel": "THREE PEOPLE · A SHARED ARRANGEMENT",
+          "people": [
+            {
+              "name": "Vincent",
+              "role": "A home and a studio community",
+              "text": "Invited Gauguin, prepared the rooms and hoped shared work could develop into a community of artists."
+            },
+            {
+              "name": "Paul Gauguin",
+              "role": "A partner with plans of his own",
+              "text": "Worked with Vincent, contributed household purchases and continued to consider his own artistic and travel plans."
+            },
+            {
+              "name": "Theo",
+              "role": "Brother, supporter and art dealer",
+              "text": "Supported Vincent, sold work by Gauguin and remained involved through money, paintings and letters."
+            }
+          ],
+          "figuresLabel": "ONE PLACE · TWO PAINTINGS",
+          "figures": [
+            {
+              "workId": "kmm-km108668"
+            },
+            {
+              "mediaId": "gauguin-alyscamps"
+            }
+          ]
+        },
+        {
+          "id": "observation-memory",
+          "label": "Observation, Memory and Imagination",
+          "title": "How Does Experience Become a Painting?",
+          "date": "October–November 1888",
+          "badge": "OBSERVATION · MEMORY · EXPERIMENT",
+          "paragraphs": [
+            "Before Gauguin arrived, Vincent explained to Émile Bernard that an actual model or subject gave his work direction. Starting from life did not mean reproducing appearances mechanically: he could change colour, simplify forms and intensify expression.",
+            "Gauguin encouraged him to compose through memory and imagination. This was not a contest between a realist and an inventor. Both selected and transformed experience, and Vincent tried another way of bringing it into a picture.",
+            "Painted in Arles, Memory of the Garden at Etten brings an earlier place into a new scene. In a letter to Willemien, Vincent connected its figures and colours with their mother and Wil without claiming literal likenesses. Choose a detail below to follow his explanation."
+          ],
+          "sources": [
+            "letter-698",
+            "letter-720"
+          ],
+          "figures": [
+            {
+              "workId": "letters-f496"
+            }
+          ],
+          "observationsLabel": "LOOK CLOSER · FOLLOW VINCENT’S LETTER",
+          "observations": [
+            {
+              "id": "people",
+              "label": "People",
+              "text": "The two foreground women can call their mother and Wil to mind without being their exact portraits. Vincent asks his sister to read associations in the figures rather than identify a literal family scene."
+            },
+            {
+              "id": "colour",
+              "label": "Colour",
+              "text": "Dark violet clothing, an orange-and-green scarf and the emphatic garden colours help carry character and feeling. In his explanation, colour does more than describe the local appearance of things."
+            },
+            {
+              "id": "memory",
+              "label": "Memory",
+              "text": "The painting was made in Arles, not in the Etten garden before his eyes. Earlier experience is reorganised in a new composition. Vincent links this experiment to conversations with Gauguin."
+            }
+          ]
+        },
+        {
+          "id": "painting-one-another",
+          "label": "Painting One Another",
+          "title": "Gauguin’s Image of Vincent",
+          "date": "December 1888",
+          "badge": "A PORTRAIT · AN INTERPRETATION",
+          "paragraphs": [
+            "Gauguin painted Vincent seated at work on sunflowers, joining his companion to a subject already associated with him.",
+            "Museum research places the portrait in December, when Vincent was not painting fresh sunflowers. Memory and reference to earlier paintings shape this scene: it is Gauguin’s image of Vincent at work, not a transparent record of a sitting.",
+            "Look at the concentrated figure, the flowers and the act of painting. Gauguin’s later account of Vincent’s reaction is discussed in Sources & Versions, rather than staged here as a witnessed conversation."
+          ],
+          "sources": [
+            "gauguin-portrait"
+          ],
+          "figures": [
+            {
+              "mediaId": "gauguin-vincent-sunflowers"
+            }
+          ],
+          "evidenceId": "portrait-recollection",
+          "evidenceLabel": "Read the Later Recollection →"
+        },
+        {
+          "id": "town-after-dark",
+          "label": "The Town After Dark",
+          "title": "Cafés, Brothels and Possible Subjects",
+          "date": "1 or 2 November 1888 · An earlier café painting from September",
+          "badge": "THE TOWN · CONTEMPORARY CORRESPONDENCE",
+          "paragraphs": [
+            "Their shared life extended beyond the studio. In the joint letter to Émile Bernard of 1 or 2 November, Vincent reported going to brothels with Gauguin and discussed what might be painted there.",
+            "The letter supports a shared activity and a search for subjects. It does not establish how often either man went, every purpose or encounter, or a causal link with the later crisis.",
+            "The Night Café was painted in September 1888, before Gauguin’s arrival. It offers an earlier view of a café in Arles, not a brothel interior and not evidence of the two painters making this picture together."
+          ],
+          "sources": [
+            "letter-716",
+            "night-cafe"
+          ],
+          "figures": [
+            {
+              "workId": "highlight-21"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "staying-or-leaving",
+      "label": "Staying or Leaving",
+      "title": "The Future of the Household",
+      "date": "December 1888",
+      "hall": "05",
+      "paragraphs": [
+        "By December, the continuation of their shared life had become uncertain. Around 11 December, Vincent thought Gauguin had become discouraged by Arles, the Yellow House and Vincent himself. He hoped the partnership could continue.",
+        "The prospect then shifted. Vincent’s letter of 17 or 18 December describes their museum visit and intense discussions of Delacroix and Rembrandt. The accompanying letter from Gauguin to Theo, identified by the editors, drew back from his earlier plan to leave for Paris.",
+        "On 22 December, Gauguin told Émile Schuffenecker he was staying for now, though departure remained possible. This statement survives in his correspondence, cited in note 28 to Letter 726; it is not a decision reported in Vincent’s own words.",
+        "The sequence contains concern, renewed conversation and a provisional decision to remain. It should not be flattened into an inevitable march towards disaster. The next chapter follows the crisis of 23 December; artistic disagreement alone cannot establish its immediate cause."
+      ],
+      "sources": [
+        "letter-724",
+        "letter-726"
+      ],
+      "workIds": [
+        "highlight-26",
+        "vgm-s0048v1962"
+      ],
+      "readings": [
+        {
+          "id": "december-11",
+          "label": "Around 11 December",
+          "title": "The possibility of leaving",
+          "date": "Letter 724 · On or about 11 December 1888",
+          "paragraphs": [
+            "Vincent considers Gauguin’s discouragement and the possibility of his departure. This is Vincent’s view of an uncertain situation, not a record of a final decision or a witnessed quarrel."
+          ],
+          "sources": [
+            "letter-724"
+          ]
+        },
+        {
+          "id": "december-17",
+          "label": "17 or 18 December",
+          "title": "Artistic conversation continues",
+          "date": "Letter 726 · 17 or 18 December 1888",
+          "paragraphs": [
+            "Vincent describes the visit to Montpellier and discussions of Delacroix and Rembrandt as “excessively electric”. Note 28 identifies an accompanying letter in which Gauguin withdrew his plan to return to Paris. Keep Vincent’s description and Gauguin’s decision in their separate voices."
+          ],
+          "sources": [
+            "letter-726"
+          ]
+        },
+        {
+          "id": "december-22",
+          "label": "22 December · Gauguin’s Decision",
+          "title": "Staying, without closing the possibility of leaving",
+          "date": "Gauguin to Émile Schuffenecker · 22 December 1888",
+          "badge": "GAUGUIN’S CORRESPONDENCE · CITED IN EDITORIAL NOTE 28",
+          "paragraphs": [
+            "Writing to Schuffenecker, Gauguin said that he was staying in Arles for now, while leaving remained possible. The scholarly edition cites this correspondence in note 28 to Letter 726. It preserves a provisional choice, not a promise that the household could continue indefinitely."
+          ],
+          "sources": [
+            "letter-726"
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "label": "VINCENT · CONCERN",
+          "date": "Around 11 December"
+        },
+        {
+          "label": "VINCENT & GAUGUIN · CORRESPONDENCE",
+          "date": "17 or 18 December"
+        },
+        {
+          "label": "GAUGUIN · STAYING FOR NOW",
+          "date": "22 December"
+        }
+      ]
+    },
+    {
+      "id": "23-december",
+      "label": "23 December",
+      "title": "A Crisis in Arles",
+      "date": "The evening of 23 December 1888",
+      "hall": "05",
+      "paragraphs": [
+        "On the evening of 23 December, Vincent experienced an acute crisis and cut his left ear with a razor.",
+        "A local newspaper later reported that he went to a brothel and handed the severed ear to a woman it called Rachel. Police found him at home the following morning, and he was taken to hospital.",
+        "The surviving accounts leave gaps in the sequence of events. Gauguin’s description of their encounter comes through his own accounts and the reports of others."
+      ],
+      "sources": ["letter-728", "museum-illness"],
+      "workIds": [],
+      "timeline": [
+        {"label": "Event", "date": "23 December 1888"},
+        {"label": "Newspaper report", "date": "30 December 1888"}
+      ],
+      "readings": []
+    },
+    {
+      "id": "woman-called-rachel",
+      "label": "A Woman Called Rachel",
+      "title": "The Woman Behind the Report",
+      "date": "23 December 1888 · A later visit on 2 February 1889",
+      "hall": "05",
+      "paragraphs": [
+        "The report names her Rachel. Vincent brought the severed ear to a woman at a brothel in Arles; beyond this moment, her own life has often disappeared from the story.",
+        "Bernadette Murphy’s later research identifies her as Gabrielle Berlatier, a farmer’s daughter who had survived a dog bite and treatment earlier that year. Martin Bailey subsequently published her surname. Murphy describes her as a maid, rather than a sex worker. These are attributed research findings, not facts established by the newspaper alone.",
+        "Read the event, the identity research and the proposed motives separately, then return to Vincent’s account of a later visit. None establishes a romantic relationship or a certain reason for choosing her."
+      ],
+      "sources": ["forum-report", "museum-illness", "murphy-research", "letter-745"],
+      "workIds": [],
+      "skipChapter": "care-and-concern",
+      "skipLabel": "Skip to Care and Recovery →",
+      "readingsLabel": "THE EVENT · THE PERSON · THE INTERPRETATION",
+      "defaultReading": "the-report",
+      "readings": [
+        {
+          "id": "the-report",
+          "label": "The Report",
+          "badge": "CONTEMPORARY REPORT · EDITORIAL SUMMARY",
+          "title": "A Name in the Newspaper",
+          "date": "Le Forum Républicain · 30 December 1888",
+          "paragraphs": [
+            "The newspaper’s local-news item describes an event on the previous Sunday, 23 December. At about 11.30 in the evening, it reports, Vincent arrived at brothel No. 1, asked for Rachel and gave her his ear, with the words ‘Keep this object carefully’. Those words belong to the report: they are not independently recovered dialogue.",
+            "According to the same account, police found him at home the following morning and took him to hospital. The scholarly letter edition reproduces and compares the report with other accounts. This panel is a summary, not a facsimile or an invented eyewitness scene.",
+            "The Van Gogh Museum’s account likewise describes self-injury and a visit to a brothel; it calls the recipient a prostitute. Murphy’s later research offers a different account of her occupation. An institutional summary, a contemporary report and later research should not be mistaken for the same kind of evidence."
+          ],
+          "sources": ["forum-report", "letter-728", "museum-illness"]
+        },
+        {
+          "id": "tracing-gabrielle",
+          "label": "Tracing Gabrielle",
+          "badge": "LATER IDENTITY RESEARCH · ATTRIBUTED",
+          "title": "A Life Before That Night",
+          "date": "Medical history in 1888 · Research published in 2016",
+          "paragraphs": [
+            "Murphy traced a young woman named Gabrielle but withheld her surname. Following clues in her book and medical records at the Institut Pasteur, Bailey identified her as Gabrielle Berlatier, a farmer’s daughter living near Arles.",
+            "Bailey reports that a rabid dog bit her left arm on 8 January 1888. Local cauterisation came before anti-rabies treatment in Paris. She was eighteen at treatment and nineteen by December. The injury left a scar; the journey and associated expenses placed pressure on her family.",
+            "Murphy describes work as a maid and cleaner at the brothel. The registration age for sex workers was twenty-one, but Bailey cautions that the rule was not always observed. Age alone therefore cannot settle her occupation.",
+            "Murphy also suggests she may have worked at the Café de la Gare, where Vincent lodged. That possible connection does not prove they already knew each other. The underlying medical documents are discussed through these researchers’ accounts; no reconstructed archive page is presented here."
+          ],
+          "sources": ["murphy-research", "murphy-excerpt", "bailey-occupation"]
+        },
+        {
+          "id": "why-her",
+          "label": "Why Her?",
+          "badge": "MURPHY’S INTERPRETATION · UNCONFIRMED MOTIVE",
+          "title": "Compassion, a Scar and an Unanswered Question",
+          "date": "Bernadette Murphy · Interpretation published in 2016",
+          "paragraphs": [
+            "Murphy proposes that Gabrielle’s scar might have mattered to Vincent. In her interpretation, during the crisis he may have imagined offering his own healthy flesh to repair another person’s injury. She connects this possibility with compassion and religious ideas of sacrifice.",
+            "This is Murphy’s proposed explanation, not a documented statement of Vincent’s intention or a demonstrated medical diagnosis. His surviving words do not say that he meant to heal her scar. The possible café connection is not proof of the motive either.",
+            "The question remains open. This interpretation should not turn a distressing act of self-injury into a romantic gesture, a successful treatment or an established act of rescue."
+          ],
+          "sources": ["murphy-excerpt", "letter-745"]
+        },
+        {
+          "id": "a-later-visit",
+          "label": "A Later Visit",
+          "badge": "VINCENT’S LETTER · EDITORIAL SUMMARY",
+          "title": "Returning to See Her",
+          "date": "Letter 745 · 3 February 1889 · Describing a visit on 2 February",
+          "paragraphs": [
+            "On 3 February, Vincent told Theo that he had gone back the previous day to see the woman he had approached during the crisis. He wrote that she had suffered, had fainted and had since regained her composure. He also described her sympathetically, as someone of whom people spoke well.",
+            "The letter is a first-person record of a later visit, not a full account of the December night. It does not give her name or explain why he brought her the ear. It brings her distress back into view without confirming Murphy’s later identification or proposed motive."
+          ],
+          "sources": ["letter-745"]
+        }
+      ]
+    },
+    {
+      "id": "care-and-concern",
+      "label": "Care and Concern",
+      "title": "News from the Hospital",
+      "date": "Late December 1888 to early January 1889",
+      "hall": "05",
+      "paragraphs": [
+        "Gauguin sent a telegram to Theo on 24 December. Theo took the night train to Arles to see his brother in hospital. Gauguin left Arles in the days following the crisis.",
+        "Doctors and friends kept Theo informed. On 30 December, Félix Rey described an improvement in Vincent’s condition while acknowledging how difficult it was to answer Theo’s questions with certainty.",
+        "Rey also wrote about his own experience of being far from his family. His letter brings a personal voice into the record of Vincent’s care."
+      ],
+      "sources": ["letter-728", "rey-letter", "roulin-letter"],
+      "workIds": ["kmm-km103101"],
+      "people": [
+        {"name": "Theo van Gogh", "role": "His brother", "text": "Travelled to Arles and remained central to the correspondence about Vincent’s care."},
+        {"name": "Félix Rey", "role": "The doctor treating him", "text": "Reported improvement while acknowledging the limits of what he could know."},
+        {"name": "Joseph Roulin", "role": "His friend in Arles", "text": "Wrote to the family and accompanied Vincent after he left hospital."}
+      ],
+      "readings": [
+        {
+          "id": "from-the-doctor",
+          "label": "From the Doctor",
+          "title": "Félix Rey to Theo",
+          "date": "30 December 1888 · FR 1056",
+          "paragraphs": ["Rey reports that Vincent’s condition has improved, but cannot offer certainty about what will follow. He also recalls his own separation from his family. Clinical observation and personal sympathy both have a place in this letter."],
+          "sources": ["rey-letter"]
+        },
+        {
+          "id": "from-a-friend",
+          "label": "From a Friend",
+          "title": "Joseph Roulin to Willemien",
+          "date": "8 January 1889 · FR b710",
+          "paragraphs": ["Roulin writes about Vincent’s return from hospital and his own efforts to accompany him. The letter presents recovery through the practical actions of a friend. Roulin accidentally wrote the year as 1888; the scholarly edition dates it to 1889."],
+          "sources": ["roulin-letter"]
+        }
+      ]
+    },
+    {
+      "id": "returning-to-work",
+      "label": "Returning to Work",
+      "title": "A Face in the Studio",
+      "date": "January 1889",
+      "hall": "05",
+      "paragraphs": [
+        "Vincent returned home on 7 January. He told Theo that he intended to begin with still lifes to regain the habit of painting. He also planned a portrait of Félix Rey.",
+        "That month, he painted Self-Portrait with Bandaged Ear. A canvas on an easel and a Japanese print appear behind him. The bandage records the injury within an image of himself as a working painter.",
+        "On 17 January, he reported that he had begun working again. The same letter counted hospital payments, laundry and other expenses. Recovery involved finding strength, paying bills and returning to his materials."
+      ],
+      "sources": ["letter-732", "courtauld", "letter-736"],
+      "workIds": ["highlight-30"],
+      "focusWorkId": "highlight-30",
+      "hotspots": [
+        {"id": "bandage", "label": "The Bandage", "x": 29, "y": 43, "text": "The injury was to Vincent’s left ear. Working from a mirror reversed his features: the bandage is on the figure’s right, which is the viewer’s left. This is a self-portrait in a studio, not an image of the injury itself."},
+        {"id": "canvas", "label": "The Canvas", "x": 10, "y": 45, "text": "A canvas on an easel stands behind him. Its presence brings the setting back to work: a room with the materials and possibilities of painting, not only a place of suffering."},
+        {"id": "print", "label": "The Japanese Print", "x": 70, "y": 36, "text": "The Japanese print on the wall recalls his sustained interest in Japanese art. Together with the easel, it places the injured man within the visual world of a working artist."}
+      ],
+      "readings": [
+        {
+          "id": "january-7",
+          "label": "7 January · Returning Home",
+          "title": "Regaining the habit of painting",
+          "date": "Letter 732 · 7 January 1889",
+          "paragraphs": ["Home again, Vincent proposes starting with still lifes and making a portrait of Rey. These are plans for specific pieces of work, not evidence that his recovery is complete."],
+          "sources": ["letter-732"]
+        },
+        {
+          "id": "january-17",
+          "label": "17 January · Work and Bills",
+          "title": "The practical life of recovery",
+          "date": "Letter 736 · 17 January 1889",
+          "paragraphs": ["Vincent reports returning to work while accounting for hospital costs, laundry and other expenses. Read these ordinary obligations beside the self-portrait: a life is being resumed through materials, money and care."],
+          "sources": ["letter-736"]
+        }
+      ]
+    },
+    {
+      "id": "living-in-arles",
+      "label": "Living in Arles",
+      "title": "Illness, Neighbours and Confinement",
+      "date": "February to March 1889",
+      "hall": "05",
+      "paragraphs": [
+        "Further crises interrupted Vincent’s recovery. In February, a petition signed by thirty residents asked the authorities to have him committed.",
+        "The petition and police report recorded fears and allegations about his behaviour. Vincent’s letter of 19 March gives another view: he described being confined, distressed by the accusations and unable to use his studio.",
+        "Read together, these records reveal a difficult relationship between illness, public concern and personal freedom. Each document speaks from a particular position."
+      ],
+      "sources": ["letter-750", "museum-illness"],
+      "workIds": [],
+      "readings": [
+        {
+          "id": "petition",
+          "label": "The Petition",
+          "title": "A document of public concern",
+          "date": "February 1889 · Thirty signatures on the surviving petition",
+          "paragraphs": ["The petition records the residents’ fears and allegations. Their statements must remain attributed to the document, rather than being retold as established acts. The scholarly annotations link the petition and police material."],
+          "sources": ["letter-750"]
+        },
+        {
+          "id": "vincents-response",
+          "label": "Vincent’s Response",
+          "title": "Confinement and the inaccessible studio",
+          "date": "Letter 750 · 19 March 1889",
+          "paragraphs": ["Vincent describes confinement, distress over the accusations and his inability to use his studio. He says that more than eighty people signed, whereas the surviving petition bears thirty signatures. His experience and the surviving document should both be visible; neither number should silently replace the other."],
+          "sources": ["letter-750"]
+        }
+      ]
+    },
+    {
+      "id": "seeking-care",
+      "label": "Seeking a Place of Care",
+      "title": "The Decision to Go to Saint-Rémy",
+      "date": "Spring 1889 · Admission on 8 May",
+      "hall": "06",
+      "paragraphs": [
+        "In a letter to Willemien written between late April and early May, Vincent described repeated crises and his plan to enter an institution at Saint-Rémy.",
+        "He continued to think about the course of his work, the books he was reading and the life he hoped to regain.",
+        "On 8 May 1889, he entered Saint-Paul-de-Mausole. The admission documents record his wish for care and observation. His next year of painting would take shape within this new setting."
+      ],
+      "sources": ["letter-764", "admission"],
+      "workIds": [],
+      "readings": [
+        {
+          "id": "decision",
+          "label": "Read About the Decision",
+          "title": "Seeking a setting for care and work",
+          "date": "Letter 764 · Between about 28 April and 2 May 1889",
+          "paragraphs": ["The letter to Willemien describes repeated crises and the proposed move. The admission register records his entry on 8 May. These are separate documents: the decision and the institutional record should not be presented as the same moment."],
+          "sources": ["letter-764", "admission"]
+        }
+      ]
+    }
+  ],
+  "workConnections": [
+    {"workId": "vgm-s0032v1962", "chapterId": "a-place-for-two", "label": "A Room for Gauguin"},
+    {"workId": "highlight-23", "chapterId": "a-place-for-two", "label": "A Room for Gauguin"},
+    {"workId": "highlight-26", "chapterId": "staying-or-leaving", "label": "Staying or Leaving"},
+    {"workId": "vgm-s0048v1962", "chapterId": "staying-or-leaving", "label": "Staying or Leaving"},
+    {"workId": "highlight-30", "chapterId": "returning-to-work", "label": "Returning to Work"},
+    {"workId":"kmm-km103101","chapterId":"care-and-concern","label":"Care and Concern"},
+    {"workId":"kmm-km108668","chapterId":"working-side-by-side","label":"Working Side by Side"},
+    {"workId":"letters-f496","chapterId":"working-side-by-side","label":"Working Side by Side"},
+    {"workId":"highlight-21","chapterId":"working-side-by-side","label":"Working Side by Side"}
+  ],
+  "evidence": [
+    {
+      "id": "gauguins-account",
+      "title": "Gauguin’s Account",
+      "subtitle": "A Recollection Written Later",
+      "kind": "recollection",
+      "badge": "LATER RECOLLECTION · 1903",
+      "paragraphs": ["In Avant et après, written in 1903, Gauguin described Vincent approaching him with an open razor. A letter from Émile Bernard to Albert Aurier dated 1 January 1889, reporting what Gauguin had told him, gives a different account of the encounter.", "These texts reach us through different moments and narrators. They require comparison; neither is a recording of the evening."],
+      "sources": ["letter-728"]
+    },
+    {
+      "id": "medical-drawing",
+      "title": "The Extent of the Injury",
+      "subtitle": "A Drawing by Félix Rey",
+      "kind": "retrospective-document",
+      "badge": "RETROSPECTIVE DOCUMENT · 18 AUGUST 1930",
+      "paragraphs": ["Accounts differed over how much of the ear was removed. In 1930, Félix Rey drew the injury for the writer Irving Stone. Preserved at the Bancroft Library, the note and drawings support an injury involving almost the entire external ear.", "The drawing was made decades after Rey treated Vincent. It is not an 1888 hospital chart."],
+      "contentNote": "The external source includes a medical drawing of the injury. It is not displayed in this gallery.",
+      "linkLabel": "View the Medical Drawing at Berkeley",
+      "sources": ["rey-drawing"]
+    },
+    {
+      "id": "woman-in-the-report",
+      "title": "The Woman in the Report",
+      "subtitle": "Rachel and a Later Identification",
+      "kind": "later-research",
+      "badge": "REPORT · 1888 / ATTRIBUTED RESEARCH · 2016",
+      "paragraphs": ["The contemporary report uses Rachel. Murphy’s 2016 identification and Bailey’s subsequent archival work propose Gabrielle Berlatier and describe a young maid. Bailey also cautions against using the registration age alone to prove her occupation.", "Letter 745 records a later visit but does not name her. Identity, occupation, acquaintance and motive are separate questions; establishing one would not automatically establish the others."],
+      "sources": ["forum-report", "murphy-research", "bailey-occupation", "letter-745"]
+    },
+    {
+      "id": "museum-account",
+      "kind": "institutional-summary",
+      "title": "The Museum’s Account",
+      "subtitle": "A present-day synthesis, not an eyewitness report",
+      "badge": "MUSEUM ACCOUNT · HISTORICAL SYNTHESIS",
+      "paragraphs": ["The Van Gogh Museum describes Vincent injuring himself on 23 December, wrapping the ear and taking it to a woman in a brothel. Its page calls her a prostitute. It does not establish a scar-healing motive.", "This museum narrative supplies the exhibition’s basic sequence of crisis, care and renewed work. Its wording about the recipient should be compared with Murphy’s later occupation research, not silently combined with it."],
+      "sources": ["museum-illness", "murphy-research", "bailey-occupation"]
+    },
+    {
+      "id": "motive-interpretation",
+      "kind": "disputed-hypothesis",
+      "title": "An Explanation Is Not an Intention",
+      "subtitle": "Murphy’s reading of the scar and sacrifice",
+      "badge": "ATTRIBUTED INTERPRETATION · NOT ESTABLISHED",
+      "paragraphs": ["Murphy suggests that Gabrielle’s injury and religious ideas of sacrifice might help explain the gift. The argument is hers: no surviving statement by Vincent identifies healing her scar as his purpose.", "The chapter offers this interpretation for examination, not as an official conclusion or a retrospective diagnosis. Letter 745 records concern and a later visit; it cannot verify that proposed motive."],
+      "sources": ["murphy-excerpt", "letter-745"]
+    },
+    {
+      "id": "gauguin-hypothesis",
+      "title": "An Alternative Reconstruction",
+      "subtitle": "The Gauguin Hypothesis",
+      "kind": "disputed-hypothesis",
+      "badge": "LATER HYPOTHESIS · DISPUTED",
+      "paragraphs": ["In their 2008 book, Hans Kaufmann and Rita Wildegans proposed that Gauguin injured Vincent with a sabre and that the artists concealed what had happened.", "This is a later reconstruction advanced by those authors. It differs from the Van Gogh Museum’s account of self-injury. The presence of several narratives does not give them the same evidential weight."],
+      "sources": ["sabre-hypothesis", "museum-illness"]
+    },
+    {
+      "id": "portrait-recollection",
+      "kind": "recollection",
+      "title": "The Portrait and a Later Reaction",
+      "subtitle": "Gauguin’s retrospective voice",
+      "badge": "LATER RECOLLECTION · NOT A WITNESSED DIALOGUE",
+      "paragraphs": [
+        "The museum catalogue discusses Gauguin’s later claim that Vincent recognised himself in the sunflower portrait but thought he looked like a madman. This reaction reaches us through Gauguin’s retrospective account, not a contemporary transcript of Vincent speaking.",
+        "Read it as evidence of how Gauguin later told the story. It should not be turned into invented speech or used to diagnose Vincent from the painting."
+      ],
+      "sources": [
+        "gauguin-portrait"
+      ]
+    }
+  ],
+  "sources": [
+    {"id": "letter-712", "title": "Letter 712 · Vincent to Theo", "date": "On or about 25 October 1888", "type": "Contemporary letter", "url": "https://vangoghletters.org/vg/letters/let712/letter.html", "note": "Describes Gauguin’s arrival on 23 October and the practical hopes of the household."},
+    {"id": "letter-716", "title": "Letter 716 · Vincent and Gauguin to Émile Bernard", "date": "1 or 2 November 1888", "type": "Joint contemporary letter", "url": "https://vangoghletters.org/vg/letters/let716/letter.html", "note": "A shared document containing writing by both painters. The reader uses editorial summaries, not invented dialogue."},
+    {"id": "letter-724", "title": "Letter 724 · Vincent to Theo", "date": "On or about 11 December 1888", "type": "Contemporary letter · Revised dating", "url": "https://vangoghletters.org/vg/letters/let724/letter.html", "note": "The current scholarly edition dates this letter to around 11 December; older editions placed it on 23 December."},
+    {"id":"letter-726","title":"Letter 726 · Vincent to Theo","date":"17 or 18 December 1888","type":"Contemporary letter","url":"https://vangoghletters.org/vg/letters/let726/letter.html","note":"Vincent’s account of artistic discussions; note 28 identifies Gauguin’s accompanying retraction of departure and his 22 December letter to Schuffenecker. These are separate voices and documents."},
+    {"id": "letter-728", "title": "Letter 728 · Vincent to Theo, with annotations", "date": "2 January 1889", "type": "Letter · Scholarly documentary comparison", "url": "https://vangoghletters.org/vg/letters/let728/letter.html", "note": "Annotations include the newspaper report of 30 December and compare accounts of the crisis, including later recollections."},
+    {"id": "rey-letter", "title": "Félix Rey to Theo · FR 1056", "date": "30 December 1888", "type": "Contemporary correspondence", "url": "https://vangoghletters.org/vg/documentation.html#id30December1888-2", "note": "Rey reports improvement while acknowledging uncertainty; he also writes personally about separation from family."},
+    {"id": "roulin-letter", "title": "Joseph Roulin to Willemien · FR b710", "date": "8 January 1889", "type": "Contemporary correspondence", "url": "https://vangoghletters.org/vg/documentation.html#id8January1889", "note": "A friend’s account of accompanying Vincent after hospital. The mistaken year on the letter is discussed by the editors."},
+    {"id": "letter-732", "title": "Letter 732 · Vincent to Theo", "date": "7 January 1889", "type": "Contemporary letter", "url": "https://vangoghletters.org/vg/letters/let732/letter.html", "note": "Return home, planned still lifes and the portrait of Félix Rey."},
+    {"id": "letter-736", "title": "Letter 736 · Vincent to Theo", "date": "17 January 1889", "type": "Contemporary letter", "url": "https://vangoghletters.org/vg/letters/let736/letter.html", "note": "Painting again alongside hospital payments, laundry and other expenses."},
+    {"id": "letter-750", "title": "Letter 750 · Vincent to Theo", "date": "19 March 1889", "type": "Letter · Petition and police annotations", "url": "https://vangoghletters.org/vg/letters/let750/letter.html", "note": "Distinguishes allegations from Vincent’s account. Vincent mentions more than eighty signatures; the surviving petition has thirty."},
+    {"id": "letter-764", "title": "Letter 764 · Vincent to Willemien", "date": "Between about 28 April and 2 May 1889", "type": "Contemporary letter · Approximate dating", "url": "https://vangoghletters.org/vg/letters/let764/letter.html", "note": "Repeated crises and the decision to enter an institution at Saint-Rémy."},
+    {"id": "admission", "title": "Saint-Paul-de-Mausole · Admission register", "date": "8 May 1889", "type": "Institutional record", "url": "https://vangoghletters.org/vg/documentation.html#id8May1889", "note": "Records admission and the wish for care and observation. It is distinct from the earlier letter describing the decision."},
+    {"id": "sunflowers", "title": "National Gallery · Sunflowers", "date": "Arles, 1888", "type": "Museum artwork research", "url": "https://www.nationalgallery.org.uk/paintings/vincent-van-gogh-sunflowers", "note": "The sunflower paintings and the room prepared for Gauguin. The linked work is the London version, not a later repetition."},
+    {"id": "courtauld", "title": "The Courtauld · Self-Portrait with Bandaged Ear", "date": "January 1889", "type": "Museum artwork research", "url": "https://courtauld.ac.uk/highlights/self-portrait-with-bandaged-ear/", "note": "The mirror reversal, easel, Japanese print and renewed commitment to painting. This is not the separate self-portrait with a pipe."},
+    {"id": "museum-illness", "title": "Van Gogh Museum · Vincent’s Illness and the Healing Power of Art", "date": "Museum historical account", "type": "Museum synthesis", "url": "https://www.vangoghmuseum.nl/en/art-and-stories/stories/vincents-illness-and-the-healing-power-of-art", "note": "The museum’s account of self-injury, care and continuing work. The story does not infer a diagnosis or a single direct cause."},
+    {"id": "rey-drawing", "title": "UC Berkeley Library · The Tale of the Van Gogh Note", "date": "Note and drawings dated 18 August 1930", "type": "Holding institution · Retrospective document", "url": "https://www.lib.berkeley.edu/about/news/tale-van-gogh-note", "note": "Rey’s note for Irving Stone is held by the Bancroft Library. The external page includes an injury drawing; no graphic image is embedded here."},
+    {"id": "murphy-research", "title": "Martin Bailey · Name of Mystery Woman Who Received Van Gogh’s Ear Revealed for First Time", "date": "19 July 2016", "type": "Report of attributed later research", "url": "https://www.theartnewspaper.com/2016/07/20/name-of-mystery-woman-who-received-van-goghs-ear-revealed-for-first-time", "note": "Reports Murphy’s account of Gabrielle as a maid at the brothel and Bailey’s archival identification of her surname as Berlatier. These are later research claims, separate from the 1888 report."},
+    {"id": "sabre-hypothesis", "title": "Hans Kaufmann and Rita Wildegans · Authors’ Argument", "date": "Book published in 2008", "type": "Authors’ later hypothesis · Disputed", "url": "https://van-goghs-ear.com/x_english/index_uk.html", "note": "The proponents’ account of the sabre hypothesis, not a contemporary witness or the museum’s conclusion."},
+    {"id": "edition-rights", "title": "Van Gogh Letters · Copyright and Permissions", "date": "Digital edition use conditions", "type": "Digital publication rights", "url": "https://vangoghletters.org/vg/copyright.html", "note": "The reader links to the digital edition. Its manuscript images and extended translations have not been reprinted or treated as freely licensed."},
+    {"id": "forum-report", "title": "Le Forum Républicain · Chronique locale", "date": "30 December 1888", "type": "Contemporary newspaper report · Reproduced in the scholarly letter edition", "url": "https://vangoghletters.org/vg/letters/let728/print.html", "note": "The annotations reproduce the local report about 23 December. Its name Rachel, chronology and reported words are distinguished from later identity research."},
+    {"id": "letter-745", "title": "Letter 745 · Vincent to Theo", "date": "3 February 1889", "type": "Contemporary letter · A later visit", "url": "https://vangoghletters.org/vg/letters/let745/letter.html", "note": "Vincent describes a visit the previous day, 2 February. The letter does not name the woman or state a scar-healing intention."},
+    {"id": "murphy-excerpt", "title": "Bernadette Murphy · Searching for ‘Rachel’", "date": "4 August 2016", "type": "Author’s published book excerpt · Research and interpretation", "url": "https://fsgworkinprogress.com/2016/08/04/searching-for-rachel/", "note": "Murphy discusses Gabrielle’s treatment and possible work, then offers her interpretation of the scar and sacrifice. Those proposals are not statements by Vincent."},
+    {"id": "bailey-occupation", "title": "Martin Bailey · Uncovering Van Gogh’s Infamous Days in Arles", "date": "24 August 2016", "type": "Research review · Occupation caveat", "url": "https://apollo-magazine.com/uncovering-van-goghs-infamous-days-in-arles/", "note": "Bailey reviews Murphy’s identification and cautions that the age-twenty-one registration rule was not always observed. It is not decisive proof of occupation."},
+    {
+      "id": "letter-665",
+      "title": "Letter 665 · Vincent to Émile Bernard",
+      "date": "On or about 21 August 1888",
+      "type": "Contemporary letter",
+      "url": "https://vangoghletters.org/vg/letters/let665/letter.html",
+      "note": "An artists’ studio in the south and the sunflower decoration planned before Gauguin’s arrival."
+    },
+    {
+      "id": "letter-698",
+      "title": "Letter 698 · Vincent to Émile Bernard",
+      "date": "On or about 5 October 1888",
+      "type": "Contemporary letter",
+      "url": "https://vangoghletters.org/vg/letters/let698/letter.html",
+      "note": "Actual models, changes of colour and simplification; this letter is to Bernard, not Theo, and is dated October, not September."
+    },
+    {
+      "id": "letter-717",
+      "title": "Letter 717 · Vincent to Theo",
+      "date": "On or about 3 November 1888",
+      "type": "Contemporary letter",
+      "url": "https://vangoghletters.org/vg/letters/let717/letter.html",
+      "note": "The Alyscamps paintings, Gauguin’s purchases, recorded expenses and his Martinique plans. Letter 717, rather than 715, supports this pairing."
+    },
+    {
+      "id": "letter-720",
+      "title": "Letter 720 · Vincent to Willemien",
+      "date": "On or about 12 November 1888",
+      "type": "Contemporary letter",
+      "url": "https://vangoghletters.org/vg/letters/let720/letter.html",
+      "note": "Vincent explains the people, expressive colours and remembered setting of Memory of the Garden at Etten."
+    },
+    {
+      "id": "kmm-alyscamps",
+      "title": "Kröller-Müller Museum · Falling Leaves (Les Alyscamps)",
+      "date": "Work dated c. 1 November 1888",
+      "type": "Museum collection record",
+      "url": "https://www.krollermuller.nl/en/collection/vincent-van-gogh-falling-leaves-les-alyscamps-km-108-668",
+      "note": "Identifies the Vincent canvas used in the comparison: F486 / JH1620 / KM 108.668. Other Alyscamps versions are not substituted."
+    },
+    {
+      "id": "gauguin-alyscamps",
+      "title": "Musée d’Orsay work · Gauguin’s Les Alyscamps",
+      "date": "Work dated 1888",
+      "type": "Artwork and public-domain image record · Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Paul_Gauguin_085.jpg",
+      "note": "Identifies the Musée d’Orsay work RF 1985 68 and records the PD-Art status of its reproduction. This is the comparison image, not a Vincent painting."
+    },
+    {
+      "id": "gauguin-portrait",
+      "title": "Van Gogh Museum Research Catalogue · Vincent van Gogh Painting Sunflowers",
+      "date": "Work dated December 1888",
+      "type": "Museum research catalogue",
+      "url": "https://catalogues.vangoghmuseum.com/contemporaries-of-van-gogh-1/cat60",
+      "note": "Research on the portrait’s constructed scene, sunflower imagery and Gauguin’s later account of Vincent’s reaction. Reproduction rights are linked beneath the image."
+    },
+    {
+      "id": "night-cafe",
+      "title": "Yale University Art Gallery · The Night Café",
+      "date": "Work dated September 1888",
+      "type": "Museum collection record",
+      "url": "https://artgallery.yale.edu/collections/objects/12507",
+      "note": "Identifies the September café painting, made before Gauguin’s arrival. It is not a brothel scene or a record of joint work."
+    }
+  ],
+  "mediaNote": "Painting reproductions follow the gallery’s credited public-domain records. The two Gauguin images are narrative comparison materials, not additions to Vincent’s collection; image sources and PD-Art records appear beneath them. Manuscripts, reports and medical documents remain linked at their original sites. Reading panels are editorial summaries, not transcripts or facsimiles."
+}

@@ -1,29 +1,94 @@
 {
   "language": "en",
-  "version": "2026-10-03-hall-introductions",
+  "version": "2026-10-04-story-route-fixes",
   "arrival": {
-    "id": "arrival", "kind": "statement", "chapter": "01", "label": "Before you enter",
-    "paragraphs": ["We know who he would become.", "As you enter, set that knowledge aside."],
-    "wall": {"width": 6.3, "height": 1.52, "centerHeight": 1.45, "curve": {"center": [0, 35], "radii": [15, 13.5], "angle": 136, "inset": 0.06}, "viewDistance": 8}
+    "id": "arrival",
+    "kind": "statement",
+    "chapter": "01",
+    "label": "Before you enter",
+    "paragraphs": [
+      "We know who he would become.",
+      "As you enter, set that knowledge aside."
+    ],
+    "wall": {
+      "width": 6.3,
+      "height": 1.52,
+      "centerHeight": 1.45,
+      "curve": {
+        "center": [
+          0,
+          35
+        ],
+        "radii": [
+          15,
+          13.5
+        ],
+        "angle": 136,
+        "inset": 0.06
+      },
+      "viewDistance": 8
+    }
   },
   "halls": [
     {
-      "id": "01", "kind": "hall", "chapter": "01", "title": "Origins and Uncertainty", "years": "1853–1881",
+      "id": "01",
+      "kind": "hall",
+      "chapter": "01",
+      "title": "Origins and Uncertainty",
+      "years": "1853–1881",
       "paragraphs": [
         "Vincent’s story begins in a pastor’s household in the Netherlands. School took him away from home. Work carried him to other cities, where he encountered pictures, books, new acquaintances and the practical demands of earning a living.",
         "In London, his letters describe a room he enjoyed, walks through the city and seeds planted in a garden. Religious work later brought him into the mining communities of the Borinage. His plans changed, and the question of how to make a useful life remained.",
         "The opening film follows these years. As you move towards the drawings, you meet Vincent at the beginning of another undertaking. In 1880, he decided to become an artist. Learning how would occupy the years ahead."
       ],
       "sources": [
-        {"title": "Vincent van Gogh: The Letters — Chronology", "url": "https://vangoghletters.org/vg/chronology.html", "note": "A chronology of family, schooling, employment, religious work and the turn towards art in 1880."},
-        {"title": "Letter 13 · To Theo · 13 September 1873", "url": "https://vangoghletters.org/vg/letters/let013/letter.html", "note": "New lodgings, the London household and everyday activities."},
-        {"title": "Letter 22 · To Theo · 30 April 1874", "url": "https://vangoghletters.org/vg/letters/let022/letter.html", "note": "Gardening, walking, work and homesickness."},
-        {"title": "Letter 156 · To Theo · 20 August 1880", "url": "https://vangoghletters.org/vg/letters/let156/letter.html", "note": "Drawing in the mining district, learning materials and requests for Theo’s support."}
+        {
+          "title": "Vincent van Gogh: The Letters — Chronology",
+          "url": "https://vangoghletters.org/vg/chronology.html",
+          "note": "A chronology of family, schooling, employment, religious work and the turn towards art in 1880."
+        },
+        {
+          "title": "Letter 13 · To Theo · 13 September 1873",
+          "url": "https://vangoghletters.org/vg/letters/let013/letter.html",
+          "note": "New lodgings, the London household and everyday activities."
+        },
+        {
+          "title": "Letter 22 · To Theo · 30 April 1874",
+          "url": "https://vangoghletters.org/vg/letters/let022/letter.html",
+          "note": "Gardening, walking, work and homesickness."
+        },
+        {
+          "title": "Letter 156 · To Theo · 20 August 1880",
+          "url": "https://vangoghletters.org/vg/letters/let156/letter.html",
+          "note": "Drawing in the mining district, learning materials and requests for Theo’s support."
+        }
       ],
-      "wall": {"width": 4.5, "height": 3.55, "centerHeight": 2.65, "curve": {"center": [-24, 30], "radii": [19, 14], "angle": 308, "inset": 0.12}, "viewDistance": 6.6}
+      "tourLead": "Before painting, a young man searches for a home, a livelihood and a purpose.",
+      "wall": {
+        "width": 4.8,
+        "height": 2.7,
+        "centerHeight": 2.5,
+        "curve": {
+          "center": [
+            -24,
+            30
+          ],
+          "radii": [
+            19,
+            14
+          ],
+          "angle": 115,
+          "inset": 0.12
+        },
+        "viewDistance": 7.4
+      }
     },
     {
-      "id": "02", "kind": "hall", "chapter": "02", "title": "Earth and Labour", "years": "1881–Early 1886",
+      "id": "02",
+      "kind": "hall",
+      "chapter": "02",
+      "title": "Earth and Labour",
+      "years": "1881–Early 1886",
       "paragraphs": [
         "A figure bends over the ground. A woman prepares food. People gather around a table at the end of a working day.",
         "Vincent returned to such subjects throughout his early years as an artist. In Etten, The Hague, Drenthe and Nuenen, he studied working people and the spaces in which ordinary life unfolded. His letters discuss models, materials, money and the difficulties of drawing what he saw.",
@@ -31,14 +96,46 @@
         "Spend time with the figures in this room. Follow the position of a hand, the weight of a body and the objects placed within reach. These details held his attention through repeated study."
       ],
       "sources": [
-        {"title": "Letter 172 · To Theo · Mid-September 1881", "url": "https://vangoghletters.org/vg/letters/let172/letter.html", "note": "Live models, repeated practice, materials and the study of diggers and women peeling potatoes."},
-        {"title": "Letter 497 · To Theo · 30 April 1885", "url": "https://vangoghletters.org/vg/letters/let497/letter.html", "note": "Preparing The Potato Eaters: studies of hands and heads, labour and food."},
-        {"title": "Vincent van Gogh: The Letters — Chronology", "url": "https://vangoghletters.org/vg/chronology.html", "note": "Moves between Etten, The Hague, Drenthe and Nuenen, and relationships during these years."}
+        {
+          "title": "Letter 172 · To Theo · Mid-September 1881",
+          "url": "https://vangoghletters.org/vg/letters/let172/letter.html",
+          "note": "Live models, repeated practice, materials and the study of diggers and women peeling potatoes."
+        },
+        {
+          "title": "Letter 497 · To Theo · 30 April 1885",
+          "url": "https://vangoghletters.org/vg/letters/let497/letter.html",
+          "note": "Preparing The Potato Eaters: studies of hands and heads, labour and food."
+        },
+        {
+          "title": "Vincent van Gogh: The Letters — Chronology",
+          "url": "https://vangoghletters.org/vg/chronology.html",
+          "note": "Moves between Etten, The Hague, Drenthe and Nuenen, and relationships during these years."
+        }
       ],
-      "wall": {"width": 3.6, "height": 3.4, "centerHeight": 2.55, "position": [-24.22, 2.55, 19], "normal": [-1, 0, 0], "viewDistance": 5.5}
+      "tourLead": "Look at the work of ordinary days: digging, preparing food and gathering around a table.",
+      "wall": {
+        "width": 3.2,
+        "height": 2.7,
+        "centerHeight": 2.5,
+        "viewDistance": 5.8,
+        "position": [
+          -29.15,
+          2.5,
+          21.63
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ]
+      }
     },
     {
-      "id": "03", "kind": "hall", "chapter": "03", "title": "The Paris Transformation", "years": "1886–1888",
+      "id": "03",
+      "kind": "hall",
+      "chapter": "03",
+      "title": "The Paris Transformation",
+      "years": "1886–1888",
       "paragraphs": [
         "In 1886, Vincent arrived in Paris and moved in with Theo. The brothers could now share the daily conversations that distance had previously carried into their letters.",
         "The city brought Vincent into contact with artists, exhibitions and unfamiliar approaches to painting. He studied Japanese prints, experimented with colour and painted flowers, streets and his own face. His surroundings offered a continuing supply of subjects and ideas.",
@@ -46,14 +143,46 @@
         "Imagine the activity surrounding these paintings: visits, conversations, pictures examined closely and another canvas begun. His practice developed within that exchange."
       ],
       "sources": [
-        {"title": "Letter 567 · To Theo · On or about 28 February 1886", "url": "https://vangoghletters.org/vg/letters/let567/letter.html", "note": "Vincent’s brief note to Theo on arriving in Paris."},
-        {"title": "Van Gogh Museum — Gallery Texts for the Permanent Collection", "url": "https://assets.vangoghmuseum.nl/5cda37ee-857c-4b93-b71c-aa5f616b9900?id=f2357819-1690-4160-b225-f87288965957", "note": "See New Perspectives and Dreaming of Japan for artists, experiments and Japanese prints. PDF."},
-        {"title": "Van Gogh Museum — Back in Time", "url": "https://assets.vangoghmuseum.nl/ea9bf1e4-331a-420d-a63b-cbc5a793816e?id=569ba2bb-33e6-4ea1-8e64-68223848f32c", "note": "Secondary-education assignment sheet, with context on Paris and the brothers’ life together. PDF."}
+        {
+          "title": "Letter 567 · To Theo · On or about 28 February 1886",
+          "url": "https://vangoghletters.org/vg/letters/let567/letter.html",
+          "note": "Vincent’s brief note to Theo on arriving in Paris."
+        },
+        {
+          "title": "Van Gogh Museum — Gallery Texts for the Permanent Collection",
+          "url": "https://assets.vangoghmuseum.nl/5cda37ee-857c-4b93-b71c-aa5f616b9900?id=f2357819-1690-4160-b225-f87288965957",
+          "note": "See New Perspectives and Dreaming of Japan for artists, experiments and Japanese prints. PDF."
+        },
+        {
+          "title": "Van Gogh Museum — Back in Time",
+          "url": "https://assets.vangoghmuseum.nl/ea9bf1e4-331a-420d-a63b-cbc5a793816e?id=569ba2bb-33e6-4ea1-8e64-68223848f32c",
+          "note": "Secondary-education assignment sheet, with context on Paris and the brothers’ life together. PDF."
+        }
       ],
-      "wall": {"width": 4.4, "height": 3.55, "centerHeight": 2.65, "position": [-29, 2.65, -14.23], "normal": [0, 0, -1], "viewDistance": 6.1}
+      "tourLead": "Living with Theo in Paris, Vincent discovers new pictures, new colours and new ways of seeing.",
+      "wall": {
+        "width": 4.6,
+        "height": 2.7,
+        "centerHeight": 2.5,
+        "viewDistance": 6.6,
+        "position": [
+          -43.4,
+          2.5,
+          -13.27
+        ],
+        "normal": [
+          0,
+          0,
+          -1
+        ]
+      }
     },
     {
-      "id": "04", "kind": "hall", "chapter": "04", "title": "Arles: Toward the Sun", "years": "1888",
+      "id": "04",
+      "kind": "hall",
+      "chapter": "04",
+      "title": "Arles: Toward the Sun",
+      "years": "1888",
       "paragraphs": [
         "Vincent arrived in Arles in February 1888. As the seasons changed, he painted blossoming orchards, wheatfields and the streets of the town. He also turned his attention to cafés, bedrooms and people he came to know.",
         "His letters describe plans for a shared studio in the south. He rented the Yellow House and prepared rooms where another artist could live and work. Paintings became part of those preparations.",
@@ -61,14 +190,59 @@
         "During these months, Vincent was working towards a daily life in which painting and companionship could grow together."
       ],
       "sources": [
-        {"title": "Van Gogh Museum — Vincent van Gogh in the South of France", "url": "https://www.vangoghmuseum.nl/en/art-and-stories/vincents-life-1853-1890/vincent-van-gogh-in-the-south-of-france", "note": "Arles, the Yellow House and plans for a studio in the south."},
-        {"title": "Letter 674 · To Theo · 4 September 1888", "url": "https://vangoghletters.org/vg/letters/let674/letter.html", "note": "Plans for furnishing his home and studio and accommodating other artists."},
-        {"title": "Van Gogh Museum — Gallery Texts for the Permanent Collection", "url": "https://assets.vangoghmuseum.nl/5cda37ee-857c-4b93-b71c-aa5f616b9900?id=f2357819-1690-4160-b225-f87288965957", "note": "See Artistic Flourishing and the discussions of The Bedroom, The Harvest and Sunflowers. PDF."}
+        {
+          "title": "Van Gogh Museum — Vincent van Gogh in the South of France",
+          "url": "https://www.vangoghmuseum.nl/en/art-and-stories/vincents-life-1853-1890/vincent-van-gogh-in-the-south-of-france",
+          "note": "Arles, the Yellow House and plans for a studio in the south."
+        },
+        {
+          "title": "Letter 674 · To Theo · 4 September 1888",
+          "url": "https://vangoghletters.org/vg/letters/let674/letter.html",
+          "note": "Plans for furnishing his home and studio and accommodating other artists."
+        },
+        {
+          "title": "Van Gogh Museum — Gallery Texts for the Permanent Collection",
+          "url": "https://assets.vangoghmuseum.nl/5cda37ee-857c-4b93-b71c-aa5f616b9900?id=f2357819-1690-4160-b225-f87288965957",
+          "note": "See Artistic Flourishing and the discussions of The Bedroom, The Harvest and Sunflowers. PDF."
+        }
       ],
-      "wall": {"width": 3.8, "height": 3.55, "centerHeight": 2.65, "position": [-20, 2.65, -29.83], "normal": [0, 0, -1], "viewDistance": 6, "wing": {"position": [-20, 2.6, -29.7], "width": 4.5, "height": 5.2, "depth": 0.18}}
+      "tourLead": "In Arles, painting and plans for a shared home take shape together.",
+      "wall": {
+        "width": 4.6,
+        "height": 2.7,
+        "centerHeight": 2.5,
+        "viewDistance": 6.4,
+        "path": {
+          "points": [
+            [
+              -37,
+              -38.16
+            ],
+            [
+              -37,
+              -42.3
+            ],
+            [
+              -31.64534,
+              -43.34929
+            ],
+            [
+              -27.9398880005,
+              -44.8517227173
+            ]
+          ],
+          "at": 0.78,
+          "inset": 0.12,
+          "side": 1
+        }
+      }
     },
     {
-      "id": "05", "kind": "hall", "chapter": "05", "title": "Companionship and Crisis", "years": "1888–1889",
+      "id": "05",
+      "kind": "hall",
+      "chapter": "05",
+      "title": "Companionship and Crisis",
+      "years": "1888–1889",
       "paragraphs": [
         "Gauguin arrived in Arles in October 1888. The Yellow House became a shared household and workplace. The two artists painted, discussed their methods and made portraits of people around them.",
         "Living together brought their different expectations into daily contact. Tensions developed, and their collaboration ended during the crisis of December. Vincent received hospital care and returned to painting as his condition allowed.",
@@ -76,15 +250,50 @@
         "Take time with the aftermath. Correspondence continued, practical questions needed attention, and Vincent considered where he could live and work with support."
       ],
       "sources": [
-        {"title": "Letter 716 · Vincent van Gogh and Paul Gauguin to Émile Bernard · 1 or 2 November 1888", "url": "https://vangoghletters.org/vg/letters/let716/letter.html", "note": "A letter written jointly during their collaboration."},
-        {"title": "Van Gogh Museum — Vincent’s Illness and the Healing Power of Art", "url": "https://www.vangoghmuseum.nl/en/art-and-stories/vincents-life-1853-1890/vincents-illness-and-the-healing-power-of-art", "note": "Disagreements, the ear injury, hospital care, visits and the return to painting."},
-        {"title": "Van Gogh Museum — Vincent van Gogh in the South of France", "url": "https://www.vangoghmuseum.nl/en/art-and-stories/vincents-life-1853-1890/vincent-van-gogh-in-the-south-of-france", "note": "Events after the collaboration and before his admission in 1889."}
+        {
+          "title": "Letter 716 · Vincent van Gogh and Paul Gauguin to Émile Bernard · 1 or 2 November 1888",
+          "url": "https://vangoghletters.org/vg/letters/let716/letter.html",
+          "note": "A letter written jointly during their collaboration."
+        },
+        {
+          "title": "Van Gogh Museum — Vincent’s Illness and the Healing Power of Art",
+          "url": "https://www.vangoghmuseum.nl/en/art-and-stories/stories/vincents-illness-and-the-healing-power-of-art",
+          "note": "Disagreements, the ear injury, hospital care, visits and the return to painting."
+        },
+        {
+          "title": "Van Gogh Museum — Vincent van Gogh in the South of France",
+          "url": "https://www.vangoghmuseum.nl/en/art-and-stories/vincents-life-1853-1890/vincent-van-gogh-in-the-south-of-france",
+          "note": "Events after the collaboration and before his admission in 1889."
+        }
       ],
       "researchNote": "These sources support the basic chronology. Alternative accounts of the ear injury need a separate evidence record naming their proponents, supporting material and objections; this introduction does not claim to resolve that debate.",
-      "wall": {"width": 3.9, "height": 3.55, "centerHeight": 2.65, "theme": "dark", "curve": {"center": [27, -37], "radii": [14, 15], "angle": 150, "inset": 0.1}, "viewDistance": 6}
+      "tourLead": "The Yellow House becomes a shared workplace. Companionship, disagreement and crisis enter the story.",
+      "wall": {
+        "width": 3.5,
+        "height": 2.7,
+        "centerHeight": 2.5,
+        "theme": "dark",
+        "curve": {
+          "center": [
+            27,
+            -37
+          ],
+          "radii": [
+            14,
+            15
+          ],
+          "angle": 240,
+          "inset": 0.1
+        },
+        "viewDistance": 6
+      }
     },
     {
-      "id": "06", "kind": "hall", "chapter": "06", "title": "Saint-Rémy: Inner Skies", "years": "1889–1890",
+      "id": "06",
+      "kind": "hall",
+      "chapter": "06",
+      "title": "Saint-Rémy: Inner Skies",
+      "years": "1889–1890",
       "paragraphs": [
         "In May 1889, Vincent entered Saint-Paul-de-Mausole in Saint-Rémy. His daily surroundings included a room, hospital corridors, a garden and views towards the nearby countryside.",
         "When he was able to work, he gave sustained attention to these places. Irises, olive trees, cypresses and fields became subjects for painting. Prints after artists he admired offered material he could work from indoors. Episodes of illness interrupted this activity.",
@@ -92,34 +301,166 @@
         "His letters record concerns about his health alongside decisions about pictures, colours and future plans. Painting remained an important part of his days."
       ],
       "sources": [
-        {"title": "Van Gogh Museum — Vincent’s Illness and the Healing Power of Art", "url": "https://www.vangoghmuseum.nl/en/art-and-stories/vincents-life-1853-1890/vincents-illness-and-the-healing-power-of-art", "note": "Voluntary admission, working conditions, the garden and interruptions caused by illness."},
-        {"title": "Letter 776 · To Theo", "url": "https://vangoghletters.org/vg/letters/let776/letter.html", "note": "Early life at the hospital, health and the surrounding landscape. See the source for its editorial dating."},
-        {"title": "Letter 805 · To Theo", "url": "https://vangoghletters.org/vg/letters/let805/letter.html", "note": "Working after prints by Millet and Delacroix, colour, health and plans to move."}
+        {
+          "title": "Van Gogh Museum — Vincent’s Illness and the Healing Power of Art",
+          "url": "https://www.vangoghmuseum.nl/en/art-and-stories/stories/vincents-illness-and-the-healing-power-of-art",
+          "note": "Voluntary admission, working conditions, the garden and interruptions caused by illness."
+        },
+        {
+          "title": "Letter 776 · To Theo",
+          "url": "https://vangoghletters.org/vg/letters/let776/letter.html",
+          "note": "Early life at the hospital, health and the surrounding landscape. See the source for its editorial dating."
+        },
+        {
+          "title": "Letter 805 · To Theo",
+          "url": "https://vangoghletters.org/vg/letters/let805/letter.html",
+          "note": "Working after prints by Millet and Delacroix, colour, health and plans to move."
+        }
       ],
-      "wall": {"width": 4.4, "height": 3.55, "centerHeight": 2.65, "curve": {"center": [35, -2], "radii": [17, 23], "angle": 215, "inset": 0.1}, "viewDistance": 6.4}
+      "tourLead": "A room, a garden and the surrounding fields become a world to explore, painting by painting.",
+      "wall": {
+        "width": 3.5,
+        "height": 2.7,
+        "centerHeight": 2.5,
+        "viewDistance": 6.6,
+        "path": {
+          "points": [
+            [
+              36.89949494,
+              -26.39339828
+            ],
+            [
+              35.3,
+              -24.55
+            ],
+            [
+              39.6134,
+              -24.2845
+            ],
+            [
+              41.3683128357,
+              -23.3252277374
+            ]
+          ],
+          "at": 0.62,
+          "inset": 0.12,
+          "side": 1
+        }
+      }
     },
     {
-      "id": "07", "kind": "hall", "chapter": "07", "title": "Auvers and Afterlife", "years": "1890 Onward",
+      "id": "07",
+      "kind": "hall",
+      "chapter": "07",
+      "title": "Auvers: The Final Months",
+      "years": "May–July 1890",
       "paragraphs": [
-        "Vincent arrived in Auvers-sur-Oise in May 1890 and took a room at the Ravoux inn. He met Dr Gachet and painted the village, its inhabitants and the surrounding fields. Theo and his family were within visiting distance.",
-        "This gallery begins with the activity of those weeks. Portraits and wide landscapes show the subjects that occupied him. Documents then lead into the circumstances of his death in July and the questions later accounts have raised.",
-        "The story continues through the people who preserved and shared his work. Jo van Gogh-Bonger organised exhibitions, arranged sales and prepared his letters for publication. Their efforts helped bring the paintings into public view.",
-        "As you leave, consider the person you have encountered through these rooms, and the many hands through which his story has reached you."
+        "Vincent arrived in Auvers-sur-Oise on 20 May 1890. He took lodgings at the Ravoux inn and began exploring his surroundings through painting. In an early letter to Theo and Jo, he described studies of thatched roofs and a field of flowering peas, with wheat in the foreground. He asked for canvas or drawing paper so that he could keep working.",
+        "By early June, he was painting Dr Gachet’s portrait and making studies in the doctor’s garden. He wrote about getting up early, the materials he needed and the possibility of Theo, Jo and their young son coming to stay. There were paintings to make, supplies to arrange and people he hoped to see.",
+        "The portraits, village views and wide landscapes in this room bring us into the activity of those weeks. Across them, Vincent continued to explore colour, brushwork and the shape of the canvas. His work in Auvers forms a concentrated period of experimentation within his artistic life.",
+        "Vincent died on 29 July 1890. As you move through this gallery, follow the people and places that occupied his attention, rather than reading every painting only through the knowledge of his death.",
+        "Beyond this room, Afterlife follows the people who carried his paintings and letters into the future, and the encounters his work made possible."
       ],
       "sources": [
-        {"title": "Musée d’Orsay — Van Gogh in Auvers-sur-Oise", "url": "https://www.musee-orsay.fr/en/whats-on/exhibitions/van-gogh-auvers-sur-oise-final-months", "note": "Research on the final months, people and works."},
-        {"title": "Van Gogh Route — Auvers-sur-Oise", "url": "https://www.vangoghroute.com/france/auvers-sur-oise/", "note": "The Ravoux inn, Dr Gachet and local places."},
-        {"title": "Letter 877 · To Theo · 3 June 1890", "url": "https://vangoghletters.org/vg/letters/let877/letter.html", "note": "Early work in Auvers and Dr Gachet."},
-        {"title": "Van Gogh Museum — Biography of Jo van Gogh-Bonger", "url": "https://www.vangoghmuseum.nl/en/research/research-projects/research-project-biography-of-jo-van-gogh-bonger", "note": "Research on preserving and promoting the work and preparing the letters."},
-        {"title": "Vincent van Gogh: The Letters — Publication History", "url": "https://vangoghletters.org/vg/pubhistory.html", "note": "The publication and dissemination of the letters and Jo’s work."}
+        {
+          "title": "Musée d’Orsay — Van Gogh in Auvers-sur-Oise",
+          "url": "https://www.musee-orsay.fr/en/whats-on/exhibitions/van-gogh-auvers-sur-oise-final-months",
+          "note": "Research on the final months, people and works."
+        },
+        {
+          "title": "Van Gogh Route — Auvers-sur-Oise",
+          "url": "https://www.vangoghroute.com/france/auvers-sur-oise/",
+          "note": "The Ravoux inn, Dr Gachet and local places."
+        },
+        {
+        "title": "Letter 874 · To Theo and Jo · On or about 21 May 1890",
+        "url": "https://vangoghletters.org/vg/letters/let874/letter.html",
+        "note": "His new address, thatched roofs, flowering peas and wheat, and a request for canvas or drawing paper."
+      },
+      {
+          "title": "Letter 877 · To Theo · 3 June 1890",
+          "url": "https://vangoghletters.org/vg/letters/let877/letter.html",
+        "note": "Dr Gachet’s portrait, studies in his garden, working materials and the hope of a visit from Theo’s family."
+        }
       ],
-      "researchNote": "These sources principally support life in Auvers and the work’s later dissemination. Accounts of his death require a separate source table distinguishing contemporary records, later recollections and modern hypotheses.",
-      "wall": {"width": 4.5, "height": 3.55, "centerHeight": 2.65, "position": [23.7, 2.65, 18.1], "normal": [0.04282, 0, 0.99908], "viewDistance": 6}
+      "tourLead": "Vincent arrives in a village near Paris and begins to work. Faces, gardens and open fields fill his canvases. His letters carry plans for paintings and visits, alongside concerns about health and the future. Follow these weeks through the work and the words he leaves behind.",
+      "wall": {
+        "width": 4.8,
+        "height": 3.5,
+        "centerHeight": 2.5,
+        "viewDistance": 8.1,
+        "position": [
+          30,
+          2.5,
+          18.22
+        ],
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "08",
+      "kind": "hall",
+      "chapter": "08",
+      "title": "Afterlife",
+      "years": "1890 onward",
+      "subtitle": "What His Work Set in Motion",
+      "tourLead": "Vincent’s paintings and letters passed into the care of others. Through exhibitions and publication, they reached new audiences. Artists explored their possibilities; musicians and filmmakers responded in their own forms. This gallery follows those encounters and invites you to consider your own.",
+      "paragraphs": [
+        "Vincent’s paintings and letters passed into the care of others. Through exhibitions and publication, they reached new audiences. Artists explored their possibilities; musicians and filmmakers responded in their own forms. This gallery follows those encounters and invites you to consider your own.",
+        "Begin with the people who cared for the collection. Jo van Gogh-Bonger’s exhibition and editorial work, and Vincent Willem’s later stewardship, helped paintings and letters reach future viewers. The surviving photographs, catalogues and books let you follow that work through particular objects.",
+        "Then follow a museum-curated connection to later painting, a song by Don McLean and an imagined encounter in Akira Kurosawa’s cinema. These are responses to Vincent’s work, not new evidence about his life. A named viewer’s account opens the final section before you are invited to leave a reflection of your own."
+      ],
+      "sources": [
+        { "title": "Van Gogh Museum · After Vincent’s Death", "url": "https://www.vangoghmuseum.nl/en/art-and-stories/vincents-life-1853-1890/after-vincents-death", "note": "The family collection, Jo’s work, publication of the letters and the museum." },
+        { "title": "Van Gogh Museum · Biography of Jo van Gogh-Bonger", "url": "https://www.vangoghmuseum.nl/en/about/knowledge-and-research/completed-research-projects/research-project-biography-of-jo-van-gogh-bonger", "note": "Research into Jo’s exhibition, sales and editorial work." },
+        { "title": "Vincent van Gogh: The Letters · Publication History", "url": "https://vangoghletters.org/vg/pubhistory.html", "note": "The changing editions and dissemination of the correspondence." },
+        { "title": "Van Gogh Museum · Van Gogh Inspires Matisse, Kirchner, Kandinsky", "url": "https://www.vangoghmuseum.nl/en/about/news-and-press/press-releases/van-gogh-inspires-matisse-kirchner-kandinsky", "note": "Museum-curated connections to expressive colour and form in later painting." },
+        { "title": "Don McLean · Vincent composition manuscript", "url": "https://www.donmclean.com/don-mclean-to-have-rare-items-on-display-in-country-music-hall-of-fame-and-museum/", "note": "The musician’s official account identifies the song as a tribute and dates its composition to 1970." },
+        { "title": "Criterion · Akira Kurosawa’s Dreams", "url": "https://www.criterion.com/films/28700-akira-kurosawas-dreams", "note": "The 1990 film and its imaginative tribute to Van Gogh." },
+        { "title": "MoMA · The Starry Night · Sheldon A. Clarke", "url": "https://www.moma.org/collection/works/79802#artwork-articles", "note": "A named security officer’s personal response, presented separately from biography." }
+      ],
+      "wall": {
+        "exhibit": "afterlife",
+        "width": 14.4,
+        "height": 2.9,
+        "centerHeight": 6.35,
+        "viewDistance": 11.5,
+        "position": [69.89, 6.35, 40],
+        "normal": [-1, 0, 0]
+      }
     }
   ],
   "departure": {
-    "id": "departure", "kind": "statement", "chapter": "07", "label": "As you leave",
-    "paragraphs": ["We know who he became.", "As you leave, ask what you have come to know of the person."],
-    "wall": {"width": 3.8, "height": 2.65, "centerHeight": 2.55, "position": [10.43, 2.55, 42.81], "normal": [0.93449, 0, -0.35599], "viewDistance": 6.4}
-  }
+    "id": "departure",
+    "kind": "statement",
+    "chapter": "08",
+    "label": "As You Leave",
+    "paragraphs": [
+      "We know who he became.",
+      "As you leave, what stays with you",
+      "from Vincent’s life?"
+    ],
+    "wall": {
+      "width": 5.9,
+      "height": 3.15,
+      "centerHeight": 3,
+      "align": "center",
+      "position": [
+        49.25,
+        3,
+        34.6
+      ],
+      "normal": [
+        1,
+        0,
+        0
+      ],
+      "viewDistance": 7.5
+    }
+  },
+  "layoutRevision": "2026-10-05-afterlife-gallery"
 }

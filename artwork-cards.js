@@ -1,15 +1,33 @@
+import { currentLanguage, onLanguageChange } from './i18n.js';
+
+function validateNarrative(narrative, id) {
+  if (!narrative.body || !narrative.evidence || narrative.stories?.length !== 3) throw new Error(`Incomplete artwork story: ${id}`);
+  for (const chapter of narrative.stories) {
+    if (!chapter.title || !chapter.body || !chapter.tag || !chapter.prompt || !chapter.sources?.length) throw new Error(`Incomplete story chapter: ${id}`);
+  }
+  for (const source of [...narrative.sources, ...narrative.stories.flatMap((chapter) => chapter.sources)]) {
+    if (!source.label || new URL(source.url).protocol !== 'https:') throw new Error(`Invalid artwork source: ${id}`);
+  }
+}
+
 export function validateArtworkCards(data, collection) {
   if (!data?.cards || !data.version) throw new Error('Missing authored artwork cards');
   for (const [id, card] of Object.entries(data.cards)) {
     const work = collection.works[id];
     if (!work || work.body !== card.body || work.title !== card.title || work.date !== card.date) throw new Error(`Artwork label and collection disagree: ${id}`);
-    if (!card.body || !card.evidence || card.stories?.length !== 3) throw new Error(`Incomplete artwork story: ${id}`);
+    validateNarrative(card, id);
     if (/[\u3400-\u9fff]/u.test(JSON.stringify(card))) throw new Error(`Artwork copy must be English: ${id}`);
-    for (const chapter of card.stories) {
-      if (!chapter.title || !chapter.body || !chapter.tag || !chapter.prompt || !chapter.sources.length) throw new Error(`Incomplete story chapter: ${id}`);
-    }
-    for (const source of [...card.sources, ...card.stories.flatMap((chapter) => chapter.sources), ...(card.quote ? [card.quote.source] : [])]) {
-      if (!source.label || new URL(source.url).protocol !== 'https:') throw new Error(`Invalid artwork source: ${id}`);
+    if (card.quote && (!card.quote.source.label || new URL(card.quote.source.url).protocol !== 'https:')) throw new Error(`Invalid artwork quotation source: ${id}`);
+    if (card.seriesReading) {
+      const series = card.seriesReading;
+      if (!series.title) throw new Error(`Missing series title: ${id}`);
+      validateNarrative(series, `${id}:series`);
+      if (series.arrangement) {
+        const arrangement = series.arrangement;
+        if (arrangement.ids?.length !== 3 || new Set(arrangement.ids).size !== 3 || !arrangement.ids.includes(id) || !arrangement.label || !arrangement.note || !arrangement.sources?.length) throw new Error(`Incomplete series arrangement: ${id}`);
+        for (const workId of arrangement.ids) if (!collection.works[workId]?.image) throw new Error(`Missing series arrangement image: ${workId}`);
+        for (const source of arrangement.sources) if (!source.label || new URL(source.url).protocol !== 'https:') throw new Error(`Invalid series arrangement source: ${id}`);
+      }
     }
     for (const related of card.related) {
       if (!collection.works[related.id] || !['read', 'visit', 'compare'].includes(related.mode)) throw new Error(`Invalid related artwork: ${id}`);
@@ -53,7 +71,7 @@ function showQuote(container, quote) {
   container.append(textElement('p', quote.text), textElement('cite', quote.attribution));
 }
 
-export function createArtworkCards({ onExplore, onVisit, onArtworkChange = () => {} }) {
+export function createArtworkCards({ onExplore, onVisit, onArtworkChange = () => {}, storyConnection = () => null, onStory = () => {} }) {
   const select = (id) => document.getElementById(id);
   const dialog = select('art-immersive');
   const figure = dialog.querySelector('.immersive-figure');
@@ -65,6 +83,8 @@ export function createArtworkCards({ onExplore, onVisit, onArtworkChange = () =>
   const image = select('immersive-image');
   const imageStage = select('artwork-image-stage');
   const comparison = select('artwork-comparison');
+  const comparisonDetails = select('artwork-comparison-details');
+  const comparisonCredits = select('artwork-comparison-credits');
   const zoomButton = select('artwork-zoom');
   const back = select('artwork-reader-back');
   const surrounds = select('artwork-surround');
@@ -82,6 +102,12 @@ export function createArtworkCards({ onExplore, onVisit, onArtworkChange = () =>
     return data.cards[active?.collectionId ?? active?.id];
   }
 
+  function updateLanguageNotice() {
+    select('artwork-language-note').hidden = currentLanguage() !== 'zh' || !currentCard();
+  }
+
+  onLanguageChange(updateLanguageNotice);
+
   function setSurround(surround) {
     figure.dataset.surround = surround;
     for (const button of select('artwork-surround-options').children) button.setAttribute('aria-pressed', String(button.dataset.surround === surround));
@@ -96,6 +122,10 @@ export function createArtworkCards({ onExplore, onVisit, onArtworkChange = () =>
     imageStage.hidden = false;
     comparison.hidden = true;
     comparison.replaceChildren();
+    delete comparison.dataset.layout;
+    comparisonDetails.hidden = true;
+    comparisonDetails.open = false;
+    comparisonCredits.replaceChildren();
     select('immersive-caption').textContent = active?.title ?? '';
     surrounds.hidden = true;
     zoomButton.hidden = false;
@@ -134,12 +164,13 @@ export function createArtworkCards({ onExplore, onVisit, onArtworkChange = () =>
   }
 
   function renderDetails(card, entry) {
+    renderSeries(card?.seriesReading);
     const details = select('artwork-details');
     details.hidden = !card;
     details.open = false;
     if (!card) return;
     const fields = [
-      ['Artist', 'Vincent van Gogh'], ['Title', card.title], ['Place & Date', [card.location, card.date].filter(Boolean).join(', ')],
+      ['Artist', 'Vincent van Gogh'], ['Title', card.title], ['Catalogue Title', card.catalogueTitle !== card.title ? card.catalogueTitle : null], ['Place & Date', [card.location, card.date].filter(Boolean).join(', ')],
       ['Medium', card.medium], ['Dimensions', card.dimensions], ['Collection', card.institution],
       ['Collection Credit', card.collectionCredit], ['Object Number', card.museumId],
       ['Catalogue Numbers', [card.fNumber, card.jhNumber].filter(Boolean).join(' / ')],
@@ -160,6 +191,76 @@ export function createArtworkCards({ onExplore, onVisit, onArtworkChange = () =>
     sourceLinks(select('artwork-sources'), sources);
   }
 
+  function renderSeries(series) {
+    const reading = select('artwork-series-reading');
+    reading.hidden = !series;
+    reading.open = false;
+    reading.replaceChildren();
+    if (!series) return;
+    reading.append(textElement('summary', `Explore ${series.title}`), textElement('h3', series.labelTitle), textElement('p', series.body, 'immersive-body'));
+    if (series.arrangement) {
+      const button = textElement('button', `${series.arrangement.label} ↔`, 'artwork-action');
+      button.type = 'button';
+      button.addEventListener('click', () => {
+        if (comparedId === 'series-arrangement') return resetImage();
+        resetImage();
+        comparedId = 'series-arrangement';
+        comparison.dataset.layout = 'triptych';
+        showComparison(series.arrangement.ids.map((id) => collection.works[id]), series.arrangement.note);
+      });
+      const links = document.createElement('div');
+      sourceLinks(links, series.arrangement.sources);
+      reading.append(button, textElement('p', series.arrangement.note, 'artwork-evidence'), links);
+    }
+    for (const [index, chapter] of series.stories.entries()) {
+      const panel = document.createElement('details');
+      panel.className = 'artwork-series-chapter';
+      const prompt = document.createElement('div');
+      prompt.className = 'artwork-looking-prompt';
+      prompt.append(textElement('span', 'LOOKING PROMPT', 'eyebrow'), textElement('p', chapter.prompt));
+      const links = document.createElement('div');
+      sourceLinks(links, chapter.sources);
+      panel.append(textElement('summary', `${String(index + 1).padStart(2, '0')} · ${chapter.title}`), textElement('span', chapter.tag, 'artwork-story-tag'), textElement('p', chapter.body, 'immersive-body'), prompt);
+      if (chapter.note) panel.append(textElement('p', chapter.note, 'artwork-evidence'));
+      panel.append(links);
+      reading.append(panel);
+    }
+    const links = document.createElement('div');
+    sourceLinks(links, series.sources);
+    reading.append(textElement('h3', 'Evidence & Interpretation'), textElement('p', series.evidence, 'artwork-evidence'), textElement('h3', 'Series Sources'), links);
+  }
+
+  function showComparison(entries, caption) {
+    comparisonCredits.append(textElement('p', caption, 'artwork-evidence'));
+    for (const [index, entry] of entries.entries()) {
+      const frame = document.createElement('figure');
+      const imagePane = textElement('div', '', 'artwork-comparison-image');
+      const artwork = document.createElement('img');
+      artwork.src = entry.image;
+      artwork.alt = entry.title;
+      imagePane.append(artwork);
+      const label = textElement('figcaption', entry.title);
+      label.title = entry.title;
+      const credit = textElement('article', '', 'artwork-comparison-credit');
+      credit.append(textElement('h4', `${String(index + 1).padStart(2, '0')} · ${entry.title}`));
+      credit.append(textElement('p', `${entry.institution ?? ''} · ${entry.museumId ?? entry.fNumber ?? ''}`));
+      credit.append(textElement('small', entry.credit ?? ''));
+      const source = textElement('a', 'Image and rights record ↗');
+      source.href = entry.imageSource ?? entry.source;
+      source.target = '_blank';
+      source.rel = 'noopener noreferrer';
+      credit.append(source);
+      comparisonCredits.append(credit);
+      frame.append(imagePane, label);
+      comparison.append(frame);
+    }
+    imageStage.hidden = true;
+    comparison.hidden = false;
+    comparisonDetails.hidden = false;
+    zoomButton.hidden = true;
+    select('immersive-caption').textContent = comparison.dataset.layout === 'triptych' ? 'Illustrative proposal · Not a historical installation · Not to scale' : caption;
+  }
+
   function compareWith(id) {
     if (comparedId === id) {
       resetImage();
@@ -167,19 +268,7 @@ export function createArtworkCards({ onExplore, onVisit, onArtworkChange = () =>
     }
     resetImage();
     comparedId = id;
-    const other = collection.works[id];
-    for (const entry of [active, other]) {
-      const frame = document.createElement('figure');
-      const artwork = document.createElement('img');
-      artwork.src = entry.image;
-      artwork.alt = entry.title;
-      frame.append(artwork, textElement('figcaption', `${entry.title} · ${entry.museumId ?? entry.fNumber ?? ''}`));
-      comparison.append(frame);
-    }
-    imageStage.hidden = true;
-    comparison.hidden = false;
-    zoomButton.hidden = true;
-    select('immersive-caption').textContent = 'Two distinct works · Images fitted for comparison, not shown at physical scale';
+    showComparison([active, collection.works[id]], 'Two distinct works · Images fitted for comparison, not shown at physical scale');
   }
 
   function renderRelated(card) {
@@ -205,6 +294,7 @@ export function createArtworkCards({ onExplore, onVisit, onArtworkChange = () =>
     chapterIndex = initialChapter;
     const card = currentCard();
     resetImage();
+    updateLanguageNotice();
     const chapter = chapters.find((item) => item.id === entry.hall);
     image.src = entry.image;
     image.alt = entry.title;
@@ -231,6 +321,13 @@ export function createArtworkCards({ onExplore, onVisit, onArtworkChange = () =>
     setStoryOpen(storyFirst);
     renderDetails(card, entry);
     renderRelated(card);
+    const connection = storyConnection(entry.collectionId ?? entry.id);
+    const storyLink = select('artwork-yellow-house');
+    storyLink.hidden = !connection;
+    if (connection) {
+      select('artwork-yellow-house-label').textContent = connection.label;
+      select('artwork-yellow-house-open').onclick = () => onStory(connection.chapterId);
+    }
     back.hidden = !history.length;
     back.textContent = history.length ? `← Back to ${history.at(-1).entry.title}` : '';
     content.scrollTop = 0;

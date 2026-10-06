@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vincent van Gogh · A Life Through Art</title>
-  <link rel="stylesheet" href="./style.css?v=2026-10-03-immersive-navigation">
+  <link rel="stylesheet" href="./style.css?v=2026-10-06-visitor-guidance">
   <script type="importmap">
     {
       "imports": {
@@ -20,10 +20,15 @@
     <div class="masthead">
       <span class="eyebrow">VINCENT VAN GOGH · INTERACTIVE STUDY</span>
       <strong>A Life Through Art</strong>
-      <span id="exhibit-status" class="disclaimer">Loading seven chapters…</span>
+      <span id="exhibit-status" class="disclaimer">Loading the exhibition…</span>
     </div>
-    <button id="catalog-toggle" class="catalog-toggle" type="button" aria-controls="catalogue" aria-expanded="false">Seven Halls · Catalogue</button>
-    <aside id="catalogue" class="catalogue" aria-label="Seven-hall catalogue" aria-hidden="true" inert>
+    <button id="catalog-toggle" class="catalog-toggle" type="button" aria-controls="catalogue" aria-expanded="false">Eight Halls · Catalogue</button>
+    <div id="language-switch" class="language-switch" role="group" aria-label="Choose language" translate="no">
+      <button type="button" data-language="en" lang="en" aria-pressed="true" aria-label="English">EN</button>
+      <span aria-hidden="true">/</span>
+      <button type="button" data-language="zh" lang="zh-CN" aria-pressed="false" aria-label="简体中文">中文</button>
+    </div>
+    <aside id="catalogue" class="catalogue" aria-label="Eight-hall catalogue" aria-hidden="true" inert>
       <header class="catalog-header">
         <span class="eyebrow">CHAPTERS &amp; WORKS</span>
         <button id="catalog-close" class="close" type="button" aria-label="Close catalogue">×</button>
@@ -48,17 +53,31 @@
       <span id="wall-status" role="status"></span>
     </section>
     <div class="toolbar">
+      <section id="visit-hint" class="visit-hint" aria-label="A tip for your visit" hidden>
+        <div aria-live="polite"><span id="visit-hint-label" class="eyebrow"></span><strong id="visit-hint-title"></strong><p id="visit-hint-text"></p></div>
+        <button id="visit-hint-dismiss" type="button" aria-label="Dismiss this tip" title="Got it">×</button>
+      </section>
+      <div class="gallery-navigation" role="group" aria-label="Your place in the gallery">
       <button id="previous-artwork" type="button" disabled>← Previous</button>
       <span id="guide-position" aria-live="polite">Gallery-view route · Follow the left wall</span>
       <button id="next-artwork" type="button" disabled>Next →</button>
-      <button id="story-go" type="button" aria-pressed="false" disabled>Early life</button>
       <button id="hall-intro-toggle" type="button" aria-haspopup="dialog" aria-controls="hall-reader" disabled>Room introduction</button>
-      <button id="reset-view" type="button" disabled>Reset view</button>
+      <button id="reset-view" class="toolbar-icon" type="button" aria-label="Reset view" title="Reset view" disabled><span aria-hidden="true">↺</span></button>
+      <button id="visit-help-toggle" class="toolbar-icon" type="button" aria-label="How to explore" title="How to explore" aria-haspopup="dialog" aria-controls="visit-help" aria-expanded="false" disabled>?</button>
+      </div>
+      <div class="story-shortcuts" role="group" aria-label="Explore the stories" aria-describedby="story-shortcuts-note">
+        <span class="toolbar-kicker">Stories</span>
+        <button id="story-go" type="button" aria-pressed="false" title="Early life · London, faith, the miners and learning to draw" disabled>Early life</button>
+        <button id="yellow-house-go" type="button" aria-haspopup="dialog" aria-controls="yellow-house-reader" title="The Yellow House · Vincent and Gauguin in Arles" disabled>The Yellow House</button>
+        <button id="afterlife-go" type="button" aria-pressed="false" aria-controls="afterlife-stop-controls" title="Afterlife · Who carried his work forward?" disabled>Afterlife</button>
+        <span id="story-shortcuts-note">Read at your own pace · Return to the gallery anytime</span>
+      </div>
       <div class="tour-controls">
+        <span class="toolbar-kicker">Tour</span>
         <label for="tour-mode">Choose tour mode</label>
         <select id="tour-mode" aria-label="Choose tour mode" disabled>
-          <option value="highlights">Highlights · 90 seconds</option>
-          <option value="collection">Full collection · 365 works</option>
+          <option value="highlights">Highlights · 3 minutes</option>
+          <option value="collection">Full collection · 366 works</option>
         </select>
         <label for="tour-hold">Viewing time per artwork</label>
         <select id="tour-hold" aria-label="Viewing time per artwork" hidden>
@@ -66,14 +85,59 @@
           <option value="8" selected>8s per work</option>
           <option value="12">12s per work</option>
         </select>
-        <button id="tour-toggle" type="button" disabled>Play 90-second tour</button>
+        <button id="tour-toggle" type="button" disabled>Play 180-second tour</button>
         <label for="tour-progress">Tour progress</label>
-        <input id="tour-progress" type="range" min="0" max="90" value="0" step="0.1" aria-label="Tour progress in seconds">
-        <span id="tour-time">00:00 / 01:30</span>
+        <input id="tour-progress" type="range" min="0" max="180" value="0" step="0.1" aria-label="Tour progress in seconds">
+        <span id="tour-time">00:00 / 03:00</span>
       </div>
       <span id="tour-status" class="tour-status" hidden></span>
     </div>
-    <div class="tip">Scroll / pinch to move closer or farther · Drag to look · Follow the left wall · ←/→ browse works · Click for artwork + story · W/A/S/D to walk</div>
+    <div class="tip">Drag to look · Scroll / pinch to move · Click a painting for its story · ? for help</div>
+    <section id="visit-welcome" class="visit-welcome" aria-labelledby="visit-welcome-title" aria-describedby="visit-welcome-text" hidden>
+      <button id="visit-welcome-close" type="button" aria-label="Skip this guide">×</button>
+      <span class="eyebrow">START HERE</span>
+      <h2 id="visit-welcome-title">How would you like to explore?</h2>
+      <p id="visit-welcome-text">Let the tour lead you, or take your time with the artworks and stories.</p>
+      <div class="visit-welcome-actions">
+        <button type="button" data-visit-action="tour">Start the 3-minute tour →</button>
+        <button type="button" data-visit-action="free">Explore freely</button>
+      </div>
+      <p class="visit-welcome-note">Early life, The Yellow House and Afterlife stay available below. Open ? anytime for a quick guide.</p>
+    </section>
+    <dialog id="visit-help" class="visit-help" aria-labelledby="visit-help-title">
+      <header><div><span class="eyebrow">A GUIDE TO YOUR VISIT</span><h2 id="visit-help-title">There is more than one way in.</h2></div><button id="visit-help-close" type="button" aria-label="Close the visitor guide">×</button></header>
+      <div class="visit-help-body">
+        <ol class="visit-help-steps">
+          <li><span>01</span><div><h3>Let the tour lead you</h3><p>Choose Highlights for a 3-minute visit through the halls. Full collection visits every verified work. Use Pause at any time; click a painting to stop and look closer.</p></div></li>
+          <li><span>02</span><div><h3>Look closer at a work</h3><p>Click a painting to enlarge it and read its story. Previous and Next inside the viewer move between works. Close it to return to the same place.</p></div></li>
+          <li><span>03</span><div><h3>Follow the person behind the paintings</h3><p>The story buttons stay visible below. They are optional reading paths, not steps you have to complete in order.</p></div></li>
+        </ol>
+        <dl class="visit-help-stories">
+          <div><dt>Early life</dt><dd>London, faith, the miners and learning to draw.</dd></div>
+          <div><dt>The Yellow House</dt><dd>Vincent and Gauguin: a shared studio, friendship and tension in Arles.</dd></div>
+          <div><dt>Afterlife</dt><dd>Who preserved his work, and how it reached later generations.</dd></div>
+        </dl>
+        <p class="visit-help-movement">To explore freely: drag to look, scroll or pinch to move, or use W/A/S/D to walk. The arrow buttons follow the works; Eight Halls · Catalogue lets you choose a destination. Use Room introduction to read each hall’s opening story.</p>
+      </div>
+      <footer><button type="button" data-visit-action="tour">Start the 3-minute tour →</button><button type="button" data-visit-action="free">Explore freely</button></footer>
+    </dialog>
+    <section id="afterlife-stop-controls" class="afterlife-stop-controls" aria-label="Afterlife epilogue gallery" hidden>
+      <span class="eyebrow">HALL 08 · 1890 ONWARD</span>
+      <strong id="afterlife-stop-title">Afterlife</strong>
+      <p id="afterlife-stop-note">Who carried Vincent’s work forward?</p>
+      <div>
+        <button id="afterlife-read" type="button" aria-haspopup="dialog" aria-controls="afterlife-reader">Follow the Story →</button>
+        <button id="afterlife-wall-overview" type="button">Gallery overview</button>
+        <button id="afterlife-wall-sources" type="button">Sources &amp; Images</button>
+        <button id="afterlife-wall-exit" type="button">Closing reflection →</button>
+      </div>
+    </section>
+    <section id="afterlife-invitation" class="afterlife-invitation" aria-label="Continue beyond the artworks" hidden>
+      <span class="eyebrow">THE STORY CONTINUES · 1890 ONWARD</span>
+      <strong>Who carried Vincent’s work forward?</strong>
+      <button id="afterlife-continue" type="button">Enter Afterlife →</button>
+      <button id="afterlife-dismiss" type="button" aria-label="Dismiss Afterlife invitation">×</button>
+    </section>
     <div id="story-stop-controls" class="story-stop-controls" hidden>
       <span>Hall 01 · After the opening film</span>
       <button id="story-explore" type="button">Searching for a Place</button>
@@ -92,12 +156,27 @@
           <div><span class="eyebrow">HALL 01 · OPENING FILM</span><h2 id="film-player-title">The Early Years</h2></div>
           <button id="film-close" type="button" aria-label="Close film and return to the gallery">× <span>Back to gallery</span></button>
         </header>
-        <video id="opening-film" preload="metadata" playsinline controls aria-label="Opening film"></video>
+        <video id="opening-film" preload="metadata" controls playsinline aria-label="Opening film"></video>
+        <div class="film-seek-controls" role="group" aria-label="Film controls" hidden>
+          <button id="film-player-toggle" type="button" aria-label="Pause opening film" title="Pause" data-playing="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path class="icon-play" d="M8 5v14l11-7z"/><path class="icon-pause" d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+          </button>
+          <label class="film-seek-label" for="film-seek">Film progress</label>
+          <input id="film-seek" type="range" min="0" max="0" step="0.1" value="0" aria-label="Film progress in seconds">
+          <span id="film-seek-time" aria-live="off">00:00 / 00:00</span>
+          <button id="film-player-mute" type="button" aria-label="Mute opening film" title="Mute" data-muted="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9z"/><g class="icon-sound" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M16 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></g><path class="icon-silent" d="m16 9 5 6m0-6-5 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </button>
+          <button id="film-player-fullscreen" type="button" aria-label="Full screen" title="Full screen" data-expanded="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path class="icon-expand" d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/><path class="icon-contract" d="M4 9h5V4m6 0v5h5M9 20v-5H4m16 0h-5v5"/></svg>
+          </button>
+        </div>
         <footer class="film-player-footer">
           <span id="film-player-status" role="status">Loading opening film…</span>
         <p id="film-complete" hidden>Continue through the lives, places and decisions behind the early drawings.</p>
         <div class="film-player-actions">
           <button id="film-replay" type="button">Play opening film</button>
+          <button id="film-tour" type="button">Start the 3-minute tour →</button>
           <button id="film-explore" type="button">Explore His Early Life</button>
           <button id="film-works" type="button">View the Early Works</button>
           </div>
@@ -140,6 +219,7 @@
           <h2 id="immersive-title"></h2>
           <p id="immersive-date" class="immersive-date"></p>
           <div class="immersive-rule"></div>
+          <p id="artwork-language-note" class="artwork-language-note" hidden>The main labels are available in Chinese. Detailed artwork stories and some source notes currently retain the English original.</p>
           <button id="artwork-explore" class="artwork-action" type="button" aria-expanded="false" aria-controls="artwork-story-reader" hidden>Explore the Story →</button>
           <div id="artwork-overview">
             <h3 id="artwork-label-title" class="artwork-label-title" hidden></h3>
@@ -166,6 +246,16 @@
             </div>
           </section>
           <div id="artwork-related" class="artwork-related" hidden></div>
+          <section id="artwork-yellow-house" class="artwork-yellow-house" hidden>
+            <span class="eyebrow">THE YELLOW HOUSE · FOLLOW THE LIFE BEHIND THE WORK</span>
+            <h3 id="artwork-yellow-house-label"></h3>
+            <button id="artwork-yellow-house-open" type="button">Open the Story of the Yellow House →</button>
+          </section>
+          <details id="artwork-comparison-details" class="artwork-details" hidden>
+            <summary>Comparison Details &amp; Image Credits</summary>
+            <div id="artwork-comparison-credits"></div>
+          </details>
+          <details id="artwork-series-reading" class="artwork-details artwork-series-reading" hidden></details>
           <details id="artwork-details" class="artwork-details" hidden>
             <summary>Artwork Details &amp; Sources ↗</summary>
             <dl id="artwork-detail-fields"></dl>
@@ -196,6 +286,7 @@
         <select id="hall-reader-select"></select>
         <h2 id="hall-reader-title"></h2>
         <p id="hall-reader-years"></p>
+        <p id="hall-reader-subtitle" hidden></p>
       </header>
       <div class="hall-reader-scroll">
         <div id="hall-reader-copy" class="hall-reader-copy"></div>
@@ -207,7 +298,108 @@
       </div>
       <footer class="hall-reader-footer">
         <button id="hall-reader-back" type="button">Back to gallery</button>
+        <button id="hall-reader-story" type="button" hidden>A Room for Gauguin →</button>
+        <button id="hall-reader-afterlife" type="button" hidden>Continue to Afterlife →</button>
         <button id="hall-reader-locate" type="button">View this wall →</button>
+      </footer>
+    </dialog>
+    <dialog id="yellow-house-reader" class="yellow-house-reader" aria-labelledby="yellow-house-title" aria-describedby="yellow-house-subtitle">
+      <header class="yellow-house-header">
+        <div>
+          <span id="yellow-house-eyebrow" class="eyebrow"></span>
+          <h2 id="yellow-house-title"></h2>
+          <p id="yellow-house-subtitle"></p>
+        </div>
+        <div class="yellow-house-header-actions">
+          <button id="yellow-house-sources-toggle" type="button" aria-controls="yellow-house-sources" aria-expanded="false">Sources &amp; Versions</button>
+          <button id="yellow-house-close" class="close" type="button" aria-label="Close the Yellow House story">×</button>
+        </div>
+      </header>
+      <div class="yellow-house-layout">
+        <nav id="yellow-house-chapters" class="yellow-house-chapters" aria-label="The Yellow House chapters"></nav>
+        <div id="yellow-house-scroll" class="yellow-house-scroll">
+          <article id="yellow-house-content" class="yellow-house-content"></article>
+          <section id="yellow-house-sources" class="yellow-house-sources" aria-label="Sources, versions and optional evidence" hidden></section>
+        </div>
+      </div>
+      <footer class="yellow-house-footer">
+        <button id="yellow-house-back" type="button">Back to gallery</button>
+        <div>
+          <button id="yellow-house-previous" type="button" disabled>← Previous</button>
+          <span id="yellow-house-position" aria-live="polite"></span>
+          <button id="yellow-house-next" type="button">Continue →</button>
+        </div>
+      </footer>
+    </dialog>
+    <dialog id="afterlife-reader" class="afterlife-reader" aria-labelledby="afterlife-title" aria-describedby="afterlife-subtitle">
+      <header class="afterlife-reader-header">
+        <div>
+          <span class="eyebrow">AFTERLIFE · WHAT HIS WORK SET IN MOTION</span>
+          <p id="afterlife-dates" class="afterlife-dates"></p>
+          <h2 id="afterlife-title"></h2>
+          <p id="afterlife-subtitle"></p>
+          <p id="afterlife-evidence-type" class="afterlife-evidence-type"></p>
+        </div>
+        <div class="afterlife-header-actions">
+          <button id="afterlife-overview-toggle" type="button">Four sections</button>
+          <button id="afterlife-sources-toggle" type="button" aria-controls="afterlife-sources" aria-expanded="false">Sources &amp; Versions</button>
+          <button id="afterlife-close" type="button" aria-label="Close Afterlife and return to the gallery">×</button>
+        </div>
+      </header>
+      <nav id="afterlife-chapters" class="afterlife-chapters" aria-label="Four Afterlife sections"></nav>
+      <div id="afterlife-scroll" class="afterlife-scroll">
+        <section id="afterlife-overview" aria-label="Choose an Afterlife section"></section>
+        <nav id="afterlife-stories" class="afterlife-stories" aria-label="Stories within the current section" hidden></nav>
+        <details id="afterlife-introduction" class="afterlife-introduction" hidden>
+          <summary id="afterlife-question">What happened when his work entered other lives?</summary>
+          <div id="afterlife-intro"></div>
+        </details>
+        <div id="afterlife-layout" class="afterlife-layout" hidden>
+          <figure id="afterlife-visual" class="afterlife-visual">
+            <button id="afterlife-image-zoom" class="afterlife-image-zoom" type="button" aria-pressed="false" aria-label="Enlarge the photograph or document">
+              <img id="afterlife-image" alt="">
+              <span id="afterlife-zoom-label">Enlarge image +</span>
+            </button>
+            <div id="afterlife-graphic" hidden></div>
+            <figcaption id="afterlife-caption"></figcaption>
+            <p id="afterlife-credit" class="afterlife-credit"></p>
+            <p id="afterlife-image-record"></p>
+          </figure>
+          <article class="afterlife-copy">
+            <div id="afterlife-copy"></div>
+            <div id="afterlife-people" class="afterlife-people" hidden></div>
+            <div id="afterlife-connections" class="afterlife-connections"></div>
+            <ol id="afterlife-milestones" class="afterlife-milestones" hidden></ol>
+            <aside id="afterlife-document" class="afterlife-document" hidden></aside>
+            <button id="afterlife-almond" type="button" hidden>Return to Almond Blossom →</button>
+            <button id="afterlife-artwork" type="button" hidden>Open The Starry Night →</button>
+            <form id="afterlife-visitor-form" class="afterlife-visitor-form" hidden>
+              <h3>Leave a Reflection</h3>
+              <label for="afterlife-reflection-work">A work or a moment</label>
+              <select id="afterlife-reflection-work"></select>
+              <label for="afterlife-reflection-text">What do you carry from it?</label>
+              <textarea id="afterlife-reflection-text" rows="5" maxlength="2000" required aria-describedby="afterlife-reflection-privacy" placeholder="A detail, a question, a memory…"></textarea>
+              <p id="afterlife-reflection-privacy">Saved only in this browser. Not published or sent to a server.</p>
+              <button type="submit">Save Reflection</button>
+              <p id="afterlife-reflection-status" role="status" aria-live="polite"></p>
+            </form>
+          </article>
+        </div>
+        <section id="afterlife-sources" class="afterlife-sources" hidden aria-labelledby="afterlife-sources-title">
+          <h3 id="afterlife-sources-title" tabindex="-1">Sources &amp; Versions</h3>
+          <ul id="afterlife-source-list"></ul>
+          <p id="afterlife-rights"></p>
+          <details id="afterlife-reflection" class="afterlife-reflection">
+            <summary>Remembering Vincent · Letters, Recollections &amp; Interpretation</summary>
+          </details>
+        </section>
+      </div>
+      <footer class="afterlife-reader-footer">
+        <button id="afterlife-back" type="button">View this card on the wall</button>
+        <button id="afterlife-previous" type="button">← Previous story</button>
+        <span id="afterlife-position" aria-live="polite"></span>
+        <button id="afterlife-next" type="button">Next story →</button>
+        <button id="afterlife-exit" type="button">Closing reflection</button>
       </footer>
     </dialog>
     <dialog id="gallery-entry" class="gallery-entry" aria-labelledby="entry-title">
@@ -253,6 +445,8 @@
             <p id="story-location" class="story-location"></p>
           </div>
         </header>
+        <div id="story-topic-intro" class="story-topic-intro" hidden></div>
+        <nav id="story-groups" class="story-groups" aria-label="Choose a learning stage" hidden></nav>
         <nav id="story-chapters" class="story-chapters" role="tablist" aria-label="London story chapters"></nav>
         <section id="story-chapter" class="story-layout" role="tabpanel" tabindex="0">
           <div class="story-media">
@@ -270,7 +464,9 @@
             <span id="story-kicker" class="eyebrow"></span>
             <h3 id="story-chapter-title"></h3>
             <p id="story-chapter-subtitle" class="story-chapter-subtitle"></p>
+            <p id="story-chapter-focus" class="story-chapter-focus"></p>
             <div id="story-paragraphs"></div>
+            <div id="story-household"></div>
             <nav id="story-view-tabs" class="story-view-tabs" role="tablist" aria-label="Choose a London letter" hidden></nav>
             <div id="story-view-panel" role="tabpanel" tabindex="0" hidden>
               <h4 id="story-view-title"></h4>
@@ -280,7 +476,9 @@
               <summary>Read the chapter in more detail</summary>
               <div id="story-expanded-sections"></div>
             </details>
+            <div id="story-narrative" hidden></div>
             <div id="story-quotes"></div>
+            <div id="story-assessment" class="story-assessment" hidden></div>
             <div id="story-evidence-cards" class="story-evidence-cards"></div>
             <p id="story-question" class="story-question"></p>
             <div id="story-actions" class="story-actions"></div>
@@ -330,6 +528,7 @@
     </dialog>
     <div id="error" role="alert" hidden></div>
   </main>
-  <script type="module" src="./viewer.js?v=2026-10-03-immersive-navigation"></script>
+  <script type="module" src="./viewer.js?v=2026-10-06-visitor-guidance"></script>
 </body>
 </html>
+

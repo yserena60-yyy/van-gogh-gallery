@@ -1,8 +1,9 @@
-import { validateStoryExhibit } from './story-data.js';
+import { storyChapterGroup, storySourceChapter, validateStoryExhibit } from './story-data.js?v=2026-10-06-drawing-story';
 
 export function createStoryReader({ onOpen, onContinue }) {
   const dialog = document.querySelector('#story-reader');
   const tabs = document.querySelector('#story-chapters');
+  const groups = document.querySelector('#story-groups');
   const content = document.querySelector('#story-chapter');
   const previous = document.querySelector('#story-previous');
   const next = document.querySelector('#story-next');
@@ -20,6 +21,7 @@ export function createStoryReader({ onOpen, onContinue }) {
   const topicNext = document.querySelector('#story-topic-next');
   const selectedViews = new Map();
   const selectedChapters = new Map();
+  const selectedGroupChapters = new Map();
   let data = null;
   let chapterIndex = 0;
   let topicIndex = 0;
@@ -35,6 +37,17 @@ export function createStoryReader({ onOpen, onContinue }) {
   };
   const paragraphs = (texts) => texts.map((text) => element('p', '', text));
   const sourceById = (identifier) => data.sources.find((source) => source.id === identifier);
+
+  function householdPeople(people) {
+    const list = element('dl', 'story-scene-people');
+    list.setAttribute('aria-label', 'The household at Hackford Road');
+    list.append(...people.map((person) => {
+      const item = element('div');
+      item.append(element('dt', '', person.name), element('dd', '', person.role));
+      return item;
+    }));
+    return list;
+  }
 
   function externalLink(source, label, resource = 'url') {
     const link = element('a', 'story-resource-link', `${label} ↗`);
@@ -63,6 +76,45 @@ export function createStoryReader({ onOpen, onContinue }) {
     const topic = data.topics[index];
     navigateChapter(selectedChapters.get(topic.id) || topic.chapters[0]);
     if (focusTab) topics.children[index].focus({ preventScroll: true });
+  }
+
+  function selectGroup(index, focusTab = false) {
+    const topic = data.topics[topicIndex];
+    const group = topic.groups[index];
+    navigateChapter(selectedGroupChapters.get(`${topic.id}:${group.id}`) || group.chapters[0]);
+    if (focusTab) groups.children[index].focus({ preventScroll: true });
+  }
+
+  function renderIntroduction(topic, chapter) {
+    const introduction = document.querySelector('#story-topic-intro');
+    introduction.hidden = !topic.introduction || chapter.id !== topic.chapters[0];
+    introduction.classList.toggle('story-topic-entry', Boolean(topic.introduction?.entry));
+    introduction.replaceChildren();
+    if (introduction.hidden) return;
+    const copy = element('div', 'story-topic-entry-copy');
+    copy.append(element('h4', '', topic.introduction.title), ...paragraphs(topic.introduction.paragraphs));
+    if (topic.introduction.entry) {
+      const visual = element('div', 'story-topic-entry-visual');
+      visual.append(imageFigure(topic), element('p', 'story-image-credit', topic.imageCredit));
+      const actions = element('div', 'story-entry-actions');
+      const read = element('button', 'story-entry-read', 'Read the Story →');
+      read.type = 'button';
+      read.addEventListener('click', () => {
+        const scroll = document.querySelector('#story-scroll');
+        const target = groups.hidden ? content : groups;
+        scroll.scrollTop += target.getBoundingClientRect().top - scroll.getBoundingClientRect().top - 20;
+        const title = document.querySelector('#story-chapter-title');
+        title.tabIndex = -1;
+        title.focus({ preventScroll: true });
+      });
+      const works = element('button', 'story-entry-works', 'Explore the Early Works →');
+      works.type = 'button';
+      works.addEventListener('click', () => { close(); onContinue(); });
+      actions.append(read, works);
+      copy.append(actions);
+      introduction.append(visual);
+    }
+    introduction.append(copy);
   }
 
   function actionNode(action) {
@@ -101,9 +153,10 @@ export function createStoryReader({ onOpen, onContinue }) {
 
   function relationshipCard(material) {
     const section = element('section', 'story-relationships');
+    section.classList.toggle('story-support', material.presentation === 'support');
     const people = element('div', 'story-people');
     people.setAttribute('role', 'group');
-    people.setAttribute('aria-label', 'Choose a person at Hackford Road');
+    people.setAttribute('aria-label', material.presentation === 'support' ? 'Choose an early artistic contact' : 'Choose a person at Hackford Road');
     const detail = element('div', 'story-person-detail');
     detail.id = `story-person-detail-${material.id}`;
     detail.setAttribute('aria-live', 'polite');
@@ -123,6 +176,10 @@ export function createStoryReader({ onOpen, onContinue }) {
       return button;
     }));
     selectPerson(material.people[0]);
+    if (material.presentation === 'support') {
+      section.append(people, detail);
+      return section;
+    }
     const connections = element('ul', 'story-connections');
     connections.setAttribute('aria-label', 'Documented household and family ties');
     connections.append(...material.connections.map((connection) => {
@@ -155,7 +212,7 @@ export function createStoryReader({ onOpen, onContinue }) {
       sheet.append(element('span', 'story-transcription-label', 'TYPESET EXCERPT · NOT A MANUSCRIPT'), quotation(quote, 'story-letter-excerpt'));
       card.append(sheet);
     }
-    if (material.presentation === 'relationships') card.append(relationshipCard(material));
+    if (['relationships', 'support'].includes(material.presentation)) card.append(relationshipCard(material));
     if (material.presentation === 'household') {
       const sections = element('div', 'story-household');
       sections.append(...material.sections.map((entry, index) => {
@@ -175,6 +232,104 @@ export function createStoryReader({ onOpen, onContinue }) {
     if (source.reuseBasis) rights.append(externalLink({ url: source.reuseBasis }, 'Translation reuse terms'));
     card.append(actions, rights);
     return card;
+  }
+
+  function narrativeScene(scene, index) {
+    const section = element('section', 'story-scene');
+    section.dataset.scene = scene.id;
+    const heading = element('header', 'story-scene-heading');
+    const title = element('h4', '', scene.title);
+    title.id = 'story-scene-' + scene.id;
+    section.setAttribute('aria-labelledby', title.id);
+    const titles = element('div');
+    titles.append(title, element('p', 'story-scene-subtitle', scene.subtitle));
+    if (scene.label) titles.append(element('p', 'story-scene-label', scene.label));
+    heading.append(element('span', 'story-scene-number', String(index + 1).padStart(2, '0')), titles);
+    const body = element('div', 'story-scene-body');
+    const copy = element('div', 'story-scene-copy');
+    copy.append(...paragraphs(scene.paragraphs));
+    if (scene.people) copy.append(householdPeople(scene.people));
+    if (scene.materialNote) copy.append(element('p', 'story-scene-material-note', scene.materialNote));
+    body.append(copy);
+    if (scene.image) {
+      const visual = element('div', 'story-scene-visuals');
+      visual.append(imageFigure(scene), element('p', 'story-image-credit', scene.imageCredit));
+      body.prepend(visual);
+      body.classList.add('story-scene-paired');
+    }
+    if (scene.record) {
+      const record = element('aside', 'story-scene-record');
+      record.append(element('p', 'story-scene-record-label', scene.record.label), element('p', 'story-scene-record-date', scene.record.date), element('h5', '', scene.record.title));
+      if (scene.record.flow) {
+        const flow = element('ol', 'story-correspondence-flow');
+        flow.setAttribute('aria-label', 'Correspondence between siblings');
+        flow.append(...scene.record.flow.map((name) => element('li', '', name)));
+        record.append(flow);
+      }
+      record.append(element('p', '', scene.record.body));
+      body.prepend(record);
+      body.classList.add('story-scene-paired');
+    }
+    if (scene.visuals?.length) {
+      const visuals = element('div', 'story-scene-visuals');
+      visuals.append(...scene.visuals.map((visual) => materialCard(visual.material, visual.quote)));
+      if (scene.visuals.length === 1) body.prepend(visuals);
+      else body.append(visuals);
+      body.classList.toggle('story-scene-paired', scene.visuals.length === 1);
+      visuals.classList.toggle('story-scene-letter-pair', scene.visuals.length > 1);
+    }
+    if (scene.addresses) {
+      const addresses = element('figure', 'story-scene-addresses');
+      const list = element('ol');
+      list.setAttribute('aria-label', 'The change of address');
+      list.append(...scene.addresses.map((address) => {
+        const item = element('li');
+        item.append(element('strong', '', address.name), element('span', '', address.detail));
+        return item;
+      }));
+      addresses.append(list, element('figcaption', '', scene.addressCaption));
+      body.append(addresses);
+      body.classList.add('story-scene-paired');
+    }
+    const links = element('div', 'story-scene-links');
+    links.append(...scene.actions.map(actionNode));
+    section.append(heading, body, links);
+    return section;
+  }
+
+  function renderNarrative(chapter) {
+    const container = document.querySelector('#story-narrative');
+    container.hidden = !chapter.scenes;
+    container.replaceChildren();
+    if (!chapter.scenes) return;
+    const scenes = chapter.scenes.map(narrativeScene);
+    const jumpTo = (index) => {
+      const scroll = document.querySelector('#story-scroll');
+      scroll.scrollTop += scenes[index].getBoundingClientRect().top - scroll.getBoundingClientRect().top - 20;
+      const title = scenes[index].querySelector('h4');
+      title.tabIndex = -1;
+      title.focus({ preventScroll: true });
+    };
+    const actions = element('div', 'story-entry-actions');
+    const begin = element('button', 'story-entry-read', 'Begin the Story →');
+    begin.type = 'button';
+    begin.addEventListener('click', () => jumpTo(0));
+    actions.append(begin, actionNode({ label: 'Sources & Versions', chapter: chapter.sourceChapter }));
+    const navigation = element('nav', 'story-scene-navigation');
+    navigation.setAttribute('aria-label', 'Six moments in the London story');
+    navigation.append(...chapter.scenes.map((scene, index) => {
+      const button = element('button', 'story-scene-jump');
+      button.type = 'button';
+      button.setAttribute('aria-controls', 'story-scene-' + scene.id);
+      button.append(element('span', '', String(index + 1).padStart(2, '0')), element('strong', '', scene.title));
+      button.addEventListener('click', () => jumpTo(index));
+      return button;
+    }));
+    const comparison = element('section', 'story-narrative-sources');
+    comparison.append(element('h4', '', chapter.comparison.title), element('p', '', chapter.comparison.subtitle), actionNode({ label: 'Explore Sources & Versions', chapter: chapter.comparison.chapter }));
+    const closing = element('section', 'story-narrative-closing');
+    closing.append(element('h4', '', chapter.closing.title), ...paragraphs(chapter.closing.paragraphs), actionNode(chapter.closing.action));
+    container.append(actions, navigation, ...scenes, comparison, closing);
   }
 
   function renderQuote(quote) {
@@ -227,6 +382,8 @@ export function createStoryReader({ onOpen, onContinue }) {
     const chapter = data.chapters[chapterIndex];
     const topic = data.topics[topicIndex];
     selectedChapters.set(topic.id, chapter.id);
+    const group = storyChapterGroup(topic, chapter.id);
+    if (group) selectedGroupChapters.set(`${topic.id}:${group.id}`, chapter.id);
     [...topics.children].forEach((button, position) => {
       button.setAttribute('aria-selected', String(position === topicIndex));
       button.tabIndex = position === topicIndex ? 0 : -1;
@@ -235,13 +392,29 @@ export function createStoryReader({ onOpen, onContinue }) {
     document.querySelector('#story-topic-title').textContent = topic.title;
     document.querySelector('#story-topic-subtitle').textContent = topic.subtitle;
     document.querySelector('#story-location').textContent = topic.location;
-    tabs.hidden = topic.chapters.length === 1;
+    renderIntroduction(topic, chapter);
+    groups.hidden = !topic.groups;
+    groups.replaceChildren(...(topic.groups || []).map((entry, position) => {
+      const button = element('button', 'story-group-button');
+      button.type = 'button';
+      button.dataset.group = entry.id;
+      button.setAttribute('aria-pressed', String(entry.id === group?.id));
+      button.setAttribute('aria-controls', 'story-chapters');
+      button.append(element('span', 'story-group-number', String(position + 1).padStart(2, '0')), element('strong', '', entry.title));
+      button.addEventListener('click', () => selectGroup(position));
+      return button;
+    }));
+    const visibleChapters = group?.chapters || topic.chapters;
+    tabs.hidden = visibleChapters.length === 1;
     tabs.setAttribute('aria-label', `${topic.title} chapters`);
-    tabs.replaceChildren(...topic.chapters.map((identifier, position) => {
+    tabs.replaceChildren(...visibleChapters.map((identifier) => {
       const record = data.chapters.find((entry) => entry.id === identifier);
+      const position = topic.chapters.indexOf(identifier);
       const button = element('button', '', `${String(position + 1).padStart(2, '0')} · ${record.title}`);
       button.type = 'button';
       button.id = `story-tab-${identifier}`;
+      button.dataset.chapter = identifier;
+      button.title = record.focus;
       button.setAttribute('role', 'tab');
       button.setAttribute('aria-controls', 'story-chapter');
       button.addEventListener('click', () => navigateChapter(identifier));
@@ -249,8 +422,8 @@ export function createStoryReader({ onOpen, onContinue }) {
     }));
     const buttons = [...tabs.children];
     buttons.forEach((button, position) => {
-      button.setAttribute('aria-selected', String(topic.chapters[position] === chapter.id));
-      button.tabIndex = topic.chapters[position] === chapter.id ? 0 : -1;
+      button.setAttribute('aria-selected', String(visibleChapters[position] === chapter.id));
+      button.tabIndex = visibleChapters[position] === chapter.id ? 0 : -1;
     });
     content.setAttribute('aria-labelledby', tabs.hidden ? 'story-chapter-title' : `story-tab-${chapter.id}`);
     const image = document.querySelector('#story-image');
@@ -264,7 +437,11 @@ export function createStoryReader({ onOpen, onContinue }) {
     document.querySelector('#story-kicker').textContent = chapter.kicker;
     document.querySelector('#story-chapter-title').textContent = chapter.title;
     document.querySelector('#story-chapter-subtitle').textContent = chapter.subtitle;
+    document.querySelector('#story-chapter-focus').textContent = chapter.focus;
     document.querySelector('#story-paragraphs').replaceChildren(...paragraphs(chapter.paragraphs));
+    document.querySelector('#story-household').replaceChildren(...(chapter.people ? [householdPeople(chapter.people)] : []));
+    content.classList.toggle('story-narrative-layout', Boolean(chapter.scenes));
+    renderNarrative(chapter);
     const expanded = document.querySelector('#story-expanded');
     expanded.hidden = !chapter.sections?.length;
     expanded.open = false;
@@ -289,25 +466,41 @@ export function createStoryReader({ onOpen, onContinue }) {
       renderMaterials(chapter);
     }
     document.querySelector('#story-evidence-cards').replaceChildren(...(chapter.evidenceCards || []).map((card, position) => evidenceCard(card, position)));
+    const assessment = document.querySelector('#story-assessment');
+    assessment.hidden = !chapter.assessment;
+    assessment.replaceChildren(...(chapter.assessment ? [element('span', 'story-assessment-label eyebrow', chapter.assessment.label), ...chapter.assessment.items.map((item) => {
+      const section = element('section');
+      section.append(element('h4', '', item.title), ...paragraphs(item.paragraphs));
+      return section;
+    })] : []));
     document.querySelector('#story-question').textContent = chapter.prompt;
+    document.querySelector('#story-question').hidden = !chapter.prompt;
     document.querySelector('#story-actions').replaceChildren(...(chapter.actions || []).map(actionNode));
     document.querySelector('#story-evidence').textContent = chapter.evidence;
+    document.querySelector('#story-evidence').parentElement.hidden = !chapter.evidence;
+    document.querySelector('#story-view-sources').hidden = Boolean(chapter.scenes);
+    document.querySelector('#story-source-details').hidden = Boolean(chapter.scenes);
     document.querySelector('#story-sources').replaceChildren(...chapter.sources.map((identifier) => sourceLink(sourceById(identifier))));
     document.querySelector('#story-source-details').open = false;
     document.querySelector('#story-evidence-label').textContent = chapter.interpretation ? 'INTERPRETATION · NOT A DOCUMENTED SCENE' : 'A NOTE ON THE EVIDENCE';
     const mainIndex = data.readingOrder.indexOf(chapter.id);
     previous.disabled = mainIndex <= 0;
     next.disabled = mainIndex === data.readingOrder.length - 1;
-    next.textContent = mainIndex < data.readingOrder.length - 1 ? 'Next →' : 'Next';
-    next.setAttribute('aria-label', mainIndex < data.readingOrder.length - 1 ? `Next: ${data.chapters.find((entry) => entry.id === data.readingOrder[mainIndex + 1]).title}` : 'Last chapter');
+    const nextChapter = data.chapters.find((entry) => entry.id === data.readingOrder[mainIndex + 1]);
+    next.textContent = nextChapter ? `${nextChapter.title} →` : 'Next';
+    next.setAttribute('aria-label', nextChapter ? `Next: ${nextChapter.title}` : 'Last chapter');
+    next.hidden = !nextChapter;
     progress.textContent = `${topic.title} · ${topic.chapters.indexOf(chapter.id) + 1} / ${topic.chapters.length}`;
     topicNext.textContent = topicIndex < data.topics.length - 1 ? `Continue to ${data.topics[topicIndex + 1].title} →` : 'Enter the Early Works →';
-    document.querySelector('#story-continue').hidden = topicIndex === data.topics.length - 1;
+    topicNext.hidden = Boolean(nextChapter);
+    document.querySelector('#story-continue').hidden = Boolean(chapter.scenes) || topicIndex === data.topics.length - 1;
     content.classList.toggle('story-single-chapter', topic.chapters.length === 1);
+    content.classList.toggle('story-mining-layout', topic.id === 'miners');
+    content.classList.toggle('story-drawing-layout', topic.id === 'drawing');
     const scroll = document.querySelector('#story-scroll');
     if (scrollToReading) scroll.scrollTop += topicPanel.getBoundingClientRect().top - scroll.getBoundingClientRect().top - 20;
     else scroll.scrollTop = 0;
-    if (focusTab) (tabs.hidden ? topics.children[topicIndex] : buttons[topic.chapters.indexOf(chapter.id)]).focus({ preventScroll: true });
+    if (focusTab) (tabs.hidden ? (group ? groups.children[topic.groups.indexOf(group)] : topics.children[topicIndex]) : buttons[visibleChapters.indexOf(chapter.id)]).focus({ preventScroll: true });
   }
 
   function openResource(identifier, trigger = document.activeElement) {
@@ -319,14 +512,15 @@ export function createStoryReader({ onOpen, onContinue }) {
     resourceBody.replaceChildren(element('h4', '', chapter.subtitle), ...paragraphs(chapter.paragraphs));
     if (chapter.image) resourceBody.append(imageFigure(chapter));
     for (const section of chapter.sections || []) resourceBody.append(element('h4', '', section.title), ...paragraphs(section.paragraphs));
-    if (chapter.quote) resourceBody.append(quotation(chapter.quote));
+    const materials = (chapter.materials || []).map((id) => materialCard(id, chapter.quote));
+    if (chapter.quote && !materials.some((card) => card.querySelector('.story-letter-excerpt'))) resourceBody.append(quotation(chapter.quote));
     resourceBody.append(...(chapter.evidenceCards || []).map((card, position) => evidenceCard(card, position, 'resource')));
-    resourceBody.append(...(chapter.materials || []).map((id) => materialCard(id, chapter.quote)));
+    resourceBody.append(...materials);
     const actions = element('div', 'story-material-actions');
     actions.append(...(chapter.actions || []).map(actionNode));
     resourceBody.append(actions, element('p', 'story-evidence-note', chapter.evidence));
     const list = element('ul', 'story-sources');
-    const identifiers = [...new Set([...chapter.sources, ...(identifier === 'sources' ? data.chapters[chapterIndex].sources : [])])];
+    const identifiers = [...new Set([...chapter.sources, ...(identifier === storySourceChapter(data, data.topics[topicIndex].id, data.chapters[chapterIndex].id) ? data.chapters[chapterIndex].sources : [])])];
     list.append(...identifiers.map((id) => sourceLink(sourceById(id))));
     resourceBody.append(element('h4', '', 'Sources for this reading'), list);
     resourceBody.scrollTop = 0;
@@ -369,7 +563,8 @@ export function createStoryReader({ onOpen, onContinue }) {
   }
 
   topics.addEventListener('keydown', (event) => tabKey(event, topics.children, topicIndex, selectTopic));
-  tabs.addEventListener('keydown', (event) => tabKey(event, tabs.children, data.topics[topicIndex].chapters.indexOf(data.chapters[chapterIndex].id), (index, focusTab) => navigateChapter(data.topics[topicIndex].chapters[index], focusTab)));
+  groups.addEventListener('keydown', (event) => tabKey(event, groups.children, data.topics[topicIndex].groups.indexOf(storyChapterGroup(data.topics[topicIndex], data.chapters[chapterIndex].id)), selectGroup));
+  tabs.addEventListener('keydown', (event) => tabKey(event, tabs.children, [...tabs.children].findIndex((button) => button.dataset.chapter === data.chapters[chapterIndex].id), (index, focusTab) => navigateChapter(tabs.children[index].dataset.chapter, focusTab)));
   viewTabs.addEventListener('keydown', (event) => tabKey(event, viewTabs.children, selectedViews.get(data.chapters[chapterIndex].id) || 0, renderView));
   previous.addEventListener('click', () => navigateChapter(data.readingOrder[data.readingOrder.indexOf(data.chapters[chapterIndex].id) - 1]));
   next.addEventListener('click', () => navigateChapter(data.readingOrder[data.readingOrder.indexOf(data.chapters[chapterIndex].id) + 1]));
@@ -425,8 +620,9 @@ export function createStoryReader({ onOpen, onContinue }) {
     if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
     else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
   });
-  document.querySelector('#story-view-sources').addEventListener('click', () => openResource('sources'));
-  document.querySelector('#story-fixed-sources').addEventListener('click', () => openResource('sources'));
+  const openSources = () => openResource(storySourceChapter(data, data.topics[topicIndex].id, data.chapters[chapterIndex].id));
+  document.querySelector('#story-view-sources').addEventListener('click', openSources);
+  document.querySelector('#story-fixed-sources').addEventListener('click', openSources);
   document.querySelector('#story-resource-close').addEventListener('click', closeResource);
   document.querySelector('#story-resource-back').addEventListener('click', closeResource);
   resourceDialog.addEventListener('cancel', (event) => { event.preventDefault(); event.stopPropagation(); if (!imageDialog.open) closeResource(); });
@@ -453,6 +649,7 @@ export function createStoryReader({ onOpen, onContinue }) {
       timelineTitle.textContent = data.timelineTitle;
       document.querySelector('#story-intro').replaceChildren(...paragraphs([data.intro, data.wallText]));
       selectedChapters.clear();
+      selectedGroupChapters.clear();
       selectedViews.clear();
       topicIndex = 0;
       topics.replaceChildren(...data.topics.map((topic, index) => {
@@ -479,10 +676,12 @@ export function createStoryReader({ onOpen, onContinue }) {
       }));
       renderChapter(0, false, false);
     },
-    open() {
+    open(topicId) {
       if (!data || dialog.open) return;
       focusBefore = document.activeElement;
       onOpen();
+      const selectedTopic = data.topics.findIndex((topic) => topic.id === topicId);
+      if (selectedTopic >= 0) selectTopic(selectedTopic);
       document.querySelector('.story-timeline').open = false;
       dialog.showModal();
       closeButton.focus();

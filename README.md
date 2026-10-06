@@ -1,160 +1,148 @@
 # Vincent van Gogh · A Life Through Art
 
-## Large media and deployment
+**An interactive exhibition about the person behind the paintings.**
 
-The gallery model and opening film are stored in `assets/media-parts/` as small, lossless binary segments for reliable GitHub uploads. `data/media_manifest.json` records the order, byte counts and SHA-256 checksums. `npm run build` automatically restores `assets/gallery_v22.glb` and `assets/van-gogh-early-years.mp4` before building the site. The restored model and film are byte-for-byte identical to their source files: no resizing, compression, re-encoding, audio changes or extra transitions. The restored local files and `dist/` are ignored by Git.
+> We know who he would become.  
+> As you enter, set that knowledge aside.
 
-For a fresh clone, run `npm ci`, then `npm run build`. You can then use `npm start` for local preview. The existing GitHub Pages workflow performs the reconstruction automatically; visitors receive ordinary GLB and MP4 files, not the segments.
+## The exhibition
 
-V22 retains the bright 30 by 27 metre arrival rotunda and its concave VINCENT VAN GOGH title wall. Hall 01 remains a **38 by 28 metre oval**, with approximately **836 square metres** of floor area and an **8.5 metre** daylight ceiling. Its film display, integrated early-life narrative and early-drawing wall share one spacious room rather than a small alcove in the connecting passage. The Hall 01 curve joins behind the Hall 02 artwork wall instead of crossing its paintings. V22 lowers the projecting Hall 02 transition wall to **3.85 metres**, shortens its end by **0.45 metres**, and rounds the end while retaining the reverse-side paintings and collision. The earlier Hall 02 mount setbacks and Hall 07 wall clearance are retained. All 365 frame-backing and sightline checks pass; unrelated geometry, mounts and the original camera rail remain unchanged. Earlier Blender scenes and route data remain untouched as backups.
+This exhibition approaches Vincent van Gogh as a person, not only as a celebrated painter. A concise account of his life provides the chronological thread; artworks, letters, relationships, places and individual stories bring the experiences behind that thread into view.
 
-The camera follows a continuous, rounded spatial rail with a level gaze. In Hall 01 it follows **opening film → London story → early drawings, 1881 → Hall 02**, with brief calm holds at the two narrative stations. Artwork stations remain on the left of the travel direction. Multiple paintings, floor, ceiling, seating, and room depth remain part of the composition. The staggered halls include an oval cinema-and-narrative gallery, a rectangular Dutch gallery, a high-low Paris square, nine visitor-facing stepped fan walls, a curved charcoal black box, a high elliptical Saint-Rémy gallery, and a wide Auvers/afterlife return. Ceiling heights vary from 6.4 to 10.6 metres; walking floors remain at one level. Hall 01 retains its suspended black curtain and 16:9 screen above a low circular plinth, without restoring the removed cinema benches. All labels and interface text are in English.
+The aim is not to explain an entire life through a single tragedy, diagnosis or image of artistic genius. It is to meet someone who sought a home and a livelihood, formed attachments, changed direction, learned to draw, worked with others and continued making art through periods of difficulty. The paintings remain central, but they are encountered alongside the circumstances, choices and human relationships around them.
 
-The expanded installation has **365 individually identified artwork images: 46 default highlights plus 319 additional works**. They occupy **54 switchable wall sets**, not 365 simultaneous frames. V22 preserves the collection, lighting, wide passages, left-wall viewing order and the complete V20 90-second camera rail. Manual artwork stations face their paintings squarely at eye level. Additional paintings retain their actual image proportions within each mount's audited `displayBounds`. Titles, dates, F/JH or museum identifiers, image credits, and primary record links appear in the English catalogue and cards. **Road in Etten** returns to Hall 01's default Early Works frame; **Boy with a Sickle** remains in that hall's second set.
+**Uncertainty is part of the story, rather than something to conceal or settle prematurely.** Where records are incomplete or accounts differ, the exhibition brings letters, family recollections, archival material and later research into conversation. Sources are identified so that visitors can see what an account supports, where interpretations diverge and which questions remain open. A remembered episode, a contemporary letter and a later hypothesis are not presented as equivalent kinds of evidence.
 
-## Introductions and closing reflection
+### 策展主旨
 
-The entrance reflection is presented centrally in an interactive opening, not on a side wall. The visitor first sees **Vincent van Gogh**; a click or Enter reveals **“We know who he would become.”** and **“As you enter, set that knowledge aside.”** The two lines fade into the Hall 01 title and introduction, then the enlarged opening film begins. Entry is gated on the gallery being ready, supports reduced motion, and can be skipped with **Enter without the film** or Escape. If sound-enabled playback is blocked, the player offers a visible play control. Eight physical reading locations remain: seven hall introductions and the Hall 07 closing reflection, **“We know who he became. As you leave, ask what you have come to know of the person.”**
+本展览从「梵高作为一个人」的角度出发，以简明的生平脉络串联作品，并通过信件、人物关系、生活地点与具体事件，呈现画作背后的经历。对于史料不完整或存在争议的部分，展览并置不同的记载、回忆与后来的研究，说明各自的来源与性质，让观众看见叙述之间的差异、能够确认的内容与仍然开放的问题。
 
-Click a wall text, select **Room introduction**, or use **Read introduction** in the catalogue for the complete English prose. **Sources & Further Reading** expands the credited source links; the fifth and seventh introductions retain their explicit research caveats. **View this wall** brings the camera to a level, unobstructed reading station. **Enter Hall** starts at its introductory wall; **Next** then continues to that hall’s works (or the opening film in Hall 01). After the last work, **Exit reflection** brings the visitor to the closing wall, with a return to the entrance available. Reading pauses movement and tours without changing the approved video.
+我们希望观众认识的不只是已经成名的画家，而是一个曾经寻找归属、谋求生计、建立关系、经历挫折，并不断学习与工作的人。这里的「不确定性」不是给故事附加一个模糊的结论，而是邀请观众在不同的讲述之间，更审慎也更具体地接近这个人。
 
-Wall copy, references and placement are editable in `data/hall_introductions_en.json`. The build validates all nine text entries: the interactive arrival copy and eight physical reading locations. `gallery-entry.js` controls the cancellable opening; the remaining wall lettering stays static. These reading interfaces are browser features and do not alter the approved film file.
+## A journey through eight halls
 
-## Authored artwork cards
+Each hall begins with an introduction that places the works within a stage of Vincent’s life. The seven chronological artwork halls lead to a separate epilogue; Afterlife is not folded into the account of his final months.
 
-Fourteen works have revised English main labels and **42 story chapters**, following the supplied curatorial text. Hover for the main label; click the painting or **Explore the Story** to open an artwork-and-text view. The image stays visible on the left while visitors switch between the main label and three chapters on the right. Each chapter includes a looking prompt and credited source links. **Artwork Details & Sources** expands object numbers, dimensions, collection and image credits, and evidence or interpretation caveats. Paragraph breaks and short letter quotations are retained; the duplicate straw-hat self-portrait section appears only once.
+| Hall | Chapter | Period | Narrative focus |
+| --- | --- | --- | --- |
+| 01 | Origins and Uncertainty | 1853–1881 | Family, education, work, belonging, faith and the decision to learn to draw. |
+| 02 | Earth and Labour | 1881–Early 1886 | Learning through observation; working people, ordinary life and the demands of becoming an artist. |
+| 03 | The Paris Transformation | 1886–1888 | Life with Theo, artistic exchange, Japanese prints and experiments with colour. |
+| 04 | Arles: Toward the Sun | 1888 | A new setting, daily work and the hope of building a shared artistic life. |
+| 05 | Companionship and Crisis | 1888–1889 | Friendship, disagreement, crisis and the work of recovery. |
+| 06 | Saint-Rémy: Inner Skies | 1889–1890 | Life and work within the institution, familiar subjects and renewed experimentation. |
+| 07 | Auvers: The Final Months | May–July 1890 | An intense period of work, family concerns and the limits of what the final paintings can tell us. |
+| 08 | Afterlife | 1890 onward | The people who preserved the work, changing interpretations and later encounters with Vincent. |
 
-**Look Closely** provides a two-times crop without changing the source image. **View the Other Side** switches between *The Potato Peeler* and *Self-Portrait with a Straw Hat*, identifying the two surfaces as one canvas; **Back** restores the previous reading chapter without moving the camera. The oil and lithograph versions of *The Potato Eaters* can be compared side by side, explicitly not at physical scale. Its third chapter also offers optional neutral, dark and wheat-gold digital surrounds: these change only the viewer background. The Paris *Sunflowers* card remains distinct from Arles and offers a link to the later work. No additional images or facsimiles are downloaded for these cards; existing image credits and rights records remain available.
+The exhibition ends with a question, not a verdict:
 
-Copy is editable in `data/artwork_cards_en.json`, with matching title, date and main-label text in `data/collection_en.json` and default highlights in `data/artworks_en.json`. `artwork-cards.js` handles reading and validates the authored data during `npm run build`. **Road in Etten** is the first-hall default drawing, following **Learning to Draw**; **Boy with a Sickle** is available in its second wall set. Hall 02 retains its eight existing default highlights. The approved opening film and 90-second camera rail are unchanged. The detailed interactive artwork cards are browser features.
+> We know who he became.  
+> As you leave, what stays with you  
+> from Vincent’s life?
 
-## Collection and wall sets
+## Stories behind the works
 
-| Hall | Chapter | Individual works | Physical positions | Wall sets |
-| --- | --- | ---: | ---: | ---: |
-| 01 | Origins and early drawing | 2 | 1 | 2 |
-| 02 | The Netherlands and early Antwerp | 100 | 8 | 13 |
-| 03 | Paris | 107 | 6 | 18 |
-| 04 | Early Arles | 41 | 9 | 5 |
-| 05 | Gauguin, late Arles and recovery | 26 | 6 | 5 |
-| 06 | Saint-Rémy | 68 | 10 | 7 |
-| 07 | Auvers and the posthumous research chapter | 21 | 6 | 4 |
-| Total | | 365 | 46 | 54 |
+Three story entrances remain available throughout the visit. They are optional paths for closer reading, not a checklist visitors must complete.
 
-Every hall starts on its **Highlights** set. Use the upper-right selector or its arrows to replace that hall's paintings with another collection set. Unused positions on a partial set are hidden rather than filled with unrelated works. Images load before the walls change; a failed download leaves the previous set intact and allows a retry. **Next / Previous** and the keyboard arrows browse the whole 365-work reading order, switching sets when necessary. Searching a title, F number or accession in **Seven Halls · Catalogue** and selecting a result loads its set and opens the artwork with its story.
+### Early life · Searching for a Place
 
-The **90-second tour is a highlights tour, not a film of all 365 works**. It remains the default; starting it restores the default 46-work installation in every hall. The separate **Full collection · 365 works** mode automatically visits the entire installed selection across all 54 wall sets. It follows the same seven-hall reading order as Next / Previous: each hall's Highlights first, then its additional sets. This is a period-based itinerary, not a claim that every individual painting within a hall is in exact date order or that all of Van Gogh's works are installed.
+The first hall moves from an **Opening Film** to **Searching for a Place**, then to **Early Works**. Four connected topics offer a more personal account of the years before painting became his main work:
 
-### Full collection tour
+- **A Home in London** — a household, employment, everyday pleasures and an attachment whose details survive through different accounts.
+- **Turning to Faith** — religious reading, changing work and the search for a useful role.
+- **Among the Miners** — encounters with mining communities, efforts to help and the loss of an official preaching position.
+- **Learning to Draw** — how he reached the decision to become an artist, what he wanted to depict and how study, observation and repeated practice began.
 
-- Choose **Full collection · 365 works** in the bottom toolbar, then **Play full collection**. This browser-only mode starts at the first drawing; the opening film and London narrative remain optional interactive stops rather than being automatically played or opened.
-- Each work has a full **8-second stationary viewing hold**, measured only after its images and camera arrival are ready. Choose **6s**, **8s**, or **12s per work**. The full visit is much longer than 90 seconds; 8-second holds alone total 48 minutes 40 seconds, with camera transitions and image loading adding time.
-- Stations face paintings squarely at eye level while preserving the gallery around them. Short clear moves glide slowly; changed wall sets, large turns and moves across architecture use a gentle 0.6-second fade out and in. Reduced-motion preferences suppress both glides and fades. The architecture and the original 90-second Blender camera remain unchanged.
-- **Pause collection / Resume collection** retains the current work and its remaining stationary viewing time. A transition interrupted by a pause resumes at the same target work. Scrolling, dragging, walking, viewing an enlarged artwork, opening the catalogue or London story, and hiding the browser tab pause playback. After manual movement, Resume first returns to that artwork's station.
-- Hovering paintings during **Full collection** shows their information without pausing playback. Click a painting to pause the tour and open its immersive view.
-- The immersive view has persistent **Previous artwork / Next artwork** buttons, a collection position counter and left/right arrow-key navigation. These follow all 365 works across hidden wall sets and halls without closing the view. The first and last works disable the corresponding button. Closing the view returns to the artwork last selected; Resume continues from there. Loading failures retain the previous artwork, and closing during loading cancels the pending selection.
-- In this mode the progress slider chooses a **work number**, not seconds. Scrubbing loads that work and pauses; Next / Previous and catalogue selections synchronize the tour position. **Reset view** returns to the current work, not the overview rail. The counter, English title and status distinguish loading, travel, viewing, pause and completion.
-- A complete wall set loads before any image is replaced. Loading and travel do not consume the viewing hold. Failed images keep the old walls, stop the tour at the failed work and offer **Retry collection**. Pausing or changing modes during loading invalidates the pending change; late downloads cannot replace walls or restart playback.
-- The tour stops after the last of the 365 works. **Replay collection** starts again at the first. Choosing **Highlights · 90 seconds** and pressing Play restores the original installation; the two modes never play simultaneously.
+The London story moves through **A New Home**, **A Life He Enjoyed** and **An Uncertain Attachment**. Its **Sources & Versions** entrance stays accessible while reading. An optional **Art Before Painting** branch explores the art trade without replacing the main story or treating romantic disappointment as the sole cause of a later change in direction.
 
-### Scope and unresolved material
+### The Yellow House
 
-This is **selected, verified series coverage**, not the complete oeuvre or a complete catalogue raisonné. The original 96 catalogue entries mix individual works, entire series and archive leads; they are not 96 individual paintings. Of those entries, 46 refer to installed highlights, 39 have selected series works, four early-subject leads remain unresolved, and seven archive leads are not installed. Another 288 individually identified candidate records remain outside the installed collection because image or chronology verification is still pending. These are listed in `data/collection_audit.json`; missing works are not represented by similar images, AI replacements or placeholder paintings.
+This story connects Arles, Vincent’s hopes for a shared studio and his relationship with Paul Gauguin. It follows why they wanted to work together, how their approaches differed, what tensions developed and how Vincent continued living and working after the crisis.
 
-Versions are separate records. For example, the bandaged-ear self-portraits with and without a pipe are distinct, and the Chicago 1889 bedroom repetition belongs to Saint-Rémy rather than the 1888 Arles group. Only the separately documented F753 oil portrait of Doctor Gachet is installed; do not infer that both oil versions are included. Collection names drawn from the scholarly letter edition are attributed to that source, not asserted as newly confirmed current ownership. Private or historical auction locations are qualified in the cards. The Washington Potato Eaters lithograph is identified by its accession as well as the shared print-design number.
+Artwork connections and optional evidence comparisons keep the narrative close to specific works and records. Later recollections and interpretations are distinguished from contemporary correspondence; the crisis is not staged as spectacle or used as a single explanation for the paintings.
 
-Sources include public museum records, the scholarly Van Gogh Letters edition and individually licensed image files. Preserve all credits and links and review each image licence before public release. Research and installation counts are dated October 1, 2026.
+### Afterlife
 
-## Open the interactive gallery
+A distinct eighth hall asks **who carried the work forward** and **what the work set in motion**. Archival cards and longer reading sections follow preservation, publication, changing interpretations and subsequent artistic responses. The closing reflection returns attention to the person visitors have encountered, rather than simply to his fame.
 
-From a fresh clone, first run `npm ci` and `npm run build` to restore the original media. Then run `npm start` from this directory and open `http://127.0.0.1:8765/`. Do not open `index.html` directly: the 3D model and data files require a local web server. An existing server on this port may need to be restarted or its tab reloaded to show changes.
+## How uncertainty is presented
 
-- Use **Next / Previous** or the left and right arrow keys to follow the 365 works in chapter order without leaving the wide gallery view. Frames preserve each source image's aspect ratio, with a balanced display area rather than identical frame dimensions. Short unobstructed moves glide; long moves or moves across walls use a gentle fade rather than flying through architecture. Click a painting when you want a close reading of the artwork and its story.
-- Hover over a painting for its white information card. Click it for a large artwork-and-text view; press **Esc**, click outside, or use the close button to return. Open **Seven Halls · Catalogue** to search and jump to a work or chapter.
-- Drag to look around and use **W/A/S/D** to walk through the wide open thresholds. Floors, wall blades, benches, and the film plinth have collision boundaries. Painted faces are visible and interactive from their front, with architecture blocking hover/click selection through walls.
-- Scroll the mouse wheel or use two-finger trackpad scrolling to move closer or farther: scroll up to approach, down to step back. On a touchscreen, spread two fingers to approach and pinch them together to step back. These controls move the camera smoothly at eye level instead of zooming the webpage or changing the lens. Movement stops before walls and the film plinth, and manual navigation pauses the tour. Pinching or dragging over a painting does not open its artwork dialog; a short click or tap still does. **Reset view** restores the current tour position and level heading.
-- The opening view faces the suspended film screen front-on at the same wide viewing distance, without changing the architecture or frame sizes. A five-second smooth blend joins the original camera rail after the opening hold, and the tour returns to the same frontal view at the end.
-- Play or scrub the **90-second tour** for an overview. It begins with a three-second bright rotunda establishing view and returns to the same view. The level camera stays at 1.85 metres, with a 64-degree vertical field of view on 16:9 landscape screens matching Blender. Narrow portrait panels widen the vertical field to preserve the horizontal composition. A rounded spatial rail and continuous heading interpolation replace sharp corners and independently eased turns. Brief calm holds introduce the London story and early drawings; the later halls continue without stopping at every painting. Use Next / Previous or click a painting to study it at your own pace.
-- Hall 01's suspended curtain displays an English title and a paper-toned cover using the already credited nineteen-year-old portrait. **Play film** is anchored directly to the screen; the screen and its title are also clickable. Playback opens a large, responsive cinema dialog with sound, native playback/volume/full-screen controls and **Back to gallery**. The interactive opening requests playback; browser restrictions are handled with a visible play control rather than silent failure. Escape or a backdrop click pauses the film; **Resume film** continues where you left off. The 3:02 Full HD film, English subtitles, restrained piano, 1.2-second fade from black and restored dissolve near eight seconds remain unchanged.
-- The cinema offers **Explore His Early Life** and **View the Early Works**. At the end, the transition reads **“Continue through the lives, places and decisions behind the early drawings.”** Replay and loading-error retry controls remain available. Opening the player pauses tours, camera transitions and walking; player keys do not navigate the gallery. The Blender scene still requires a separate film assignment; this integration is for the interactive website.
-- Piano: **Calm Piano 1 (Vaporware)** by **The Cynic Project / cynicmusic**, CC0, from `https://opengameart.org/content/calm-piano-1-vaporware`. Film and music provenance is included in `data/film_credits.json`; CC0 applies only to the music track.
+The main story comes first. Source comparisons deepen it without forcing visitors to read a research apparatus before they can understand the events.
 
-## Searching for a Place inside Hall 01
+- **Letters** preserve particular moments and viewpoints; they do not provide a complete account of everything that happened.
+- **Family recollections** are identified as recollections, including when they were written and their relationship to the events.
+- **Archival materials and museum records** are attached to the objects or claims they document.
+- **Later research and interpretation** are attributed to their authors and kept distinct from direct evidence.
+- **Open questions** remain open where the available material does not justify a definitive conclusion.
 
-The early-life display is integrated into the west curve of enlarged Hall 01, with a wide, level, frontal viewing area. The ivory display contains the exact January 1873 portrait of Vincent and an invitation to **Searching for a Place**. **A Life Before Painting** is its small explanatory heading. Four illustrated topic cards sit below the curatorial introduction: **A Home in London**, **Turning to Faith**, **Among the Miners**, and **Learning to Draw**. These are entry points, not substitutes for the longer reading content. It is a story exhibit, not a new painting or a second film screen; the broad connection to Hall 02 remains open.
+Modern photographs, illustrative reconstructions and original historical objects are labelled separately. Different versions of a painting retain their own records instead of being used interchangeably. Visitors can open sources, compare accounts and return to their place in the narrative.
 
-- Follow **Next / Previous**: opening film → **Searching for a Place** → **Road in Etten** and the other Early Works set → Hall 02. The genuine 1881 drawing occupies one fitted frame on the west curve. **Early life** in the toolbar takes you directly to the narrative display. Previous from the first drawing returns to the story; Previous from the story returns to the film viewpoint.
-- Click the physical display or **Searching for a Place**. Topic navigation sits above London’s subordinate tabs: **A New Home → A Life He Enjoyed → An Uncertain Attachment**. The full reading sequence continues to **Turning to Faith → Among the Miners → Learning to Draw**. Detailed London text, letter tabs and selected chapters remain available; topic changes remember the previous reading selection.
-- **Sources & Versions** stays accessible in the reader header. It opens a separate resource dialog with **Letters**, **Family Recollections**, **Later Research**, and **Open Questions**, without replacing the current story. **Art Before Painting** is a separate optional resource dialog accessible from the first two London chapters. Closing either resource restores the underlying chapter, letter selection and scroll position. Neither branch is treated as a consequence of romantic rejection.
-- In **A Life He Enjoyed**, switch between **January: Home and Art** and **April: Gardens and Walks**. Each view has its own quotation, letter date, short narrative and original-edition links.
-- Enlarge the genuine nineteen-year-old portrait or the modern house photograph inside the reader. Escape closes the enlargement first, returns focus to that photograph, and leaves the story open. Udimu’s house photograph is explicitly dated **17 May 2016**, not 1873; the full original is displayed without cropping.
-- Letter quotations appear directly in quiet, paper-toned **typeset excerpt** panels. They are not facsimiles or invented handwriting. The English wording follows WebExhibits; dates and letter numbers follow the modern scholarly edition. January and April retain separate selectable views.
-- **An Uncertain Attachment** offers four selectable people, household/family connections and an evidence timeline. It does not depict Vincent and Eugénie as a proven couple. **The Household Behind the Story** explains rooms, teaching and everyday business without reproducing the insurance photograph.
-- The four **Sources & Versions** evidence groups distinguish contemporary letters, retrospective memoir, later research and unresolved questions; there is no vote on which account is true. Longer production and rights notes live here, while image-specific dates and credits stay beside the images.
-- Expand **A Life in Motion** for the short art-trade, teaching, religious-work and early-drawing chronology. Dated source links distinguish contemporary letters from later interpretations.
-- While reading, walking, dragging, dolly controls and automatic tours pause. **Close**, Escape or a backdrop click returns to the same view; nested Escape closes the image or resource before the story. **Learning to Draw** ends with **Looking Closely, Learning Slowly** and **Enter the Early Works**, guiding the camera to **Road in Etten**. On phones, topic cards stack and images sit above the text.
+## Visiting the exhibition
 
-The tour still lasts **90 seconds** at eye level. V22 retains every V20 waypoint and animation frame. `data/story_exhibit_en.json` holds the editable English copy, four topics, six main chapters, two resource branches, chronology, source links and viewpoint. `assets/story_transition_v20.glb` carries the unchanged physical display geometry, with its collision in `data/story_transition_layout.json` and no supplementary walkable pocket. The main expanded room and lower rounded transition wall are in `assets/gallery_v22.glb`; the refreshed story poster is packed in the V22 Blender file.
+The entrance begins with Vincent’s name, followed by the opening reflection and the first-hall film. Visitors who skip or return from the film can choose **Start the 3-minute tour** or **Explore freely**. This first-visit choice does not block the other controls.
 
-Two real photographs are embedded: the verified January 1873 portrait by J. M. W. de Louw (Commons marks it public domain) and Udimu’s 2016 photograph of 87 Hackford Road (**CC BY-SA 4.0**). The miners topic uses an identified 1880 drawing, not a photograph; the drawing topic uses the existing museum image of **Road in Etten**. The composed wall image retains its own CC BY-SA 4.0 composition licence. Credit, licence, source links, modifications and exact-file SHA-256 checksums are recorded in `data/story_image_credits.json`; `data/story_source_audit.json` records nine materials, twenty-nine source records and four typeset excerpts.
+The toolbar separates **location and navigation**, **story reading** and **tour playback**. Short contextual tips point to the next relevant action with a quiet, non-flashing outline. Dismissed tips are remembered locally. **?** reopens the visitor guide and pauses the tour without changing the viewpoint; closing help does not restart it automatically.
 
-The short English excerpts are credited to Vincent van Gogh / English version as published by WebExhibits. Its exhibit-specific credits distinguish public-domain letters from edited or translated letters offered under **CC BY-SA 1.0**; no blanket public-domain claim is made for translations. The typeset excerpt panels retain attribution and are offered under CC BY-SA 1.0. The reuse basis is `https://www.webexhibits.org/vangogh/about/credits.html`, not a guessed general copyright page. The gallery’s surrounding summaries are independently written and are not part of the quoted translation. Modern scholarly edition facsimiles and full English translations are not copied.
+- **Highlights · 3 minutes** is a 180-second introduction to the exhibition, including pauses at the seven chronological hall introductions. It is not a tour of every work or a substitute for reading the stories.
+- **Full collection · 366 works** visits the installed artwork selection across its switchable wall sets. Choose 6, 8 or 12 seconds of viewing time per work; movement and loading add to the total duration.
+- **Explore freely** by dragging to look, scrolling or pinching to move, or using W/A/S/D. Previous and Next follow the works without requiring manual walking.
+- **Click a painting** to enlarge it and open its information and story. The artwork viewer includes Previous and Next buttons; closing it returns to the gallery. Opening a work pauses a running tour, while hovering during Full collection does not.
+- **Eight Halls · Catalogue** lets visitors choose a hall or find a work by title or identifier. **Room introduction** opens the current hall’s introductory text.
+- **Play the opening film** from the symbol on the screen. The enlarged player includes playback, seeking, volume and full-screen controls.
 
-Original relationship and household cards replace the locket and insurance photographs rather than simulating archives. The Tom Parsons exterior, Claire Zhao insurance photograph, locket and Jacquet reproduction remain credited research references; permission to redistribute those images is not assumed. Reference dates of 2019 describe modern photographs or research publication, not the date of Vincent’s residence. No external image is fetched merely by opening a chapter, and no AI-generated archive imagery is used. The seven-hall design, 365 installed works and 90-second tour remain preserved. The integrated physical display is included in V22 Blender; its interactive reader and optional materials are browser features.
+### English and Simplified Chinese
 
-## GitHub Pages deployment
+The upper-right **EN / 中文** control switches languages without reloading the exhibition. The Chinese edition covers the interface, all installed artwork titles, main artwork labels, hall introductions and the principal life-story sections. Some detailed artwork stories and bibliographic notes retain the English original and are identified as such. Film narration, original inscriptions and external source pages are not replaced by the language switch.
 
-Publish this `interactive_gallery` directory as the repository root, not the surrounding Blender or video workspace. The `.gitignore` excludes installed dependencies, build output, caches, older models, and older route data. Preserve the artwork credits and source links in the English data files, and review their image licences before public publication.
+Language, acknowledged tips and visitor reflections are stored in the visitor’s browser. The exhibition has no server-side reflection submission; these entries are not collected by the project.
 
-1. Install Node.js 22 and run `npm ci` to install the pinned Three.js dependency.
-2. Run `npm run build`. This exports `dist/` with the V22 architectural model, all 365 artwork images, the collection manifest and audit, interactive opening, four-topic early-life reader, licensed images and English data, the bundled opening film and its credits, and the required Three.js modules. It does not copy Blender files, old models, unrelated video exports, server code, or caches into the website.
-3. To check the production build locally, run `npm start` and open `http://127.0.0.1:8765/dist/index.html`. This also checks that resource URLs work inside a subdirectory, as they do on a project Pages site.
-4. Push this directory to the repository's `main` branch. In the repository's **Settings > Pages**, choose **GitHub Actions** as the source.
-5. Open **Actions > Deploy gallery to GitHub Pages** and wait for both jobs to succeed. If the first run occurred before Pages was enabled, use **Run workflow** to deploy again. The deployment environment links to the actual published website.
+## Collection scope and credits
 
-The workflow rebuilds and publishes the site after each push to `main`. No personal access token needs to be saved in the repository. The bundled opening film loads by default. Building this local folder does not update an already published GitHub Pages site; publication requires a separate push and deployment.
+The current installation contains **366 individually identified works**, displayed through **46 physical artwork positions** and switchable wall sets. **44 authored artwork cards** provide expanded labels and stories. Additional research leads are not counted as installed works, and this selection is not a complete catalogue of Van Gogh’s production.
 
-## Open the expanded Blender collection
+The artworks, narrative texts and media carry object-specific source and credit records. Preserve these records when adapting the exhibition; consult the relevant rights links before reusing images, scans, translations or music. This README does not replace asset-level credit information or grant a blanket media licence.
 
-Open `../outputs/van_gogh_gallery_v22_first_hall_story.blend` for the enlarged first hall, lower rounded transition wall, refreshed story poster and 365-work collection. V21 remains the earlier clear-wall backup; V20 remains the expanded-first-hall backup; V17 remains the pre-story collection backup. All installed painting and story-wall images are packed in V22. The film display and complete V20 2,160-frame, 24 fps tour are retained. The two moved Hall 02 mounts include all switched picture, frame, reveal and label components; the hidden Hall 01 drawing variant is also aligned with its visible mount. The physical story display appears in Blender, but its interactive opening and chapter reader are browser features.
+- Artwork records and credits: `data/collection_en.json` and `data/artwork_cards_en.json`.
+- Early-life materials, sources and image notes: `data/story_exhibit_en.json`, `data/story_image_credits.json` and `data/story_source_audit.json`.
+- Yellow House sources and evidence comparisons: `data/yellow_house_en.json`.
+- Afterlife objects, images and sources: `data/afterlife_en.json`.
+- Film and music credits: `data/film_credits.json`.
 
-In **Scene Properties > Custom Properties**, change `hall_01_wall_set` through `hall_07_wall_set` to choose a hall's visible set. Values are zero-based: **0 means Highlights**, 1 means the second set, and so on. The maximum values for Halls 01–07 are **1, 12, 17, 4, 4, 6, 3**. The seven properties work independently. Set all seven to 0 to restore the highlights tour. Visibility uses simple property drivers and does not need an auto-run script.
+## Run locally
 
-The Text Editor includes **READ ME | Expanded collection** and **COLLECTION | Manifest**. Individual painting objects store their title, story, primary record and identifier as custom properties. Blender wall-set choices are independent of the browser choices. The 90-second animation does not automatically cycle wall sets.
+Requirements: Node.js 22 and npm.
 
-## Source files
+```sh
+npm ci
+npm run build
+npm start
+```
 
-- `../outputs/van_gogh_gallery_v22_first_hall_story.blend`: packed 365-work collection, enlarged Hall 01, lower rounded transition wall and refreshed narrative display.
-- `../work/rebuild_gallery_v22.py`, `../outputs/gallery_v22_validation.json`: all 365 frame-backing and sightline checks, transition-wall dimensions, packed story poster and preservation of unrelated geometry and the original camera rail.
-- `../work/rebuild_gallery_v21.py`, `../outputs/gallery_v21_validation.json`: all 365 frame-backing and sightline checks, clear routes, preservation of unrelated geometry and the unchanged 90-second rail. Use `--audit-only` to reproduce the V20 wall failures without modifying the previous scene.
-- `gallery-entry.js`: cancellable title, reflection and Hall 01 opening, readiness gate, reduced motion and film handoff.
-- `story.js`, `data/story_exhibit_en.json`: four topics, six main chapters, persistent sources and optional art dialogs, short chronology and sourced evidence notes.
-- `assets/story_transition_v20.glb`, `data/story_transition_layout.json`: integrated story-wall geometry and collision, with no extra alcove floor.
-- `data/story_image_credits.json`: house/portrait image attribution, licences and derivative-wall rights.
-- `../work/build_story_transition.py`: builds V19 from V17; `--verify-only` reopens the saved file and checks the original camera, works, wall sightlines and route clearance.
-- `story-data.js` and `../work/verify_story_data.mjs`: validate topic order, chapter and branch references, materials, source records, image credits and safe resource paths.
-- `../work/verify_story_browser.mjs`, `../outputs/story_browser_checks.json`: physical wall click, chapter reading, camera pause, mobile layout and Hall 01–02 navigation checks.
-- `../outputs/van_gogh_gallery_v17_collection.blend`: expanded, packed 365-work Blender collection with switchable sets and the preserved 90-second camera animation.
-- `../outputs/van_gogh_gallery_v16.blend`: unchanged architectural source and original highlight scene.
-- `assets/gallery_v22.glb`: expanded Hall 01, lower rounded transition wall and corrected entry mounts; `assets/*.jpg`: individually sourced artwork images.
-- `data/artworks_en.json`: 46 default highlight records, including the revised English labels.
-- `data/collection_en.json`: enriched individual records for all 365 installed works, their identifiers, provenance and exact hall/set assignments.
-- `data/collection_audit.json`: original lead coverage, exclusions and pending individual records.
-- `data/chapters_en.json`: generated English catalogue, including installed titles and explicitly uninstalled research leads.
-- `collection.js`: collection validation, reading order, exact work lookup and proportion-preserving display sizing.
-- `collection-tour.js`: cancellable full-collection playback, viewing holds, pause/resume, work seeking and same-work error recovery. Included in the production static build; it does not alter the Blender file.
-- `../outputs/gallery_collection_inventory.csv`: one row per installed work, including its hall, one-based wall set, identifiers, image licence and sources.
-- `../outputs/gallery_collection_stats.json`: installed and pending counts, with explicit non-completeness flags.
-- `data/ordered_route_v22.json`: expanded floor polygons, lower transition-wall collision, seating, frontal eye-level viewing stations, audited mount bounds and unchanged chronological camera waypoints.
-- `../work/rebuild_gallery_v16.py`: builds V16 from the preserved V15 Blender scene and route with Blender 5.0.
-- `../outputs/gallery_v16_validation.json`: route clearance, left-side artwork stations, unchanged later-gallery and artwork geometry, opening-title margins and safe framing, ray-cast visibility checks for the entire opening title and subtitle, heading-rate checks, and sampled forward wall distances.
-- `../work/assemble_gallery_collection.mjs`: assembles the enriched collection, wall sets, catalogue, inventory and honest lead audit from cached research.
-- `../work/build_gallery_collection_blend.py`: builds V17 from V16; `--verify-only` reopens and checks the saved collection.
-- `../outputs/gallery_v17_collection_validation.json`: camera and geometry fingerprints, packed images, exact work placements and every set's visibility checks.
-- `../outputs/gallery_collection_data_checks.json`: individual reachability, source/identifier and duplicate checks, JPEG decoding and frame proportions.
-- `../outputs/gallery_collection_browser_checks.json`: baseline checks of the previous 54-set installation, failed-image recovery, catalogue selection, highlight restoration and mobile controls.
-- `../work/verify_artwork_walls_browser.mjs`, `../outputs/gallery_v21_browser_wall_checks.json`: baseline full-width backing and frame-edge visibility checks for the 54-set installation using the exported browser meshes. V22 separately checks all 365 works against the lower transition wall.
-- `../work/verify_collection_tour.mjs`, `../outputs/gallery_collection_tour_checks.json`: baseline playback checks for all 365 works and the previous 54 sets, timing, pause/resume, canceled arrivals, seeking, replay and failed-image retry.
-- `../work/verify_collection_tour_browser.mjs`, `../outputs/gallery_collection_tour_browser_checks.json`: actual-browser checks for the complete automated itinerary, correct visible paintings, frontal level walkable stations, loading cancellation/retry, immersive/catalogue/story pauses, original Highlights restoration and mobile controls. Accepts a production-build URL as its first argument. Tests accelerate viewing holds and suppress motion while traversing all works; ordinary playback retains the selected full hold and calm transitions.
+The local preview server uses port 8765 by default. Serve the project through HTTP rather than opening `index.html` directly from the filesystem. `npm start` serves the source project; the production website is built into `dist/`.
 
-The Blender render and interactive website are separate outputs. The interactive opening, artwork cards and browser film player do not automatically appear in a Blender-rendered MP4.
+The build validates collection records, artwork cards, hall introductions, story references and the Highlights timeline before copying the website and its pinned Three.js dependency. The gallery is a static Three.js application; it does not need an application backend.
+
+### Large media and GitHub Pages
+
+The model and opening film are stored as lossless binary segments in `assets/media-parts/`. `data/media_manifest.json` records their order, byte counts and SHA-256 checksums. `npm run build` reconstructs the ordinary GLB and MP4 files before producing the site. This does not resize, compress or re-encode them. Restored media, dependencies and build output are ignored by Git.
+
+`.github/workflows/pages.yml` installs the pinned dependencies, builds `dist/` and deploys it to GitHub Pages on a push to `main`. The repository’s Pages source must be set to **GitHub Actions**. Visitors receive the reconstructed media files, not the binary segments.
+
+The browser exhibition and separately authored Blender scenes are different outputs. Browser interactions, reading panels and the interactive film player do not automatically appear in a Blender-rendered video.
+
+## Main editable files
+
+| File | Purpose |
+| --- | --- |
+| `data/hall_introductions_en.json` | Entrance, eight hall introductions and closing reflection. |
+| `data/story_exhibit_en.json` | Early-life topics, chapters, branches, materials and sources. |
+| `data/yellow_house_en.json` | Yellow House narrative, comparisons and artwork connections. |
+| `data/afterlife_en.json` | Independent epilogue, archival cards and later responses. |
+| `data/artwork_cards_en.json` | Expanded artwork labels, stories and looking prompts. |
+| `data/collection_en.json` | Installed works, object identities, credits and wall assignments. |
+| `data/ordered_route_v28.json` and `highlight-route.js` | Spatial stations and the browser’s retimed Highlights route. |
+| `visit-guide.js` | First-visit choices, contextual tips and visitor help. |
+| `locale-zh*.js` and `i18n.js` | Chinese overlays and live language switching. |
+| `index.html`, `style.css` and `viewer.js` | Interface, visual presentation and gallery interaction. |
+
+English source records remain the primary editable data. Chinese text is layered over them; provenance and original source records remain available in either interface language.

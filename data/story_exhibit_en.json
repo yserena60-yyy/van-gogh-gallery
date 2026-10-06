@@ -18,7 +18,16 @@
     "attachment",
     "faith",
     "miners",
-    "drawing"
+    "miners-care",
+    "miners-appointment",
+    "miners-purpose",
+    "drawing",
+    "drawing-bargue",
+    "drawing-millet",
+    "drawing-guidance",
+    "drawing-models",
+    "drawing-nature",
+    "drawing-mauve"
   ],
   "station": {
     "position": [
@@ -31,7 +40,7 @@
       1.85,
       30
     ],
-    "routeTime": 13.8,
+    "routeTime": 15.241521,
     "center": [
       -42.36,
       2.62,
@@ -98,17 +107,9 @@
       "imageSource": "portrait",
       "paragraphs": [
         "In May 1873, twenty-year-old Vincent van Gogh arrived in London to work for the art dealer Goupil & Cie. By August, he had moved into lodgings at 87 Hackford Road.",
-        "His letter to Theo that September introduces not a tragic artist, but a young man pleased with his new surroundings—and eager to share them."
-      ],
-      "sections": [
-        {
-          "title": "A Room and a Household",
-          "paragraphs": [
-            "At Hackford Road, Vincent boarded with the widowed Sarah Ursula Loyer and her daughter, Eugénie. The household also accommodated a small school for boys. For Mrs Loyer, teaching and letting rooms were ways of earning a living.",
-            "On 13 September 1873, Vincent described his new room to Theo. He was glad to have left behind the sloping beams and blue wallpaper with a green border of his previous lodgings. He found the household lively and wished his brother could see it.",
-            "The same letter moves easily from domestic news to an outing on the Thames and an exhibition of Belgian paintings. Home, companionship and pictures belonged to the same conversation."
-          ]
-        }
+        "At Hackford Road, Vincent boarded with the widowed Sarah Ursula Loyer and her daughter, Eugénie. The household also accommodated a small school for boys. For Mrs Loyer, teaching and letting rooms were ways of earning a living.",
+        "On 13 September 1873, Vincent described his new room to Theo. He was glad to have left behind the sloping beams and blue wallpaper with a green border of his previous lodgings. He found the household lively and wished his brother could see it.",
+        "The same letter moves easily from domestic news to an outing on the Thames and an exhibition of Belgian paintings. Home, companionship and pictures belonged to the same conversation."
       ],
       "quote": {
         "text": "Oh! Old man, I so want that you come here to see my new lodgings",
@@ -120,13 +121,7 @@
         "letter-13"
       ],
       "prompt": "Look beyond the famous name. What would you want to tell someone about your first home in a new city?",
-      "actions": [
-        {
-          "label": "Art Before Painting",
-          "chapter": "art",
-          "description": "Optional branch · Work and the pictures he chose to share"
-        }
-      ],
+      "actions": [],
       "evidence": "The portrait was taken in January 1873, before London. The letter documents his new room and the boys’ school. The house photograph shown here was taken on 17 May 2016, not in 1873. The letter excerpt is a typeset quotation from WebExhibits, not a manuscript image; its wording differs from the modern scholarly translation.",
       "sources": [
         "portrait",
@@ -137,11 +132,27 @@
         "house",
         "house-open-photo",
         "bailey-2019"
+      ],
+      "focus": "Where did he live, and who shared the household?",
+      "people": [
+        {
+          "name": "Vincent van Gogh",
+          "role": "Lodger"
+        },
+        {
+          "name": "Ursula Loyer",
+          "role": "Landlady"
+        },
+        {
+          "name": "Eugénie Loyer",
+          "role": "Her daughter"
+        }
       ]
     },
     {
       "id": "life",
       "title": "A Life He Enjoyed",
+      "focus": "What made everyday life in London rewarding?",
       "subtitle": "Art, Nature and Everyday Pleasure — 1874",
       "kicker": "PLEASURE ALSO BELONGS IN HIS BIOGRAPHY",
       "paragraphs": [
@@ -207,41 +218,228 @@
     {
       "id": "attachment",
       "title": "An Uncertain Attachment",
-      "subtitle": "Affection, Disappointment and an Incomplete Record",
-      "kicker": "MEMORY & INTERPRETATION",
+      "focus": "What did this household mean to Vincent, and how did the relationship continue?",
+      "subtitle": "A Home, a Hope, and a Departure",
+      "kicker": "LONDON · 1873–1874",
       "paragraphs": [
-        "Did Vincent fall in love at Hackford Road?",
-        "A later family memoir tells of an attachment that was not returned. Research has revisited the woman’s identity and the sequence of events. The familiar story of heartbreak survives—but not as a fully documented scene."
+        "At Hackford Road, Vincent found a household he enjoyed. His family also became interested in the people with whom he was living.",
+        "A later family memoir places an unreturned attachment inside this happy period. Follow six moments: a familiar home, a family’s questions, an existing engagement, the remembered refusal, a summer with Anna and a later visit."
       ],
-      "sections": [
+      "scenes": [
         {
-          "title": "A Story Told Afterwards",
+          "id": "household",
+          "title": "A Household He Enjoyed",
+          "subtitle": "Rooms, a Garden, and Familiar Company",
+          "label": "A BRIEF RETURN TO THE PREVIOUS CHAPTERS",
           "paragraphs": [
-            "In Jo van Gogh-Bonger’s retrospective account, Vincent confessed his love to a woman she called Ursula. She was already engaged to a previous lodger. Jo describes his unsuccessful attempts to change her mind, followed by withdrawal and growing religious preoccupation.",
-            "This is a family account written afterwards, not Vincent’s own description of a confession. It gives the episode emotional force, but should not be read as a transcript of what happened.",
-            "Van Gogh House London takes a more cautious approach: it describes his affection for Eugénie as rumoured and acknowledges that the circumstances of his departure remain unclear. Family correspondence expresses concern, but does not settle every question.",
-            "Here, the story is presented as an unresolved part of his life—not a single explanation for everything that followed."
+            "The rooms and garden you have just encountered gave his London life a familiar setting. His letters describe pleasure in the house, attention to its flowers and the daily walk to work.",
+            "The family story of an attachment begins within that period of happiness—not in a place he described only through disappointment."
+          ],
+          "image": "./assets/story-house-2016.jpg",
+          "imageSource": "house-open-photo",
+          "imageCaption": "87 Hackford Road, London · Photographed on 17 May 2016, not in 1873.",
+          "imageCredit": "Photograph: Udimu / Wikimedia Commons · CC BY-SA 4.0 · Unmodified source image",
+          "sources": [
+            "letter-13",
+            "letter-17",
+            "letter-22",
+            "house-open-photo"
+          ],
+          "actions": [
+            {
+              "label": "Return to A Life He Enjoyed",
+              "chapter": "life"
+            }
+          ]
+        },
+        {
+          "id": "questions",
+          "title": "Questions Between Families",
+          "subtitle": "How Close Had They Become?",
+          "label": "FAMILY CORRESPONDENCE · JANUARY 1874",
+          "paragraphs": [
+            "In a letter to Theo dated 6 January 1874, Anna passed on news of Vincent’s relationship with the household. According to the correspondence discussed in Elly Cassee’s research, Vincent had described himself and “Ursula” as being like a brother and sister. Anna nevertheless wondered whether their closeness might be love.",
+            "Here, a young man’s description and his sister’s curiosity do not quite coincide. The letter preserves the family wondering about an attachment; it does not establish a romance.",
+            "The name needs care. The house included Ursula Loyer and her daughter Eugénie. Later accounts have had to disentangle them."
+          ],
+          "record": {
+            "label": "EDITORIAL CORRESPONDENCE GUIDE · NOT AN ARCHIVE IMAGE",
+            "date": "6 January 1874",
+            "title": "News Passed Between Siblings",
+            "body": "Vincent writes to Anna; Anna passes his description and her own question on to Theo. This is a guide to the exchange discussed by Cassee, not a reconstruction of the letters.",
+            "flow": [
+              "Vincent",
+              "Anna",
+              "Theo"
+            ]
+          },
+          "sources": [
+            "cassee-1996"
+          ],
+          "actions": [
+            {
+              "label": "Read Anna’s Correspondence in Cassee’s Research",
+              "source": "cassee-1996"
+            }
+          ]
+        },
+        {
+          "id": "engagement",
+          "title": "A Promise Already Made",
+          "subtitle": "Eugénie’s Engagement",
+          "label": "FAMILY CORRESPONDENCE · FEBRUARY 1874",
+          "paragraphs": [
+            "On 24 February 1874, Anna wrote to Theo after receiving a letter from Vincent. He was in good spirits, enjoyed living with the Loyer family, and reported that Eugénie was engaged to a good-natured young man.",
+            "Eugénie’s engagement appears alongside his happiness in the household. This was a home whose other residents had commitments and possible futures of their own; her promise was already a subject of discussion in Vincent’s family."
+          ],
+          "record": {
+            "label": "PUBLISHED TRANSCRIPTION · NOT A MANUSCRIPT FACSIMILE",
+            "date": "24 February 1874",
+            "title": "Anna to Theo",
+            "body": "The linked transcription records Anna’s report of Vincent’s recent letter: he was in good spirits, enjoyed the household, and described Eugénie’s fiancé. Read the passage in its family context."
+          },
+          "materialNote": "The linked transcription is dated 24 February and addressed to Theo. It does not establish when Vincent declared his feelings; the engagement should not be introduced as something he certainly first discovered during an August confession.",
+          "sources": [
+            "anna-family-1874",
+            "cassee-1996"
+          ],
+          "actions": [
+            {
+              "label": "Read Anna’s Letter · 24 February 1874",
+              "source": "anna-family-1874"
+            }
+          ]
+        },
+        {
+          "id": "remembered",
+          "title": "The Story Jo Preserved",
+          "subtitle": "A Declaration and a Refusal",
+          "label": "LATER FAMILY ACCOUNT",
+          "paragraphs": [
+            "In Jo van Gogh-Bonger’s later account, Vincent fell in love with the landlady’s daughter. When he declared his feelings, the young woman, whom Jo called Ursula, told him that she was already engaged to a former lodger.",
+            "Jo describes Vincent trying to persuade her to change her mind. He wanted her to break off the engagement, but his efforts failed.",
+            "She then follows him back to the Netherlands, where he appeared thinner, quieter and dejected. Affection had become a hope for a different life; in the story the family preserved, that hope was not returned."
+          ],
+          "record": {
+            "label": "RETROSPECTIVE MEMOIR · NOT AN EYEWITNESS TRANSCRIPT",
+            "date": "A later family account",
+            "title": "Jo van Gogh-Bonger",
+            "body": "The memoir supplies the declaration, refusal and disappointment. Its emotional sequence can be read as a story in its own right, alongside the correspondence."
+          },
+          "materialNote": "Jo identifies the woman as the daughter but calls her Ursula; she does not write that Vincent loved the mother. This is a later family memoir. His surviving letters from the period do not describe the declaration itself.",
+          "sources": [
+            "family-memoir",
+            "cassee-1996"
+          ],
+          "actions": [
+            {
+              "label": "Read Jo’s Account",
+              "source": "family-memoir"
+            }
+          ]
+        },
+        {
+          "id": "departure",
+          "title": "Summer with Anna",
+          "subtitle": "Finding Work and Preparing to Move",
+          "label": "LONDON · JULY–AUGUST 1874",
+          "paragraphs": [
+            "By the end of July 1874, Anna was with Vincent in London. His letter of 31 July describes their walks and the search for a position for her. Reading, pictures and family responsibilities remained part of his daily life.",
+            "On 10 August, he told Theo that they were preparing to move. The new house was covered with ivy, identified by the letter editors as Ivy Cottage at 395 Kennington Road. He also wrote about their evening walks and promised to send another letter from the new address.",
+            "The letter records the practical shape of a departure: a sister beside him, another house to enter and a continuing exchange with Theo. It gives us more than a sudden escape after a refusal."
+          ],
+          "addresses": [
+            {
+              "name": "87 Hackford Road",
+              "detail": "London"
+            },
+            {
+              "name": "Ivy Cottage",
+              "detail": "395 Kennington Road"
+            }
+          ],
+          "addressCaption": "Preparing to move · Letter to Theo, 10 August 1874. The new address is identified by the letter editors; this is not a reconstruction of a journey.",
+          "sources": [
+            "letter-27",
+            "letter-28"
+          ],
+          "actions": [
+            {
+              "label": "Read Letter 27 · 31 July 1874",
+              "source": "letter-27"
+            },
+            {
+              "label": "Read Letter 28 · 10 August 1874",
+              "source": "letter-28"
+            }
+          ]
+        },
+        {
+          "id": "return",
+          "title": "Visiting Again",
+          "subtitle": "The Household Remained in His Life",
+          "label": "LONDON · NOVEMBER 1876",
+          "paragraphs": [
+            "In a letter dated 25 November 1876, Vincent described another visit to Mrs Loyer in Clapham, shortly after her birthday. It was one stop on a long day walking through London and calling on people he knew.",
+            "The contact had not ended with his move from Hackford Road. This small later visit carries the relationship beyond the departure, without resolving the earlier attachment."
+          ],
+          "record": {
+            "label": "EDITORIAL LETTER SUMMARY · NOT A TRANSCRIPTION",
+            "date": "25 November 1876",
+            "title": "Letter 99 · To Theo",
+            "body": "This letter records a visit to Mrs Loyer shortly after her birthday. It does not say that Eugénie was present, or that the romantic disappointment had been resolved."
+          },
+          "sources": [
+            "letter-99"
+          ],
+          "actions": [
+            {
+              "label": "Read Letter 99 · 25 November 1876",
+              "source": "letter-99"
+            },
+            {
+              "label": "How Vincent Later Remembered Young Love",
+              "chapter": "attachment-memory"
+            }
           ]
         }
       ],
-      "materials": [
-        "locket"
-      ],
-      "prompt": "A shared address connects people. Does it also prove the story later told about them?",
-      "actions": [
-        {
-          "label": "Compare the Accounts",
-          "chapter": "sources",
-          "description": "Letters · Family memory · Later research · What remains uncertain"
+      "sourceChapter": "attachment-sources",
+      "comparison": {
+        "title": "Sources & Versions",
+        "subtitle": "How the Attachment Has Been Understood",
+        "chapter": "attachment-sources"
+      },
+      "closing": {
+        "title": "Beyond Hackford Road",
+        "paragraphs": [
+          "Vincent continued to seek a direction through work, reading and religious commitment. His early London letters already contained expressions of faith. Over the following years, teaching and religious work became part of his search for a useful life.",
+          "Follow the places, people and choices through which that search continued—not a single cause linking disappointment to religion."
+        ],
+        "action": {
+          "label": "Continue to Turning to Faith",
+          "chapter": "faith"
         }
-      ],
-      "evidence": "This original relationship card is a reading aid, not a historic document or a picture of a proven couple. Samuel Plowman is the man Eugénie married in 1878; identifying him as the earlier fiancé remains an interpretation. The reported engagement comes from Bailey’s account of Anna’s correspondence, not a manuscript displayed here.",
-      "interpretation": true,
+      },
+      "materials": [],
+      "prompt": "",
+      "actions": [],
+      "evidence": "",
+      "interpretation": false,
       "sources": [
-        "locket-photo",
+        "letter-13",
+        "letter-17",
+        "letter-22",
+        "anna-family-1874",
+        "letter-27",
+        "letter-28",
+        "letter-99",
+        "letter-183",
         "family-memoir",
         "bailey-2019",
-        "house-london"
+        "cassee-1996",
+        "house-london",
+        "house-open-photo"
       ]
     },
     {
@@ -360,7 +558,7 @@
         "letter-15"
       ],
       "prompt": "Before asking what Vincent painted, ask what he chose to look at—and what he wanted someone else to see.",
-      "evidence": "The reproduction is after Jacquet’s 1872 painting, not a Van Gogh painting or a portrait of Eugénie. This branch can be visited from the first two chapters without implying that an interest in art followed a rejection.",
+      "evidence": "The reproduction is after Jacquet’s 1872 painting, not a Van Gogh painting or a portrait of Eugénie. This optional branch expands the working life introduced in A Life He Enjoyed; it is not a new chronological stage or a consequence of the attachment.",
       "sources": [
         "letter-15",
         "translation-15",
@@ -373,6 +571,7 @@
     {
       "id": "faith",
       "title": "Turning to Faith",
+      "focus": "How did teaching, study and preaching become possible directions?",
       "subtitle": "Reading, Teaching and a Possible Vocation",
       "kicker": "ENGLAND · 1876 / FURTHER STUDY · 1877–1878",
       "image": "./assets/story-vincent-nineteen.jpg",
@@ -395,50 +594,570 @@
     },
     {
       "id": "miners",
-      "title": "Among the Miners",
-      "subtitle": "Work, Hardship and an Unsettled Direction",
-      "kicker": "THE BORINAGE · 1878–1880",
+      "title": "Going Underground",
+      "focus": "What were the miners facing, below ground and at home?",
+      "subtitle": "What He Saw at Marcasse",
+      "kicker": "VINCENT’S LETTER · APRIL 1879",
       "image": "./assets/story-miners-1880.jpg",
       "imageSource": "miners-image",
-      "imageCaption": "Miners, Cuesmes. Catalogued as 1880 at the linked image source. A reproduction of a drawing, not a photograph of the miners.",
+      "imageCaption": "Miners, Cuesmes. Catalogued as 1880 at the linked image source. This later drawing is not a photograph of Marcasse or a facsimile of the April 1879 letter. Open the letter to see its mine-work sketches.",
       "imageCredit": "Vincent van Gogh · Wikimedia Commons · Public domain",
       "paragraphs": [
-        "In December 1878, Vincent wrote to Theo from Wasmes in the Borinage. He described a landscape shaped by coal mining and the difficult conditions in which local people lived and worked.",
-        "Religious work did not become a lasting vocation. The mining region also belongs to the years in which he began to give drawing a more deliberate place in his life. The letter and the drawing offer different kinds of evidence: an account addressed to his brother, and a visual study of working people."
+        "In April 1879, Vincent told Theo about spending six hours underground at Marcasse. He described descending about 700 metres, following narrow timber-supported passages and watching coal being cut by lamplight. Some miners stood; others worked lying flat. Children, both boys and girls, loaded coal into small wagons.",
+        "He drew the cramped working spaces in the letter. These small sketches make the account concrete: a body has to fit into the space left by the coal seam, and a narrow passage is also the way back out.",
+        "Above ground, the danger continued as illness and exhaustion. Vincent visited a miner recovering from severe burns. In another household, everyone had fever and almost no help. He recorded a woman’s observation about their situation:"
       ],
-      "prompt": "How does looking closely differ from telling someone else’s story?",
-      "evidence": "The accompanying image is a drawing reproduction labelled Miners, Cuesmes at its source, not a photograph or a reconstructed scene. Contemporary letters should be distinguished from later interpretations of these years.",
+      "quote": {
+        "text": "Here it is the sick who nurse the sick.",
+        "attribution": "A woman in a sick household, as reported by Vincent to Theo · April 1879 · Letter 151",
+        "source": "miners-letter-151"
+      },
+      "prompt": "",
+      "evidence": "",
       "sources": [
         "miners-letter-149",
+        "miners-letter-151",
+        "miners-image"
+      ],
+      "materials": [],
+      "actions": [
+        {
+          "label": "Read the Letter & Mine Sketches",
+          "source": "miners-letter-151"
+        }
+      ]
+    },
+    {
+      "id": "miners-care",
+      "title": "Giving What He Had",
+      "focus": "How did caring for others begin to endanger his own welfare?",
+      "subtitle": "Care and His Own Living Conditions",
+      "kicker": "CONTEMPORARY FAMILY CORRESPONDENCE · FEBRUARY–MARCH 1879",
+      "image": "./assets/story-miners-1880.jpg",
+      "imageSource": "miners-image",
+      "imageCaption": "Miners, Cuesmes. Catalogued as 1880 at the linked image source. A later drawing of working people, not an illustration documenting the nursing visits or Vincent’s hut in 1879.",
+      "imageCredit": "Vincent van Gogh · Wikimedia Commons · Public domain",
+      "paragraphs": [
+        "Vincent wanted to do more than speak about faith. He nursed injured people and kept watch with them at night. In February 1879, his father worried that this care was absorbing him completely, leaving too little strength for his other responsibilities.",
+        "Family correspondence describes him leaving the Denis household for a hut, without a bed or clean clothes. After an inspection, his mother reported a warning from local religious figures: if he refused their advice, he could lose his post. His father travelled to the Borinage to intervene.",
+        "In March, Vincent told Theo that the small house was now a workspace or study, and that he had agreed to board with the Denis family again. His commitment to helping others was real; so were the concerns about how he was living."
+      ],
+      "evidenceCards": [
+        {
+          "id": "miners-later-family",
+          "title": "A Later Family Account",
+          "label": "FAMILY MEMORY · WRITTEN AFTERWARDS",
+          "paragraphs": [
+            "Jo van Gogh-Bonger later described him giving away money, clothes and his bed while trying to live by the teachings of Jesus. In her account, his intense devotion and self-neglect alarmed the religious authorities.",
+            "This is a retrospective family narrative, not the committee’s statement of its reasons. Read it beside the contemporary correspondence and the committee report, rather than treating all three as a single eyewitness account."
+          ],
+          "sources": [
+            "miners-jo-memoir",
+            "miners-letter-150"
+          ]
+        }
+      ],
+      "prompt": "",
+      "evidence": "",
+      "sources": [
+        "miners-letter-150",
+        "miners-jo-memoir",
+        "miners-image"
+      ],
+      "materials": [],
+      "actions": [
+        {
+          "label": "Read the Family Correspondence",
+          "source": "miners-letter-150"
+        }
+      ]
+    },
+    {
+      "id": "miners-appointment",
+      "title": "The Appointment Ends",
+      "focus": "Why did sincere dedication not secure a lasting appointment?",
+      "subtitle": "How the Committee Judged His Work",
+      "kicker": "INSTITUTIONAL REPORT · 1879–1880",
+      "image": "./assets/story-miners-1880.jpg",
+      "imageSource": "miners-image",
+      "imageCaption": "Miners, Cuesmes. Catalogued as 1880 at the linked image source. An artwork reproduction, not an image of the committee or its report.",
+      "imageCredit": "Vincent van Gogh · Wikimedia Commons · Public domain",
+      "paragraphs": [
+        "By August 1879, Vincent’s six-month trial as an evangelist had ended without renewal. He was given three months to look for another position. Caring so deeply for the people around him had not secured the vocation he had hoped for.",
+        "The committee’s 1879–1880 report contains both praise and criticism. It recognised his generosity towards sick and injured people, but judged that he lacked the speaking and organisational abilities needed to lead a congregation. It also noted that a meeting at Warquignies had lapsed during his appointment."
+      ],
+      "assessment": {
+        "label": "EDITORIAL SUMMARY · TWO ASPECTS OF THE SAME REPORT",
+        "items": [
+          {
+            "id": "praised",
+            "title": "What the Committee Praised",
+            "paragraphs": [
+              "Care for the sick and injured, night watches, and the clothes and linen he gave away. It acknowledged devotion and self-sacrifice."
+            ],
+            "sources": [
+              "miners-letter-153"
+            ]
+          },
+          {
+            "id": "criticised",
+            "title": "What the Committee Criticised",
+            "paragraphs": [
+              "His suitability for preaching and leading congregational activity. It considered the results of the trial inadequate for continuing his employment."
+            ],
+            "sources": [
+              "miners-letter-153"
+            ]
+          }
+        ]
+      },
+      "prompt": "",
+      "evidence": "",
+      "sources": [
+        "miners-letter-149",
+        "miners-letter-153",
+        "miners-image"
+      ],
+      "materials": [],
+      "actions": [
+        {
+          "label": "Read the Report Extract · Note 4",
+          "source": "miners-letter-153"
+        }
+      ]
+    },
+    {
+      "id": "miners-purpose",
+      "title": "Taking Up the Pencil",
+      "focus": "After the appointment, how could he still be useful?",
+      "subtitle": "Finding a Way to Be Useful",
+      "kicker": "VINCENT’S LETTERS · 1879–1880",
+      "image": "./assets/story-miners-1880.jpg",
+      "imageSource": "miners-image",
+      "imageCaption": "Miners, Cuesmes. Catalogued as 1880 at the linked image source. A drawing of working people, shown here alongside his letters about finding a direction through drawing.",
+      "imageCredit": "Vincent van Gogh · Wikimedia Commons · Public domain",
+      "paragraphs": [
+        "Losing the appointment did not instantly turn Vincent into an artist. In August 1879, he was already filling sketchbooks and drawing at night. His direction remained unsettled, and the months ahead brought estrangement and discouragement.",
+        "In a letter dated approximately 22–24 June 1880, he asked how he could contribute to the world. The question was larger than the position he had lost.",
+        "By September, he described renewed effort in drawing: working through Bargue’s course and studying anatomy and perspective. He also wrote of his fellow-feeling for miners and weavers, hoping to bring their often-unnoticed lives into view.",
+        "The wish to help did not vanish when his religious employment ended. Drawing was becoming another way to attend to people, but it required learning and sustained work. The next chapter follows that practice."
+      ],
+      "quote": {
+        "text": "what could I be good for, couldn’t I serve and be useful in some way",
+        "attribution": "Vincent to Theo · Cuesmes, approximately 22–24 June 1880 · Letter 155",
+        "source": "miners-letter-155"
+      },
+      "prompt": "",
+      "evidence": "",
+      "sources": [
+        "miners-letter-153",
+        "miners-letter-155",
         "drawing-letter-158",
-        "miners-image",
-        "purpose"
+        "miners-image"
+      ],
+      "materials": [],
+      "actions": [
+        {
+          "label": "Read the Letter about Being Useful",
+          "source": "miners-letter-155"
+        },
+        {
+          "label": "Read the September Letter",
+          "source": "drawing-letter-158"
+        }
+      ]
+    },
+    {
+      "id": "miners-sources",
+      "title": "Sources & Versions",
+      "subtitle": "Why Was He Not Retained?",
+      "kicker": "CORRESPONDENCE · INSTITUTIONAL REPORT · FAMILY MEMORY",
+      "branch": true,
+      "paragraphs": [
+        "Practical care, personal living conditions and the expectations of an evangelist’s work appear differently in these records. None needs to be hidden for the story to remain moving.",
+        "Read the three accounts together. Consider what each records directly, what it judges, and when it was written."
+      ],
+      "evidenceCards": [
+        {
+          "id": "miners-contemporary-correspondence",
+          "title": "Contemporary Correspondence",
+          "label": "VINCENT AND HIS FAMILY · 1878–1880",
+          "paragraphs": [
+            "Vincent’s letters describe Bible readings, visits to the sick, the descent at Marcasse and the daily lives around him. Family letters quoted in the scholarly edition record concern about nursing, housing, clothing and refusal to accept advice.",
+            "The warning from local religious figures and his father’s intervention concern his conduct and welfare. These records do not reduce the later non-renewal to a single cause."
+          ],
+          "sources": [
+            "miners-letter-149",
+            "miners-letter-150",
+            "miners-letter-151"
+          ]
+        },
+        {
+          "id": "miners-committee-account",
+          "title": "The Committee’s Account",
+          "label": "REPORT FOR 1879–1880 · EXTRACT IN LETTER 153, NOTE 4",
+          "paragraphs": [
+            "The report explicitly recognises care and self-sacrifice. Its explanation for not retaining him centres on the demands of preaching and congregational leadership, including the lapsed Warquignies meeting.",
+            "The appointment document cited in Letter 149 dates the six-month post from 1 February 1879; the committee had discussed him on 14 January. The report is a later institutional assessment, not a transcript of a dismissal conversation."
+          ],
+          "sources": [
+            "miners-letter-149",
+            "miners-letter-153"
+          ]
+        },
+        {
+          "id": "miners-family-narrative",
+          "title": "A Later Family Narrative",
+          "label": "JO VAN GOGH-BONGER · RETROSPECTIVE MEMOIR",
+          "paragraphs": [
+            "Jo’s account places greater emphasis on giving possessions away, intense religious practice and self-neglect. It helps explain the familiar portrayal of a man whose attempt to share poverty unsettled his employers.",
+            "That emphasis belongs to her later narrative. The suggestion that he embarrassed the church is not presented here as the committee’s documented wording or its sole stated reason."
+          ],
+          "sources": [
+            "miners-jo-memoir",
+            "miners-letter-150",
+            "miners-letter-153"
+          ]
+        }
+      ],
+      "prompt": "",
+      "evidence": "The 1880 Miners reproduction provides a visual connection with working people, not photographic evidence of the 1879 episodes. The original mine-work sketches can be opened from Letter 151 at the scholarly edition. No manuscript image, historical interior or dismissal scene has been invented.",
+      "sources": [
+        "miners-letter-149",
+        "miners-letter-150",
+        "miners-letter-151",
+        "miners-letter-153",
+        "miners-letter-155",
+        "drawing-letter-158",
+        "miners-jo-memoir",
+        "miners-image"
       ],
       "materials": [],
       "actions": []
     },
     {
       "id": "drawing",
-      "title": "Learning to Draw",
-      "subtitle": "Looking Closely, Learning Slowly",
-      "kicker": "CUESMES · 1880 / ETTEN · 1881",
+      "title": "Finding a Way Forward",
+      "focus": "How could an interest in art become useful, sustainable work?",
+      "subtitle": "Returning to the Pencil",
+      "kicker": "CUESMES · 1880",
+      "paragraphs": [
+        "The end of religious employment had not supplied a new profession. By 1880, Vincent still needed a livelihood and a way to contribute. Art was already familiar to him; deciding to work at it meant finding something he could actually do each day.",
+        "In September he told Theo about an earlier journey to Courrières, where he hoped to approach Jules Breton. He reached the painter’s studio but did not introduce himself. Fields, cottages and working people remained vivid in his account, alongside exhaustion and poverty.",
+        "Back in Cuesmes, drawing gave that attention a task. He borrowed prints, studied books and asked Theo for help. Renewed energy did not remove his shortage of money or a suitable working room. It made another attempt possible: a sheet, a model to copy, and a day spent learning."
+      ],
+      "prompt": "What would it take to turn something you care about into a daily practice?",
+      "evidence": "Letter 158 recalls the journey retrospectively; its date is not the date of the journey. This is a gradual change of direction, not an invented scene of sudden conversion from preacher to painter.",
+      "sources": [
+        "drawing-letter-158",
+        "miners-letter-155",
+        "drawing-letter-156",
+        "purpose"
+      ],
+      "materials": ["drawing-direction"],
+      "actions": [
+        { "label": "Before the Decision · Learning to Look", "description": "Optional look back to London · art and nature before 1880", "chapter": "drawing-looking" }
+      ]
+    },
+    {
+      "id": "drawing-bargue",
+      "title": "A Teacher on Paper",
+      "focus": "What did repeated exercises teach his eye and hand?",
+      "subtitle": "Exercises, Repetition and the Hand",
+      "kicker": "CUESMES AND BRUSSELS · 1880–1881",
+      "paragraphs": [
+        "A printed lesson could be returned to as often as necessary. Charles Bargue’s drawing course, published by Goupil, supplied models derived from plaster casts and master drawings. The trade in reproductions Vincent had known as an employee became part of his training.",
+        "On 7 September 1880 he reported finishing sixty sheets of Bargue’s charcoal exercises, lent by Hermanus Tersteeg. He had worked for about a fortnight, from early morning until evening. In January 1881 he was copying the complete exercises for a third time.",
+        "Repetition was meant to change what he could see. When he returned to living models in Etten, he credited those exercises with helping him measure, notice proportions and grasp the broad outlines. Copying was a preparation for looking, not the final destination."
+      ],
+      "prompt": "Look at an outline before its details. Where does the weight of the form sit?",
+      "evidence": "The lesson sequence is an editorial guide based on his letters, not an image of a surviving exercise sheet. The sixty-sheet report and the third repetition belong to different letters and dates.",
+      "sources": ["drawing-letter-136", "drawing-letter-157", "drawing-letter-162", "drawing-letter-172"],
+      "materials": ["drawing-exercises"],
+      "actions": []
+    },
+    {
+      "id": "drawing-millet",
+      "title": "Learning from Millet",
+      "focus": "Why did figures at work become both subjects and lessons?",
+      "subtitle": "Bodies at Work",
+      "kicker": "CUESMES · AUGUST–SEPTEMBER 1880",
+      "paragraphs": [
+        "In August, Vincent asked Theo to lend him reproductions of Jean-François Millet’s Labours of the Fields. He wanted examples of diggers and a winnower, and had already copied The Four Times of the Day and The Sower. He asked for loans, not specially purchased pictures.",
+        "By September he had drawn The Sower five times: twice small, three times large. The figure continued to occupy him. A person’s balance, the reach of an arm and the effort of a bent body gave him something specific to work out on paper.",
+        "Millet offered a meeting point between Vincent’s attention to labouring people and his need to learn figure drawing. That connection is a curatorial reading of his choices, not a quotation or proof of a single motive. Theo’s help and the circulation of printed images made those choices practicable."
+      ],
+      "prompt": "Follow the gesture rather than the face. How does a body show its work?",
+      "evidence": "The 1880 copies described in the letters are not automatically the surviving early Sower dated April 1881. The scholarly notes also leave the precise reproduction used in August 1880 uncertain.",
+      "sources": ["drawing-letter-156", "drawing-letter-157"],
+      "materials": ["drawing-millet-comparison"],
+      "actions": []
+    },
+    {
+      "id": "drawing-guidance",
+      "title": "Seeking Other Artists",
+      "focus": "Who supplied advice, examples and a place to work?",
+      "subtitle": "Guidance in Brussels",
+      "kicker": "BRUSSELS · NOVEMBER 1880–APRIL 1881",
+      "paragraphs": [
+        "In Brussels, Willem Roelofs advised Vincent to draw directly from plaster casts or a living model, with guidance. Studying printed examples was not enough. Proportion, anatomy, light and shade, and perspective had to be brought to the things in front of him.",
+        "Vincent also worked at Anthon van Rappard’s studio. In April 1881 he described the problem of losing that workspace: his own bedroom was too small and poorly lit. He hoped to live where he could meet other painters and receive practical advice.",
+        "He imagined a craft that might earn a living. In January he discussed drawing working people for magazine or book illustration, and the need to afford models. Literature and pictures of ordinary lives belonged to that ambition. He worked largely through his own efforts, but not without other people."
+      ],
+      "prompt": "Choose a person in the support network. What made their help different?",
+      "evidence": "Academy registration is documented. The scholarly edition also cites participation in a December 1880 competition; see Sources & Versions for the limits of reconstructing his classroom experience. Neither wholly isolated self-teaching nor prolonged academic training is assumed.",
+      "sources": ["drawing-letter-160", "drawing-letter-162", "drawing-letter-164", "drawing-letter-191"],
+      "materials": ["drawing-support"],
+      "actions": []
+    },
+    {
+      "id": "drawing-models",
+      "title": "Drawing the Life Around Him",
+      "focus": "How did printed lessons become studies of real people?",
+      "subtitle": "Models in Etten",
+      "kicker": "ETTEN · MID-SEPTEMBER 1881",
+      "paragraphs": [
+        "In Etten, advice from Anton Mauve helped Vincent return to living models. One was the labourer Piet Kaufmann. Getting someone to pose meant negotiation, time and money; observation depended on another person’s cooperation.",
+        "His September letter lists a man with a spade drawn five times in different poses, two sowers and two studies of a girl with a broom. A woman peeling potatoes and an old man by the fire also became subjects. These were repeated attempts to understand familiar actions, not a single finished image of rural life.",
+        "Bargue’s lessons now had a practical test. He could measure a figure and establish its broad shape, then try again when the proportions did not work. Labourers and household tasks supplied both the world he wanted to notice and the forms he needed to learn."
+      ],
+      "prompt": "Choose one everyday action. What changes when it is seen from another pose?",
+      "evidence": "Letter 172 contains small sketches and a description of the studies. Open those sketches in the original edition; a letter sketch, a named study and a surviving independent drawing are different kinds of object.",
+      "sources": ["drawing-letter-172"],
+      "materials": ["drawing-poses"],
+      "actions": []
+    },
+    {
+      "id": "drawing-nature",
+      "title": "Nature and Reality",
+      "focus": "What did working from life require beyond a love of scenery?",
+      "subtitle": "A Familiar World to Study",
+      "kicker": "ETTEN · MAY–NOVEMBER 1881",
       "image": "./assets/etten-road-1881.jpg",
       "imageSource": "road-in-etten",
       "imageCaption": "Road in Etten, 1881. Chalk, pencil, pastel and watercolour; underdrawing in pen and brown ink. The Metropolitan Museum of Art, 1975.1.774.",
       "imageCredit": "The Metropolitan Museum of Art · Open Access / CC0 · 459193",
       "paragraphs": [
-        "Drawing became a practice to be pursued, not simply an interest. In his letter to Theo of 24 September 1880, Vincent discussed exercises and the work of learning. Observation, copying and repeated study formed part of that process.",
-        "The early works bring us close to the work of learning. Open a drawing to explore its materials, its setting and the evidence behind its story. Road in Etten belongs to the Early Works section of this first hall; further drawings and paintings continue in Hall 02."
+        "When the weather allowed, he went out to draw. In May he described huts, barns, trees and woodcutters, as well as carts, ploughs, harrows and wheelbarrows. Landscape and working life were not separate worlds in these observations.",
+        "In July, heat could send him indoors to copy Holbein. He experimented with textured Ingres paper and a reed pen. In October he described about seven large studies of pollard-willow trunks along the road to the station and Leur. Attention became a routine shaped by weather, materials and repeated encounters.",
+        "Road in Etten brings several of those concerns into view: a receding road, trees and a worker carrying a broom. Follow the road into the distance, then return to the figure and the marks that hold the scene together. The picture is an independent work, not a facsimile of the road sketch in his October letter.",
+        "In November he wrote passionately to Van Rappard about nature and reality. His argument expresses an artistic commitment to lived experience; it is not a neutral verdict on every kind of academy teaching. Here, loving nature means staying with something long enough to observe and attempt it."
       ],
-      "prompt": "What changes when a familiar road becomes something to study?",
-      "evidence": "This section uses the September 1880 letter and the museum record for Road in Etten. The work is dated 1881; it is not presented as an illustration made for that particular letter.",
-      "sources": [
-        "drawing-letter-158",
-        "road-in-etten",
-        "purpose"
+      "prompt": "Follow the road, compare the trunks, and find the figure. What makes this a studied place?",
+      "evidence": "Working ‘from nature’ could also mean observing objects, casts or live models. This work’s mixed materials and date follow the Met record. No direct identity with Letter 174’s sketch, or unproved influence from another artist, is asserted.",
+      "sources": ["drawing-letter-167", "drawing-letter-169", "drawing-letter-174", "drawing-letter-184", "drawing-letter-160", "road-in-etten"],
+      "materials": ["drawing-weather-materials"],
+      "actions": []
+    },
+    {
+      "id": "drawing-mauve",
+      "title": "Taking Up the Brush",
+      "focus": "How did guidance turn drawing practice towards painting?",
+      "subtitle": "Lessons with Mauve",
+      "kicker": "THE HAGUE · DECEMBER 1881",
+      "paragraphs": [
+        "At the beginning of December, Mauve put Vincent in front of a still life of old wooden clogs and other objects. He also went to Mauve in the evenings to draw. Painting began with ordinary things and practical instruction, not a sudden release from the need to learn.",
+        "Later that month he discussed painted studies and watercolours, and a technical problem: Mauve thought he was working too close to his model. Without enough distance, judging proportions was difficult. A larger room, rent and the conditions of work were part of the next lesson.",
+        "The early works bring us close to that labour of learning. Open a drawing to explore its materials, its setting and the evidence behind its story. Road in Etten remains in Hall 01’s Early Works; the drawings, paintings and lives of The Hague continue in Hall 02 · Earth and Labour."
       ],
+      "prompt": "What do the next works reveal about a skill still being built?",
+      "evidence": "Letters 191 and 193 describe the instruction and its difficulties. No unverified still life is substituted for the objects named in the letter. The detailed Hague biography belongs to the next hall.",
+      "sources": ["drawing-letter-191", "drawing-letter-193", "road-in-etten"],
+      "materials": ["drawing-mauve-lesson"],
+      "actions": []
+    },
+    {
+      "id": "drawing-looking",
+      "branch": true,
+      "title": "Before the Decision",
+      "subtitle": "Learning to Look",
+      "kicker": "OPTIONAL LOOK BACK · LONDON · JANUARY 1874",
+      "paragraphs": [
+        "Choosing art as work in 1880 did not mean discovering pictures for the first time. Years earlier, Vincent discussed Millet, Breton, Corot, Rousseau and Dutch painters with Theo. Walking, reading and looking at art were already connected in his everyday life.",
+        "This short return to the January 1874 letter offers a starting point for the later practice. The full account of the house, garden and London work remains in A Life He Enjoyed rather than being repeated here."
+      ],
+      "quote": {
+        "text": "Painters understand nature and love it, and teach us to see.",
+        "attribution": "Vincent to Theo · Beginning of January 1874 · Letter 17",
+        "source": "letter-17"
+      },
+      "prompt": "",
+      "evidence": "A brief excerpt from the scholarly translation, not a manuscript image. This earlier interest is not evidence that he had already chosen an artistic career in 1874.",
+      "sources": ["letter-17"],
+      "materials": [],
+      "actions": [
+        { "label": "Read the January 1874 Letter", "source": "letter-17" }
+      ]
+    },
+    {
+      "id": "drawing-sources",
+      "branch": true,
+      "title": "Sources & Versions",
+      "subtitle": "How We Know about the First Years of Learning",
+      "kicker": "LEARNING TO DRAW · FOUR QUESTIONS",
+      "paragraphs": [
+        "Letters describe intentions, requests and difficulties at particular moments. Printed models, letter sketches and independent works must be identified separately. Open a question below, then return to the same place in the story."
+      ],
+      "evidenceCards": [
+        {
+          "id": "drawing-becoming",
+          "title": "When Did He Become an Artist?",
+          "label": "INTEREST · DIRECTION · CONTINUING PRACTICE",
+          "paragraphs": [
+            "Early interest in art, the decision to pursue it as work around 1880, and developing a workable practice are not the same event. The letters show plans changing, help being sought and the problem of earning a living. A surviving study does not date an artist’s ‘birth’ to a single day."
+          ],
+          "sources": ["letter-17", "miners-letter-155", "drawing-letter-156", "drawing-letter-164", "drawing-timeline"]
+        },
+        {
+          "id": "drawing-from-nature",
+          "title": "What Does ‘From Nature’ Mean?",
+          "label": "DIRECT OBSERVATION · NOT ONLY LANDSCAPE",
+          "paragraphs": [
+            "In Letter 160, Roelofs’s advice explicitly includes casts and a living model. Outdoor landscape is one application of direct observation, not its whole meaning. The Etten letters also describe work tools, people, weather and the choice to continue indoors."
+          ],
+          "sources": ["drawing-letter-160", "drawing-letter-167", "drawing-letter-169", "drawing-letter-172"]
+        },
+        {
+          "id": "drawing-self-taught",
+          "title": "Was He Self-Taught?",
+          "label": "EXERCISES · ADVICE · ACADEMY RECORDS",
+          "paragraphs": [
+            "Much of the work was self-directed, but books, borrowed prints, artists’ advice and shared workspaces mattered. The support network is a guide to specific help, not a claim that every person taught the same lesson.",
+            "Letter 160’s current scholarly note 3 records Brussels academy enrolment in the first week of November 1880. It discusses older doubts about attendance, then cites research on his participation in a competition on 5 December. Registration and that competition should not be erased; they also do not establish prolonged or comprehensive classroom training."
+          ],
+          "sources": ["drawing-letter-157", "drawing-letter-160", "drawing-letter-164", "drawing-letter-191"]
+        },
+        {
+          "id": "drawing-survival",
+          "title": "Which Early Drawings Survive?",
+          "label": "A LETTER IS NOT AN OBJECT IDENTIFICATION",
+          "paragraphs": [
+            "Some early copies are lost; others cannot securely be matched to an individual mention. Letter 156’s notes date the known early Sower to April 1881, rather than the August 1880 request. Small sketches inside letters are distinct from separately catalogued works.",
+            "Road in Etten is shown with its Met catalogue date and materials. It is not labelled as the exact drawing attached to Letter 174. The Bargue lesson guide and the support network are present-day editorial aids, clearly distinguished from historical images."
+          ],
+          "sources": ["drawing-letter-156", "drawing-letter-157", "drawing-letter-172", "drawing-letter-174", "road-in-etten"]
+        }
+      ],
+      "prompt": "",
+      "evidence": "Dates and letter numbers follow the scholarly edition. Original manuscript views and full translations are accessed at their source; the exhibit does not generate substitute archive pages or imply permission for wholesale reproduction.",
+      "sources": ["letter-17", "drawing-letter-136", "miners-letter-155", "drawing-letter-156", "drawing-letter-157", "drawing-letter-158", "drawing-letter-160", "drawing-letter-162", "drawing-letter-164", "drawing-letter-167", "drawing-letter-169", "drawing-letter-172", "drawing-letter-174", "drawing-letter-184", "drawing-letter-191", "drawing-letter-193", "road-in-etten", "drawing-timeline"],
       "materials": [],
       "actions": []
+    },
+    {
+      "id": "attachment-sources",
+      "title": "Sources & Versions",
+      "subtitle": "How the Attachment Has Been Understood",
+      "kicker": "AN UNCERTAIN ATTACHMENT · READ FURTHER",
+      "branch": true,
+      "paragraphs": [
+        "These accounts do more than disagree about names. They give the episode different shapes: a family’s remembered refusal, a revised identification, a different explanation of disappointment, and a cautious history of the house.",
+        "Open an account to see what it actually contributes. The letters remain available below; the date, author and kind of source matter alongside the story."
+      ],
+      "evidenceCards": [
+        {
+          "id": "memoir",
+          "title": "The Family Memoir",
+          "label": "JO VAN GOGH-BONGER · RETROSPECTIVE FAMILY ACCOUNT",
+          "paragraphs": [
+            "Jo preserves the declaration, refusal and disappointment that give the episode its familiar narrative. She describes the landlady’s daughter but calls her Ursula.",
+            "She assembled the account retrospectively from family material and information received from Theo. It supplies a remembered scene, not an eyewitness transcript or a secure date for the declaration."
+          ],
+          "sources": [
+            "family-memoir"
+          ]
+        },
+        {
+          "id": "identification",
+          "title": "A Revised Identification",
+          "label": "MARTIN BAILEY · LATER SPECIALIST RESEARCH",
+          "paragraphs": [
+            "Bailey revisits the identity through Anna’s correspondence and family records. He identifies Eugénie as the likely subject of the attachment and considers Samuel Plowman, whom she married in 1878, a possible earlier fiancé.",
+            "His article reproduces later photographs of Eugénie and Samuel in a family locket. It is not a portrait of Vincent with Eugénie, or an image of the declaration.",
+            "The linked family-letter transcription is dated 24 February 1874 and addressed to Theo. It mentions Eugénie’s engagement. The date belongs to this published transcription; it does not establish when Vincent declared his feelings."
+          ],
+          "sources": [
+            "bailey-2019",
+            "anna-family-1874"
+          ]
+        },
+        {
+          "id": "alternative",
+          "title": "A Different Scholarly Reading",
+          "label": "ELLY CASSEE · VAN GOGH MUSEUM JOURNAL, 1996",
+          "paragraphs": [
+            "In her museum-journal article In love: Vincent van Gogh’s first true love, Cassee questions the weight later biography has given to the London romance. She examines Anna’s correspondence and Vincent’s earlier attachment to his cousin Caroline Haanebeek.",
+            "She proposes that disappointment involving Caroline may help explain the unhappiness associated with this period. This is an alternative scholarly reading, not proof that the London attachment never happened."
+          ],
+          "sources": [
+            "cassee-1996"
+          ]
+        },
+        {
+          "id": "institution",
+          "title": "A Cautious Institutional Account",
+          "label": "VAN GOGH HOUSE LONDON · HERITAGE INSTITUTION",
+          "paragraphs": [
+            "Van Gogh House describes affection for Eugénie as rumoured and leaves the circumstances of his departure unresolved.",
+            "The account places the relationship within the life of the house without allowing a familiar love story to explain every later choice."
+          ],
+          "sources": [
+            "house-london"
+          ]
+        }
+      ],
+      "materials": [],
+      "actions": [
+        {
+          "label": "Remembering an Earlier Love",
+          "chapter": "attachment-memory"
+        }
+      ],
+      "prompt": "",
+      "evidence": "These are independent synopses, not reproduced manuscript pages. The family transcription and Cassee’s article are readable sources; the locket is viewed on Bailey’s site with its original credit. No substitute archive images or portraits have been invented.",
+      "sources": [
+        "letter-13",
+        "letter-17",
+        "letter-22",
+        "anna-family-1874",
+        "letter-27",
+        "letter-28",
+        "letter-99",
+        "letter-183",
+        "family-memoir",
+        "bailey-2019",
+        "cassee-1996",
+        "house-london"
+      ]
+    },
+    {
+      "id": "attachment-memory",
+      "title": "Remembering an Earlier Love",
+      "subtitle": "A Letter Written in 1881",
+      "kicker": "A LATER REFLECTION · THE GIRL IS NOT NAMED",
+      "branch": true,
+      "paragraphs": [
+        "In November 1881, while discussing his feelings for Kee Vos, Vincent reflected on an earlier attachment. He recalled giving up on a girl who married someone else, and the long sorrow that followed.",
+        "He also questioned the way he had approached love when he was younger. It is his own later reflection on an early disappointment, but it is not a dated account of the London declaration.",
+        "He did not name the girl. This passage should not be labelled as a recollection of Eugénie: its precise identification remains open."
+      ],
+      "materials": [],
+      "actions": [
+        {
+          "label": "Read Letter 183 · 12 November 1881",
+          "source": "letter-183"
+        },
+        {
+          "label": "Back to Sources & Versions",
+          "chapter": "attachment-sources"
+        }
+      ],
+      "prompt": "",
+      "evidence": "Cassee discusses this passage in her 1996 museum-journal article, including the possibility that the earlier attachment concerned Caroline Haanebeek. The reading here is an independent summary, not a reproduced translation.",
+      "sources": [
+        "letter-183",
+        "cassee-1996"
+      ]
     }
   ],
   "materials": [
@@ -739,9 +1458,106 @@
           "source": "letter-15"
         }
       ]
+    },
+    {
+      "id": "drawing-direction", "title": "A Journey Recalled, a Task Begun", "kind": "LETTER 158 · 24 SEPTEMBER 1880", "presentation": "household",
+      "caption": "Read the journey as Vincent remembered it, not as a scene of sudden revelation.",
+      "sections": [
+        { "title": "The earlier journey", "body": "Vincent recalled walking to Courrières, reaching Jules Breton’s studio and leaving without introducing himself. The letter’s date is not the date of the journey.", "sources": ["drawing-letter-158"] },
+        { "title": "The work now at hand", "body": "Books, borrowed prints and drawing offered something practical to return to. Limited space and money remained part of that work.", "sources": ["drawing-letter-158", "drawing-letter-156"] }
+      ],
+      "credit": "Original gallery reading aid · Based on Letters 156 and 158", "source": "drawing-letter-158",
+      "rights": "Editorial summary, not a letter transcription, travel map or reconstructed historical scene. The manuscript and complete translation are available at the original edition.",
+      "actions": [{ "label": "Read the Journey in Letter 158", "source": "drawing-letter-158" }]
+    },
+    {
+      "id": "drawing-exercises", "title": "A Programme to Repeat", "kind": "DRAWING PRACTICE · 1880–1881", "presentation": "household",
+      "caption": "An editorial guide to his practice—not a reproduction of a Bargue plate.",
+      "sections": [
+        { "title": "Begin with the outline", "body": "Printed models gave him forms to compare: broad outlines, relationships between parts, and the placement of light and shade.", "sources": ["drawing-letter-136", "drawing-letter-157", "drawing-letter-160"] },
+        { "title": "Work through the sheets", "body": "On 7 September 1880, he reported completing sixty Bargue charcoal sheets in a fortnight, working from morning until evening.", "sources": ["drawing-letter-157"] },
+        { "title": "Return and compare", "body": "By January 1881 he described a third complete repetition. A course on paper could be revisited while he sought guidance and practised other subjects.", "sources": ["drawing-letter-162"] }
+      ],
+      "credit": "Original gallery study guide · Based on Letters 136, 157, 160 and 162", "source": "drawing-letter-157",
+      "rights": "Original explanatory guide, not an archival teaching sheet. The course description and illustrated example can be checked in Letter 136, note 22; no unverified plate or supposed matching Vincent copy is displayed.",
+      "actions": [{ "label": "Explore Bargue’s Course · Note 22", "source": "drawing-letter-136" }, { "label": "Read the Practice Record", "source": "drawing-letter-157" }, { "label": "Read about the Third Repetition", "source": "drawing-letter-162" }]
+    },
+    {
+      "id": "drawing-millet-comparison", "title": "From a Printed Example to a Working Figure", "kind": "STUDY SOURCE / VINCENT’S WORK", "presentation": "household",
+      "caption": "Keep the artist he studied separate from the drawings he was trying to make.",
+      "sections": [
+        { "title": "Study Source · Millet", "body": "The requested reproductions included The Labours of the Fields, diggers and a winnower. These were examples to borrow and study, not pictures painted by Vincent.", "sources": ["drawing-letter-156"] },
+        { "title": "Vincent’s Work · Learning the Figure", "body": "He reported making copies and trying to improve the figures in a drawing of miners going to the pit. Five repetitions of The Sower are mentioned in September 1880. A surviving Sower from April 1881 must not be passed off as one of those earlier copies.", "sources": ["drawing-letter-156", "drawing-letter-157"] }
+      ],
+      "credit": "Original gallery comparison guide · Letter 156 and its work-identification notes; Letter 157", "source": "drawing-letter-156",
+      "rights": "Textual study comparison, not a pair of identified matching artworks. Consult the edition’s illustrations and object notes for the actual reproductions and surviving works.",
+      "actions": [{ "label": "See the Prints He Requested", "source": "drawing-letter-156" }, { "label": "Read about the Sower Copies", "source": "drawing-letter-157" }]
+    },
+    {
+      "id": "drawing-support", "title": "The Help Behind the Practice", "kind": "PEOPLE & PRACTICAL SUPPORT", "presentation": "support",
+      "caption": "Choose a person to see what their help made possible at this stage.",
+      "people": [
+        { "id": "theo", "name": "Theo van Gogh", "role": "Prints, paper and correspondence", "body": "Vincent asked Theo to lend Millet reproductions rather than buy new ones. Later he asked him to bring textured Ingres paper suitable for pen work. Their letters connect encouragement to particular things he needed to keep practising.", "sources": ["drawing-letter-156", "drawing-letter-169"] },
+        { "id": "tersteeg", "name": "Hermanus Tersteeg", "role": "Access to Bargue’s course", "body": "The former Goupil colleague in The Hague was asked to lend the drawing examples. Borrowing the course made an organised programme of exercises available without requiring Vincent to purchase the whole set.", "sources": ["drawing-letter-156", "drawing-letter-157"] },
+        { "id": "roelofs", "name": "Willem Roelofs", "role": "Advice about drawing from life", "body": "In Brussels, Roelofs urged direct work from casts or living models, with help from an experienced artist. The advice challenged Vincent to move beyond copying flat examples alone.", "sources": ["drawing-letter-160"] },
+        { "id": "rappard", "name": "Anthon van Rappard", "role": "An artistic contact and workspace", "body": "Vincent’s April 1881 letter describes working in Van Rappard’s studio and benefiting from the contact. He still needed room, company and guidance as he worked towards earning a living.", "sources": ["drawing-letter-164"] },
+        { "id": "mauve", "name": "Anton Mauve", "role": "Models, painting and proportion", "body": "Mauve encouraged work with living models, then gave him practical painting lessons in The Hague. His advice about working farther from the model brought space and judging proportions into the learning process.", "sources": ["drawing-letter-172", "drawing-letter-191", "drawing-letter-193"] }
+      ],
+      "credit": "Original gallery contact guide · Independent summaries of the linked correspondence", "source": "drawing-letter-160",
+      "rights": "Editorial guide to documented assistance, not an archival relationship chart. No invented portraits, dialogue or studio photographs are used.",
+      "actions": [{ "label": "Read about Roelofs and the Academy", "source": "drawing-letter-160" }]
+    },
+    {
+      "id": "drawing-poses", "title": "A Body in More Than One Position", "kind": "LETTER 172 · MID-SEPTEMBER 1881", "presentation": "household",
+      "caption": "The original letter includes small sketches. Open the edition to examine the actual marks.",
+      "sections": [
+        { "title": "Return to the same model", "body": "Piet Kaufmann posed with a spade. Vincent reported five positions of a digger, studying how a familiar action changed the arrangement of the body.", "sources": ["drawing-letter-172"] },
+        { "title": "Look at ordinary tasks", "body": "Sowing, sweeping, peeling potatoes and sitting beside a fire supplied other poses. These were people who cooperated with him, not only subjects observed from a distance.", "sources": ["drawing-letter-172"] },
+        { "title": "Make the work possible", "body": "He paid the models. Finding someone willing to pose, making time and meeting the expense belonged to the practice as much as pencil and paper.", "sources": ["drawing-letter-172"] }
+      ],
+      "credit": "Original gallery pose guide · Based on Letter 172", "source": "drawing-letter-172",
+      "rights": "Editorial reading aid. No invented pose drawing or substitute manuscript is shown; the actual letter sketches remain available through the scholarly edition.",
+      "actions": [{ "label": "Explore the Etten Letter & Sketches", "source": "drawing-letter-172" }]
+    },
+    {
+      "id": "drawing-weather-materials", "title": "Paper, Weather and a Place to Work", "kind": "THE PRACTICAL CONDITIONS OF DRAWING", "presentation": "household",
+      "caption": "Tools and circumstances shaped what could be studied on a particular day.",
+      "sections": [
+        { "title": "Outside when possible", "body": "In May he described drawing buildings, trees, woodcutters and agricultural tools outdoors whenever the weather allowed.", "sources": ["drawing-letter-167"] },
+        { "title": "A paper suited to the pen", "body": "In July he requested textured Ingres paper for pen work, especially the reed pen. Local alternatives could be too smooth or too expensive.", "sources": ["drawing-letter-169"] },
+        { "title": "Change the work, keep practising", "body": "When the heath was too hot for outdoor drawing, he copied a Holbein example indoors. In autumn he returned repeatedly to the willow trunks beside a familiar road.", "sources": ["drawing-letter-169", "drawing-letter-174"] }
+      ],
+      "credit": "Original gallery materials guide · Based on Letters 167, 169 and 174", "source": "drawing-letter-169",
+      "rights": "Editorial summary, not a display of Vincent’s original drawing tools or paper. Road in Etten is shown separately with its museum image credit and object record.",
+      "actions": [{ "label": "Read the Request for Paper", "source": "drawing-letter-169" }, { "label": "Read the Willow Studies Letter", "source": "drawing-letter-174" }, { "label": "Open Road in Etten’s Museum Record", "source": "road-in-etten" }]
+    },
+    {
+      "id": "drawing-mauve-lesson", "title": "Objects, Distance and Proportion", "kind": "LESSONS WITH MAUVE · DECEMBER 1881", "presentation": "household",
+      "caption": "Painting introduced another set of practical problems—not an instant transformation into the artist we know.",
+      "sections": [
+        { "title": "A still life to begin", "body": "Mauve put old wooden clogs and other objects before him to paint. Vincent also visited in the evenings to draw.", "sources": ["drawing-letter-191"] },
+        { "title": "Step farther back", "body": "After returning to Etten, he recalled advice to work farther from the model. More space would help him judge proportions; finding a suitable room therefore mattered.", "sources": ["drawing-letter-193"] }
+      ],
+      "credit": "Original gallery lesson guide · Based on Letters 191 and 193", "source": "drawing-letter-191",
+      "rights": "Editorial summary, not a reconstruction of Mauve’s studio or an attribution of a particular surviving still life to this lesson.",
+      "actions": [{ "label": "Read the Still-Life Lesson", "source": "drawing-letter-191" }, { "label": "Read the Advice on Proportion", "source": "drawing-letter-193" }]
     }
   ],
   "sources": [
+    { "id": "drawing-letter-136", "label": "Letter 136 · To Theo, Amsterdam, 3–4 December 1877 · Bargue course", "type": "Contemporary letter · Printed drawing models and annotations", "url": "https://vangoghletters.org/vg/letters/let136/letter.html" },
+    { "id": "drawing-letter-156", "label": "Letter 156 · To Theo, Cuesmes, 20 August 1880", "type": "Contemporary letter · Millet copies, loans and surviving-work notes", "url": "https://vangoghletters.org/vg/letters/let156/letter.html" },
+    { "id": "drawing-letter-157", "label": "Letter 157 · To Theo, Cuesmes, 7 September 1880", "type": "Contemporary letter · Sixty Bargue sheets and repeated Millet studies", "url": "https://vangoghletters.org/vg/letters/let157/print.html" },
+    { "id": "drawing-letter-160", "label": "Letter 160 · To Theo, Brussels, 1 November 1880 · Academy history in note 3", "type": "Contemporary letter and scholarly annotation · Roelofs, anatomy and academy records", "url": "https://vangoghletters.org/vg/letters/let160/letter.html" },
+    { "id": "drawing-letter-162", "label": "Letter 162 · To Theo, Brussels, January 1881", "type": "Contemporary letter · Third repetition, working people and illustration", "url": "https://vangoghletters.org/vg/letters/let162/print.html" },
+    { "id": "drawing-letter-164", "label": "Letter 164 · To Theo, Brussels, 2 April 1881", "type": "Contemporary letter · Van Rappard, workspace and earning a living", "url": "https://vangoghletters.org/vg/letters/let164/letter.html" },
+    { "id": "drawing-letter-167", "label": "Letter 167 · To Theo, Etten, second half of May 1881", "type": "Contemporary letter · Outdoor subjects, weather and work tools", "url": "https://vangoghletters.org/vg/letters/let167/letter.html" },
+    { "id": "drawing-letter-169", "label": "Letter 169 · To Theo, Etten, approximately 15–20 July 1881", "type": "Contemporary letter · Paper, reed pen and indoor copying", "url": "https://vangoghletters.org/vg/letters/let169/letter.html" },
+    { "id": "drawing-letter-172", "label": "Letter 172 · To Theo, Etten, mid-September 1881", "type": "Contemporary letter and sketches · Living models and repeated poses", "url": "https://vangoghletters.org/vg/letters/let172/letter.html" },
+    { "id": "drawing-letter-174", "label": "Letter 174 · To Anthon van Rappard, Etten, 12 October 1881", "type": "Contemporary letter and road sketch · Pollard-willow studies", "url": "https://vangoghletters.org/vg/letters/let174/letter.html" },
+    { "id": "drawing-letter-184", "label": "Letter 184 · To Anthon van Rappard, Etten, 12 November 1881", "type": "Contemporary letter · Personal argument about nature, reality and teaching", "url": "https://vangoghletters.org/vg/letters/let184/letter.html" },
+    { "id": "drawing-letter-191", "label": "Letter 191 · To Theo, The Hague, 1–3 December 1881", "type": "Contemporary letter · Mauve’s still-life lesson and evening drawing", "url": "https://vangoghletters.org/vg/letters/let191/print.html" },
+    { "id": "drawing-letter-193", "label": "Letter 193 · To Theo, Etten, on or about 23 December 1881", "type": "Contemporary letter · Painted studies, working distance and proportion", "url": "https://vangoghletters.org/vg/letters/let193/letter.html" },
+    { "id": "drawing-timeline", "label": "National Gallery of Victoria · Vincent van Gogh timeline", "type": "Museum chronology · Career direction and early artistic practice", "url": "https://www.ngv.vic.gov.au/ngv_timeline/vincent-van-gogh/" },
     {
       "id": "house-open-photo",
       "label": "87 Hackford Road · Udimu, 17 May 2016",
@@ -838,6 +1654,22 @@
       "url": "https://vangoghletters.org/vg/letters/let022/letter.html",
       "translationUrl": "https://vangoghletters.org/vg/letters/let022/print.html",
       "rights": "Edition facsimile and full translation: reuse permission unconfirmed"
+    },
+    {
+      "id": "letter-27",
+      "label": "Letter 27 · To Theo, 31 July 1874",
+      "type": "Contemporary letter + scholarly annotation",
+      "url": "https://vangoghletters.org/vg/letters/let027/letter.html",
+      "translationUrl": "https://vangoghletters.org/vg/letters/let027/print.html",
+      "rights": "Linked scholarly edition. Independent narrative synopsis here; no manuscript image or full translation reproduced."
+    },
+    {
+      "id": "letter-28",
+      "label": "Letter 28 · To Theo, 10 August 1874",
+      "type": "Contemporary letter + scholarly annotation",
+      "url": "https://vangoghletters.org/vg/letters/let028/letter.html",
+      "translationUrl": "https://vangoghletters.org/vg/letters/let028/print.html",
+      "rights": "Linked scholarly edition. Independent narrative synopsis here; no manuscript image or full translation reproduced."
     },
     {
       "id": "house",
@@ -990,6 +1822,64 @@
       "license": "CC0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
       "credit": "The Metropolitan Museum of Art · Open Access / CC0 · 459193"
+    },
+    {
+      "id": "miners-letter-150",
+      "label": "To Theo, Wasmes, 4–15 March 1879 · Letter 150 · Family correspondence in notes 2 and 7",
+      "url": "https://vangoghletters.org/vg/letters/let150/letter.html",
+      "type": "Contemporary letter and family correspondence · Scholarly edition and annotations"
+    },
+    {
+      "id": "miners-letter-151",
+      "label": "To Theo, Wasmes, April 1879 · Letter 151 · Marcasse and mine-work sketches",
+      "url": "https://vangoghletters.org/vg/letters/let151/letter.html",
+      "type": "Contemporary letter with sketches · Scholarly edition"
+    },
+    {
+      "id": "miners-letter-153",
+      "label": "To Theo, Cuesmes, 5 August 1879 · Letter 153 · Committee report in note 4",
+      "url": "https://vangoghletters.org/vg/letters/let153/letter.html",
+      "type": "Contemporary letter and institutional report extract · Scholarly annotations"
+    },
+    {
+      "id": "miners-letter-155",
+      "label": "To Theo, Cuesmes, approximately 22–24 June 1880 · Letter 155",
+      "url": "https://vangoghletters.org/vg/letters/let155/letter.html",
+      "type": "Contemporary letter · Scholarly edition and annotations"
+    },
+    {
+      "id": "miners-jo-memoir",
+      "label": "Jo van Gogh-Bonger · Memoir · The Borinage and Brussels",
+      "url": "https://www.webexhibits.org/vangogh/memoir/sisterinlaw/5.html",
+      "type": "Later family memoir · Online transcription, not an eyewitness record"
+    },
+    {
+      "id": "anna-family-1874",
+      "label": "Anna to Theo · 24 February 1874 · Published family correspondence",
+      "type": "Family letter · Published transcription, not a manuscript image",
+      "url": "https://www.webexhibits.org/vangogh/letter/2/etc-fam-1874.htm",
+      "rights": "Original-source reading with independent synopsis. The linked transcription is dated 24 February 1874 and addressed to Theo; no archive image or full text is reproduced."
+    },
+    {
+      "id": "cassee-1996",
+      "label": "Elly Cassee · In love: Vincent van Gogh’s first true love · Van Gogh Museum Journal, 1996",
+      "type": "Museum-journal research · Alternative interpretation",
+      "url": "https://www.dbnl.org/tekst/_van012199601_01/_van012199601_01_0009.php",
+      "rights": "Published museum-journal article, read at DBNL; independent narrative and research synopses here, not a reproduction of the article."
+    },
+    {
+      "id": "letter-99",
+      "label": "Letter 99 · To Theo, 25 November 1876",
+      "type": "Contemporary letter + scholarly annotation",
+      "url": "https://vangoghletters.org/vg/letters/let099/letter.html",
+      "rights": "Linked scholarly edition. Independent narrative synopsis here; no manuscript image or full translation reproduced."
+    },
+    {
+      "id": "letter-183",
+      "label": "Letter 183 · To Theo, 12 November 1881",
+      "type": "Later autobiographical reflection · The girl is unnamed",
+      "url": "https://vangoghletters.org/vg/letters/let183/letter.html",
+      "rights": "Linked scholarly edition. Independent synopsis, cross-read with Cassee’s published discussion; no manuscript image or full translation reproduced."
     }
   ],
   "topics": [
@@ -1026,12 +1916,29 @@
     {
       "id": "miners",
       "title": "Among the Miners",
-      "subtitle": "Work, Hardship and an Unsettled Direction",
-      "location": "THE BORINAGE · 1878–1880",
+      "subtitle": "A Calling in the Borinage",
+      "location": "BELGIUM · 1878–1880",
       "chapters": [
-        "miners"
+        "miners",
+        "miners-care",
+        "miners-appointment",
+        "miners-purpose"
       ],
-      "summary": "Coal-mining communities, religious work and an increasingly uncertain vocation.",
+      "summary": "Dangerous work, practical care, an appointment that ended, and the search for another way to be useful.",
+      "introduction": {
+        "title": "Faith, Care and the End of an Appointment",
+        "paragraphs": [
+          "Vincent arrived in the Borinage hoping to find a lasting place in religious work. In December 1878, he described miners returning through the snow and the small homes around the pits. He held Bible readings, visited the sick and wanted to stay.",
+          "His six-month appointment began on 1 February 1879. Caring for injured and sick people became absorbing work. As he gave more of himself, his family grew alarmed by his living conditions, and local religious authorities pressed him to accept advice.",
+          "He was not retained. The committee acknowledged generosity and sacrifice but judged his preaching and congregational work inadequate. His future remained unsettled; the wish to be useful did not disappear."
+        ],
+        "sources": [
+          "miners-letter-149",
+          "miners-letter-150",
+          "miners-letter-153"
+        ]
+      },
+      "sourceChapter": "miners-sources",
       "image": "./assets/story-miners-1880.jpg",
       "imageSource": "miners-image",
       "imageCaption": "Miners, Cuesmes. Catalogued as 1880 at the linked image source. A reproduction of a drawing, not a photograph of the miners.",
@@ -1040,12 +1947,28 @@
     {
       "id": "drawing",
       "title": "Learning to Draw",
-      "subtitle": "Looking Closely, Learning Slowly",
-      "location": "CUESMES AND ETTEN · 1880–1881",
+      "subtitle": "A Direction Taking Shape",
+      "location": "CUESMES · BRUSSELS · ETTEN / 1880–1881",
       "chapters": [
-        "drawing"
+        "drawing", "drawing-bargue", "drawing-millet", "drawing-guidance", "drawing-models", "drawing-nature", "drawing-mauve"
       ],
-      "summary": "Observation, materials and repeated exercises lead into the Early Works.",
+      "summary": "Borrowed models, advice and repeated observation turn a possible future into daily work.",
+      "groups": [
+        { "id": "direction", "title": "Finding a Direction", "chapters": ["drawing"] },
+        { "id": "practice", "title": "Building a Practice", "chapters": ["drawing-bargue", "drawing-millet", "drawing-guidance"] },
+        { "id": "life", "title": "Working from Life", "chapters": ["drawing-models", "drawing-nature", "drawing-mauve"] }
+      ],
+      "introduction": {
+        "title": "A Possible Future, Made into Daily Work",
+        "entry": true,
+        "paragraphs": [
+          "By 1880, Vincent was looking for sustainable work and a way to contribute. Theo encouraged his artistic direction, and drawing began to occupy more of his days.",
+          "Borrowed prints, exercises, books and contact with artists gave that direction a practical shape. In Etten, outdoor work and repeated studies of local people brought the lessons to life: materials, proportion, and the next attempt.",
+          "Follow the subjects and methods of these first years, or go straight to the Early Works. The London look back is optional; the main story moves from finding a direction to building a practice and working from life."
+        ],
+        "sources": ["miners-letter-155", "drawing-letter-156", "drawing-letter-164", "drawing-letter-172"]
+      },
+      "sourceChapter": "drawing-sources",
       "image": "./assets/etten-road-1881.jpg",
       "imageSource": "road-in-etten",
       "imageCaption": "Road in Etten, 1881. Chalk, pencil, pastel and watercolour; underdrawing in pen and brown ink. The Metropolitan Museum of Art, 1975.1.774.",

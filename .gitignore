@@ -13,9 +13,15 @@ Thumbs.db
 !/data/artworks_en.json
 !/data/artwork_cards_en.json
 !/data/hall_introductions_en.json
+!/data/afterlife_en.json
+!/data/yellow_house_en.json
 !/data/chapters_en.json
 !/data/ordered_route_v21.json
 !/data/ordered_route_v22.json
+!/data/ordered_route_v23.json
+!/data/ordered_route_v24.json
+!/data/ordered_route_v25.json
+!/data/ordered_route_v28.json
 !/data/collection_en.json
 !/data/collection_audit.json
 !/data/story_exhibit_en.json

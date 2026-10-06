@@ -1,7 +1,8 @@
 import * as THREE from 'three';
+import { onLanguageChange, translate, wrapText } from './i18n.js';
 
 export function validateHallTexts(data) {
-  if (data?.language !== 'en' || data.halls?.length !== 7) throw new Error('Seven English hall introductions are required');
+  if (data?.language !== 'en' || data.halls?.length !== 8) throw new Error('Eight English hall introductions are required');
   const entries = [data.arrival, ...data.halls, data.departure];
   const identifiers = new Set();
   for (const [index, entry] of entries.entries()) {
@@ -10,14 +11,19 @@ export function validateHallTexts(data) {
       throw new Error('Wall-text identifiers and English paragraphs must be complete');
     }
     identifiers.add(entry.id);
-    if (index > 0 && index < 8 && (entry.id !== String(index).padStart(2, '0') || !entry.title || !entry.years || !entry.sources?.length)) {
+    if (index > 0 && index <= data.halls.length && (entry.id !== String(index).padStart(2, '0') || !entry.title || !entry.years || !entry.sources?.length)) {
       throw new Error(`Hall ${index} needs a title, dates and sources`);
     }
     const wall = entry.wall;
+    if (wall?.exhibit && (wall.exhibit !== 'afterlife' || entry.id !== '08')) throw new Error('Only Hall 08 can share the Afterlife exhibit introduction');
     if (![wall?.width, wall?.height, wall?.centerHeight, wall?.viewDistance].every((value) => Number.isFinite(value) && value > 0)) {
       throw new Error(`Invalid wall dimensions for ${entry.id}`);
     }
-    if (wall.curve) {
+    if (wall.path) {
+      if (wall.path.points?.length !== 4 || !wall.path.points.every((point) => point.length === 2 && point.every(Number.isFinite))
+          || ![wall.path.at, wall.path.inset, wall.path.side].every(Number.isFinite)
+          || wall.path.at < 0 || wall.path.at > 1 || ![-1, 1].includes(wall.path.side)) throw new Error(`Invalid wall path for ${entry.id}`);
+    } else if (wall.curve) {
       if (![...wall.curve.center, ...wall.curve.radii, wall.curve.angle, wall.curve.inset].every(Number.isFinite)
           || wall.curve.radii.some((radius) => radius <= 0)) throw new Error(`Invalid curved wall for ${entry.id}`);
     } else if (!wall.position?.every(Number.isFinite) || wall.position.length !== 3
@@ -27,19 +33,45 @@ export function validateHallTexts(data) {
     for (const source of entry.sources ?? []) {
       if (!source.title || !source.note || new URL(source.url).protocol !== 'https:') throw new Error(`Invalid introduction source for ${entry.id}`);
     }
+    if (entry.tourLead && (typeof entry.tourLead !== 'string' || /[\u3400-\u9fff]/u.test(entry.tourLead))) throw new Error(`Invalid tour introduction for ${entry.id}`);
   }
   if (data.arrival.paragraphs.join('\n') !== 'We know who he would become.\nAs you enter, set that knowledge aside.'
-      || data.departure.paragraphs.join('\n') !== 'We know who he became.\nAs you leave, ask what you have come to know of the person.') {
+      || data.departure.paragraphs.join('\n') !== 'We know who he became.\nAs you leave, what stays with you\nfrom Vincent’s life?') {
     throw new Error('The paired entrance and exit statements must retain the approved wording');
   }
   return entries.length;
+}
+
+function pathPose(wall, horizontal = 0) {
+  const { points, at, inset, side } = wall.path;
+  const samples = [];
+  let length = 0;
+  for (let index = 0; index <= 200; index += 1) {
+    const fraction = index / 200;
+    const inverse = 1 - fraction;
+    const weights = [inverse ** 3, 3 * inverse ** 2 * fraction, 3 * inverse * fraction ** 2, fraction ** 3];
+    const point = new THREE.Vector3(points.reduce((sum, value, axis) => sum + value[0] * weights[axis], 0), wall.centerHeight,
+      points.reduce((sum, value, axis) => sum + value[1] * weights[axis], 0));
+    if (index) length += point.distanceTo(samples[index - 1].point);
+    samples.push({ point, distance: length });
+  }
+  const distance = THREE.MathUtils.clamp(at * length + horizontal * side, 0, length);
+  const index = Math.max(1, samples.findIndex((sample) => sample.distance >= distance));
+  const previous = samples[index - 1];
+  const next = samples[index];
+  const tangent = next.point.clone().sub(previous.point).normalize();
+  const normal = new THREE.Vector3(-tangent.z * side, 0, tangent.x * side);
+  const position = previous.point.clone().lerp(next.point, (distance - previous.distance) / (next.distance - previous.distance)).addScaledVector(normal, inset);
+  return { position, normal };
 }
 
 export function wallTextPose(entry) {
   const wall = entry.wall;
   let position;
   let normal;
-  if (wall.curve) {
+  if (wall.path) {
+    ({ position, normal } = pathPose(wall));
+  } else if (wall.curve) {
     const { center, radii, angle, inset } = wall.curve;
     const radians = THREE.MathUtils.degToRad(angle);
     normal = new THREE.Vector3(-Math.cos(radians) / radii[0], 0, -Math.sin(radians) / radii[1]).normalize();
@@ -53,17 +85,7 @@ export function wallTextPose(entry) {
 }
 
 function linesFor(context, text, width) {
-  const lines = [];
-  let line = '';
-  for (const word of text.split(/\s+/u)) {
-    const candidate = line ? `${line} ${word}` : word;
-    if (line && context.measureText(candidate).width > width) {
-      lines.push(line);
-      line = word;
-    } else line = candidate;
-  }
-  if (line) lines.push(line);
-  return lines;
+  return wrapText(context, text, width);
 }
 
 function wallTexture(entry, renderer) {
@@ -84,56 +106,63 @@ function wallTexture(entry, renderer) {
   let cursor;
   if (entry.kind === 'statement') {
     const blocks = entry.paragraphs.map((paragraph, index) => {
-      const size = Math.round((index === 0 ? 0.27 : 0.22) * canvas.width / entry.wall.width);
+      const size = Math.round((index === 0 ? 0.32 : 0.28) * canvas.width / entry.wall.width);
       context.font = `${size}px Georgia, serif`;
       return { size, lines: linesFor(context, paragraph, available), lineHeight: size * 1.4 };
     });
     const gap = canvas.height * 0.09;
     const totalHeight = blocks.reduce((height, block) => height + block.lines.length * block.lineHeight, 0) + gap;
     cursor = Math.max(30, (canvas.height - totalHeight) / 2);
+    context.textAlign = entry.wall.align === 'center' ? 'center' : 'left';
     for (const [index, block] of blocks.entries()) {
       context.font = `${block.size}px Georgia, serif`;
       context.fillStyle = ink;
       for (const text of block.lines) {
-        context.fillText(text, padding, cursor);
+        context.fillText(text, entry.wall.align === 'center' ? canvas.width / 2 : padding, cursor);
         cursor += block.lineHeight;
       }
       if (index === 0) cursor += gap;
     }
   } else {
-    context.font = '500 44px "Segoe UI", sans-serif';
-    context.fillStyle = secondary;
-    context.fillText(`HALL ${entry.id}  /  INTRODUCTION`, padding, 70);
-    context.font = '112px Georgia, serif';
+    context.font = '128px Georgia, serif';
     const title = linesFor(context, entry.title, available);
-    cursor = 164;
+    let size = 82;
+    let body;
+    let totalHeight;
+    do {
+      context.font = `${size}px Georgia, serif`;
+      body = linesFor(context, entry.tourLead ?? entry.paragraphs[0], available);
+      totalHeight = 110 + title.length * 153 + 171 + body.length * size * 1.45 + 200;
+      if (totalHeight <= canvas.height - 130) break;
+      size -= 2;
+    } while (size >= 60);
+    if (totalHeight > canvas.height - 100) throw new Error(`Wall text would overflow in Hall ${entry.id}`);
+    cursor = (canvas.height - totalHeight) / 2;
+    context.font = '500 46px "Segoe UI", sans-serif';
+    context.fillStyle = secondary;
+    context.fillText(translate(`CHAPTER ${entry.id}  /  INTRODUCTION`), padding, cursor);
+    cursor += 110;
+    context.font = '128px Georgia, serif';
     context.fillStyle = ink;
     for (const text of title) {
       context.fillText(text, padding, cursor);
-      cursor += 137;
+      cursor += 153;
     }
-    context.font = '51px "Segoe UI", sans-serif';
+    context.font = '54px "Segoe UI", sans-serif';
     context.fillStyle = secondary;
-    context.fillText(entry.years, padding, cursor + 13);
-    line(cursor + 109);
-    cursor += 168;
-    let size = 74;
-    let body;
-    do {
-      context.font = `${size}px Georgia, serif`;
-      body = linesFor(context, entry.paragraphs[0], available);
-      if (cursor + body.length * size * 1.45 <= canvas.height - 180) break;
-      size -= 2;
-    } while (size >= 52);
-    if (cursor + body.length * size * 1.45 > canvas.height - 150) throw new Error(`Wall text would overflow in Hall ${entry.id}`);
+    context.fillText(translate(entry.years), padding, cursor + 13);
+    line(cursor + 110);
+    cursor += 171;
+    context.font = `${size}px Georgia, serif`;
     context.fillStyle = ink;
     for (const text of body) {
       context.fillText(text, padding, cursor);
       cursor += size * 1.45;
     }
-    context.font = '46px "Segoe UI", sans-serif';
-    context.fillStyle = secondary;
-    context.fillText('Read the introduction + sources  →', padding, canvas.height - 91);
+    context.font = '500 64px "Segoe UI", sans-serif';
+    const invitation = 'Read the introduction + sources  →';
+    context.fillStyle = ink;
+    context.fillText(translate(invitation), padding, cursor + 115);
   }
   const texture = new THREE.CanvasTexture(canvas);
   texture.colorSpace = THREE.SRGBColorSpace;
@@ -141,19 +170,21 @@ function wallTexture(entry, renderer) {
   return texture;
 }
 
-function wallGeometry(entry) {
+export function wallGeometry(entry) {
   const wall = entry.wall;
   const pose = wallTextPose(entry);
   const tangent = new THREE.Vector3(pose.normal.z, 0, -pose.normal.x);
   const positions = [];
   const coordinates = [];
   const indices = [];
-  const segments = wall.curve ? 64 : 1;
+  const segments = wall.curve || wall.path ? 64 : 1;
   for (let index = 0; index <= segments; index += 1) {
     const fraction = index / segments;
     const horizontal = (fraction - 0.5) * wall.width;
     let point = pose.position.clone().addScaledVector(tangent, horizontal);
-    if (wall.curve) {
+    if (wall.path) {
+      point = pathPose(wall, horizontal).position;
+    } else if (wall.curve) {
       const { center, radii, angle, inset } = wall.curve;
       const middle = THREE.MathUtils.degToRad(angle);
       const speed = Math.hypot(radii[0] * Math.sin(middle), radii[1] * Math.cos(middle));
@@ -176,7 +207,7 @@ function wallGeometry(entry) {
   return geometry;
 }
 
-export function createHallTexts({ data, scene, renderer, pickMeshes, onOpen, onLocate, currentChapter }) {
+export function createHallTexts({ data, scene, renderer, pickMeshes, onOpen, onLocate, currentChapter, onStory = () => {}, onAfterlife = () => {} }) {
   validateHallTexts(data);
   const entries = [...data.halls, data.departure];
   const byId = new Map(entries.map((entry) => [entry.id, entry]));
@@ -191,7 +222,13 @@ export function createHallTexts({ data, scene, renderer, pickMeshes, onOpen, onL
   const toggle = document.querySelector('#hall-intro-toggle');
   let selected = null;
   let focusBefore = null;
+  const textMaterials = [];
   for (const entry of entries) {
+    const option = document.createElement('option');
+    option.value = entry.id;
+    option.textContent = entry.kind === 'hall' ? `${entry.id} · ${entry.title}` : entry.label;
+    select.append(option);
+    if (entry.wall.exhibit === 'afterlife') continue;
     if (entry.wall.wing) {
       const wing = entry.wall.wing;
       const mesh = new THREE.Mesh(new THREE.BoxGeometry(wing.width, wing.height, wing.depth), new THREE.MeshStandardMaterial({ color: '#f1eee6', roughness: 0.92 }));
@@ -205,21 +242,27 @@ export function createHallTexts({ data, scene, renderer, pickMeshes, onOpen, onL
       depthWrite: false, toneMapped: false, polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -1,
     });
     const mesh = new THREE.Mesh(wallGeometry(entry), material);
+    textMaterials.push({ entry, material });
     mesh.name = `Wall introduction ${entry.id}`;
     mesh.userData.hall_text = entry.id;
     mesh.renderOrder = 1;
     scene.add(mesh);
     pickMeshes.push(mesh);
-    const option = document.createElement('option');
-    option.value = entry.id;
-    option.textContent = entry.kind === 'hall' ? `${entry.id} · ${entry.title}` : entry.label;
-    select.append(option);
   }
   function show(entry) {
     selected = entry;
     select.value = entry.id;
+    const storyButton = document.querySelector('#hall-reader-story');
+    storyButton.hidden = !['04', '05'].includes(entry.id);
+    storyButton.textContent = entry.id === '04' ? 'A Room for Gauguin →' : 'The Yellow House · Follow the Story →';
+    const afterlifeButton = document.querySelector('#hall-reader-afterlife');
+    afterlifeButton.hidden = !['07', '08'].includes(entry.id);
+    afterlifeButton.textContent = entry.id === '07' ? 'Continue to Afterlife →' : 'Explore the Four Sections →';
     title.textContent = entry.kind === 'hall' ? entry.title : entry.label;
     years.textContent = entry.years ?? 'A Life Through Art';
+    const subtitle = document.querySelector('#hall-reader-subtitle');
+    subtitle.textContent = entry.subtitle ?? '';
+    subtitle.hidden = !entry.subtitle;
     document.querySelector('#hall-reader-eyebrow').textContent = entry.kind === 'hall' ? `HALL ${entry.id} · INTRODUCTION` : 'VINCENT VAN GOGH · A LIFE THROUGH ART';
     body.classList.toggle('hall-reader-statement', entry.kind === 'statement');
     body.replaceChildren(...entry.paragraphs.map((paragraph) => {
@@ -266,6 +309,8 @@ export function createHallTexts({ data, scene, renderer, pickMeshes, onOpen, onL
   select.addEventListener('change', () => show(byId.get(select.value)));
   document.querySelector('#hall-reader-close').addEventListener('click', close);
   document.querySelector('#hall-reader-back').addEventListener('click', close);
+  document.querySelector('#hall-reader-story').addEventListener('click', () => { const id = selected.id; close(); onStory(id === '04' ? 'overview' : 'staying-or-leaving'); });
+  document.querySelector('#hall-reader-afterlife').addEventListener('click', () => { close(); onAfterlife(); });
   document.querySelector('#hall-reader-locate').addEventListener('click', () => { const entry = selected; close(); onLocate(entry); });
   dialog.addEventListener('cancel', (event) => { event.preventDefault(); event.stopPropagation(); close(); });
   dialog.addEventListener('click', (event) => {
@@ -274,5 +319,12 @@ export function createHallTexts({ data, scene, renderer, pickMeshes, onOpen, onL
     if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) close();
   });
   toggle.disabled = false;
+  onLanguageChange(() => {
+    for (const { entry, material } of textMaterials) {
+      const previous = material.map;
+      material.map = wallTexture(entry, renderer);
+      previous.dispose();
+    }
+  });
   return { open, close, isOpen: () => dialog.open, entry: (id) => byId.get(id) };
 }

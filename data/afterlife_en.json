@@ -1,0 +1,346 @@
+{
+  "language": "en",
+  "id": "afterlife",
+  "gallery": "08",
+  "title": "Afterlife",
+  "subtitle": "What His Work Set in Motion",
+  "years": "1890 onward",
+  "question": "What happened when his work entered other lives?",
+  "intro": [
+    "Vincent’s paintings and letters passed into the care of others. Through exhibitions and publication, they reached new audiences. Artists explored their possibilities; musicians and filmmakers responded in their own forms. This gallery follows those encounters and invites you to consider your own.",
+    "Begin with the people who cared for the collection. Jo van Gogh-Bonger’s exhibition and editorial work, and Vincent Willem’s later stewardship, helped paintings and letters reach future viewers. The surviving photographs, catalogues and books let you follow that work through particular objects.",
+    "Then follow a museum-curated connection to later painting, a song by Don McLean and an imagined encounter in Akira Kurosawa’s cinema. These are responses to Vincent’s work, not new evidence about his life. A named viewer’s account opens the final section before you are invited to leave a reflection of your own."
+  ],
+  "wall": {
+    "position": [70, 0, 40],
+    "normal": [-1, 0, 0],
+    "inset": 0.11,
+    "cardWidth": 2.55,
+    "cardHeight": 4.3,
+    "spacing": 5,
+    "centerHeight": 2.75,
+    "headerWidth": 14.4,
+    "headerHeight": 2.9,
+    "headerCenterHeight": 6.35,
+    "overviewDistance": 11.5,
+    "readingDistance": 5.3,
+    "cardPlacements": [
+      { "position": [70, 0, 35], "normal": [-1, 0, 0] },
+      { "position": [70, 0, 40], "normal": [-1, 0, 0] },
+      { "position": [70, 0, 45], "normal": [-1, 0, 0] },
+      { "position": [62.7, 0, 53], "normal": [0, 0, -1] },
+      { "position": [55.5, 0, 53], "normal": [0, 0, -1] }
+    ]
+  },
+  "sections": [
+    {
+      "id": "carrying-forward",
+      "title": "Carrying the Work Forward",
+      "subtitle": "Family, Exhibitions and Letters",
+      "summary": "Follow the people and objects through which paintings and private letters reached a public audience.",
+      "cardIds": ["what-remained", "jos-decision", "bringing-into-view", "letters-public", "child-collection-museum"]
+    },
+    {
+      "id": "new-language",
+      "title": "A New Language for Painting",
+      "subtitle": "Artists Respond",
+      "summary": "Explore expressive colour and form through a museum-curated connection to Henri Matisse.",
+      "cardIds": ["artists-respond"]
+    },
+    {
+      "id": "beyond-canvas",
+      "title": "Beyond the Canvas",
+      "subtitle": "Music, Cinema and Reimagined Lives",
+      "summary": "Follow an image into song and an imagined encounter into cinema—creative responses, not biography.",
+      "cardIds": ["painting-becomes-song", "walking-into-painting"]
+    },
+    {
+      "id": "personal-encounter",
+      "title": "A Personal Encounter",
+      "subtitle": "What the Work Means to Others",
+      "summary": "Meet a named viewer’s response to The Starry Night, then consider what stays with you.",
+      "cardIds": ["a-personal-voice", "your-reflection"]
+    }
+  ],
+  "responses": [
+    {
+      "id": "artists-respond",
+      "title": "Colour Opens Another Possibility",
+      "subtitle": "Henri Matisse · Interior at Collioure (Afternoon Rest)",
+      "date": "After 1890",
+      "typeLabel": "Museum-curated connection",
+      "summary": "A museum exhibition connects Van Gogh’s expressive colour and form to later painting. One work by Matisse gives us a place to look.",
+      "graphic": { "kind": "colour", "label": "ARTISTS RESPOND", "title": "Henri Matisse", "detail": "Colour · Form · Expression" },
+      "paragraphs": [
+        "In its presentation of works from the Merzbacher Collection, the Van Gogh Museum traces Van Gogh’s influence on the Fauvists and German Expressionists. It brings attention to expressive colour and form: painting need not simply describe appearances.",
+        "Henri Matisse’s Interior at Collioure (Afternoon Rest) is one of the works named in that presentation. Open the museum’s account and look at how colour shapes a room. Which passages invite a descriptive reading, and which let colour carry the feeling of the space? This is a curatorial looking prompt, not a statement by Matisse.",
+        "The connection here is museum-curated. The cited account does not establish that Matisse borrowed from a particular Van Gogh canvas, or when he first encountered it. Similarity alone would not prove such a link; a claim of direct borrowing would need further evidence."
+      ],
+      "document": { "label": "Explore the museum’s connection ↗", "url": "https://www.vangoghmuseum.nl/en/about/news-and-press/press-releases/van-gogh-inspires-matisse-kirchner-kandinsky", "note": "Official museum presentation, 24 August 2016. The later painting is viewed at the source, not reproduced in this gallery." },
+      "imageRights": "The colour-and-type panel is an original navigation graphic, not Matisse’s painting. The protected later work is not copied here.",
+      "sourceIds": ["artists-respond"]
+    },
+    {
+      "id": "painting-becomes-song",
+      "title": "A Painting Becomes a Song",
+      "subtitle": "Don McLean · Vincent",
+      "date": "1970 · composition",
+      "typeLabel": "Musician’s interpretation",
+      "summary": "Don McLean’s tribute carries Vincent into another medium. A song offers an interpretation of a life, not an additional historical record of it.",
+      "image": "./assets/st-remy-starry-night-1889.jpg",
+      "alt": "Vincent van Gogh’s The Starry Night: a village under a swirling blue night sky, with a dark cypress in the foreground.",
+      "caption": "The Starry Night, Saint-Rémy, June 1889. Explore the painting alongside this later musical response.",
+      "credit": "Image: Wikimedia Commons · Public domain · New York, The Museum of Modern Art, Acquired through the Lillie P. Bliss Bequest · F612 / JH1731.",
+      "imageRecord": "https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+      "imageRights": "The painting image is public domain, with its Commons record retained. No recording, lyrics or composition manuscript is reproduced.",
+      "artworkId": "highlight-33",
+      "paragraphs": [
+        "Don McLean’s official account identifies Vincent as a tribute to Vincent van Gogh and dates its composition to 1970. In 2018 it described the song’s original manuscript being prepared for display at the Country Music Hall of Fame and Museum.",
+        "The manuscript includes crossed-out and discarded ideas. It offers a material trace of a musician shaping a response, rather than a finished interpretation arriving all at once. From a curatorial perspective, placing The Starry Night beside the song invites us to ask what changes when an image is encountered through words, melody and time.",
+        "McLean’s understanding of Vincent belongs to the song. It should not be turned into a medical judgement or a biographical fact. Follow the official entry to explore this later creative response; this gallery does not autoplay music or reproduce its lyrics."
+      ],
+      "document": { "label": "Read Don McLean’s official account ↗", "url": "https://www.donmclean.com/don-mclean-to-have-rare-items-on-display-in-country-music-hall-of-fame-and-museum/", "note": "Official article, 4 January 2018. It documents the tribute and composition manuscript; it does not establish every detail in later retellings of the song’s origin." },
+      "sourceIds": ["mclean-vincent", "starry-night"]
+    },
+    {
+      "id": "walking-into-painting",
+      "title": "Walking into a Painting",
+      "subtitle": "Akira Kurosawa · Dreams",
+      "date": "1990",
+      "typeLabel": "Creative interpretation · Fictional encounter",
+      "summary": "In the Crows episode of Dreams, a visitor encounters an imagined Van Gogh and travels into a world shaped by painting.",
+      "graphic": { "kind": "cinema", "label": "AN IMAGINED ENCOUNTER", "title": "Dreams", "detail": "Akira Kurosawa · 1990" },
+      "paragraphs": [
+        "In the Crows episode of Dreams, Akira Kurosawa imagines a visitor meeting Vincent van Gogh, played by Martin Scorsese. The film makes an encounter possible that belongs to cinema, not to a historical record.",
+        "The visitor moves through reconstructed landscapes and then through drawings and enlarged painted surfaces. Bilge Ebiri’s Criterion essay describes how brushstrokes themselves become part of the journey. Painting changes the world the character can enter and the way we are invited to see it.",
+        "Read this sequence as a filmmaker’s imaginative response. The character’s words and actions are not Van Gogh testimony. The official film page and essay below offer a route into the work without presenting a fictional scene as evidence about Vincent’s life."
+      ],
+      "document": { "label": "Explore Dreams at Criterion ↗", "url": "https://www.criterion.com/films/28700-akira-kurosawas-dreams", "note": "Official film page with information and available viewing materials. The graphic here is original typography, not a frame from the film." },
+      "imageRights": "No film frame, poster, trailer or soundtrack is copied or automatically loaded. The cinema-and-type panel is an original navigation graphic.",
+      "sourceIds": ["kurosawa-dreams", "kurosawa-essay"]
+    },
+    {
+      "id": "a-personal-voice",
+      "title": "One Viewer, One Painting",
+      "subtitle": "Sheldon A. Clarke · The Starry Night",
+      "date": "A personal response",
+      "typeLabel": "Attributed viewer response · MoMA",
+      "summary": "A MoMA security officer connects The Starry Night with persistence in an artistic vision. His account makes one person’s encounter specific.",
+      "image": "./assets/st-remy-starry-night-1889.jpg",
+      "alt": "The Starry Night by Vincent van Gogh, with stars and a moon over the village and hills.",
+      "caption": "The Starry Night, 1889. This is the painting Clarke discusses, not a portrait of the speaker.",
+      "credit": "Image: Wikimedia Commons · Public domain · New York, The Museum of Modern Art, Acquired through the Lillie P. Bliss Bequest · F612 / JH1731.",
+      "imageRecord": "https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+      "imageRights": "Public-domain painting image; Commons source retained. Clarke’s video and image remain at MoMA’s official page and are not copied.",
+      "artworkId": "highlight-33",
+      "paragraphs": [
+        "MoMA’s page for The Starry Night includes a response by Sheldon A. Clarke, a museum security officer. The museum describes his encounter with the painting as a reminder not to give up on an artistic vision.",
+        "This is a named person responding to a particular work. His account offers one way the painting can matter in another life. It is neither a statement of what every visitor should feel nor new evidence about Vincent’s intentions.",
+        "Follow MoMA’s official page to hear his own account. Then turn back to the works you have encountered here. A response may be a question, a detail or a memory; it does not have to arrive as an uplifting conclusion."
+      ],
+      "document": { "label": "Hear Sheldon A. Clarke at MoMA ↗", "url": "https://www.moma.org/collection/works/79802#artwork-articles", "note": "Look for Sheldon A. Clarke on Vincent van Gogh’s The Starry Night in the artwork’s audio and video section." },
+      "sourceIds": ["clarke-response", "starry-night"]
+    },
+    {
+      "id": "your-reflection",
+      "title": "What Stays with You?",
+      "subtitle": "A Personal Encounter",
+      "date": "Your encounter",
+      "typeLabel": "Your reflection · Saved only in this browser",
+      "summary": "Choose a work or a moment, and put into words what you carry from it. There is no expected answer.",
+      "graphic": { "kind": "reflection", "label": "A PERSONAL ENCOUNTER", "title": "What stays?", "detail": "A detail · A question · A memory" },
+      "paragraphs": [
+        "Has a work in this exhibition stayed with you? Tell us which one, and what you carry from it.",
+        "You can leave a reflection for yourself below, or continue to the final wall without writing. There is no required feeling and no public testimonial has been invented for this space.",
+        "Your response stays in this browser. It is not published or sent to a server. It is not shared across devices and may disappear if you clear this site’s browser data."
+      ],
+      "reflectionForm": true,
+      "imageRights": "Original navigation typography. No visitor photographs or invented testimony are displayed.",
+      "sourceIds": []
+    }
+  ],
+  "almondBlossomId": "vgm-s0176v1962",
+  "cards": [
+    {
+      "id": "what-remained",
+      "title": "What Remained",
+      "subtitle": "Two Deaths, a Young Family, an Uncertain Future",
+      "date": "1890–1891",
+      "summary": "Vincent died in July 1890; Theo in January 1891. Jo and her young son were left with paintings, drawings, letters—and the question of their future.",
+      "image": "./assets/afterlife-jo-and-son-1890.jpg",
+      "alt": "A historical studio photograph of Jo van Gogh-Bonger holding her infant son Vincent Willem.",
+      "caption": "Jo van Gogh-Bonger and her son Vincent Willem. Raoul Saisset, Paris, 1890.",
+      "credit": "Photograph: Raoul Saisset (1851–1897). Van Gogh Museum collection, via Wikimedia Commons. Public domain.",
+      "imageRecord": "https://commons.wikimedia.org/wiki/File:Jo_Bonger_and_son_Vincent_Willem_van_Gogh_1890.jpg",
+      "imageRights": "Public domain; Commons image record retained.",
+      "paragraphs": [
+        "Vincent died in Auvers-sur-Oise on 29 July 1890. His brother Theo died on 25 January 1891. Within six months, the family had lost both the artist and the brother who had supported his work.",
+        "Theo’s wife, Jo van Gogh-Bonger, was left with their young son, Vincent Willem, and responsibility for a collection of paintings, drawings and letters. What had passed between the brothers now had to be cared for by the people who survived them.",
+        "The photograph shown here was made in Paris in 1890. It introduces Jo and her child; it is not a photograph of the aftermath of Theo’s death. Their future responsibility cannot be read directly from their expressions."
+      ],
+      "people": [
+        { "name": "Jo van Gogh-Bonger", "description": "Theo’s wife; later an editor, exhibition organiser and steward of the collection." },
+        { "name": "Vincent Willem van Gogh", "description": "Theo and Jo’s son, born in 1890 and named for his uncle. He later continued the care of the family collection." }
+      ],
+      "sourceIds": ["family", "after-death"]
+    },
+    {
+      "id": "jos-decision",
+      "title": "Jo’s Decision",
+      "subtitle": "Caring for the Collection",
+      "date": "From 1891",
+      "summary": "Jo brought the work before new viewers: arranging exhibitions, working with dealers, selling selected works and preparing the letters for publication.",
+      "image": "./assets/afterlife-jo-portrait-1889.jpg",
+      "alt": "Jo van Gogh-Bonger in an 1889 studio portrait by Woodbury and Page.",
+      "caption": "Jo van Gogh-Bonger. Woodbury & Page, Amsterdam, April 1889.",
+      "credit": "Photograph: Woodbury & Page. Van Gogh Museum collection, via Wikimedia Commons. Public domain.",
+      "imageRecord": "https://commons.wikimedia.org/wiki/File:Jo_van_Gogh-Bonger,_by_Woodbury_and_Page.jpg",
+      "imageRights": "Public domain; Commons image record retained.",
+      "paragraphs": [
+        "After Theo’s death, Jo returned to the Netherlands. Alongside raising Vincent Willem, she began a sustained effort to bring her brother-in-law’s art to public attention.",
+        "She lent works to exhibitions, worked with dealers and sold selected paintings and drawings. Preparing the letters for publication offered a different route to the public: readers could meet Vincent through his own discussions of work and life.",
+        "Jo was more than a relative carrying out a family duty. She had studied English and worked as a teacher in Elburg and Utrecht. She later took part in social-democratic women’s organising. These experiences belong to her own life, not only to the history of Vincent’s reputation."
+      ],
+      "connections": [
+        { "label": "Exhibiting · Amsterdam, 1905 →", "cardId": "bringing-into-view" },
+        { "label": "Publishing · The letters, 1914 →", "cardId": "letters-public" }
+      ],
+      "sourceIds": ["jo-research", "after-death"]
+    },
+    {
+      "id": "bringing-into-view",
+      "title": "Bringing the Work into View",
+      "subtitle": "An Exhibition in Amsterdam",
+      "date": "1905",
+      "summary": "Jo organised a major exhibition at Amsterdam’s Stedelijk Museum. A surviving catalogue lets us encounter the work as it was presented to that audience.",
+      "image": "./assets/afterlife-catalogue-1905.jpg",
+      "alt": "The ochre cover of the 1905 Vincent van Gogh exhibition catalogue, printed with a tree illustration and the name Stedelijk Museum Amsterdam.",
+      "caption": "Catalogue of the Vincent van Gogh exhibition, Stedelijk Museum, Amsterdam, July and August 1905. Cover, including a later library label.",
+      "credit": "Historical publication: Stedelijk Museum, 1905. Digitized copy: Getty Research Institute / Internet Archive. Cover rendered from the source PDF; no reconstruction or removal of the library label.",
+      "imageRecord": "https://commons.wikimedia.org/wiki/File:Catalogus_der_tentoonstelling_van_schilderijen_en_teekeningen_door_Vincent_van_Gogh_-_juli_en_augustus,_1905_(IA_catalogusdertent00gogh).pdf",
+      "imageRights": "Public domain; Commons PDF record retained. The source scan includes a later library label, which has not been removed.",
+      "paragraphs": [
+        "In 1905, Jo organised a major exhibition of Vincent’s work at the Stedelijk Museum in Amsterdam. Paintings and drawings from different periods could be seen together by a public audience.",
+        "The surviving catalogue is a material trace of that event. Its cover names the museum and dates the exhibition to July and August 1905. The copy shown here also carries a later library label: the object has its own history of preservation.",
+        "Open the original catalogue to look through its entries. Historical titles and numbers do not necessarily match today’s museum records. This display does not imply that every work in our digital gallery was included in the 1905 exhibition."
+      ],
+      "document": { "label": "Explore the 1905 catalogue ↗", "url": "https://archive.org/details/catalogusdertent00gogh", "note": "Original digitized catalogue. Browse the cover and pages in the source reader." },
+      "sourceIds": ["family", "jo-research", "catalogue-1905"]
+    },
+    {
+      "id": "letters-public",
+      "title": "The Letters Become Public",
+      "subtitle": "A Private Correspondence Reaches Readers",
+      "date": "1914",
+      "summary": "Jo edited Vincent’s letters to Theo in three volumes. A private correspondence became a public route into his work, ambitions and everyday life.",
+      "image": "./assets/afterlife-letters-1914.jpg",
+      "alt": "The title page of volume I of Brieven aan zijn broeder, the 1914 Dutch edition of Vincent van Gogh’s letters edited by Jo van Gogh-Bonger.",
+      "caption": "Brieven aan zijn broeder, volume I, 1914. Edited and introduced by J. van Gogh-Bonger. Title page of the original Dutch edition.",
+      "credit": "Historical publication: Vincent van Gogh, Brieven aan zijn broeder, edited by J. van Gogh-Bonger, 1914. Public-domain scan via Internet Archive / Wikimedia Commons.",
+      "imageRecord": "https://commons.wikimedia.org/wiki/File:Brieven_aan_zijn_broeder;_uitgegeven_en_toegelicht_door_zijn_schoonzuster,_J._van_Gogh-Bonger_(IA_brievenaanzijnbr01gogh).pdf",
+      "imageRights": "Public domain; Commons PDF record retained. DBNL’s digital text and the modern English translation are linked, not copied as images.",
+      "paragraphs": [
+        "In 1914, Jo published Vincent’s letters to Theo in three volumes, titled Brieven aan zijn broeder—Letters to His Brother. She prepared the edition and supplied a biographical introduction.",
+        "Readers could follow his discussions of art, books, money, relationships and ambition. The correspondence opened another way of encountering the person behind the paintings.",
+        "A letter, its published edition and a later translation are different kinds of material. This display shows a page from the historical Dutch publication. The source links lead separately to the 1914 edition and to the modern scholarly letters website; a modern translation is not presented as Jo’s text."
+      ],
+      "document": { "label": "Explore the 1914 edition ↗", "url": "https://archive.org/details/brievenaanzijnbr01gogh", "note": "Volume I in the original Dutch; volumes II and III are listed in the source collection." },
+      "sourceIds": ["letters-1914", "dbnl-1914", "letters-modern", "publication-history", "after-death"]
+    },
+    {
+      "id": "child-collection-museum",
+      "title": "A Child, a Collection, a Museum",
+      "subtitle": "Vincent Willem Carries the Work Forward",
+      "date": "1925–1973",
+      "summary": "The baby for whom Vincent painted Almond Blossom grew up to care for the collection. A foundation agreement in 1962 helped secure its museum future.",
+      "image": "./assets/st-remy-almond-blossom-1890.jpg",
+      "alt": "Vincent van Gogh’s Almond Blossom: pale flowering branches against a blue sky.",
+      "caption": "Vincent van Gogh, Almond Blossom, Saint-Rémy, February 1890. A gift for Theo and Jo’s newborn son, Vincent Willem.",
+      "credit": "Van Gogh Museum, Amsterdam (Vincent van Gogh Foundation). Image: Wikimedia Commons, public domain; reused from the verified Hall 06 artwork record.",
+      "imageRecord": "https://www.vangoghmuseum.nl/en/collection/s0176V1962",
+      "imageRights": "Public domain; existing gallery image and credit retained.",
+      "paragraphs": [
+        "In 1890, Vincent painted Almond Blossom for his newborn nephew, Vincent Willem. At the end of this exhibition, the painting returns with another emphasis: the child who received it would later help preserve the family collection.",
+        "After Jo’s death in 1925, her son inherited the collection. He continued the responsibility she had carried, and worked toward a permanent public home for the paintings, drawings and letters.",
+        "In 1962, the collection was transferred to the Vincent van Gogh Foundation through an agreement with the Dutch state. The Van Gogh Museum opened in Amsterdam on 2 June 1973.",
+        "Jo did not establish the museum herself: she died decades before its opening. The museum’s existence reflects the work of successive generations, as well as the people and institutions with whom they collaborated."
+      ],
+      "milestones": [
+        { "date": "1890", "text": "Almond Blossom welcomes Vincent Willem." },
+        { "date": "1925", "text": "After Jo’s death, her son inherits the collection." },
+        { "date": "1962", "text": "The foundation and Dutch state agree on its future." },
+        { "date": "2 June 1973", "text": "The Van Gogh Museum opens in Amsterdam." }
+      ],
+      "sourceIds": ["almond-blossom", "after-death", "family"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "publication-history",
+      "title": "Vincent van Gogh: The Letters · Publication History",
+      "url": "https://vangoghletters.org/vg/pubhistory.html",
+      "kind": "Scholarly publication history",
+      "note": "The editions and dissemination of the correspondence, including Jo’s editorial work. This context belongs to Afterlife, not the Auvers introduction."
+    },
+    {
+      "id": "artists-respond",
+      "title": "Van Gogh Museum · Van Gogh Inspires Matisse, Kirchner, Kandinsky",
+      "url": "https://www.vangoghmuseum.nl/en/about/news-and-press/press-releases/van-gogh-inspires-matisse-kirchner-kandinsky",
+      "kind": "Museum-curated connection · 24 August 2016",
+      "note": "A Merzbacher Collection presentation linking expressive colour and form to later painters; it names Matisse’s Interior at Collioure (Afternoon Rest), but does not establish borrowing from a particular Van Gogh canvas."
+    },
+    {
+      "id": "mclean-vincent",
+      "title": "Don McLean · Composition manuscript of Vincent",
+      "url": "https://www.donmclean.com/don-mclean-to-have-rare-items-on-display-in-country-music-hall-of-fame-and-museum/",
+      "kind": "Musician’s official account · 4 January 2018",
+      "note": "Identifies the song as a tribute, dates its composition to 1970 and describes the manuscript, including revisions, being prepared for a museum display."
+    },
+    {
+      "id": "kurosawa-dreams",
+      "title": "Criterion · Akira Kurosawa’s Dreams",
+      "url": "https://www.criterion.com/films/28700-akira-kurosawas-dreams",
+      "kind": "Official film record",
+      "note": "The 1990 film, its dream vignettes and Martin Scorsese’s appearance as Van Gogh. The encounter is fictional."
+    },
+    {
+      "id": "kurosawa-essay",
+      "title": "Bilge Ebiri · Akira Kurosawa’s Dreams: Quiet Devastation",
+      "url": "https://www.criterion.com/current/posts/4299-akira-kurosawa-s-dreams-quiet-devastation",
+      "kind": "Named critical interpretation · 15 November 2016",
+      "note": "Criterion essay describing the Crows episode’s movement from reconstructed landscapes into drawings, paintings and brushstrokes."
+    },
+    {
+      "id": "clarke-response",
+      "title": "MoMA · Sheldon A. Clarke on The Starry Night",
+      "url": "https://www.moma.org/collection/works/79802#artwork-articles",
+      "kind": "Named personal response · Museum video",
+      "note": "The security officer’s attributed response connects the painting with persistence in an artistic vision; it is presented as his response, not as a universal lesson or historical testimony."
+    },
+    {
+      "id": "starry-night",
+      "title": "MoMA · The Starry Night · Artwork record",
+      "url": "https://www.moma.org/collection/works/79802",
+      "kind": "Artwork record",
+      "note": "The painting’s identity, Saint-Rémy provenance, June 1889 date and collection credit."
+    },
+    { "id": "after-death", "title": "Van Gogh Museum · After Vincent’s Death", "url": "https://www.vangoghmuseum.nl/en/art-and-stories/vincents-life-1853-1890/after-vincents-death", "kind": "Museum history", "note": "Jo’s care of the collection, the 1914 publication, Vincent Willem’s inheritance, the 1962 agreement and the museum’s opening on 2 June 1973." },
+    { "id": "family", "title": "Van Gogh Museum · Choosing Vincent: A Family History", "url": "https://www.vangoghmuseum.nl/en/about/news-and-press/press-releases/20221122-van-gogh-museum-anniversary-year-kicks-off-with-tribute-van-gogh-family", "kind": "Museum exhibition context", "note": "The roles of Vincent, Theo, Jo and Vincent Willem in preserving and transmitting the work." },
+    { "id": "jo-research", "title": "Van Gogh Museum · Biography of Jo van Gogh-Bonger", "url": "https://www.vangoghmuseum.nl/en/about/knowledge-and-research/completed-research-projects/research-project-biography-of-jo-van-gogh-bonger", "kind": "Research project", "note": "Jo’s exhibition, sales and editorial work; her English teaching and involvement in women’s social-democratic organising." },
+    { "id": "catalogue-1905", "title": "1905 exhibition catalogue · Original digitized copy", "url": "https://archive.org/details/catalogusdertent00gogh", "kind": "Historical publication", "note": "Catalogue of the July–August 1905 exhibition at the Stedelijk Museum, Amsterdam. Digitized by the Getty Research Institute / Internet Archive." },
+    { "id": "letters-1914", "title": "Brieven aan zijn broeder · Volume I, 1914", "url": "https://archive.org/details/brievenaanzijnbr01gogh", "kind": "Historical edition", "note": "Original Dutch edition edited and introduced by J. van Gogh-Bonger. Public-domain PDF also recorded on Wikimedia Commons." },
+    { "id": "dbnl-1914", "title": "DBNL · The 1914 edition", "url": "https://www.dbnl.org/tekst/gogh006brie00_01/", "kind": "Digital text edition", "note": "Bibliographic record and transcription of the three-volume edition. Linked for reading; its digitization is not assumed to have the same reuse status as the historical book." },
+    { "id": "letters-modern", "title": "Vincent van Gogh · The Letters", "url": "https://vangoghletters.org/vg/", "kind": "Modern scholarly edition", "note": "Manuscript images, Dutch text, modern translations and annotations. Follow the source to read these; no unlicensed manuscript scan or translation is reproduced here." },
+    { "id": "almond-blossom", "title": "Van Gogh Museum · Almond Blossom", "url": "https://www.vangoghmuseum.nl/en/collection/s0176V1962", "kind": "Artwork record", "note": "The painting’s identity, February 1890 date and connection to the birth of Vincent Willem." }
+  ],
+  "reflection": {
+    "title": "Remembering Vincent",
+    "subtitle": "The Stories We Carry Away",
+    "intro": "Before leaving, distinguish an artist’s words, a family member’s recollection and a later interpretation. Each brings something different to the person you have encountered.",
+    "examples": [
+      { "title": "His Words", "kind": "Letter · 13 September 1873", "description": "Vincent describes his new London lodgings to Theo. The letter preserves a particular moment, not an account of his whole London life.", "url": "https://vangoghletters.org/vg/letters/let013/letter.html" },
+      { "title": "Others Remember", "kind": "Family recollection · Jo’s biographical introduction", "description": "Jo’s account of London belongs to a later family narrative. It should not be treated as a witness record of every episode it describes.", "url": "https://www.webexhibits.org/vangogh/memoir/sisterinlaw/4.html" },
+      { "title": "Later Interpretations", "kind": "Research · Van Gogh Museum", "description": "Research into Jo’s life reconsiders the labour behind Vincent’s recognition, and gives her a biography beyond her relationship to the artist.", "url": "https://www.vangoghmuseum.nl/en/about/knowledge-and-research/completed-research-projects/research-project-biography-of-jo-van-gogh-bonger" }
+    ]
+  }
+}

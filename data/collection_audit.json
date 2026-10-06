@@ -1,9 +1,9 @@
 {
-  "date": "2026-10-03",
+  "date": "2026-10-04",
   "stats": {
-    "installed": 365,
+    "installed": 366,
     "originalHighlights": 46,
-    "added": 319,
+    "added": 320,
     "researchedMuseumRecords": 641,
     "individuallyIdentifiedWithoutImage": 288,
     "leadCount": 96,
@@ -52,7 +52,7 @@
       },
       {
         "hall": "07",
-        "works": 21,
+        "works": 22,
         "physicalPositions": 6,
         "wallSets": 4
       }
@@ -6324,5 +6324,15 @@
       "status": "no-verified-public-image",
       "group": "Translations after other artists"
     }
-  ]
+  ],
+  "authoredArtworkCards": {
+    "version": "2026-10-04-artwork-cards-19-42",
+    "mainLabels": 44,
+    "primaryChapters": 132,
+    "seriesNarratives": 1,
+    "seriesChapters": 3,
+    "addedWork": "hiroshima-f776",
+    "manuscript": "van-gogh-stories-19-42-complete.md",
+    "scope": "Browser artwork cards and one collection work; Blender files and Highlights are unchanged."
+  }
 }
