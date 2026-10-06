@@ -9,7 +9,7 @@
   "intro": [
     "Vincent’s paintings and letters passed into the care of others. Through exhibitions and publication, they reached new audiences. Artists explored their possibilities; musicians and filmmakers responded in their own forms. This gallery follows those encounters and invites you to consider your own.",
     "Begin with the people who cared for the collection. Jo van Gogh-Bonger’s exhibition and editorial work, and Vincent Willem’s later stewardship, helped paintings and letters reach future viewers. The surviving photographs, catalogues and books let you follow that work through particular objects.",
-    "Then follow a museum-curated connection to later painting, a song by Don McLean and an imagined encounter in Akira Kurosawa’s cinema. These are responses to Vincent’s work, not new evidence about his life. A named viewer’s account opens the final section before you are invited to leave a reflection of your own."
+    "Then follow a museum-curated connection to later painting, a song by Don McLean and an imagined encounter in Akira Kurosawa’s cinema. These are responses to Vincent’s work, not new evidence about his life. A named viewer’s account opens the final section, which ends by asking what stays with you from Vincent’s life."
   ],
   "wall": {
     "position": [70, 0, 40],
@@ -146,15 +146,15 @@
       "title": "What Stays with You?",
       "subtitle": "A Personal Encounter",
       "date": "Your encounter",
-      "typeLabel": "Your reflection · Saved only in this browser",
-      "summary": "Choose a work or a moment, and put into words what you carry from it. There is no expected answer.",
+      "typeLabel": "A question to take with you",
+      "summary": "Consider a work, a story or a moment that stays with you. There is no expected answer.",
       "graphic": { "kind": "reflection", "label": "A PERSONAL ENCOUNTER", "title": "What stays?", "detail": "A detail · A question · A memory" },
       "paragraphs": [
-        "Has a work in this exhibition stayed with you? Tell us which one, and what you carry from it.",
-        "You can leave a reflection for yourself below, or continue to the final wall without writing. There is no required feeling and no public testimonial has been invented for this space.",
-        "Your response stays in this browser. It is not published or sent to a server. It is not shared across devices and may disappear if you clear this site’s browser data."
+        "Which work, story or moment stays with you from this exhibition?",
+        "You might carry a detail, a question or a memory. There is no expected answer and no feeling you are required to take away.",
+        "As you continue to the final wall, consider what you have come to know of Vincent as a person, beyond the artist you already knew."
       ],
-      "reflectionForm": true,
+      "closingReflection": true,
       "imageRights": "Original navigation typography. No visitor photographs or invented testimony are displayed.",
       "sourceIds": []
     }

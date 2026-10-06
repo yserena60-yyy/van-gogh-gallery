@@ -1,4 +1,4 @@
-import { ui, terms, titles, content } from './locale-zh.js?v=2026-10-06-visitor-guidance';
+import { ui, terms, titles, content } from './locale-zh.js?v=2026-10-06-final-months-shortcut';
 
 export const languageStorageKey = 'van-gogh-gallery.language.v1';
 const dictionary = new Map([...Object.entries(terms), ...Object.entries(titles), ...Object.entries(ui)]);

@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { onLanguageChange, translate, wrapText } from './i18n.js';
+import { createAuversReader } from './auvers.js?v=2026-10-06-auvers-final-days';
 
 export function validateHallTexts(data) {
   if (data?.language !== 'en' || data.halls?.length !== 8) throw new Error('Eight English hall introductions are required');
@@ -140,7 +141,7 @@ function wallTexture(entry, renderer) {
     cursor = (canvas.height - totalHeight) / 2;
     context.font = '500 46px "Segoe UI", sans-serif';
     context.fillStyle = secondary;
-    context.fillText(translate(`CHAPTER ${entry.id}  /  INTRODUCTION`), padding, cursor);
+    context.fillText(translate(entry.eyebrow ?? `CHAPTER ${entry.id}  /  INTRODUCTION`), padding, cursor);
     cursor += 110;
     context.font = '128px Georgia, serif';
     context.fillStyle = ink;
@@ -160,7 +161,7 @@ function wallTexture(entry, renderer) {
       cursor += size * 1.45;
     }
     context.font = '500 64px "Segoe UI", sans-serif';
-    const invitation = 'Read the introduction + sources  →';
+    const invitation = entry.invitation ?? 'Read the introduction + sources  →';
     context.fillStyle = ink;
     context.fillText(translate(invitation), padding, cursor + 115);
   }
@@ -207,10 +208,17 @@ export function wallGeometry(entry) {
   return geometry;
 }
 
-export function createHallTexts({ data, scene, renderer, pickMeshes, onOpen, onLocate, currentChapter, onStory = () => {}, onAfterlife = () => {} }) {
+export function createHallTexts({ data, auversData, collection, scene, renderer, pickMeshes, onOpen, onLocate, currentChapter, onStory = () => {}, onAfterlife = () => {}, onContinueAfterlife = onAfterlife, onArtwork = () => {} }) {
   validateHallTexts(data);
   const entries = [...data.halls, data.departure];
   const byId = new Map(entries.map((entry) => [entry.id, entry]));
+  const finalEntry = {
+    id: '07', kind: 'hall', chapter: '07', readerId: 'auvers:final-days',
+    title: 'The Final Days', years: '27–30 July 1890', eyebrow: 'HALL 07  /  THE FINAL DAYS',
+    tourLead: auversData.wall.text, paragraphs: [auversData.wall.text],
+    invitation: auversData.wall.invitation, wall: auversData.wall,
+  };
+  byId.set(finalEntry.readerId, finalEntry);
   const dialog = document.querySelector('#hall-reader');
   const select = document.querySelector('#hall-reader-select');
   const title = document.querySelector('#hall-reader-title');
@@ -228,6 +236,8 @@ export function createHallTexts({ data, scene, renderer, pickMeshes, onOpen, onL
     option.value = entry.id;
     option.textContent = entry.kind === 'hall' ? `${entry.id} · ${entry.title}` : entry.label;
     select.append(option);
+  }
+  for (const entry of [...entries, finalEntry]) {
     if (entry.wall.exhibit === 'afterlife') continue;
     if (entry.wall.wing) {
       const wing = entry.wall.wing;
@@ -243,21 +253,60 @@ export function createHallTexts({ data, scene, renderer, pickMeshes, onOpen, onL
     });
     const mesh = new THREE.Mesh(wallGeometry(entry), material);
     textMaterials.push({ entry, material });
-    mesh.name = `Wall introduction ${entry.id}`;
-    mesh.userData.hall_text = entry.id;
+    mesh.name = entry.readerId ? 'Hall 07 final-days reading plaque' : `Wall introduction ${entry.id}`;
+    mesh.userData.hall_text = entry.readerId ?? entry.id;
     mesh.renderOrder = 1;
     scene.add(mesh);
     pickMeshes.push(mesh);
   }
+  const scroll = document.querySelector('.hall-reader-scroll');
+  const introduction = document.querySelector('#hall-reader-introduction');
+  const auversActions = document.querySelector('#hall-reader-auvers-actions');
+  const exploreAuvers = document.querySelector('#hall-reader-explore-auvers');
+  const finalDays = document.querySelector('#hall-reader-final-days');
+  const auversControls = ['previous', 'position', 'next'].map((id) => document.getElementById('auvers-' + id));
+  const auvers = createAuversReader({
+    data: auversData, collection, scroll,
+    onChapter: (id) => {
+      selected = id === 'final-days' ? finalEntry : byId.get('07');
+      document.querySelector('#hall-reader-locate').textContent = id === 'final-days' ? 'View the Final Days wall →' : 'View this wall →';
+    },
+    onIntroduction: () => show(byId.get('07')),
+    onArtwork: openAuversArtwork,
+    onAfterlife: () => { close(); onContinueAfterlife(); },
+  });
+  function openAuversArtwork(id) {
+    const returnScroll = scroll.scrollTop;
+    const returnFocus = document.activeElement;
+    const galleryFocus = focusBefore;
+    close();
+    onArtwork(id, () => {
+      onOpen();
+      focusBefore = galleryFocus;
+      if (!dialog.open) dialog.showModal();
+      scroll.scrollTop = returnScroll;
+      if (returnFocus?.isConnected) returnFocus.focus({ preventScroll: true });
+      else document.querySelector('#auvers-content').focus({ preventScroll: true });
+    });
+  }
   function show(entry) {
+    auvers.hide();
+    document.querySelector('#hall-reader-locate').textContent = 'View this wall →';
+    dialog.classList.remove('hall-reader--auvers');
+    document.querySelector('#hall-reader-close').setAttribute('aria-label', 'Close introduction and return to the gallery');
+    introduction.hidden = false;
+    auversActions.hidden = true;
+    auversControls.forEach((element) => { element.hidden = true; });
+    exploreAuvers.hidden = entry.id !== '07';
+    finalDays.hidden = entry.id !== '07';
     selected = entry;
     select.value = entry.id;
     const storyButton = document.querySelector('#hall-reader-story');
     storyButton.hidden = !['04', '05'].includes(entry.id);
     storyButton.textContent = entry.id === '04' ? 'A Room for Gauguin →' : 'The Yellow House · Follow the Story →';
     const afterlifeButton = document.querySelector('#hall-reader-afterlife');
-    afterlifeButton.hidden = !['07', '08'].includes(entry.id);
-    afterlifeButton.textContent = entry.id === '07' ? 'Continue to Afterlife →' : 'Explore the Four Sections →';
+    afterlifeButton.hidden = entry.id !== '08';
+    afterlifeButton.textContent = 'Explore the Four Sections →';
     title.textContent = entry.kind === 'hall' ? entry.title : entry.label;
     years.textContent = entry.years ?? 'A Life Through Art';
     const subtitle = document.querySelector('#hall-reader-subtitle');
@@ -286,15 +335,42 @@ export function createHallTexts({ data, scene, renderer, pickMeshes, onOpen, onL
     }));
     research.hidden = !entry.researchNote;
     research.textContent = entry.researchNote ?? '';
-    document.querySelector('.hall-reader-scroll').scrollTop = 0;
+    scroll.scrollTop = 0;
+  }
+  function openAuvers(id = 'arrival') {
+    if (!auversData.chapters.some((chapter) => chapter.id === id)) return;
+    if (!dialog.open) {
+      focusBefore = document.activeElement;
+      onOpen();
+    }
+    const entry = byId.get('07');
+    select.value = entry.id;
+    title.textContent = entry.title;
+    years.textContent = entry.years;
+    document.querySelector('#hall-reader-eyebrow').textContent = auversData.eyebrow;
+    document.querySelector('#hall-reader-close').setAttribute('aria-label', 'Close Auvers story and return to the gallery');
+    document.querySelector('#hall-reader-subtitle').hidden = true;
+    introduction.hidden = true;
+    dialog.classList.add('hall-reader--auvers');
+    auversActions.hidden = false;
+    exploreAuvers.hidden = true;
+    finalDays.hidden = true;
+    document.querySelector('#hall-reader-story').hidden = true;
+    document.querySelector('#hall-reader-afterlife').hidden = true;
+    auversControls.forEach((element) => { element.hidden = false; });
+    auvers.show(id);
+    if (!dialog.open) dialog.showModal();
+    document.querySelector('#auvers-content').focus({ preventScroll: true });
   }
   function close() {
     if (!dialog.open) return;
+    auvers.remember();
     dialog.close();
     if (focusBefore?.isConnected && !focusBefore.closest('[inert]')) focusBefore.focus({ preventScroll: true });
     else renderer.domElement.focus({ preventScroll: true });
   }
   function open(id = currentChapter()) {
+    if (id === finalEntry.readerId) { openAuvers('final-days'); return; }
     const entry = byId.get(id === 'arrival' ? '01' : id);
     if (!entry) return;
     if (!dialog.open) {
@@ -306,7 +382,9 @@ export function createHallTexts({ data, scene, renderer, pickMeshes, onOpen, onL
     } else show(entry);
   }
   toggle.addEventListener('click', () => open());
-  select.addEventListener('change', () => show(byId.get(select.value)));
+  select.addEventListener('change', () => open(select.value));
+  exploreAuvers.addEventListener('click', () => openAuvers());
+  finalDays.addEventListener('click', () => openAuvers('final-days'));
   document.querySelector('#hall-reader-close').addEventListener('click', close);
   document.querySelector('#hall-reader-back').addEventListener('click', close);
   document.querySelector('#hall-reader-story').addEventListener('click', () => { const id = selected.id; close(); onStory(id === '04' ? 'overview' : 'staying-or-leaving'); });
@@ -326,5 +404,5 @@ export function createHallTexts({ data, scene, renderer, pickMeshes, onOpen, onL
       previous.dispose();
     }
   });
-  return { open, close, isOpen: () => dialog.open, entry: (id) => byId.get(id) };
+  return { open, openAuvers, close, isOpen: () => dialog.open, entry: (id) => byId.get(id) };
 }

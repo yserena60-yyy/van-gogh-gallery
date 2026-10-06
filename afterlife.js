@@ -23,14 +23,14 @@ export function validateAfterlife(data) {
       || orderedIds.some((id) => !identifiers.has(id))
       || data.sections.some((section) => ![section.title, section.subtitle, section.summary].every(english) || !Array.isArray(section.cardIds) || !section.cardIds.length)
       || data.sections[0].cardIds.join('|') !== data.cards.map((card) => card.id).join('|')
-      || stories.filter((card) => card.reflectionForm).length !== 1
-      || !stories.find((card) => card.id === orderedIds.at(-1))?.reflectionForm) {
-    throw new Error('The four Afterlife sections must cover each story once and finish with the visitor reflection');
+      || stories.filter((card) => card.closingReflection).length !== 1
+      || !stories.find((card) => card.id === orderedIds.at(-1))?.closingReflection) {
+    throw new Error('The four Afterlife sections must cover each story once and finish with the closing question');
   }
   for (const card of stories) {
     if (![card.title, card.subtitle, card.date, card.summary, card.imageRights, ...(card.paragraphs ?? [])].every(english)
         || !card.id || !Array.isArray(card.paragraphs) || card.paragraphs.length < 3 || !Array.isArray(card.sourceIds)
-        || (!card.sourceIds.length && !card.reflectionForm) || !card.sourceIds.every((id) => sourceIds.has(id))
+        || (!card.sourceIds.length && !card.closingReflection) || !card.sourceIds.every((id) => sourceIds.has(id))
         || card.connections?.some((connection) => !identifiers.has(connection.cardId))
         || (card.document && !https(card.document.url))) throw new Error(`Incomplete Afterlife story: ${card.id}`);
     if (card.image) {
@@ -65,16 +65,6 @@ export function validateAfterlife(data) {
 export function afterlifeReadingOrder(data) {
   const byId = new Map([...data.cards, ...data.responses].map((card) => [card.id, card]));
   return data.sections.flatMap((section) => section.cardIds.map((id) => byId.get(id)));
-}
-
-export function parseVisitorReflection(raw, workIds) {
-  if (raw === null) return null;
-  const draft = JSON.parse(raw);
-  if (draft?.version !== 1 || typeof draft.text !== 'string' || !draft.text.trim() || draft.text.length > 2000
-      || typeof draft.workId !== 'string' || (draft.workId && !workIds.has(draft.workId))) {
-    throw new Error('Invalid saved reflection');
-  }
-  return draft;
 }
 
 export function afterlifePose(data, id = 'overview', eyeHeight = 1.85) {
@@ -216,7 +206,7 @@ function externalLink(label, url) {
   return link;
 }
 
-export async function createAfterlifeExhibit({ data, collection, scene, renderer, pickMeshes, onOpen, onLocate, onExit, onAlmond, onLondon, onArtwork }) {
+export async function createAfterlifeExhibit({ data, scene, renderer, pickMeshes, onOpen, onLocate, onExit, onAlmond, onLondon, onArtwork }) {
   validateAfterlife(data);
   const group = new THREE.Group();
   group.name = 'Hall 08 · Afterlife · independent epilogue gallery';
@@ -357,52 +347,6 @@ export async function createAfterlifeExhibit({ data, collection, scene, renderer
     return paragraph;
   }));
 
-  const reflectionForm = document.querySelector('#afterlife-visitor-form');
-  const reflectionWork = document.querySelector('#afterlife-reflection-work');
-  const reflectionText = document.querySelector('#afterlife-reflection-text');
-  const reflectionStatus = document.querySelector('#afterlife-reflection-status');
-  const workIds = new Set(Object.keys(collection.works));
-  const draftKey = 'van-gogh-gallery.afterlife-reflection.v1';
-  reflectionWork.replaceChildren();
-  const otherMoment = document.createElement('option');
-  otherMoment.value = '';
-  otherMoment.textContent = 'A moment in the exhibition';
-  reflectionWork.append(otherMoment);
-  for (const work of Object.values(collection.works).sort((first, second) => first.title.localeCompare(second.title) || first.id.localeCompare(second.id))) {
-    const option = document.createElement('option');
-    option.value = work.id;
-    option.textContent = `${work.title} · ${work.date}`;
-    reflectionWork.append(option);
-  }
-  try {
-    const draft = parseVisitorReflection(localStorage.getItem(draftKey), workIds);
-    if (draft) {
-      reflectionWork.value = draft.workId;
-      reflectionText.value = draft.text;
-      reflectionStatus.textContent = 'Your saved reflection is shown below. It stays only in this browser.';
-    }
-  } catch {
-    reflectionStatus.textContent = 'A saved reflection could not be read. It will not be replaced unless you choose Save.';
-  }
-  reflectionForm.addEventListener('input', () => { reflectionStatus.textContent = 'Changes are not saved yet.'; });
-  reflectionForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const text = reflectionText.value.trim();
-    if (!text) {
-      reflectionStatus.textContent = 'Write a reflection before saving, or continue without one.';
-      reflectionText.focus();
-      return;
-    }
-    try {
-      const raw = JSON.stringify({ version: 1, workId: reflectionWork.value, text });
-      parseVisitorReflection(raw, workIds);
-      localStorage.setItem(draftKey, raw);
-      reflectionStatus.textContent = 'Saved in this browser only. Nothing has been published or sent to a server.';
-    } catch {
-      reflectionStatus.textContent = 'This browser could not save the reflection. Your text is still here; you can copy it before leaving.';
-    }
-  });
-
   function show(card) {
     selected = card ?? null;
     const index = stories.indexOf(selected);
@@ -498,7 +442,6 @@ export async function createAfterlifeExhibit({ data, collection, scene, renderer
     }
     document.querySelector('#afterlife-almond').hidden = selected?.id !== 'child-collection-museum';
     document.querySelector('#afterlife-artwork').hidden = !selected?.artworkId;
-    reflectionForm.hidden = !selected?.reflectionForm;
     sources.hidden = true;
     sourcesToggle.setAttribute('aria-expanded', 'false');
     const sourceIds = selected ? selected.sourceIds : data.sources.map((source) => source.id);

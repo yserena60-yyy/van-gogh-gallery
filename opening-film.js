@@ -93,7 +93,7 @@ export function createFilmExpansion({ dialog, panel, button, status, ownerDocume
   return { toggle, collapse, isExpanded: () => expanded || isNative() };
 }
 
-export function createOpeningFilm({ viewer, renderer, scene, camera, screen, placeholder, pickMeshes, onOpen, onExplore, onWorks, onTour, onReturn }) {
+export function createOpeningFilm({ viewer, renderer, scene, camera, screen, placeholder, pickMeshes, onOpen, onExplore, onWorks, onTour, onCollection, onReturn }) {
   const video = document.querySelector('#opening-film');
   const dialog = document.querySelector('#film-player');
   const closeButton = document.querySelector('#film-close');
@@ -111,6 +111,8 @@ export function createOpeningFilm({ viewer, renderer, scene, camera, screen, pla
   const titleElement = document.querySelector('#film-player-title');
   const replayButton = document.querySelector('#film-replay');
   const complete = document.querySelector('#film-complete');
+  const nextTitle = document.querySelector('#film-next-title');
+  const exploreButton = document.querySelector('#film-explore');
   const toolbar = document.querySelector('.toolbar');
   const masthead = document.querySelector('.masthead');
   const selectionRay = new THREE.Raycaster();
@@ -129,10 +131,34 @@ export function createOpeningFilm({ viewer, renderer, scene, camera, screen, pla
   let failed = false;
   let lastView = { available: false, blocked: false };
   let lastLayout = '';
+  let lastVisibilityCheck = -Infinity;
+  let screenVisible = false;
+  const visibilityPosition = new THREE.Vector3();
+  const visibilityRotation = new THREE.Quaternion();
+  const intersections = [];
+  const projectedPoint = new THREE.Vector3();
   let seeking = false;
   let resumeAfterSeek = false;
   let seekTarget = 0;
   let pendingSeek = null;
+
+  function setCompletion(completed) {
+    dialog.dataset.complete = String(completed);
+    nextTitle.hidden = !completed;
+    complete.hidden = !completed;
+    dialog.setAttribute('aria-describedby', completed ? 'film-next-title film-complete' : 'film-player-status');
+  }
+
+  function showCompletion() {
+    if (!dialog.open) return;
+    resetSeek();
+    void expansion.collapse();
+    setCompletion(true);
+    playerStatus.textContent = 'Film complete · Choose your next step.';
+    updateLabel();
+    updateSeek();
+    nextTitle.focus({ preventScroll: true });
+  }
 
   function timeLabel(seconds) {
     if (!Number.isFinite(seconds)) return '00:00';
@@ -171,7 +197,7 @@ export function createOpeningFilm({ viewer, renderer, scene, camera, screen, pla
     if (!seeking) return;
     pendingSeek = Math.max(0, Math.min(seekTarget, video.duration));
     seeking = false;
-    complete.hidden = true;
+    setCompletion(false);
     video.currentTime = pendingSeek;
     updateSeek();
     settleSeek();
@@ -183,7 +209,8 @@ export function createOpeningFilm({ viewer, renderer, scene, camera, screen, pla
     pendingSeek = null;
     resumeAfterSeek = false;
     updateSeek();
-    if (resume && dialog.open && !video.ended) resumeFilm();
+    if (video.ended) showCompletion();
+    else if (resume && dialog.open) resumeFilm();
   }
 
   function resetSeek() {
@@ -200,8 +227,14 @@ export function createOpeningFilm({ viewer, renderer, scene, camera, screen, pla
   const normal = new THREE.Vector3().fromBufferAttribute(screen.geometry.getAttribute('normal'), 0)
     .transformDirection(screen.matrixWorld).setY(0).normalize();
   const vertices = screen.geometry.getAttribute('position');
+  const screenCorners = Array.from({ length: vertices.count }, (_, index) =>
+    screen.localToWorld(new THREE.Vector3().fromBufferAttribute(vertices, index)));
   const screenBounds = new THREE.Box3().setFromObject(screen);
   const screenHeight = screenBounds.max.y - screenBounds.min.y;
+  const controlTarget = screenCenter.clone();
+  controlTarget.y -= screenHeight * 0.33;
+  const screenBottom = screenCenter.clone();
+  screenBottom.y -= screenHeight / 2;
   screen.geometry.computeBoundingBox();
   const screenWidth = (screen.geometry.boundingBox.max.x - screen.geometry.boundingBox.min.x) * screen.scale.x;
   const titleCanvas = document.createElement('canvas');
@@ -295,7 +328,7 @@ export function createOpeningFilm({ viewer, renderer, scene, camera, screen, pla
   }
 
   function updateLabel() {
-    playLabel.textContent = failed ? 'Open film player' : video.ended ? 'Replay film' : video.currentTime > 0 ? 'Resume film' : 'Play film';
+    playLabel.textContent = failed ? 'Open film player' : video.ended ? 'Continue after the film' : video.currentTime > 0 ? 'Resume film' : 'Play film';
     playButton.setAttribute('aria-label', `${playLabel.textContent}: ${title}`);
     replayButton.hidden = !video.paused && !video.ended;
     replayButton.textContent = failed ? 'Retry opening film' : video.ended ? 'Replay opening film' : video.currentTime > 0 ? 'Resume opening film' : 'Play opening film';
@@ -303,45 +336,67 @@ export function createOpeningFilm({ viewer, renderer, scene, camera, screen, pla
 
   function update(nextView = lastView) {
     lastView = nextView;
+    if (!nextView.available && !video.paused) video.pause();
+    if (!nextView.available || nextView.blocked || dialog.open) {
+      hideControls();
+      lastLayout = '';
+      lastVisibilityCheck = -Infinity;
+      return;
+    }
+    const toolbarBounds = toolbar.getBoundingClientRect();
     const layout = [nextView.available, nextView.blocked, dialog.open, viewer.clientWidth, viewer.clientHeight,
       camera.position.x, camera.position.y, camera.position.z, camera.quaternion.x, camera.quaternion.y,
-      camera.quaternion.z, camera.quaternion.w, camera.fov, toolbar.getBoundingClientRect().top].join('|');
+      camera.quaternion.z, camera.quaternion.w, camera.fov, toolbarBounds.top].join('|');
     if (layout === lastLayout) return;
     lastLayout = layout;
-    controls.hidden = true;
-    if (!nextView.available) video.pause();
-    if (!nextView.available || nextView.blocked || dialog.open) return;
     camera.updateMatrixWorld();
-    if (camera.position.clone().sub(screenCenter).dot(normal) <= 0) return;
+    if (projectedPoint.subVectors(camera.position, screenCenter).dot(normal) <= 0) { hideControls(); return; }
     const bounds = renderer.domElement.getBoundingClientRect();
-    const target = screenCenter.clone();
-    target.y -= screenHeight * 0.33;
-    const projected = target.clone().project(camera);
-    if (projected.z < -1 || projected.z > 1 || Math.abs(projected.x) > 1 || Math.abs(projected.y) > 1) return;
-    const corners = Array.from({ length: vertices.count }, (_, index) =>
-      screen.localToWorld(new THREE.Vector3().fromBufferAttribute(vertices, index)).project(camera));
-    const pixelWidth = (Math.max(...corners.map((point) => point.x)) - Math.min(...corners.map((point) => point.x))) * bounds.width / 2;
-    if (pixelWidth < Math.min(48, bounds.width * 0.08)) return;
-    selectionRay.set(camera.position, target.clone().sub(camera.position).normalize());
-    const visible = pickMeshes.filter((object) => {
-      for (let parent = object; parent; parent = parent.parent) if (!parent.visible) return false;
-      return true;
-    });
-    const first = selectionRay.intersectObjects(visible, false)[0]?.object;
-    if (first !== screen && first !== titleSurface) return;
-    const width = THREE.MathUtils.clamp(pixelWidth * 0.72, 148, 210);
+    const projected = projectedPoint.copy(controlTarget).project(camera);
+    if (projected.z < -1 || projected.z > 1 || Math.abs(projected.x) > 1 || Math.abs(projected.y) > 1) { hideControls(); return; }
     const horizontal = (projected.x + 1) * bounds.width / 2;
-    const screenBottom = screenCenter.clone();
-    screenBottom.y -= screenHeight / 2;
-    screenBottom.project(camera);
+    let left = Infinity;
+    let right = -Infinity;
+    for (const corner of screenCorners) {
+      projectedPoint.copy(corner).project(camera);
+      left = Math.min(left, projectedPoint.x);
+      right = Math.max(right, projectedPoint.x);
+    }
+    const pixelWidth = (right - left) * bounds.width / 2;
+    if (pixelWidth < Math.min(48, bounds.width * 0.08)) { hideControls(); return; }
+    const now = performance.now();
+    if (now - lastVisibilityCheck >= 120 || camera.position.distanceToSquared(visibilityPosition) >= 0.64
+      || 1 - Math.abs(camera.quaternion.dot(visibilityRotation)) > 0.0009) {
+      projectedPoint.subVectors(controlTarget, camera.position);
+      selectionRay.far = projectedPoint.length() + 0.1;
+      selectionRay.set(camera.position, projectedPoint.normalize());
+      const visible = pickMeshes.filter((object) => {
+        for (let parent = object; parent; parent = parent.parent) if (!parent.visible) return false;
+        return true;
+      });
+      intersections.length = 0;
+      const first = selectionRay.intersectObjects(visible, false, intersections)[0]?.object;
+      screenVisible = first === screen || first === titleSurface;
+      lastVisibilityCheck = now;
+      visibilityPosition.copy(camera.position);
+      visibilityRotation.copy(camera.quaternion);
+    }
+    if (!screenVisible) { hideControls(); return; }
+    const width = THREE.MathUtils.clamp(pixelWidth * 0.72, 148, 210);
+    projectedPoint.copy(screenBottom).project(camera);
     const safeTop = masthead.getBoundingClientRect().bottom - bounds.top + 12;
-    const safeBottom = toolbar.getBoundingClientRect().top - bounds.top - 12;
-    const vertical = Math.min((1 - screenBottom.y) * bounds.height / 2 + 14, safeBottom - 80);
-    if (horizontal < width / 2 + 8 || horizontal > bounds.width - width / 2 - 8 || vertical < safeTop || vertical > safeBottom) return;
-    controls.style.left = `${horizontal}px`;
-    controls.style.top = `${vertical}px`;
-    controls.style.width = `${width}px`;
-    controls.hidden = false;
+    const safeBottom = toolbarBounds.top - bounds.top - 12;
+    const vertical = Math.min((1 - projectedPoint.y) * bounds.height / 2 + 14, safeBottom - 80);
+    if (horizontal < width / 2 + 8 || horizontal > bounds.width - width / 2 - 8 || vertical < safeTop || vertical > safeBottom) { hideControls(); return; }
+    for (const [property, value] of Object.entries({ left: horizontal, top: vertical, width })) {
+      const pixels = `${value.toFixed(1)}px`;
+      if (controls.style[property] !== pixels) controls.style[property] = pixels;
+    }
+    if (controls.hidden) controls.hidden = false;
+  }
+
+  function hideControls() {
+    if (!controls.hidden) controls.hidden = true;
   }
 
   async function open() {
@@ -351,15 +406,18 @@ export function createOpeningFilm({ viewer, renderer, scene, camera, screen, pla
     onOpen();
     dialog.showModal();
     controls.hidden = true;
-    closeButton.focus();
-    await playFilm();
+    if (video.ended) showCompletion();
+    else {
+      closeButton.focus();
+      await playFilm();
+    }
   }
 
   async function playFilm() {
     if (!dialog.open) return;
     if (failed) { failed = false; video.load(); }
     if (video.ended) video.currentTime = 0;
-    complete.hidden = true;
+    setCompletion(false);
     await resumeFilm();
   }
 
@@ -383,7 +441,7 @@ export function createOpeningFilm({ viewer, renderer, scene, camera, screen, pla
     video.pause();
     title = filmTitle;
     failed = false;
-    complete.hidden = true;
+    setCompletion(false);
     titleElement.textContent = title;
     status.textContent = 'Loading opening film…';
     playerStatus.textContent = 'Loading opening film…';
@@ -412,6 +470,7 @@ export function createOpeningFilm({ viewer, renderer, scene, camera, screen, pla
       video.pause();
       return;
     }
+    setCompletion(false);
     playerStatus.textContent = `${title} · ${durationLabel()} · Use controls for sound and full screen.`;
     updateLabel();
     updateSeek();
@@ -424,11 +483,7 @@ export function createOpeningFilm({ viewer, renderer, scene, camera, screen, pla
   video.addEventListener('seeked', settleSeek);
   video.addEventListener('ended', () => {
     if (seeking || pendingSeek !== null) return;
-    void expansion.collapse();
-    playerStatus.textContent = 'Film complete · Choose your next step.';
-    complete.hidden = false;
-    updateLabel();
-    updateSeek();
+    showCompletion();
   });
   video.addEventListener('error', () => {
     resetSeek();
@@ -450,16 +505,17 @@ export function createOpeningFilm({ viewer, renderer, scene, camera, screen, pla
     const target = Number(seek.value);
     beginSeek();
     seekTarget = target;
-    complete.hidden = true;
+    setCompletion(false);
     updateSeek();
   });
   seek.addEventListener('change', finishSeek);
   muteButton.addEventListener('click', () => { video.muted = !video.muted; updateSeek(); });
   playButton.addEventListener('click', open);
   replayButton.addEventListener('click', playFilm);
-  document.querySelector('#film-explore').addEventListener('click', () => { close(); onExplore(); });
+  exploreButton.addEventListener('click', () => { close(); onExplore(); });
   document.querySelector('#film-works').addEventListener('click', () => { close(); onWorks(); });
   document.querySelector('#film-tour').addEventListener('click', () => { close(); onTour(); });
+  document.querySelector('#film-collection').addEventListener('click', () => { close(); onCollection(); });
   closeButton.addEventListener('click', () => close('return'));
   dialog.addEventListener('cancel', (event) => {
     event.preventDefault();

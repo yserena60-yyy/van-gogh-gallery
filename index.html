@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vincent van Gogh · A Life Through Art</title>
-  <link rel="stylesheet" href="./style.css?v=2026-10-06-visitor-guidance">
+  <link rel="stylesheet" href="./style.css?v=2026-10-06-film-intro-route">
   <script type="importmap">
     {
       "imports": {
@@ -43,6 +43,7 @@
       <nav id="chapter-nav" class="chapter-nav" aria-label="Choose a gallery hall"></nav>
       <div id="catalog-content" class="catalog-content" aria-live="polite"></div>
     </aside>
+    <div class="gallery-sidebar">
     <section id="wall-controls" class="wall-controls" aria-label="Switch the current hall's exhibition walls" hidden>
       <label for="wall-set" id="wall-hall">Hall 01 · Exhibition walls</label>
       <div class="wall-buttons">
@@ -52,6 +53,15 @@
       </div>
       <span id="wall-status" role="status"></span>
     </section>
+    <div class="story-shortcuts" role="group" aria-label="Explore the stories" aria-describedby="story-shortcuts-note">
+      <span class="toolbar-kicker">Stories</span>
+      <button id="story-go" type="button" aria-pressed="false" title="Early life · London, faith, the miners and learning to draw" disabled>Early life</button>
+      <button id="yellow-house-go" type="button" aria-haspopup="dialog" aria-controls="yellow-house-reader" title="The Yellow House · Vincent and Gauguin in Arles" disabled>The Yellow House</button>
+      <button id="auvers-go" type="button" aria-haspopup="dialog" aria-controls="hall-reader" title="The Final Months · Life, work and the final days in Auvers" disabled>The Final Months</button>
+      <button id="afterlife-go" type="button" aria-pressed="false" aria-controls="afterlife-stop-controls" title="Afterlife · Who carried his work forward?" disabled>Afterlife</button>
+      <span id="story-shortcuts-note">Read a story · Return anytime</span>
+    </div>
+    </div>
     <div class="toolbar">
       <section id="visit-hint" class="visit-hint" aria-label="A tip for your visit" hidden>
         <div aria-live="polite"><span id="visit-hint-label" class="eyebrow"></span><strong id="visit-hint-title"></strong><p id="visit-hint-text"></p></div>
@@ -62,15 +72,9 @@
       <span id="guide-position" aria-live="polite">Gallery-view route · Follow the left wall</span>
       <button id="next-artwork" type="button" disabled>Next →</button>
       <button id="hall-intro-toggle" type="button" aria-haspopup="dialog" aria-controls="hall-reader" disabled>Room introduction</button>
-      <button id="reset-view" class="toolbar-icon" type="button" aria-label="Reset view" title="Reset view" disabled><span aria-hidden="true">↺</span></button>
+      <button id="reset-view" class="toolbar-icon" type="button" aria-label="Restore front view" title="Restore the front view of this exhibit" aria-describedby="view-reset-status" disabled><span aria-hidden="true">↺</span></button>
       <button id="visit-help-toggle" class="toolbar-icon" type="button" aria-label="How to explore" title="How to explore" aria-haspopup="dialog" aria-controls="visit-help" aria-expanded="false" disabled>?</button>
-      </div>
-      <div class="story-shortcuts" role="group" aria-label="Explore the stories" aria-describedby="story-shortcuts-note">
-        <span class="toolbar-kicker">Stories</span>
-        <button id="story-go" type="button" aria-pressed="false" title="Early life · London, faith, the miners and learning to draw" disabled>Early life</button>
-        <button id="yellow-house-go" type="button" aria-haspopup="dialog" aria-controls="yellow-house-reader" title="The Yellow House · Vincent and Gauguin in Arles" disabled>The Yellow House</button>
-        <button id="afterlife-go" type="button" aria-pressed="false" aria-controls="afterlife-stop-controls" title="Afterlife · Who carried his work forward?" disabled>Afterlife</button>
-        <span id="story-shortcuts-note">Read at your own pace · Return to the gallery anytime</span>
+      <span id="view-reset-status" class="view-reset-status" role="status" hidden></span>
       </div>
       <div class="tour-controls">
         <span class="toolbar-kicker">Tour</span>
@@ -102,7 +106,7 @@
         <button type="button" data-visit-action="tour">Start the 3-minute tour →</button>
         <button type="button" data-visit-action="free">Explore freely</button>
       </div>
-      <p class="visit-welcome-note">Early life, The Yellow House and Afterlife stay available below. Open ? anytime for a quick guide.</p>
+      <p class="visit-welcome-note">Early life, The Yellow House, The Final Months and Afterlife stay available on the right. Open ? anytime for a quick guide.</p>
     </section>
     <dialog id="visit-help" class="visit-help" aria-labelledby="visit-help-title">
       <header><div><span class="eyebrow">A GUIDE TO YOUR VISIT</span><h2 id="visit-help-title">There is more than one way in.</h2></div><button id="visit-help-close" type="button" aria-label="Close the visitor guide">×</button></header>
@@ -110,11 +114,12 @@
         <ol class="visit-help-steps">
           <li><span>01</span><div><h3>Let the tour lead you</h3><p>Choose Highlights for a 3-minute visit through the halls. Full collection visits every verified work. Use Pause at any time; click a painting to stop and look closer.</p></div></li>
           <li><span>02</span><div><h3>Look closer at a work</h3><p>Click a painting to enlarge it and read its story. Previous and Next inside the viewer move between works. Close it to return to the same place.</p></div></li>
-          <li><span>03</span><div><h3>Follow the person behind the paintings</h3><p>The story buttons stay visible below. They are optional reading paths, not steps you have to complete in order.</p></div></li>
+          <li><span>03</span><div><h3>Follow the person behind the paintings</h3><p>The story buttons stay visible on the right. They are optional reading paths, not steps you have to complete in order.</p></div></li>
         </ol>
         <dl class="visit-help-stories">
           <div><dt>Early life</dt><dd>London, faith, the miners and learning to draw.</dd></div>
           <div><dt>The Yellow House</dt><dd>Vincent and Gauguin: a shared studio, friendship and tension in Arles.</dd></div>
+          <div><dt>The Final Months</dt><dd>Vincent’s life and work in Auvers, the final days and different accounts.</dd></div>
           <div><dt>Afterlife</dt><dd>Who preserved his work, and how it reached later generations.</dd></div>
         </dl>
         <p class="visit-help-movement">To explore freely: drag to look, scroll or pinch to move, or use W/A/S/D to walk. The arrow buttons follow the works; Eight Halls · Catalogue lets you choose a destination. Use Room introduction to read each hall’s opening story.</p>
@@ -173,12 +178,14 @@
         </div>
         <footer class="film-player-footer">
           <span id="film-player-status" role="status">Loading opening film…</span>
-        <p id="film-complete" hidden>Continue through the lives, places and decisions behind the early drawings.</p>
-        <div class="film-player-actions">
-          <button id="film-replay" type="button">Play opening film</button>
-          <button id="film-tour" type="button">Start the 3-minute tour →</button>
-          <button id="film-explore" type="button">Explore His Early Life</button>
-          <button id="film-works" type="button">View the Early Works</button>
+          <h3 id="film-next-title" tabindex="-1" hidden>Where would you like to go next?</h3>
+          <p id="film-complete" hidden>Continue through the lives, places and decisions behind the early drawings.</p>
+          <div class="film-player-actions" role="group" aria-label="Continue after the film">
+            <button id="film-explore" type="button">Explore His Early Life</button>
+            <button id="film-tour" type="button">Start the 3-minute tour →</button>
+            <button id="film-works" type="button">View the Early Works</button>
+            <button id="film-collection" type="button">Start the full exhibition tour →</button>
+            <button id="film-replay" type="button">Play opening film</button>
           </div>
         </footer>
       </div>
@@ -201,6 +208,7 @@
     <section id="art-immersive" class="art-immersive" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="immersive-title" inert hidden>
       <div class="immersive-panel">
         <button id="immersive-close" class="immersive-close" type="button" aria-label="Close immersive artwork view">×</button>
+        <button id="immersive-story-back" class="immersive-story-back" type="button" hidden>← Return to the story</button>
         <figure class="immersive-figure">
           <div id="artwork-image-stage" class="artwork-image-stage">
             <img id="immersive-image" alt="">
@@ -287,19 +295,40 @@
         <h2 id="hall-reader-title"></h2>
         <p id="hall-reader-years"></p>
         <p id="hall-reader-subtitle" hidden></p>
+        <div id="hall-reader-auvers-actions" class="auvers-header-actions" hidden>
+          <button id="auvers-introduction" type="button">Hall introduction →</button>
+          <button id="auvers-sources-toggle" type="button" aria-controls="auvers-sources" aria-expanded="false">Sources &amp; Versions</button>
+        </div>
       </header>
       <div class="hall-reader-scroll">
-        <div id="hall-reader-copy" class="hall-reader-copy"></div>
-        <p id="hall-reader-research" class="hall-reader-research" hidden></p>
-        <details id="hall-reader-sources" class="hall-reader-sources">
-          <summary>Sources &amp; Further Reading</summary>
-          <ul id="hall-reader-source-list"></ul>
-        </details>
+        <div id="hall-reader-introduction">
+          <div id="hall-reader-copy" class="hall-reader-copy"></div>
+          <p id="hall-reader-research" class="hall-reader-research" hidden></p>
+          <details id="hall-reader-sources" class="hall-reader-sources">
+            <summary>Sources &amp; Further Reading</summary>
+            <ul id="hall-reader-source-list"></ul>
+          </details>
+        </div>
+        <section id="auvers-reader" class="auvers-reader" hidden>
+          <p id="auvers-reading-note" class="auvers-reading-note"></p>
+          <div class="auvers-layout">
+            <nav id="auvers-chapters" class="auvers-chapters" aria-label="Auvers chapters"></nav>
+            <div class="auvers-body">
+              <article id="auvers-content" class="auvers-content" tabindex="-1"></article>
+              <section id="auvers-sources" class="auvers-sources" tabindex="-1" hidden></section>
+            </div>
+          </div>
+        </section>
       </div>
       <footer class="hall-reader-footer">
         <button id="hall-reader-back" type="button">Back to gallery</button>
         <button id="hall-reader-story" type="button" hidden>A Room for Gauguin →</button>
         <button id="hall-reader-afterlife" type="button" hidden>Continue to Afterlife →</button>
+        <button id="hall-reader-explore-auvers" type="button" hidden>Explore the Gallery →</button>
+        <button id="hall-reader-final-days" type="button" hidden>The Final Days →</button>
+        <button id="auvers-previous" type="button" hidden>Previous chapter</button>
+        <span id="auvers-position" class="auvers-position" aria-live="polite" hidden></span>
+        <button id="auvers-next" type="button" hidden>Next chapter →</button>
         <button id="hall-reader-locate" type="button">View this wall →</button>
       </footer>
     </dialog>
@@ -373,16 +402,6 @@
             <aside id="afterlife-document" class="afterlife-document" hidden></aside>
             <button id="afterlife-almond" type="button" hidden>Return to Almond Blossom →</button>
             <button id="afterlife-artwork" type="button" hidden>Open The Starry Night →</button>
-            <form id="afterlife-visitor-form" class="afterlife-visitor-form" hidden>
-              <h3>Leave a Reflection</h3>
-              <label for="afterlife-reflection-work">A work or a moment</label>
-              <select id="afterlife-reflection-work"></select>
-              <label for="afterlife-reflection-text">What do you carry from it?</label>
-              <textarea id="afterlife-reflection-text" rows="5" maxlength="2000" required aria-describedby="afterlife-reflection-privacy" placeholder="A detail, a question, a memory…"></textarea>
-              <p id="afterlife-reflection-privacy">Saved only in this browser. Not published or sent to a server.</p>
-              <button type="submit">Save Reflection</button>
-              <p id="afterlife-reflection-status" role="status" aria-live="polite"></p>
-            </form>
           </article>
         </div>
         <section id="afterlife-sources" class="afterlife-sources" hidden aria-labelledby="afterlife-sources-title">
@@ -528,7 +547,7 @@
     </dialog>
     <div id="error" role="alert" hidden></div>
   </main>
-  <script type="module" src="./viewer.js?v=2026-10-06-visitor-guidance"></script>
+  <script type="module" src="./viewer.js?v=2026-10-06-film-intro-route"></script>
 </body>
 </html>
 

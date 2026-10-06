@@ -4,10 +4,13 @@ import artworkLabels from './locale-zh-artwork-labels.js';
 import { minersChapters, minersTopic, minersUi } from './locale-zh-miners.js';
 import { drawingChapters, drawingMaterials, drawingTopic, drawingUi } from './locale-zh-drawing.js';
 import { attachmentChapter, attachmentSourceChapter, attachmentMemoryChapter, attachmentUi } from './locale-zh-attachment.js';
-import visitUi from './locale-zh-visit.js';
+import visitUi from './locale-zh-visit.js?v=2026-10-06-final-months-shortcut';
+import auvers, { auversUi } from './locale-zh-auvers.js?v=2026-10-06-auvers-final-days';
 
 export const ui = {
+  'Preparing display…': '正在准备展厅画面…',
   ...visitUi,
+  ...auversUi,
   ...minersUi,
   ...drawingUi,
   ...attachmentUi,
@@ -164,6 +167,10 @@ export const ui = {
   'Early life': '早年生活',
   'Room introduction': '展厅序语',
   'Reset view': '重置视角',
+  'Restore front view': '恢复正面视角',
+  'Restore the front view of this exhibit': '回到当前展品的正面观看位置',
+  'Restoring the front view · Tour paused': '正在恢复正面视角 · 导览已暂停',
+  'Route view restored · Tour paused': '已恢复路线视角 · 导览已暂停',
   'Choose tour mode': '选择导览模式',
   'Highlights': '精选导览',
   'Highlights · 3 minutes': '精选导览 · 3分钟',
@@ -211,6 +218,9 @@ export const ui = {
   'Retry opening film': '重新加载影片',
   'Press Play opening film to begin with sound.': '点击播放，观看有声开场影片。',
   'Film complete · Choose your next step.': '影片结束 · 选择接下来的参观方向。',
+  'Where would you like to go next?': '接下来，你想从哪里继续？',
+  'Continue after the film': '选择影片后的参观方向',
+  'Start the full exhibition tour': '开始完整展览导览',
   'Film unavailable': '影片暂不可用',
   'Film could not load. Retry the film, or continue to the early life stories.': '影片未能加载。可以重试，或继续阅读早年生活的故事。',
   'Explore His Early Life': '探索他的早年生活',
@@ -247,11 +257,6 @@ export const ui = {
   'Enlarge image +': '放大图像 +',
   'Return to Almond Blossom →': '返回《盛开的杏花》 →',
   'Open The Starry Night →': '打开《星月夜》 →',
-  'Leave a Reflection': '留下你的感想',
-  'A work or a moment': '一幅作品，或一个瞬间',
-  'What do you carry from it?': '你从中带走了什么？',
-  'Saved only in this browser. Not published or sent to a server.': '仅保存在当前浏览器中，不会发布或发送至服务器。',
-  'Save Reflection': '保存感想',
   'Remembering Vincent · Letters, Recollections & Interpretation': '记忆中的文森特 · 书信、回忆与解读',
   'View this card on the wall': '前往墙上的这张卡片',
   '← Previous story': '← 上一个故事',
@@ -294,12 +299,6 @@ export const ui = {
   'Later Research': '后来的研究',
   'Open Questions': '仍待解答的问题',
   'Read the Translation': '阅读译文',
-  'Your saved reflection is shown below. It stays only in this browser.': '下方显示你保存的感想，仅留在当前浏览器中。',
-  'A saved reflection could not be read. It will not be replaced unless you choose Save.': '未能读取已保存的感想。除非点击保存，否则不会覆盖原记录。',
-  'Changes are not saved yet.': '修改尚未保存。',
-  'Write a reflection before saving, or continue without one.': '请先写下感想再保存，也可以不填写，继续参观。',
-  'Saved in this browser only. Nothing has been published or sent to a server.': '已保存在当前浏览器中，没有发布或发送至服务器。',
-  'This browser could not save the reflection. Your text is still here; you can copy it before leaving.': '浏览器未能保存。文字仍在这里，你可以在离开前复制。',
   'Revisit the London story & its sources →': '重访伦敦故事与来源 →',
   'Four ways to follow the work into other lives': '沿着四条线索，看作品走进别人的生命',
   'Historical material · Family, exhibitions and letters': '历史资料 · 家族、展览与书信',
@@ -543,6 +542,7 @@ export const titles = {
 
 export const content = {
   yellowHouse,
+  auvers,
   artworkCards: artworkLabels,
   chapters: chapterTranslations,
   story: {
@@ -631,13 +631,13 @@ export const content = {
         '1890年5月20日，文森特抵达瓦兹河畔奥维尔。他住进拉武旅馆，并通过绘画探索周围的环境。在早期写给特奥和乔的信里，他描述茅草屋顶的习作，以及开满豌豆花、前景种着小麦的田野。他请求寄来画布或画纸，以便继续工作。',
         '到6月初，他正在为加歇医生画肖像，并研究医生的花园。他写到早起、所需材料，以及特奥、乔和小儿子前来停留的可能。还有画要画，材料要安排，也有他盼望见到的人。',
         '这一厅的肖像、村庄景色与宽幅风景，让我们走进那些星期的活动。在这些作品中，他继续探索色彩、笔触和画布的形状。奥维尔时期是其艺术生涯中一段密集的实验。',
-        '文森特于1890年7月29日去世。在这一厅参观时，请沿着当时吸引他注意的人与地方前行，而不只是用已知的死亡结局解读每一幅画。',
-        '走出这一厅，“身后回响”将关注那些把他的绘画和书信带向未来的人，以及作品促成的种种相遇。',
+        '文森特于1890年7月29日去世，距遭受枪伤两天。本厅的最后一节将通过文献、回忆与后来的研究，沿着那些日子展开。它也呈现关于枪击的不同解释，让各自的来源与限度清楚可见。',
+        '穿过这一厅时，请把时间留给那些吸引他注意的人物、地方与画作。走出本厅，“身后回响”将关注保存他作品的人，以及作品促成的种种相遇。',
       ] },
       { tourLead: '文森特的绘画和书信交由他人守护。展览与出版让它们遇见新的观众。艺术家探索其中的可能，音乐家与电影导演以自己的形式回应。沿着这些相遇，想一想你自己的感受。', paragraphs: [
         '文森特的绘画和书信交由他人守护。通过展览与出版，它们抵达新的观众。艺术家探索其中的可能，音乐家与电影导演以自己的形式回应。这一厅沿着这些相遇展开，也邀请你想一想自己的相遇。',
         '先从守护收藏的人开始。乔·梵高-邦格的展览与编辑工作，以及文森特·威廉后来的管理，帮助绘画和书信抵达未来的观众。留存的照片、目录和书籍，让你通过具体的物件了解这些工作。',
-        '接着走向博物馆策划的后世绘画关联、唐·麦克林的一首歌，以及黑泽明电影中想象的相遇。这些是对文森特作品的回应，不是关于他生平的新证据。最后一节由一位具名观众的讲述开启，再邀请你留下自己的感想。',
+        '接着走向博物馆策划的后世绘画关联、唐·麦克林的一首歌，以及黑泽明电影中想象的相遇。这些是对文森特作品的回应，不是关于他生平的新证据。最后一节由一位具名观众的讲述开启，以一个问题收束：文森特的人生中，什么留在了你的心里？',
       ] },
     ],
     departure: { paragraphs: ['我们知道他最终成为了谁。', '离开展览时，文森特的人生', '有什么会留在你的心里？'] },
@@ -787,13 +787,13 @@ content.afterlife = {
       document: { label: '在MoMA听Sheldon A. Clarke的讲述 ↗', note: '在这幅作品的音视频区，寻找Sheldon A. Clarke谈文森特·梵高《星月夜》的内容。' },
     },
     {
-      title: '什么留在你的心里？', subtitle: '个人的相遇', date: '你的相遇', typeLabel: '你的感想 · 仅保存在此浏览器',
-      summary: '选择一幅作品或一个瞬间，用文字说出你从中带走的东西。这里没有标准答案。',
+      title: '什么留在你的心里？', subtitle: '个人的相遇', date: '你的相遇', typeLabel: '带着一个问题离开',
+      summary: '想想哪幅作品、哪个故事或哪个瞬间留在了你的心里。这里没有标准答案。',
       graphic: { label: '个人的相遇', title: '什么留下了？', detail: '一个细节 · 一个问题 · 一段记忆' },
       paragraphs: [
-        '展览中有哪幅作品留在了你的心里？说说是哪一幅，以及你从中带走了什么。',
-        '你可以在下面给自己留一段感想，也可以不写，继续走向结语墙。这里不要求特定感受，也没有为此空间编造公众感言。',
-        '你的回应仅留在此浏览器中，不会发布或发送至服务器，不跨设备共享。如果清除本网站的浏览器数据，它可能消失。',
+        '这次展览中，哪幅作品、哪个故事或哪个瞬间留在了你的心里？',
+        '你带走的或许是一个细节、一个问题或一段记忆。这里没有标准答案，也不要求你带着某种特定感受离开。',
+        '走向最后的结语墙时，不妨想想：除了你早已知道的那位画家，你又认识了一个怎样的文森特？',
       ],
       imageRights: '原创导航文字设计。未展示观众照片或虚构感言。',
     },

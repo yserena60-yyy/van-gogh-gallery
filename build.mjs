@@ -7,8 +7,9 @@ import { assembleMedia } from './assemble-media.mjs';
 import { validateHallTexts } from './hall-texts.js';
 import { validateArtworkCards } from './artwork-cards.js';
 import { validateAfterlife } from './afterlife.js';
-import { addFirstHallTourStops, HIGHLIGHT_TOUR_SECONDS, retimeHighlightTour } from './highlight-route.js';
+import { addFirstHallTourStops, FIRST_HALL_TOUR_SECONDS, HIGHLIGHT_TOUR_SECONDS, retimeHighlightTour } from './highlight-route.js';
 import { validateYellowHouse } from './yellow-house-data.js';
+import { validateAuvers } from './auvers-data.js';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 await assembleMedia(root);
@@ -24,18 +25,24 @@ const story = JSON.parse(await readFile(path.join(root, 'data/story_exhibit_en.j
 const storyCounts = validateStoryExhibit(story);
 const highlightRoute = retimeHighlightTour(addFirstHallTourStops(JSON.parse(await readFile(path.join(root, 'data/ordered_route_v28.json'), 'utf8')), story.station));
 if (highlightRoute.duration !== HIGHLIGHT_TOUR_SECONDS || highlightRoute.camera.waypoints.at(-1).time !== HIGHLIGHT_TOUR_SECONDS || highlightRoute.camera.exhibitStops.length !== 2) throw new Error('Invalid Highlights tour duration or first-hall stops.');
+if (highlightRoute.camera.waypoints.find((point) => point.chapter === '02')?.time !== FIRST_HALL_TOUR_SECONDS
+  || highlightRoute.camera.waypoints.some((point, index, points) => !Number.isFinite(point.time) || point.time < 0
+    || point.time > HIGHLIGHT_TOUR_SECONDS || (index > 0 && point.time < points[index - 1].time))) throw new Error('Invalid Highlights tour pacing.');
 const wallTexts = JSON.parse(await readFile(path.join(root, 'data/hall_introductions_en.json'), 'utf8'));
 const wallTextCount = validateHallTexts(wallTexts);
 const afterlife = JSON.parse(await readFile(path.join(root, 'data/afterlife_en.json'), 'utf8'));
 const afterlifeCount = validateAfterlife(afterlife);
 const yellowHouse = JSON.parse(await readFile(path.join(root, 'data/yellow_house_en.json'), 'utf8'));
 const yellowHouseCount = validateYellowHouse(yellowHouse, collection);
+const auvers = JSON.parse(await readFile(path.join(root, 'data/auvers_en.json'), 'utf8'));
+const auversCount = validateAuvers(auvers, collection);
 const yellowHouseImages = (yellowHouse.media ?? []).map((media) => media.image);
 const storyImages = [...new Set([story.image, story.poster, ...story.topics.map((topic) => topic.image), ...story.chapters.map((chapter) => chapter.image), ...story.materials.map((material) => material.image), ...story.sources.map((source) => source.localImage)].filter(Boolean))];
 const images = [...new Set([...Object.values(artworks), ...Object.values(collection.works)].map((artwork) => artwork.image))];
 const siteFiles = [
   'style.css',
   'viewer.js',
+  'render-preparation.js',
   'i18n.js',
   'visit-guide.js',
   'locale-zh-visit.js',
@@ -44,6 +51,7 @@ const siteFiles = [
   'locale-zh-drawing.js',
   'locale-zh-attachment.js',
   'locale-zh-yellow-house.js',
+  'locale-zh-auvers.js',
   'locale-zh-titles.js',
   'locale-zh-artwork-labels.js',
   'gallery-entry.js',
@@ -57,6 +65,9 @@ const siteFiles = [
   'yellow-house.js',
   'yellow-house-data.js',
   'data/yellow_house_en.json',
+  'auvers.js',
+  'auvers-data.js',
+  'data/auvers_en.json',
   ...yellowHouseImages,
   ...new Set([...afterlife.cards, ...afterlife.responses].map((card) => card.image).filter((image) => image && !images.includes(image))),
   'collection.js',
@@ -76,7 +87,7 @@ const siteFiles = [
   'data/ordered_route_v28.json',
   'data/collection_en.json',
   'data/collection_audit.json',
-  'assets/gallery_v28.glb',
+  'assets/gallery_v29.glb',
   'assets/van-gogh-early-years.mp4',
   ...images,
 ];
@@ -156,7 +167,8 @@ await writeFile(path.join(destination, '.nojekyll'), '');
 console.log(`Static gallery ready: ${destination}`);
 console.log(`Authored artwork cards: ${artworkCardCount} main labels, ${artworkChapterCount} story chapters and ${artworkSeriesChapterCount} optional series chapters, with details, looking prompts and source records.`);
 console.log(`Wall texts: ${wallTextCount - 1} physical reading locations, with the entrance reflection presented in the interactive opening.`);
-console.log(`Afterlife: ${afterlifeCount} physical archival cards, ${afterlife.sections.length} reading sections and ${afterlife.responses.length} digital responses in independent Hall 08. Visitor reflections stay in local browser storage only.`);
+console.log(`Auvers: ${auversCount.chapters} chapters, ${auversCount.dates} final-days dates, ${auversCount.accounts} attributed accounts and ${auversCount.sources} source records; an additional flush reading plaque in rear Hall 07.`);
+console.log(`Afterlife: ${afterlifeCount} physical archival cards, ${afterlife.sections.length} reading sections and ${afterlife.responses.length} digital responses in independent Hall 08, ending with a contemplative question and no visitor submission form.`);
 console.log(`Yellow House: ${yellowHouseCount.chapters} chapters, ${yellowHouseCount.connections} artwork connections, ${yellowHouseCount.evidence} optional evidence comparisons and ${yellowHouseCount.sources} source records across Halls 04–06.`);
 console.log(`Early life: ${storyCounts.topics} topics, ${storyCounts.mainChapters} main chapters, ${storyCounts.chapters - storyCounts.mainChapters} optional branches, ${storyCounts.materials} materials and ${storyCounts.sources} credited source records.`);
 console.log(`${installedCount} installed works; ${Object.keys(artworks).length} highlight positions; ${images.length} images; ${copies.length + 2} files; ${(totalBytes / 1024 / 1024).toFixed(1)} MiB.`);

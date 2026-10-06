@@ -28,7 +28,7 @@ export function visitGuidance(context) {
   };
   if (context.introduction) return {
     id: 'introduction', label: 'A NEW CHAPTER', title: 'Begin with this hall’s introduction',
-    text: 'Read this introduction opens the room’s story. Then choose View the artworks to continue into the hall.',
+    text: 'Read this introduction opens the room’s story. Then use the forward button to continue through the hall.',
     target: '#hall-intro-toggle',
   };
   if (context.story) return {

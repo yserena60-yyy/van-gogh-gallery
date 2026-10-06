@@ -1,4 +1,5 @@
 export const HIGHLIGHT_TOUR_SECONDS = 180;
+export const FIRST_HALL_TOUR_SECONDS = 32;
 
 export function addFirstHallTourStops(route, station, holdSeconds = 2.6) {
   const camera = route.camera;
@@ -61,20 +62,47 @@ export function retimeHighlightTour(route, duration = HIGHLIGHT_TOUR_SECONDS) {
   const waypoints = route.camera.waypoints;
   if (!Number.isFinite(duration) || duration <= 0 || !Number.isFinite(originalDuration) || originalDuration <= 0
     || Math.abs(waypoints.at(-1).time - originalDuration) > 0.000001) throw new Error('Invalid Highlights tour duration.');
-  const scale = duration / originalDuration;
-  const retimeStop = (stop) => ({ ...stop, start: stop.start * scale, end: stop.end * scale });
+  const firstHallEnd = waypoints.find((point) => point.chapter === '02')?.time;
+  if (!Number.isFinite(firstHallEnd) || firstHallEnd <= 0 || firstHallEnd >= originalDuration) throw new Error('Invalid first-hall boundary.');
+  const scale = duration / HIGHLIGHT_TOUR_SECONDS;
+  const firstHallDuration = FIRST_HALL_TOUR_SECONDS * scale;
+  const stops = [
+    { start: 0, end: route.camera.openingHoldSeconds, duration: 1.2 * scale },
+    { ...route.camera.openingFilmStop, duration: 2.8 * scale },
+    ...route.camera.introductionStops.filter((stop) => stop.id === '01').map((stop) => ({ ...stop, duration: 4 * scale })),
+    ...(route.camera.exhibitStops ?? []).map((stop) => ({ ...stop, duration: (stop.kind === 'story' ? 3.8 : 4.2) * scale })),
+  ].sort((first, second) => first.start - second.start);
+  if (stops.some((stop, index) => stop.end <= stop.start || stop.start < 0 || stop.end > firstHallEnd
+    || (index > 0 && stop.start < stops[index - 1].end))) throw new Error('Invalid first-hall pause intervals.');
+  const heldDuration = stops.reduce((total, stop) => total + stop.end - stop.start, 0);
+  const newHeldDuration = stops.reduce((total, stop) => total + stop.duration, 0);
+  const movingScale = (firstHallDuration - newHeldDuration) / (firstHallEnd - heldDuration);
+  const laterScale = (duration - firstHallDuration) / (originalDuration - firstHallEnd);
+  if (!Number.isFinite(movingScale) || movingScale <= 0) throw new Error('Insufficient first-hall moving time.');
+  const retime = (time) => {
+    if (time >= firstHallEnd) return firstHallDuration + (time - firstHallEnd) * laterScale;
+    let held = 0;
+    let newHeld = 0;
+    for (const stop of stops) {
+      const elapsed = Math.max(0, Math.min(time, stop.end) - stop.start);
+      held += elapsed;
+      newHeld += elapsed * stop.duration / (stop.end - stop.start);
+    }
+    return newHeld + (time - held) * movingScale;
+  };
+  const retimeStop = (stop) => ({ ...stop, start: retime(stop.start), end: retime(stop.end) });
   return {
     ...route,
     duration,
     camera: {
       ...route.camera,
-      openingHoldSeconds: route.camera.openingHoldSeconds * scale,
-      openingFilmTime: route.camera.openingFilmTime * scale,
+      openingHoldSeconds: retime(route.camera.openingHoldSeconds),
+      openingFilmTime: retime(route.camera.openingFilmTime),
       openingFilmStop: retimeStop(route.camera.openingFilmStop),
       introductionStops: route.camera.introductionStops.map(retimeStop),
       exhibitStops: (route.camera.exhibitStops ?? []).map(retimeStop),
-      waypoints: waypoints.map((point, index) => ({ ...point, time: index === waypoints.length - 1 ? duration : point.time * scale })),
+      waypoints: waypoints.map((point, index) => ({ ...point, time: index === waypoints.length - 1 ? duration : retime(point.time) })),
     },
-    artworks: route.artworks.map((entry) => ({ ...entry, approachTime: entry.approachTime * scale, routeTime: entry.routeTime * scale })),
+    artworks: route.artworks.map((entry) => ({ ...entry, approachTime: retime(entry.approachTime), routeTime: retime(entry.routeTime) })),
   };
 }
