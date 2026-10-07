@@ -57,15 +57,9 @@ Artwork connections and optional evidence comparisons keep the narrative close t
 
 ### Hall 07 · Auvers: The Final Months
 
-The seventh hall retains **May–July 1890** and begins with life rather than the circumstances of death. Its introduction opens **Explore the Gallery →** or **The Final Days →**. The five reading chapters are **Arriving in Auvers**, **People Around Him**, **Painting the Surroundings**, **July: Work and Worry** and **The Final Days**. The first three introduction paragraphs remain unchanged; the last two explain the added final-days section and the transition to Afterlife.
+Hall 07 follows Vincent’s life and work in Auvers from **May to July 1890**. Five optional chapters move from his arrival, the people around him and the places he painted to the concerns of his final weeks and his final days.
 
-A flush reading plaque on the existing short rear-left wall introduces **27–30 July 1890** without adding another partition or displacing a painting. The final-days chapter offers a four-date sequence, documentary records, attributed accounts and an optional comparison of *Wheatfield with Crows* and *Tree Roots*. It does not use shooting scenes, gunshot sounds, graphic wounds or invented dialogue.
-
-**Sources & Versions** remains available while reading. RM25 is labelled **An Unsent Letter to Theo · 23 July 1890**, not a suicide note. Theo’s separate annotation records possession of the manuscript on 27 July; it does not establish a farewell intention or when the annotation was written. Manuscript scans and modern translations are linked at their sources rather than replaced by simulated handwriting.
-
-The museum’s suicide interpretation, Naifeh and Smith’s disputed alternative hypothesis and the 2013 scholarly response are presented with authorship, dates, evidence types and access limitations. The authors’ 2011 proposal is distinguished from their 2014 article. The restricted Burlington article is a bibliographic reference, not a reconstructed rebuttal. *Tree Roots* retains the museum record’s qualification **probably** his last painting; the Highlights artwork selection is unchanged.
-
-**Continue to Afterlife →** appears at the end, with a content-note skip option for the discussion of suicide and death. It moves the visitor into independent Hall 08. **The Final Months** in the right-hand Stories rail opens the existing Auvers reader at **Arriving in Auvers**, pauses the tour and preserves the current gallery viewpoint. Closing the reader returns focus to that button without restarting the tour. Hall 07’s introduction, catalogue and rear plaque remain alternative entrances.
+**Sources & Versions** separates contemporary records, later recollections and disputed interpretations. Paintings and an unsent letter are not treated as conclusive explanations of his death. Visitors can skip the discussion of suicide and death and continue to the separate **Afterlife** hall.
 
 ### Afterlife
 
