@@ -1,6 +1,5 @@
 # Vincent van Gogh · A Life Behind the Name
 
-**名字背后的一生**
 
 An interactive exhibition about Vincent as a person: his family, relationships, work, faith, hopes, difficulties, and the choices through which he lived.
 
