@@ -110,22 +110,8 @@ export function addAfterlifeTourSegment(route, afterlife, auvers) {
     start: time, end: time + 3.6, position: [...readingPosition], target: [...readingTarget] };
   time = reading.end;
   waypoints.push({ time, position: [...readingPosition], target: [...readingTarget], chapter: '07' });
-  const bend = afterlife.arrivalPath[0];
   const doorway = [afterlife.arrivalPath[1][0], route.eyeHeight, afterlife.arrivalPath[1][2]];
-  const controls = [readingPosition, [bend[0], route.eyeHeight, readingPosition[2]], [doorway[0], route.eyeHeight, bend[2]], doorway];
-  move(readingPosition, facing(readingPosition, heading(controls[0], controls[1])), '07');
-  for (let index = 1; index <= 32; index += 1) {
-    const fraction = index / 32;
-    const inverse = 1 - fraction;
-    const weights = [inverse ** 3, 3 * inverse ** 2 * fraction, 3 * inverse * fraction ** 2, fraction ** 3];
-    const location = controls[0].map((value, axis) => controls.reduce((sum, point, control) => sum + point[axis] * weights[control], 0));
-    const tangent = controls[0].map((value, axis) => 3 * inverse ** 2 * (controls[1][axis] - value)
-      + 6 * inverse * fraction * (controls[2][axis] - controls[1][axis]) + 3 * fraction ** 2 * (controls[3][axis] - controls[2][axis]));
-    const angle = Math.atan2(tangent[2], tangent[0]);
-    const previous = waypoints.at(-1);
-    time += Math.max(distance(previous.position, location) / 3.2, Math.abs(angleDifference(heading(previous.position, previous.target), angle)));
-    waypoints.push({ time, position: location, target: facing(location, angle), chapter: location[2] < 45 ? '07' : '08' });
-  }
+  move(doorway, facing(doorway, heading(doorway, afterlife.arrivalPath[2] ?? doorway)), '07');
   const target = wall.position.map((value, axis) => axis === 1 ? route.eyeHeight : value + wall.normal[axis] * wall.inset);
   const position = target.map((value, axis) => value + wall.normal[axis] * wall.overviewDistance);
   for (const location of [...afterlife.arrivalPath.slice(2).map((point) => [point[0], route.eyeHeight, point[2]]), position]) {

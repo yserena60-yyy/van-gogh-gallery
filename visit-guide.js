@@ -10,6 +10,16 @@ export function readVisitGuideState(storage) {
 }
 
 export function visitGuidance(context) {
+  if (context.afterlife) return {
+    id: 'afterlife', label: 'HALL 08 · EPILOGUE', title: 'Follow the story beyond Vincent’s lifetime',
+    text: 'Use the highlighted reading button to open the Afterlife story. Closing reflection takes you to the final question; close a story to return to the gallery.',
+    target: '#afterlife-read',
+  };
+  if (context.finalDays) return {
+    id: 'final-days', label: 'HALL 07 · THE FINAL DAYS', title: 'Pause here before entering Afterlife',
+    text: 'Read The Final Days to follow his last days in Auvers. When you are ready, continue into Afterlife.',
+    target: '#hall-intro-toggle',
+  };
   if (context.playing) return {
     id: context.mode === 'collection' ? 'collection-tour' : 'highlights-tour',
     label: 'THE CAMERA LEADS THE WAY',
@@ -20,16 +30,6 @@ export function visitGuidance(context) {
   if (context.freePending) return {
     id: 'free', label: 'EXPLORE AT YOUR OWN PACE', title: 'Look around, then choose a work',
     text: 'Drag to look; scroll or pinch to move closer. Click a painting to open it. Previous and Next lead you between works without walking.',
-  };
-  if (context.afterlife) return {
-    id: 'afterlife', label: 'HALL 08 · EPILOGUE', title: 'Follow the story beyond Vincent’s lifetime',
-    text: 'Use the highlighted reading button to open the Afterlife story. Closing reflection takes you to the final question; close a story to return to the gallery.',
-    target: '#afterlife-read',
-  };
-  if (context.finalDays) return {
-    id: 'final-days', label: 'HALL 07 · THE FINAL DAYS', title: 'Pause here before entering Afterlife',
-    text: 'Read The Final Days to follow his last days in Auvers. When you are ready, continue into Afterlife.',
-    target: '#hall-intro-toggle',
   };
   if (context.introduction) return {
     id: 'introduction', label: 'A NEW CHAPTER', title: 'Begin with this hall’s introduction',

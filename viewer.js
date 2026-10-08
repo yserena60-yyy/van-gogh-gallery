@@ -3,11 +3,11 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { fitPainting, locateWork, readingOrder, validateCollection } from './collection.js';
 import { createCollectionTour } from './collection-tour.js?v=2026-10-02-full-collection-tour';
 import { createStoryReader } from './story.js?v=2026-10-06-attachment-story';
-import { addAfterlifeTourSegment, addFirstHallTourStops, HIGHLIGHT_TOUR_SECONDS, retimeHighlightTour } from './highlight-route.js?v=2026-10-07-final-days-pause';
+import { addAfterlifeTourSegment, addFirstHallTourStops, HIGHLIGHT_TOUR_SECONDS, retimeHighlightTour } from './highlight-route.js?v=2026-10-08-direct-afterlife';
 import { createGalleryEntry } from './gallery-entry.js?v=2026-10-07-staged-opening';
 import { createGalleryMusic } from './gallery-music.js?v=2026-10-07-music-volume';
 import { createOpeningFilm } from './opening-film.js?v=2026-10-06-film-tour-choices';
-import { createVisitGuide } from './visit-guide.js?v=2026-10-07-final-days-pause';
+import { createVisitGuide } from './visit-guide.js?v=2026-10-08-direct-afterlife';
 import { createHallTexts, validateHallTexts, wallTextPose } from './hall-texts.js?v=2026-10-07-forward-afterlife';
 import { afterlifePose, createAfterlifeExhibit, validateAfterlife } from './afterlife.js?v=2026-10-07-forward-afterlife';
 import { artworkDate, createArtworkCards } from './artwork-cards.js?v=2026-10-05-yellow-house-story';
@@ -753,10 +753,8 @@ afterlifeButton.addEventListener('click', () => guideToAfterlife());
 document.querySelector('#afterlife-continue').addEventListener('click', () => guideToAfterlife());
 document.querySelector('#afterlife-dismiss').addEventListener('click', () => { afterlifeInvitation.hidden = true; });
 document.querySelector('#afterlife-read').addEventListener('click', () => afterlife.open(afterlifeStation));
-document.querySelector('#afterlife-wall-overview').addEventListener('click', () => guideToAfterlife());
 document.querySelector('#afterlife-wall-sources').addEventListener('click', () => afterlife.open(afterlifeStation, { showSources: true }));
 document.querySelector('#afterlife-wall-exit').addEventListener('click', () => guideToHallText(hallTexts.entry('departure')));
-document.querySelector('#afterlife-return').addEventListener('click', returnToEntrance);
 document.querySelector('#departure-return').addEventListener('click', returnToEntrance);
 
 async function restoreHighlights() {
@@ -980,9 +978,10 @@ function positionOnRoute() {
   const finalDaysStop = orderedRoute.camera.exhibitStops?.find((stop) => stop.id === 'final-days');
   const afterlifeIntroduction = orderedRoute.camera.introductionStops?.find((stop) => stop.id === '08');
   const enteringAfterlife = finalDaysStop && afterlifeIntroduction && tour.seconds > finalDaysStop.end && tour.seconds < afterlifeIntroduction.start;
-  setAfterlifeStation(exhibitStop?.kind === 'afterlife' ? 'overview' : null);
-  hallTextStation = exhibitStop?.kind === 'reading' ? hallTexts?.entry(exhibitStop.readerId) ?? null
-    : introduction ? hallTexts?.entry(introduction.id) ?? null : enteringAfterlife ? hallTexts?.entry('08') ?? null : null;
+  const atAfterlife = introduction?.id === '08' || exhibitStop?.kind === 'afterlife';
+  setAfterlifeStation(atAfterlife ? 'overview' : null);
+  hallTextStation = atAfterlife ? null : exhibitStop?.kind === 'reading' ? hallTexts?.entry(exhibitStop.readerId) ?? null
+    : introduction ? hallTexts?.entry(introduction.id) ?? null : enteringAfterlife ? hallTexts?.entry(finalDaysStop.readerId) ?? null : null;
   setStoryStationActive(exhibitStop?.kind === 'story');
   stopDolly();
   const waypoints = orderedRoute.camera.waypoints;
