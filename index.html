@@ -5,7 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vincent van Gogh · A Life Behind the Name</title>
   <meta name="description" content="Meet Vincent as a person: his family, relationships, work, faith, hopes, difficulties and choices. An interactive exhibition with stories and clearly identified sources.">
-  <link rel="stylesheet" href="./style.css?v=2026-10-07-opening-scene">
+  <style>
+    html, body, #viewer { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+    body { background: #edeae3; font-family: "Segoe UI", system-ui, sans-serif; }
+    #viewer.entry-view > :not(#gallery-entry):not(#language-switch):not(#error):not(canvas) { visibility: hidden; pointer-events: none; }
+    .gallery-entry { box-sizing: border-box; position: fixed; inset: 0; z-index: 21; width: 100vw; max-width: none; height: 100dvh; max-height: none; margin: 0; padding: 56px; border: 0; color: #303b35; background: transparent; }
+    .gallery-entry:not(:modal) { background: rgba(243, 240, 232, .45); backdrop-filter: blur(4px); }
+    .gallery-entry::backdrop { background: rgba(243, 240, 232, .45); backdrop-filter: blur(4px); }
+    .gallery-entry[open] { display: flex; align-items: center; justify-content: center; }
+    .gallery-entry [hidden] { display: none; }
+    .entry-panel { width: min(1100px, 100%); text-align: center; }
+    .entry-start { width: 100%; padding: 32px 8px; border: 0; background: transparent; color: inherit; }
+    .entry-start:disabled { cursor: progress; }
+    .entry-start h1 { margin: 0 0 24px; font: 400 clamp(50px, 7.4vw, 116px)/1.05 Georgia, serif; letter-spacing: -.04em; }
+    .entry-start .eyebrow { display: block; margin-bottom: 38px; font-size: 11px; letter-spacing: .3em; color: #807563; }
+    #entry-prompt { display: block; color: #646b61; font-size: 13px; letter-spacing: .07em; }
+    .entry-skip { position: absolute; bottom: max(38px, env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%); padding: 12px 18px; border: 0; border-bottom: 1px solid #aba18e; background: transparent; color: #606758; font: 12px "Segoe UI", sans-serif; white-space: nowrap; }
+    .entry-view .language-switch { position: fixed; z-index: 22; top: 24px; right: 28px; display: flex; align-items: center; gap: 3px; padding: 4px; border: 1px solid #c9c2b4; border-radius: 4px; background: #fffdf9; color: #807563; font: 12px/1.4 "Segoe UI", sans-serif; }
+    .entry-view .language-switch button { min-width: 38px; min-height: 32px; padding: 5px 8px; border: 0; border-radius: 2px; background: transparent; color: #756d5e; font: inherit; }
+    .entry-view .language-switch button[aria-pressed="true"] { color: #fffdf6; background: #38493e; }
+    @media (max-width: 600px) {
+      .gallery-entry { padding: 30px 22px; }
+      .entry-start h1 { font-size: clamp(34px, 9.2vw, 49px); }
+      .entry-start .eyebrow { margin-bottom: 30px; font-size: 10px; }
+      .entry-view .language-switch { top: 12px; right: 12px; }
+      .entry-skip { bottom: max(24px, env(safe-area-inset-bottom)); }
+    }
+  </style>
+  <link rel="stylesheet" href="./style.css?v=2026-10-08-immediate-entry" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="./style.css?v=2026-10-08-immediate-entry"></noscript>
   <script type="importmap">
     {
       "imports": {
@@ -16,7 +44,7 @@
   </script>
 </head>
 <body>
-  <main id="viewer" aria-label="Interactive Van Gogh gallery">
+  <main id="viewer" class="entry-view" aria-label="Interactive Van Gogh gallery">
     <div id="loading" role="status">Loading the gallery… <span id="load-progress">0%</span></div>
     <div class="masthead">
       <span class="eyebrow">VINCENT VAN GOGH · AN INTERACTIVE EXHIBITION</span>
@@ -446,7 +474,7 @@
         <button id="afterlife-exit" type="button">Closing reflection</button>
       </footer>
     </dialog>
-    <dialog id="gallery-entry" class="gallery-entry" aria-labelledby="entry-title">
+    <dialog id="gallery-entry" class="gallery-entry" data-stage="title" open aria-labelledby="entry-title">
       <div id="entry-panel" class="entry-panel">
         <button id="entry-start" class="entry-start" type="button" aria-describedby="entry-prompt" disabled>
           <h1 id="entry-title">Vincent van Gogh</h1>
@@ -573,7 +601,7 @@
     </dialog>
     <div id="error" role="alert" hidden></div>
   </main>
-    <script type="module" src="./viewer.js?v=2026-10-08-direct-afterlife"></script>
+    <script type="module" src="./viewer.js?v=2026-10-08-immediate-entry"></script>
 </body>
 </html>
 

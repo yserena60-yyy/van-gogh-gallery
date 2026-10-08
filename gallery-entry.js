@@ -82,6 +82,7 @@ export function createGalleryEntry({ onBegin, onStart }) {
   });
   dialog.dataset.stage = 'title';
   viewer.classList.add('entry-view');
+  if (dialog.open) dialog.close();
   dialog.showModal();
   return {
     setReady() {

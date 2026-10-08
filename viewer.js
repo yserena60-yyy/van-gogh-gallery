@@ -4,7 +4,7 @@ import { fitPainting, locateWork, readingOrder, validateCollection } from './col
 import { createCollectionTour } from './collection-tour.js?v=2026-10-02-full-collection-tour';
 import { createStoryReader } from './story.js?v=2026-10-06-attachment-story';
 import { addAfterlifeTourSegment, addFirstHallTourStops, HIGHLIGHT_TOUR_SECONDS, retimeHighlightTour } from './highlight-route.js?v=2026-10-08-direct-afterlife';
-import { createGalleryEntry } from './gallery-entry.js?v=2026-10-07-staged-opening';
+import { createGalleryEntry } from './gallery-entry.js?v=2026-10-08-immediate-entry';
 import { createGalleryMusic } from './gallery-music.js?v=2026-10-07-music-volume';
 import { createOpeningFilm } from './opening-film.js?v=2026-10-06-film-tour-choices';
 import { createVisitGuide } from './visit-guide.js?v=2026-10-08-direct-afterlife';
