@@ -1,357 +1,222 @@
 # Vincent van Gogh · A Life Behind the Name
 
-**An interactive exhibition about Vincent’s life, relationships and choices.**
+**名字背后的一生**
+
+An interactive exhibition about Vincent as a person: his family, relationships, work, faith, hopes, difficulties, and the choices through which he lived.
 
 [Visit the exhibition](https://yserena60-yyy.github.io/van-gogh-gallery/)
+
+## The Exhibition
+
+We recognise the name Vincent van Gogh. This exhibition asks us to look beyond that recognition and encounter the person behind it.
+
+The exhibition follows his life through the places he inhabited, the people around him, the work he pursued, and the futures he imagined. Paintings and drawings remain important, but they are not the organising framework of an art-history survey. They sit alongside letters, recollections, documents, and accounts of daily life.
+
+The aim is not to explain every decision through a famous painting, or to reduce his life to a story of suffering and posthumous success. It is to give visitors ways to understand how Vincent lived, what mattered to him, and what remains uncertain.
+
+## Narrative and Evidence
+
+The exhibition combines an accessible life story with opportunities for closer reading.
+
+Where accounts differ, it distinguishes between:
+
+- Vincent’s letters and other contemporary records.
+- Family recollections and retrospective testimony.
+- Later research and interpretation.
+- Questions that the surviving evidence cannot settle.
+
+These sources are not treated as interchangeable. Visitors can follow the main narrative, then open the supporting material to understand who told a particular story, when it was recorded, and how its interpretation has changed.
+
+Curatorial writing is presented as exhibition interpretation rather than as Vincent’s own words. In particular, the first-person opening prologue is not a verified quotation from him.
+
+## Exhibition Structure
+
+The journey follows eight connected chapters.
+
+| Hall | Chapter | Narrative focus |
+| --- | --- | --- |
+| 01 | Origins and Uncertainty | Family, early employment, faith, relationships, and the search for a direction. |
+| 02 | The Dutch Years | Learning, working relationships, domestic circumstances, and life among rural communities. |
+| 03 | The Paris Years | New surroundings, friendships, shared interests, and encounters with a changing city. |
+| 04 | Arles | The hope of establishing a home and a working life in the south. |
+| 05 | The Yellow House | Living and working with Gauguin, their differences, the crisis, and its aftermath. |
+| 06 | Saint-Rémy | Care, restrictions, daily rhythms, and continuing to work through periods of uncertainty. |
+| 07 | Auvers: The Final Months | Relationships, work, the final days, and the evidence behind different accounts of his death. |
+| 08 | Afterlife | The people who preserved and shared his work and letters, and how his story reaches us today. |
+
+The entrance invites visitors to set aside what they already know:
 
 > We know who he would become.  
 > As you enter, set that knowledge aside.
 
-## The exhibition
-
-This exhibition begins with Vincent as a person: his family, relationships, work, faith, hopes, difficulties and the choices he made. His life, rather than an art-historical survey, provides the chronological thread. Letters, places, individual stories and artworks bring those experiences into view.
-
-The aim is not to explain an entire life through a single tragedy, diagnosis or image of artistic genius. It is to meet someone who sought a home and a livelihood, formed attachments, changed direction and tried to find a meaningful way to live. The artworks are part of that life, not the organising lens through which every experience is explained.
-
-**Uncertainty is part of the story, rather than something to conceal or settle prematurely.** Where records are incomplete or accounts differ, the exhibition brings letters, family recollections, archival material and later research into conversation. Sources are identified so that visitors can see what an account supports, where interpretations diverge and which questions remain open. A remembered episode, a contemporary letter and a later hypothesis are not presented as equivalent kinds of evidence.
-
-## A journey through eight halls
-
-Each hall begins with an introduction that places the works within a stage of Vincent’s life. The seven chronological artwork halls lead to a separate epilogue; Afterlife is not folded into the account of his final months.
-
-| Hall | Chapter | Period | Narrative focus |
-| --- | --- | --- | --- |
-| 01 | Origins and Uncertainty | 1853–1881 | Family, education, work, belonging, faith and the decision to learn to draw. |
-| 02 | Earth and Labour | 1881–Early 1886 | Learning through observation; working people, ordinary life and the demands of becoming an artist. |
-| 03 | The Paris Transformation | 1886–1888 | Life with Theo, artistic exchange, Japanese prints and experiments with colour. |
-| 04 | Arles: Toward the Sun | 1888 | A new setting, daily work and the hope of building a shared artistic life. |
-| 05 | Companionship and Crisis | 1888–1889 | Friendship, disagreement, crisis and the work of recovery. |
-| 06 | Saint-Rémy: Inner Skies | 1889–1890 | Life and work within the institution, familiar subjects and renewed experimentation. |
-| 07 | Auvers: The Final Months | May–July 1890 | An intense period of work, family concerns and the limits of what the final paintings can tell us. |
-| 08 | Afterlife | 1890 onward | The people who preserved the work, changing interpretations and later encounters with Vincent. |
-
-The exhibition ends with a question, not a verdict:
+The closing question returns the focus to the person:
 
 > We know who he became.  
 > As you leave, what stays with you  
 > from Vincent’s life?
 
-## Stories behind the works
+## How to Explore
 
-Four story entrances remain available throughout the visit: **Early life**, **The Yellow House**, **The Final Months** and **Afterlife**. They are optional paths for closer reading, not a checklist visitors must complete.
+### Highlights
 
-### Early life · Searching for a Place
+A three-minute guided route introduces the exhibition through selected works, chapter introductions, and narrative stops.
 
-The first hall moves from an **Opening Film** to **Searching for a Place**, then to **Early Works**. Four connected topics offer a more personal account of the years before painting became his main work:
+It is an orientation rather than a complete account. Film playback and time spent reading are additional to the guided route.
 
-- **A Home in London** — a household, employment, everyday pleasures and an attachment whose details survive through different accounts.
-- **Turning to Faith** — religious reading, changing work and the search for a useful role.
-- **Among the Miners** — encounters with mining communities, efforts to help and the loss of an official preaching position.
-- **Learning to Draw** — how he reached the decision to become an artist, what he wanted to depict and how study, observation and repeated practice began.
+### Full Collection
 
-The London story moves through **A New Home**, **A Life He Enjoyed** and **An Uncertain Attachment**. Its **Sources & Versions** entrance stays accessible while reading. An optional **Art Before Painting** branch explores the art trade without replacing the main story or treating romantic disappointment as the sole cause of a later change in direction.
+The full-collection route visits the installed selection in greater depth. Additional works can occupy the gallery’s display positions as the route progresses, allowing a larger collection to be explored without crowding every wall.
 
-### The Yellow House
+“Full collection” refers to the collection installed in this exhibition, not every work Vincent produced.
 
-This story connects Arles, Vincent’s hopes for a shared studio and his relationship with Paul Gauguin. It follows why they wanted to work together, how their approaches differed, what tensions developed and how Vincent continued living and working after the crisis.
+### Independent Exploration
 
-Artwork connections and optional evidence comparisons keep the narrative close to specific works and records. Later recollections and interpretations are distinguished from contemporary correspondence; the crisis is not staged as spectacle or used as a single explanation for the paintings.
+Visitors can move through the gallery at their own pace, open chapter introductions, select artworks, and enter the story readers.
 
-The 23 December chapter presents the events in four visible narrative sections, including Bernard’s early secondhand report and Gauguin’s later memoir as two attributed accounts. **Why Did It Happen?** separates contextual pressures, medical research and disputed reconstructions without claiming a settled motive. Each section has an expandable source record; links lead to the existing relationship, recipient and recovery chapters rather than repeating them. The English and Chinese versions share the same structure.
+The story menu offers deeper narrative paths, including **Early Life**, **The Yellow House**, **The Final Months**, and **Afterlife**. These complement the gallery route rather than replacing it.
 
-### Hall 07 · Auvers: The Final Months
+English and Simplified Chinese are available through the language control. Linked external sources retain the language used by their original publishers.
 
-Hall 07 follows Vincent’s life and work in Auvers from **May to July 1890**. Five optional chapters move from his arrival, the people around him and the places he painted to the concerns of his final weeks and his final days.
+## Stories and Artwork Cards
 
-**Sources & Versions** separates contemporary records, later recollections and disputed interpretations. Paintings and an unsent letter are not treated as conclusive explanations of his death. Visitors can skip the discussion of suicide and death and continue to the separate **Afterlife** hall.
+The opening film introduces Vincent’s early experiences. The story readers then make space for the people, relationships, and decisions that need more than a short label.
 
-### Afterlife
+The first hall’s **Searching for a Place** section connects four chapters:
 
-A distinct eighth hall asks **who carried the work forward** and **what the work set in motion**. Archival cards and longer reading sections follow preservation, publication, changing interpretations and subsequent artistic responses. The closing reflection returns attention to the person visitors have encountered, rather than simply to his fame.
+- **A Home in London**
+- **Turning to Faith**
+- **Among the Miners**
+- **Learning to Draw**
 
-The rounded pavilion follows the final artwork stations in Hall 07: a four-metre-wide rounded doorway and a short, enclosed vestibule lead south into Afterlife. Visitors continue beyond the final works rather than doubling back across Auvers. The archive and publication cards, lighting and reading bench retain their existing arrangement. The closing reflection is on the inner wall beside the doorway, behind arriving visitors. It comes into view when they turn towards the exit after exploring the stories, not as they enter the hall. **Return to entrance** is available in Afterlife and at the closing reflection; it closes the readers, resets the tour and returns to the beginning without automatically replaying the film.
+Later stories explore shared life in the Yellow House, the crisis in Arles, the final months in Auvers, and the transmission of Vincent’s work and reputation after his death.
 
-## How uncertainty is presented
+Authored artwork cards use a consistent reading structure:
 
-The main story comes first. Source comparisons deepen it without forcing visitors to read a research apparatus before they can understand the events.
+1. **Artwork Information** — identification, date, place, materials, and collection.
+2. **The Story** — the work’s connection to Vincent’s life.
+3. **Look Closer** — details visitors can examine for themselves.
+4. **Evidence & Interpretation** — the distinction between documentation and interpretation.
+5. **Sources** — material supporting the account.
 
-- **Letters** preserve particular moments and viewpoints; they do not provide a complete account of everything that happened.
-- **Family recollections** are identified as recollections, including when they were written and their relationship to the events.
-- **Archival materials and museum records** are attached to the objects or claims they document.
-- **Later research and interpretation** are attributed to their authors and kept distinct from direct evidence.
-- **Open questions** remain open where the available material does not justify a definitive conclusion.
+Previous and next controls support continued viewing. When an artwork is opened from a story, visitors can return to that reading context.
 
-Modern photographs, illustrative reconstructions and original historical objects are labelled separately. Different versions of a painting retain their own records instead of being used interchangeably. Visitors can open sources, compare accounts and return to their place in the narrative.
+## Implementation
 
-## Visiting the exhibition
+The exhibition is a static web application built with **Three.js**. Scene rendering, collection management, narrative content, navigation, translation, and audio are organised as separate components.
 
-The entrance begins with Vincent’s name floating over the visible gallery scene, softly blurred behind a translucent warm-toned backdrop. The visitor controls stay hidden until entry. One click leads to a standalone curatorial prologue, then the opening reflection and the first-hall film. The prologue is labelled as curatorial writing, not a quotation from Vincent. Visitors who skip or return from the film can choose **Start the 3-minute tour** or **Explore freely**. This first-visit choice does not block the other controls.
-
-From the film station, **Next** follows **Hall 01 introduction → Searching for a Place → Early Works**. The introduction is a separate, front-facing reading stop; visitors can open its full text before continuing. **Previous** follows the same sequence in reverse.
-
-The compact **right-hand rail** holds wall-set selection and the four story entrances; the bottom toolbar holds **location and navigation** and **tour playback**. Story reading is therefore available without occupying the tour controls. Short contextual tips point to the next relevant action with a quiet, non-flashing outline. Dismissed tips are remembered locally. **?** reopens the visitor guide and pauses the tour without changing the viewpoint; closing help does not restart it automatically.
-
-- **Highlights · 3 minutes** is a 180-second introduction to the exhibition, including pauses at the seven chronological hall introductions. After the last Auvers artwork, it pauses facing **The Final Days** before continuing forward through the vestibule into the independent Afterlife hall. It is not a tour of every work or a substitute for reading the stories.
-- **Full collection · 366 works** visits the installed artwork selection across its switchable wall sets. Choose 6, 8 or 12 seconds of viewing time per work; movement and loading add to the total duration.
-- **Explore freely** by dragging to look, scrolling or pinching to move, or using W/A/S/D. Previous and Next follow the works without requiring manual walking.
-- **↺ Restore front view** returns to the current artwork, film screen, introduction or story station's standard viewing position and pauses the tour. It does not send visitors back to the entrance, replay the film or switch the wall set. A brief confirmation appears above the controls; the button is unavailable while artwork images are loading.
-- **Click a painting** to enlarge it and open its information and story. The artwork viewer includes Previous and Next buttons. Works opened from The Yellow House or The Final Months include **Return to the story**; this button, Close and Escape restore the original chapter, reading tab and scroll position. Works opened directly from the gallery close back to the gallery. Opening a work pauses a running tour, while hovering during Full collection does not.
-- **Eight Halls · Catalogue** lets visitors choose a hall or find a work by title or identifier. **Room introduction** opens the current hall’s introductory text.
-- **Play the opening film** from the symbol on the screen. The enlarged player includes playback, seeking, volume and full-screen controls.
-- **Choose where to go after the film** from its completion screen: Early Life, the centrally highlighted 3-minute tour, or Early Works. A separate Full Exhibition button below starts the complete collection tour from the first work. Replay remains optional.
-
-### English and Simplified Chinese
-
-The upper-right **EN / 中文** control switches languages without reloading the exhibition. The Chinese edition covers the interface, all installed artwork titles, main artwork labels, hall introductions and the principal life-story sections. All 44 authored artwork cards also have Chinese story text: 132 individual-work chapters and three series chapters, including their headings, looking prompts, evidence notes, quotations and related-reading descriptions. Changing language keeps the current work and chapter open. Film narration, original inscriptions, bibliographic source titles and external source pages retain their source language.
-
-Language and acknowledged tips are stored in the visitor’s browser. The ending invites quiet reflection; there is currently no message board, writing form or visitor-response collection.
-
-## Collection scope and credits
-
-The current installation contains **366 individually identified works**, displayed through **46 physical artwork positions** and switchable wall sets. **44 authored artwork cards** provide expanded labels and stories. Additional research leads are not counted as installed works, and this selection is not a complete catalogue of Van Gogh’s production.
-
-The artworks, narrative texts and media carry object-specific source and credit records. Preserve these records when adapting the exhibition; consult the relevant rights links before reusing images, scans, translations or music. This README does not replace asset-level credit information or grant a blanket media licence.
-
-- Artwork records and credits: `data/collection_en.json` and `data/artwork_cards_en.json`.
-- Early-life materials, sources and image notes: `data/story_exhibit_en.json`, `data/story_image_credits.json` and `data/story_source_audit.json`.
-- Yellow House sources and evidence comparisons: `data/yellow_house_en.json`.
-- Auvers letters, final-days chronology and attributed accounts: `data/auvers_en.json`.
-- Afterlife objects, images and sources: `data/afterlife_en.json`.
-- Opening film and its soundtrack credits: `data/film_credits.json`.
-- Gallery background music and licence: `data/music_credits.json`.
-
-### Gallery background music
-
-The gallery uses two recordings by **Scott Buckley**, under **CC BY 4.0**:
-
-- **Wildflowers** accompanies Halls 01–07: https://www.scottbuckley.com.au/library/wildflowers/
-- **A Kind Of Hope** accompanies Hall 08, Afterlife, and the closing reflection: https://www.scottbuckley.com.au/library/a-kind-of-hope/
-
-> 'Wildflowers' by Scott Buckley - released under CC-BY 4.0. www.scottbuckley.com.au
->
-> 'A Kind Of Hope' by Scott Buckley - released under CC-BY 4.0. www.scottbuckley.com.au
-
-Licence: https://creativecommons.org/licenses/by/4.0/
-
-The visitor-provided original MP3 files are stored at `assets/wildflowers-scott-buckley.mp3` and `assets/a-kind-of-hope-scott-buckley.mp3` without editing either recording. The on-page music settings show the current track, artist, source and licence. Preserve both attributions when reusing or publishing the gallery. These replace The Long Way Home as the active gallery soundtrack; the build does not include that earlier track.
-
-Music starts after the visitor enters, subject to browser playback permissions, at a default volume of **20%**. A compact control at the top of the right sidebar turns it on or off and opens the volume and credit panel. Volume and the enabled preference are saved only in the visitor's browser. The previous saved 10% default is upgraded once to 20%; mute, zero volume and other saved levels are preserved, and subsequent manual choices are not reset. If autoplay is blocked, **Play music** offers a direct user action instead of silently failing. Each track loops with gentle volume fades at its edges. Moving between Halls 01–07, wall sets, stories or tour modes does not restart Wildflowers. Entering Afterlife crossfades to A Kind Of Hope over approximately **1.6 seconds**; returning to an earlier hall resumes Wildflowers at its previous position. The same rule applies to guided navigation, walking and tours; merely browsing a room in the catalogue does not change the soundtrack. Opening the film pauses both tracks immediately; closing it resumes only the soundtrack for the current room. A hidden browser tab also pauses playback. No third-party player or advertising service is embedded.
-
-## End-to-end experience
-
-The chronological route provides orientation. Optional reading paths provide depth. Neither tour requires visitors to read every story, and opening a reader does not start a second automatic journey.
+### System Logic
 
 ```text
-Open the website
-  → Vincent van Gogh · name and subtitle over the softly blurred gallery scene
-  → Click / Enter
-  → Curatorial prologue, centred on its own (four-second reading hold)
-  → Opening reflection, centred in front of the visitor
-  → Enter Hall 01 and automatically play the film in an enlarged player
-      → Film ends → a centred next-step screen, available after every viewing
-      → Explore His Early Life → Searching for a Place
-      → Start the 3-minute tour (centre) → Highlights
-      → View the Early Works → the first drawing
-      → Start the full exhibition tour → every installed work, starting from the first
-      → Return to the gallery → visitor guide
-      → Reopen a completed film → next-step screen; replay only when requested
-
-Gallery
-  ├─ Highlights → 180-second chronological route → The Final Days pause → Hall 08 → Afterlife overview
-  ├─ Full collection → every installed work, across wall sets → enter Afterlife
-  ├─ Free exploration → movement, hall selection and catalogue
-  └─ Right-hand story rail
-       ├─ Early life → London / Faith / Miners / Learning to Draw
-       ├─ The Yellow House → shared life, disagreement and recovery
-       ├─ The Final Months → life in Auvers, the final days and different accounts
-       └─ Afterlife → Hall 08, archival cards and longer stories
-
-Hall 07 introduction / catalogue / rear reading plaque
-  → Life in Auvers → five chapters → The Final Days
-      ├─ Sequence / Documents / Accounts / Last Paintings
-      ├─ Sources & Versions → return to the same reading position
-      └─ Continue to Afterlife → independent Hall 08
-
-Any artwork → enlarged image + information + story + sources
-  → Previous / Next work, or return to the gallery
-
-Afterlife → closing reflection → the visitor’s own response
+Collection metadata, narrative data, and media
+                    ↓
+Build validation and media assembly
+                    ↓
+Static application and gallery model
+                    ↓
+Three.js scene and interactive display positions
+                    ↓
+Guided routes, independent exploration, and story readers
+                    ↓
+Artwork details, sources, and closing reflection
 ```
 
-**Enter without the film** bypasses the animated prelude and film. The help guide remains available throughout the visit. The closing question belongs to the independent Afterlife space, not to the final painting’s label.
+The spatial model and the artwork collection are kept separate. Stable artwork identifiers connect an image with its metadata, story, and route entry. Display positions determine where a work appears; they are not the identity of the work itself.
 
-## Implementation architecture
+This separation lets guided routes reuse display positions while keeping the selected artwork’s image, title, information, and story aligned.
 
-The website is a static, modular JavaScript application using **Three.js 0.180.0**. It has no React-style application framework, account system or application database. `index.html` provides the controls and dialogs, `style.css` presents them, and `viewer.js` coordinates the 3D scene and the reading modules.
+### Main Components
 
-```text
-English JSON records + Chinese translation overlays
-                 ↓
-validation + cross-reference registration
-                 ↓
-viewer.js
-  ├─ Three.js scene: GLB architecture, artwork textures, spatial stations
-  ├─ camera: chronological route, collection visits, free movement
-  └─ DOM interface: entry, film, artwork reader, stories, help, catalogue
-                 ↓
-requestAnimationFrame: movement, tour state, rendering and screen controls
-```
-
-### 1. Load the exhibition before admitting the visitor
-
-`gallery-entry.js` shows only Vincent’s name, the exhibition subtitle and a loading/start prompt while the exhibition loads. The opening text floats over the visible gallery scene through a softly translucent, warm-toned backdrop with a light blur; the catalogue, story shortcuts and tour controls remain hidden until entry. Language switching and an “Enter without the film” action remain available; the start and skip controls are enabled only after the gallery is ready. `viewer.js` fetches the artwork metadata, chapter catalogue, route, collection, story layouts, hall introductions, artwork cards, Yellow House, Auvers and Afterlife data together. It validates references, registers translation overlays and builds the collection reading order.
-
-The scene is loaded from `assets/gallery_v30.glb` with `GLTFLoader`. The obsolete Hall 02–03 ceiling ribbon remains removed. Afterlife is relocated beyond the last Auvers stations, with a new southern doorway and the former eastern opening closed. Its objects, walkable polygons, obstacles, cards, introduction and closing reflection are transformed together; artwork mounts and the first seven halls' approved camera stations remain unchanged. `arrivalPath` provides the forward approach used by the Highlights route. Named artwork positions are matched to the metadata, the initial artwork textures are loaded and fitted, and the separate first-hall narrative model and poster are attached. Film and hall-text interfaces are then connected to their spatial stations. Missing artwork positions, incomplete frames or non-walkable introduction viewpoints are treated as errors rather than silently ignored.
-
-One click on the name screen starts three successive views: the name fades away; “After my death, / the world began to love me.” appears alone with its explicit “Curatorial prologue · not a quotation from Vincent” attribution for four seconds; then “We know who he would become. / As you enter, set that knowledge aside.” appears for four seconds before entry. This imagined first-person prologue contrasts posthumous fame with the life visitors are about to encounter; it is not an authentic quotation or a claim that nobody cared for him while he lived. There is no extra confirmation or first-hall title screen. The entry callback restores the gallery controls, enters Hall 01 and opens the existing film for playback.
-
-The sequence uses the browser’s Web Animations API. Reduced-motion preferences remove the fades but retain the reading time. Visible text IDs supply the dialog’s accessible name in either language. Sequence guards prevent duplicate starts, and skipping, pressing Escape or a loading failure cancels pending fades and timers so the film cannot open later unexpectedly. Music unlocking happens once at the visitor’s starting gesture. The prologue and reflection are centered, front-facing screen layers, not inscriptions on a side wall.
-
-### 2. Keep object identity separate from display position
-
-A painting’s **work ID** is its identity; a **slot** is a physical position in the model. These must not be confused. Several individually identified works can use the same slot at different times, but a work is assigned only once in the collection’s wall-set sequence.
-
-| Record | Responsibility |
+| Component | Responsibility |
 | --- | --- |
-| `data/collection_en.json` | Individual work IDs, titles, dates, media, images, sources, credits and each hall’s `slots` and `pages`. |
-| `data/artworks_en.json` | Metadata used to mount the initial wall display in the 3D model. |
-| `data/chapters_en.json` | Chronological catalogue groups; installed works missing from these groups are added at runtime. |
-| `data/artwork_cards_en.json` | Authored information, story, looking prompts, evidence and sources attached to identified works. |
-| `data/ordered_route_v30.json` | Artwork viewpoints, timed camera waypoints, film and introduction stations, walkable regions and obstacles. |
-| Story, hall and Afterlife JSON | Narrative content, sources and the locations or relationships needed by each reader. |
+| `viewer.js` | Scene rendering, camera behaviour, selection, and coordination between interactions. |
+| `gallery-entry.js` | Opening sequence and transition into the exhibition. |
+| `collection.js` | Collection metadata, artwork lookup, and wall-display management. |
+| `highlight-route.js` | Highlights route and its playback behaviour. |
+| `collection-tour.js` | Full-collection navigation and playback behaviour. |
+| `story-data.js` and `gallery-stories.js` | Narrative content and story-reader interactions. |
+| `hall-introductions.js` | Chapter introductions and closing text. |
+| `i18n.js` and `locale-zh*.js` | Language selection and Chinese interface and narrative content. |
+| `gallery-music.js` | Background audio, playback controls, and music attribution. |
+| `build.mjs` | Validation, dependency preparation, media assembly, and production output. |
+| `server.mjs` | Local preview, including byte-range responses for media playback. |
 
-This separation prevents a famous title from standing in for another version of the work. Museum identifiers, catalogue numbers and image credits remain attached to the relevant record. `validateCollection()` rejects duplicate installations, missing images or sources, mismatched halls and records that are not assigned to any wall set.
+Content and configuration are stored in the project’s data files rather than being tied exclusively to scene geometry. This supports updates to stories, introductions, routes, and credits without treating them as changes to the building itself.
 
-### 3. Display a large collection without filling every wall
+Large media assets are stored in lossless parts for publication and reconstructed during the build. The production site uses the assembled files, not the individual parts as playable media.
 
-The seven artwork halls provide 46 physical positions for 366 installed works. Each hall’s `pages` list defines its switchable wall sets; page zero is the initial Highlights display. Additional works are not stacked behind paintings or placed in the visitor’s path. They replace a set of wall images when requested.
+## Run Locally
 
-`locateWork()` resolves a work ID to its hall, wall set and slot. Selecting a catalogue item, using collection navigation or advancing Full collection can therefore load the correct set before moving to the work. `readingOrder()` follows the halls and their wall sets, providing a stable sequence for the complete collection.
-
-`switchWallSet()` loads the requested images first. Only after the set is ready does it replace textures, update the slot metadata, resize frames and labels, and refresh navigation. Unused positions are hidden when a set has fewer works. If loading fails, the previous wall set stays in place and the interface offers a retry; an outdated asynchronous request is not allowed to commit its result. Old textures and materials are disposed when replaced.
-
-### 4. Use different engines for Highlights and Full collection
-
-**Highlights** follows the authored spatial route. `highlight-route.js` adds the first-hall story and drawing stops and replaces the old return to the rotunda with a path through the Hall 07–08 vestibule into Afterlife, then retimes the complete route to **180 seconds**. Hall 01 retains its **32-second overview budget**, with separate pauses for the film, introduction, early-life stories and drawing; the remaining time is distributed across Halls 02–08. Camera waypoints, pause intervals and artwork timestamps are retimed together. The final artwork is anchored to its actual viewing position, rather than the old exit sweep. The camera then stops facing **The Final Days** for approximately six seconds, with its reader available but not opened automatically. An in-place turn and a tangent-aligned curved path lead into the vestibule without overshooting the doorway or doubling back. Inside Hall 08, the view stays oriented towards the Afterlife wall, pauses at its introduction and finishes at its overview. The visitor can then open its four story sections or continue to the closing reflection. It does not automatically open every reader or show every installed work. The film itself plays independently and pauses the tour; its running time is not shortened.
-
-**Full collection** uses `collection-tour.js` and the complete work-ID reading order. Its state advances through loading, moving and holding. Viewing time is counted after arrival, rather than while a wall set is loading or the camera is travelling. Visitors choose 6, 8 or 12 seconds per work, so this mode does not have a fixed three-minute duration. Failed visits stop with a retry message instead of advancing past an unseen work. After the final work's full viewing time, the viewer enters the independent Afterlife hall rather than leaving the visitor with an invitation outside its doorway. The collection engine remains complete and can be replayed.
-
-`viewer.js` supplies the camera visits for both modes. Safe nearby moves can glide between viewpoints; changes of hall or wall set can use a fade and repositioning rather than travel visibly through walls. Route boundaries and obstacles also constrain free movement. Opening an artwork or reader pauses automatic travel; hovering during Full collection does not.
-
-### 5. Coordinate scene navigation and reading interfaces
-
-The WebGL canvas handles dragging, movement and raycast selection. The right-hand story rail, tour toolbar and reading dialogs are ordinary HTML controls, separate from scene picking. A scene object can lead to the same reader as its corresponding HTML shortcut.
-
-During camera travel, waypoint lookup uses a binary search. Toolbar text and accessibility labels update only when their displayed values change, including in Chinese. Film-button positioning follows the camera, while its more expensive scene-occlusion check is cached for up to 120 milliseconds and refreshed immediately after a large viewpoint change or a blocked state. This avoids hiding and rebuilding the controls on every animation frame.
-
-Before enabling entry, `render-preparation.js` compiles the mounted scene’s materials asynchronously and prepares its currently visible image textures for the GPU. Texture preparation yields between batches rather than waiting until new paintings enter the camera’s view mid-tour. This prepares only the mounted wall set and exhibits, not all 366 collection images; video textures are excluded. The loading screen remains in place until preparation finishes.
-
-`viewer.js` coordinates these interfaces: opening the film, a story, an introduction or an enlarged artwork pauses the active tour, cancels conflicting camera motion and clears active movement inputs. Other incompatible readers close so they do not compete for focus. A reader is a deliberate pause in the visit, not a hover-triggered interruption.
-
-The artwork view resolves the selected record and its authored card, presenting **Artwork Information**, **The Story**, **Look Closer**, **Evidence & Interpretation** and **Sources** where provided. Previous and Next can resolve another work and load its wall set while keeping the enlarged reading experience available. Closing the view returns to the exhibition; resuming a tour remains a visitor action.
-
-Hall introductions have both spatial displays and readable dialogs. Their viewpoint coordinates belong to the layout data, while their text belongs to `data/hall_introductions_en.json`. This lets navigation point visitors toward the introduction rather than merely displaying an unrelated button.
-
-### 6. Keep the story readable, with evidence one step away
-
-`story-data.js` validates the early-life structure and references; `story.js` renders its topic, chapter, source and optional branch views. The hierarchy is **Searching for a Place → topic → chapter**, rather than several competing copies of the London story. Topic navigation is visually above the London chapter tabs. Sources & Versions stays reachable, and Art Before Painting is a separate optional branch that returns to the main reading path.
-
-`yellow-house.js` and `afterlife.js` use their own datasets and readers. The Yellow House connects narrative sections to specific artworks and evidence comparisons. Afterlife has its own spatial stations and archival cards rather than sharing the final hall’s artwork walls. These modules share navigation callbacks with `viewer.js`, but do not merge their stories into the collection metadata.
-
-`auvers.js` renders the five Auvers reading chapters inside the existing hall-introduction dialog, not a separate popup stack. Its chapter rail and final-days subviews preserve reading positions; Sources & Versions keeps the story DOM, scroll and focus for returning. The manuscript explanation uses an expandable annotation panel. Artwork actions reuse the existing enlargement and Previous/Next controls. The rear plaque and Locate action share `wallTextPose()`; the Afterlife action calls the real Hall 08 navigation. `auvers-data.js` validates chapter order, verified Hall 07 artwork references, HTTPS sources, timeline dates, manuscript dating and qualified claims. The English JSON remains authoritative; `locale-zh-auvers.js` supplies a Chinese overlay without altering provenance.
-
-The distinction between evidence types is authored in the content, not generated from a confidence score. A contemporary letter, a later family recollection and a researcher’s interpretation have different labels and source records. The main narrative explains the experience first; comparisons show what supports an account, how accounts differ and what cannot be established. Illustrations and modern photographs retain their own captions and rights notes. A link to a source is not a claim that its images are licensed for embedding.
-
-### 7. Play and seek the film independently of the tour
-
-`opening-film.js` connects the 3D screen and its poster to an enlarged HTML video player. Before playback, the screen has a designed image instead of an empty black rectangle. Its visible play control is a symbol; the controls still have accessible names. The player uses `assets/van-gogh-early-years.mp4` and offers playback, sound, seeking and full screen.
-
-Film time and tour time are separate. While the film is open, its controls operate on the video rather than the camera timeline. During a seek, the player remembers whether it was playing, pauses it, tracks the requested position and updates `video.currentTime` when the interaction finishes. It waits for that seek to settle before resuming, so playback updates cannot overwrite the dragged position.
-
-`server.mjs` serves video with the correct MIME type and byte-range support: valid range requests receive **206 Partial Content**, and invalid ranges receive **416**. This matters because a player must be able to request later bytes without restarting the file. A media change should therefore be checked through HTTP, including dragging forward and backward, not just by playing from the start.
-
-`gallery-music.js` owns two separate HTML audio elements and does not change the film soundtrack. `gallery-entry.js` requests silent playback permission for both recordings during the entry click, then releases the entry blocker once the gallery opens. The viewer selects Hall 08 music from the active Afterlife station, closing-reflection station or camera position inside Hall 08's walkable polygon, before reader-related render exits. This keeps music aligned with the visited space, rather than a catalogue browsing selection, even when a story panel is open. An unchanged track selection is a no-op; only crossing between Hall 08 and the preceding halls triggers a crossfade. Each recording retains its own `currentTime`. Film and tab-visibility blockers cancel all fades and pause both elements immediately. Per-track playback revisions prevent a delayed start from overriding a later pause or room change. `build.mjs` packages both MP3 files and their credit record, and the local server serves them as `audio/mpeg` with byte-range support.
-
-### 8. Provide guidance, translation and local-only memory
-
-`visit-guide.js` offers the initial tour/free-exploration choice, small contextual tips and the **?** help dialog. Its updates use the current mode, hall, viewpoint, playback and open-reader state so that guidance relates to the visitor’s next action. Acknowledged tips stay dismissed locally; help can always be reopened.
-
-`i18n.js` registers English/Chinese text pairs from `locale-zh*.js` and reapplies translations when interface language changes or content is rendered. `locale-zh.js` combines the main-label overlay in `locale-zh-artwork-labels.js` with the detailed-story overlay in `locale-zh-artwork-stories.js`, keyed by the same artwork IDs. The DOM translator remembers the original English text, so new chapters translate immediately and switching back restores the original without resetting the reader. English JSON remains the primary source; the overlays do not replace object identity, source links, credits or provenance. The story overlay translates the distinction between documentation, interpretation and uncertainty rather than removing those qualifications.
-
-Language and dismissed guidance use browser-local storage. The Afterlife reader ends with a contemplative question, without a writing form or submission endpoint. Dialog controls, language selection and symbol buttons have accessible names, and movement or entrance transitions use reduced-motion handling where implemented. The renderer caps pixel ratio at 1.5 to limit rendering cost on high-density displays.
-
-## Run locally
-
-Requirements: Node.js 22 and npm.
+Use Node.js 22 and npm.
 
 ```sh
+git clone https://github.com/yserena60-yyy/van-gogh-gallery.git
+cd van-gogh-gallery
 npm ci
 npm run build
 npm start
 ```
 
-The local preview server uses port 8765 by default. Serve the project through HTTP rather than opening `index.html` directly from the filesystem. `npm start` serves the source project; the production website is built into `dist/`.
+The local preview server uses port `8765` by default. To use port `8766` in PowerShell:
 
-The build validates collection records, artwork cards, hall introductions, story references and the Highlights timeline before copying the website and its pinned Three.js dependency. The gallery is a static Three.js application; it does not need an application backend.
-
-### Large media and GitHub Pages
-
-The model and opening film are stored as lossless binary segments in `assets/media-parts/`. `data/media_manifest.json` records their order, byte counts and SHA-256 checksums. `npm run build` reconstructs the ordinary GLB and MP4 files before producing the site. This does not resize, compress or re-encode them. Restored media, dependencies and build output are ignored by Git.
-
-The media manifest targets the same model version used by the viewer (`assets/gallery_v30.glb`). `.gitattributes` marks every media segment as binary so Git cannot alter its line endings. Authored exhibition data, including `data/auvers_en.json` and `data/ordered_route_v30.json`, is explicitly included in `.gitignore`'s publication allowlist.
-
-`.github/workflows/pages.yml` installs the pinned dependencies, builds `dist/` and deploys it to GitHub Pages on a push to `main`. The repository’s Pages source must be set to **GitHub Actions**. Visitors receive the reconstructed media files, not the binary segments.
-
-The browser exhibition and separately authored Blender scenes are different outputs. Browser interactions, reading panels and the interactive film player do not automatically appear in a Blender-rendered video.
-
-### Build and publishing sequence
-
-```text
-Source files + installed dependencies
-  → Reassemble GLB / MP4 parts and verify manifest checksums
-  → Validate collection, cards, stories, halls, Yellow House, Auvers and Afterlife
-  → Validate the retimed Highlights route and first-hall stops
-  → Copy HTML, CSS, modules, JSON, assets and pinned Three.js to dist/
-  → GitHub Actions uploads dist/
-  → GitHub Pages serves the static exhibition
+```powershell
+$env:PORT = '8766'
+npm start
 ```
 
-The Pages workflow also supports manual dispatch. A successful build checks the data relationships and produces deployable files; it is not a substitute for visually checking the 3D layout or trying the video and reading controls in a browser.
+Keep the server running while viewing the local exhibition. A local address such as `127.0.0.1` is available only while the corresponding server is running on that computer.
 
-## Main editable files
+Project verification is available with:
 
-| File | Purpose |
-| --- | --- |
-| `data/hall_introductions_en.json` | Entrance, eight hall introductions and closing reflection. |
-| `data/story_exhibit_en.json` | Early-life topics, chapters, branches, materials and sources. |
-| `data/yellow_house_en.json` | Yellow House narrative, comparisons and artwork connections. |
-| `data/auvers_en.json` | Five Auvers chapters, final-days chronology, documentary records, attributed accounts and sources. |
-| `data/afterlife_en.json` | Independent epilogue, archival cards and later responses. |
-| `data/artwork_cards_en.json` | Expanded artwork labels, stories and looking prompts. |
-| `data/collection_en.json` | Installed works, object identities, credits and wall assignments. |
-| `data/artworks_en.json` and `data/chapters_en.json` | Initial wall metadata and chronological catalogue groups. |
-| `data/ordered_route_v30.json` and `highlight-route.js` | Spatial stations and the browser’s retimed Highlights route. |
-| `data/story_transition_layout.json` | First-hall narrative area, walkable regions and obstacles. |
-| `assets/gallery_v30.glb` | Main architectural model and named artwork mounts. |
-| `collection.js` and `collection-tour.js` | Work lookup, painting fit, collection validation and complete-tour state. |
-| `gallery-entry.js` | Name screen, entrance reflection, title fades and film/skip entry. |
-| `opening-film.js` | Screen poster, enlarged player, seeking and film exit choices. |
-| `hall-texts.js` | Spatial introduction displays, viewpoints and readable introduction dialogs. |
-| `auvers.js` and `auvers-data.js` | Shared Hall 07 reader, chapter/subview state, source return, annotation, artwork links and dataset validation. |
-| `story-data.js` and `story.js` | Early-life validation, topic/chapter reading, sources and optional branches. |
-| `artwork-cards.js` | Artwork information, narrative, evidence and source presentation. |
-| `yellow-house.js` and `afterlife.js` | The two later-life story interfaces and their gallery connections. |
-| `visit-guide.js` | First-visit choices, contextual tips and visitor help. |
-| `locale-zh*.js` and `i18n.js` | Chinese overlays and live language switching. |
-| `index.html`, `style.css` and `viewer.js` | Interface, visual presentation and gallery interaction. |
-| `server.mjs`, `build.mjs` and `.github/workflows/pages.yml` | Local HTTP/range serving, static build and Pages deployment. |
+```sh
+npm run verify
+```
 
-English source records remain the primary editable data. Chinese text is layered over them; provenance and original source records remain available in either interface language.
+Browser checks remain important for camera movement, film playback and seeking, artwork navigation, story return paths, language switching, and audio behaviour.
 
-### Making changes safely
+## Build and Deployment
 
-1. **Text or story changes:** edit the appropriate English JSON and its Chinese overlay, preserving source links, evidence labels and image credits. Do not change a work ID merely because its displayed title changes.
-2. **Adding a work:** create an individually identified collection record with its image and source, place it once in the relevant hall’s wall sets, and add an authored card when longer interpretation is available. A research lead without a verified image is not an installed work.
-3. **Layout changes:** keep the GLB artwork slots, artwork viewpoints, introduction stations and collision data aligned. A wall move needs corresponding navigation checks; reducing a wall’s height alone does not repair a blocked viewpoint.
-4. **Interaction changes:** update the responsible module and its translation/accessibility labels, then check that opening and closing it does not restart a paused tour or leave movement running.
-5. **Before publishing:** run `npm run build`, reload the local HTTP preview, and check the entrance, both tour modes, wall switching, story navigation, artwork Previous/Next, film seeking and the Chinese switch. Check narrow-screen layout as well as desktop.
+```sh
+npm ci
+npm run build
+```
+
+The build prepares the static website in `dist/`.
+
+The GitHub Pages workflow in `.github/workflows/pages.yml` runs when changes are pushed to `main`. It installs dependencies, builds the exhibition, uploads the generated website, and deploys it to GitHub Pages.
+
+The published exhibition does not require an application server or database. A successful Git push and a successful Pages deployment are separate stages; deployment status can be checked in GitHub Actions.
+
+## Sound
+
+Background music is optional and user-controlled.
+
+- **Wildflowers** accompanies Halls 01–07.
+- **A Kind Of Hope** accompanies Afterlife and the closing reflection.
+
+Music is kept separate from the opening film so that the two soundtracks do not compete. Playback and transitions are managed by the audio module.
+
+**Music: Scott Buckley — licensed under CC BY 4.0.**
+
+- [Wildflowers](https://www.scottbuckley.com.au/library/wildflowers/)
+- [A Kind Of Hope](https://www.scottbuckley.com.au/library/a-kind-of-hope/)
+- [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+Track attribution and source information are also maintained in `data/music_credits.json`.
+
+## Sources and Media
+
+Artwork and documentary material are accompanied by source information where available. Historical works, modern photographs, document scans, text, film, and music may have different usage conditions.
+
+This repository does not imply that every included or linked item shares one licence. Preserve the relevant source, credit, and rights information when reusing material. A link to an external source does not grant permission to republish its contents.
+
+## Data and Privacy
+
+The exhibition does not require an account and does not provide a visitor message board.
+
+Browser preferences, such as language and sound settings, are stored locally where implemented. External source links lead to independently operated websites.
+
+## Project Purpose
+
+This exhibition is an invitation to encounter a life, not only a name.
+
+Its central question is not simply how Vincent became a famous artist, but what we can come to understand about the person who lived before that fame.
