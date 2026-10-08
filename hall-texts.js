@@ -208,7 +208,7 @@ export function wallGeometry(entry) {
   return geometry;
 }
 
-export function createHallTexts({ data, auversData, collection, scene, renderer, pickMeshes, onOpen, onLocate, currentChapter, onStory = () => {}, onAfterlife = () => {}, onContinueAfterlife = onAfterlife, onArtwork = () => {} }) {
+export function createHallTexts({ data, auversData, collection, scene, renderer, pickMeshes, onOpen, onLocate, currentChapter, onStory = () => {}, onAfterlife = () => {}, onContinueAfterlife = onAfterlife, onArtwork = () => {}, onReturn = () => {} }) {
   validateHallTexts(data);
   const entries = [...data.halls, data.departure];
   const byId = new Map(entries.map((entry) => [entry.id, entry]));
@@ -300,6 +300,7 @@ export function createHallTexts({ data, auversData, collection, scene, renderer,
     exploreAuvers.hidden = entry.id !== '07';
     finalDays.hidden = entry.id !== '07';
     selected = entry;
+    document.querySelector('#hall-reader-return').hidden = entry.id !== 'departure';
     select.value = entry.id;
     const storyButton = document.querySelector('#hall-reader-story');
     storyButton.hidden = !['04', '05'].includes(entry.id);
@@ -308,11 +309,11 @@ export function createHallTexts({ data, auversData, collection, scene, renderer,
     afterlifeButton.hidden = entry.id !== '08';
     afterlifeButton.textContent = 'Explore the Four Sections →';
     title.textContent = entry.kind === 'hall' ? entry.title : entry.label;
-    years.textContent = entry.years ?? 'A Life Through Art';
+    years.textContent = entry.years ?? 'A Life Behind the Name';
     const subtitle = document.querySelector('#hall-reader-subtitle');
     subtitle.textContent = entry.subtitle ?? '';
     subtitle.hidden = !entry.subtitle;
-    document.querySelector('#hall-reader-eyebrow').textContent = entry.kind === 'hall' ? `HALL ${entry.id} · INTRODUCTION` : 'VINCENT VAN GOGH · A LIFE THROUGH ART';
+    document.querySelector('#hall-reader-eyebrow').textContent = entry.kind === 'hall' ? `HALL ${entry.id} · INTRODUCTION` : 'VINCENT VAN GOGH · A LIFE BEHIND THE NAME';
     body.classList.toggle('hall-reader-statement', entry.kind === 'statement');
     body.replaceChildren(...entry.paragraphs.map((paragraph) => {
       const element = document.createElement('p');
@@ -357,6 +358,7 @@ export function createHallTexts({ data, auversData, collection, scene, renderer,
     finalDays.hidden = true;
     document.querySelector('#hall-reader-story').hidden = true;
     document.querySelector('#hall-reader-afterlife').hidden = true;
+    document.querySelector('#hall-reader-return').hidden = true;
     auversControls.forEach((element) => { element.hidden = false; });
     auvers.show(id);
     if (!dialog.open) dialog.showModal();
@@ -389,6 +391,7 @@ export function createHallTexts({ data, auversData, collection, scene, renderer,
   document.querySelector('#hall-reader-back').addEventListener('click', close);
   document.querySelector('#hall-reader-story').addEventListener('click', () => { const id = selected.id; close(); onStory(id === '04' ? 'overview' : 'staying-or-leaving'); });
   document.querySelector('#hall-reader-afterlife').addEventListener('click', () => { close(); onAfterlife(); });
+  document.querySelector('#hall-reader-return').addEventListener('click', () => { close(); onReturn(); });
   document.querySelector('#hall-reader-locate').addEventListener('click', () => { const entry = selected; close(); onLocate(entry); });
   dialog.addEventListener('cancel', (event) => { event.preventDefault(); event.stopPropagation(); close(); });
   dialog.addEventListener('click', (event) => {

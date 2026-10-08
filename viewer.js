@@ -3,15 +3,16 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { fitPainting, locateWork, readingOrder, validateCollection } from './collection.js';
 import { createCollectionTour } from './collection-tour.js?v=2026-10-02-full-collection-tour';
 import { createStoryReader } from './story.js?v=2026-10-06-attachment-story';
-import { addFirstHallTourStops, HIGHLIGHT_TOUR_SECONDS, retimeHighlightTour } from './highlight-route.js?v=2026-10-06-first-hall-flow';
-import { createGalleryEntry } from './gallery-entry.js?v=2026-10-03-story-entry';
+import { addAfterlifeTourSegment, addFirstHallTourStops, HIGHLIGHT_TOUR_SECONDS, retimeHighlightTour } from './highlight-route.js?v=2026-10-07-final-days-pause';
+import { createGalleryEntry } from './gallery-entry.js?v=2026-10-07-staged-opening';
+import { createGalleryMusic } from './gallery-music.js?v=2026-10-07-music-volume';
 import { createOpeningFilm } from './opening-film.js?v=2026-10-06-film-tour-choices';
-import { createVisitGuide } from './visit-guide.js?v=2026-10-06-film-intro-route';
-import { createHallTexts, validateHallTexts, wallTextPose } from './hall-texts.js?v=2026-10-06-artwork-story-return';
-import { afterlifePose, createAfterlifeExhibit, validateAfterlife } from './afterlife.js?v=2026-10-06-afterlife-encounters';
+import { createVisitGuide } from './visit-guide.js?v=2026-10-07-final-days-pause';
+import { createHallTexts, validateHallTexts, wallTextPose } from './hall-texts.js?v=2026-10-07-forward-afterlife';
+import { afterlifePose, createAfterlifeExhibit, validateAfterlife } from './afterlife.js?v=2026-10-07-forward-afterlife';
 import { artworkDate, createArtworkCards } from './artwork-cards.js?v=2026-10-05-yellow-house-story';
-import { createYellowHouseStory } from './yellow-house.js?v=2026-10-06-shared-studio';
-import { validateYellowHouse, yellowHouseConnection } from './yellow-house-data.js';
+import { createYellowHouseStory } from './yellow-house.js?v=2026-10-07-crisis-accounts';
+import { validateYellowHouse, yellowHouseConnection } from './yellow-house-data.js?v=2026-10-07-crisis-accounts';
 import { validateAuvers } from './auvers-data.js';
 import { mountLanguageSwitch, onLanguageChange, registerExhibitionTranslations, translate } from './i18n.js';
 import { prepareGalleryRendering } from './render-preparation.js?v=2026-10-06-first-hall-flow';
@@ -51,6 +52,7 @@ const catalogSearch = document.querySelector('#catalog-search');
 const chapterNav = document.querySelector('#chapter-nav');
 const catalogContent = document.querySelector('#catalog-content');
 const filmVideo = document.querySelector('#opening-film');
+const galleryMusic = createGalleryMusic({ video: filmVideo });
 const wallControls = document.querySelector('#wall-controls');
 const wallSelect = document.querySelector('#wall-set');
 const wallStatus = document.querySelector('#wall-status');
@@ -61,6 +63,7 @@ const auversButton = document.querySelector('#auvers-go');
 const storyControls = document.querySelector('#story-stop-controls');
 const afterlifeButton = document.querySelector('#afterlife-go');
 const afterlifeControls = document.querySelector('#afterlife-stop-controls');
+const departureControls = document.querySelector('#departure-controls');
 const afterlifeInvitation = document.querySelector('#afterlife-invitation');
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -88,7 +91,7 @@ const keys = new Set();
 const clock = new THREE.Clock();
 const tour = { playing: false, seconds: 0 };
 const totalSeconds = HIGHLIGHT_TOUR_SECONDS;
-const layoutRevision = '2026-10-06-auvers-final-days';
+const layoutRevision = '2026-10-07-closing-wall';
 const dolly = { remaining: 0 };
 const activePointers = new Map();
 let metadata = {};
@@ -189,7 +192,7 @@ const collectionTour = createCollectionTour({
     if (state.playing) collectionCompletionShown = false;
     if (state.phase === 'complete' && !collectionCompletionShown) {
       collectionCompletionShown = true;
-      showAfterlifeInvitation();
+      guideToAfterlife();
     }
   },
 });
@@ -216,15 +219,22 @@ const visitGuide = createVisitGuide({
   onLayout: measureCardLimits,
 });
 const entry = createGalleryEntry({
+  onStart: () => galleryMusic.unlock(),
   onBegin({ playFilm }) {
     returnToOpeningFilm();
     if (playFilm) openingFilm.open();
     else visitGuide.offerWelcome();
+    galleryMusic.enter();
   },
 });
 const projectedCorner = new THREE.Vector3();
 
 function updateWallControls() {
+  const atDeparture = hallTextStation?.id === 'departure';
+  const departureChanged = viewer.classList.contains('departure-view') !== atDeparture;
+  viewer.classList.toggle('departure-view', atDeparture);
+  departureControls.hidden = !atDeparture;
+  if (departureChanged) measureCardLimits();
   if (storyStationActive || hallTextStation || afterlifeStation) {
     wallControls.hidden = true;
     return;
@@ -436,8 +446,9 @@ function browseCollection(direction) {
   }
   if (hallTextStation) {
     const entry = hallTextStation;
+    if (entry.readerId === 'auvers:final-days') return direction > 0 ? guideToAfterlife() : showCollectionWork(workOrder.at(-1));
     if (entry.id === 'arrival') return direction > 0 ? returnToOpeningFilm() : undefined;
-    if (entry.id === 'departure') return direction < 0 ? guideToAfterlife(afterlife.stories.at(-1).id) : returnToOpeningFilm();
+    if (entry.id === 'departure') return direction < 0 ? guideToAfterlife(afterlife.stories.at(-1).id) : returnToEntrance();
     if (entry.id === '08') return direction > 0 ? guideToAfterlife() : showCollectionWork(workOrder.at(-1));
     const hall = collection.halls.find((item) => item.id === entry.id);
     const firstIndex = workOrder.indexOf(hall.pages[0][0]);
@@ -522,12 +533,13 @@ function guideToHallText(entry) {
       guideTransitionTimer = window.setTimeout(arrive, 150);
     }
   }
-  const introduction = orderedRoute.camera.introductionStops?.find((stop) => stop.id === entry.id);
+  const introduction = orderedRoute.camera.exhibitStops?.find((stop) => entry.readerId && stop.readerId === entry.readerId)
+    ?? orderedRoute.camera.introductionStops?.find((stop) => stop.id === entry.id);
   tour.seconds = entry.id === 'arrival' ? 0 : ['departure', '08'].includes(entry.id) ? totalSeconds : introduction?.start ?? orderedRoute.artworks.find((artwork) => artwork.chapter === entry.id)?.routeTime ?? 0;
   guidePosition.textContent = entry.readerId === 'auvers:final-days' ? 'The Final Days · Reading Station' : entry.kind === 'hall' ? `Hall ${entry.id} · ${entry.title} · Introduction` : entry.label;
   previousArtwork.disabled = entry.id === 'arrival';
   nextArtwork.disabled = false;
-  nextArtwork.textContent = entry.id === 'departure' ? 'Return to entrance →' : entry.id === '08' ? 'Explore Afterlife →' : entry.id === '01' ? 'Searching for a Place →' : entry.id === 'arrival' ? 'Opening film →' : 'View the artworks →';
+  nextArtwork.textContent = entry.id === 'departure' ? 'Return to entrance →' : entry.id === '08' || entry.readerId === 'auvers:final-days' ? 'Explore Afterlife →' : entry.id === '01' ? 'Searching for a Place →' : entry.id === 'arrival' ? 'Opening film →' : 'View the artworks →';
   updateTimeline();
   updateWallControls();
   updateFilmControls();
@@ -549,9 +561,14 @@ function enterEarlyDrawings() {
   showCollectionWork(hall.pages[0][0]);
 }
 
-function returnToOpeningFilm() {
+function returnToOpeningFilm({ entrance = false } = {}) {
   if (!orderedRoute || wallBusy) return;
   leaveAfterlife();
+  hallTexts?.close();
+  hallTextStation = null;
+  openingFilm?.close();
+  focusMotion = null;
+  stopDolly();
   story.close();
   yellowHouse?.close();
   closeImmersive();
@@ -559,13 +576,26 @@ function returnToOpeningFilm() {
   pauseTour();
   hideCard();
   keys.clear();
-  tour.seconds = orderedRoute.camera.openingFilmTime ?? 9;
+  activePointers.clear();
+  pinchDistance = null;
+  pointerDownSlot = null;
+  if (catalogue.classList.contains('open')) setCatalogueOpen(false);
+  if (entrance) {
+    tourMode = 'highlights';
+    collectionTour.adopt(-1);
+    collectionCompletionShown = false;
+  }
+  tour.seconds = entrance ? 0 : orderedRoute.camera.openingFilmTime ?? 9;
   positionOnRoute();
   resetGuidedSelection();
-  guidePosition.textContent = 'Hall 01 · Opening film → Introduction → Searching for a Place → Early Works';
+  updateText(guidePosition, 'Hall 01 · Opening film → Introduction → Searching for a Place → Early Works');
   updateTimeline();
   updateWallControls();
   updateFilmControls();
+}
+
+function returnToEntrance() {
+  returnToOpeningFilm({ entrance: true });
 }
 
 function guideToStory({ immediate = false } = {}) {
@@ -640,6 +670,27 @@ function showAfterlifeInvitation() {
   if (afterlife && !afterlifeStation && !entry.isOpen()) afterlifeInvitation.hidden = false;
 }
 
+function setAfterlifeStation(id) {
+  if (!id) return leaveAfterlife();
+  const changed = afterlifeStation !== id || !viewer.classList.contains('afterlife-view');
+  afterlifeStation = id;
+  viewer.classList.add('afterlife-view');
+  afterlifeControls.hidden = false;
+  afterlifeInvitation.hidden = true;
+  afterlifeButton.setAttribute('aria-pressed', 'true');
+  const selected = afterlife.card(id);
+  const section = afterlife.section(id);
+  const index = afterlife.stories.findIndex((entry) => entry.id === id);
+  updateText(document.querySelector('#afterlife-stop-title'), selected ? `${String(index + 1).padStart(2, '0')} · ${selected.title}` : section?.title ?? 'Afterlife');
+  updateText(document.querySelector('#afterlife-stop-note'), selected ? `${selected.date} · ${selected.subtitle}` : section?.subtitle ?? afterlifeData.subtitle);
+  updateText(document.querySelector('#afterlife-read'), selected ? 'Read the Story →' : section ? 'Explore this Section →' : 'Explore Four Sections →');
+  updateText(guidePosition, selected ? `Hall 08 · Afterlife · ${index + 1} / ${afterlife.stories.length} · ${selected.title}` : `Hall 08 · ${section?.title ?? 'Afterlife · What His Work Set in Motion'}`);
+  updateProperties(previousArtwork, { disabled: false });
+  updateProperties(nextArtwork, { disabled: false });
+  updateText(nextArtwork, index === afterlife.stories.length - 1 ? 'As You Leave →' : selected ? 'Next story →' : 'First story →');
+  if (changed) measureCardLimits();
+}
+
 function guideToAfterlife(id = 'overview') {
   if (!afterlife || wallBusy) return;
   visitGuide.recordAction('navigate');
@@ -670,17 +721,7 @@ function guideToAfterlife(id = 'overview') {
   setStoryStationActive(false);
   guidedIndex = -1;
   currentChapter = '08';
-  afterlifeStation = id;
-  viewer.classList.add('afterlife-view');
-  afterlifeControls.hidden = false;
-  afterlifeInvitation.hidden = true;
-  afterlifeButton.setAttribute('aria-pressed', 'true');
-  const selected = afterlife.card(id);
-  const section = afterlife.section(id);
-  const index = afterlife.stories.findIndex((entry) => entry.id === id);
-  document.querySelector('#afterlife-stop-title').textContent = selected ? `${String(index + 1).padStart(2, '0')} · ${selected.title}` : section?.title ?? 'Afterlife';
-  document.querySelector('#afterlife-stop-note').textContent = selected ? `${selected.date} · ${selected.subtitle}` : section?.subtitle ?? afterlifeData.subtitle;
-  document.querySelector('#afterlife-read').textContent = selected ? 'Read the Story →' : section ? 'Explore this Section →' : 'Explore Four Sections →';
+  setAfterlifeStation(id);
   const targetYaw = Math.atan2(target.z - location.z, target.x - location.x);
   const yawDifference = Math.atan2(Math.sin(targetYaw - yaw), Math.cos(targetYaw - yaw));
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -701,10 +742,6 @@ function guideToAfterlife(id = 'overview') {
     }
   }
   tour.seconds = totalSeconds;
-  guidePosition.textContent = selected ? `Hall 08 · Afterlife · ${index + 1} / ${afterlife.stories.length} · ${selected.title}` : `Hall 08 · ${section?.title ?? 'Afterlife · What His Work Set in Motion'}`;
-  previousArtwork.disabled = false;
-  nextArtwork.disabled = false;
-  nextArtwork.textContent = index === afterlife.stories.length - 1 ? 'As You Leave →' : selected ? 'Next story →' : 'First story →';
   updateTimeline();
   updateWallControls();
   updateFilmControls();
@@ -719,6 +756,8 @@ document.querySelector('#afterlife-read').addEventListener('click', () => afterl
 document.querySelector('#afterlife-wall-overview').addEventListener('click', () => guideToAfterlife());
 document.querySelector('#afterlife-wall-sources').addEventListener('click', () => afterlife.open(afterlifeStation, { showSources: true }));
 document.querySelector('#afterlife-wall-exit').addEventListener('click', () => guideToHallText(hallTexts.entry('departure')));
+document.querySelector('#afterlife-return').addEventListener('click', returnToEntrance);
+document.querySelector('#departure-return').addEventListener('click', returnToEntrance);
 
 async function restoreHighlights() {
   if (wallBusy) return false;
@@ -934,12 +973,16 @@ function cancelGuideTransition({ preserveFade = false } = {}) {
 
 function positionOnRoute() {
   if (!orderedRoute) return;
-  leaveAfterlife();
   const introduction = orderedRoute.camera.introductionStops?.find((stop) => tour.seconds >= stop.start && tour.seconds <= stop.end);
   const filmStop = orderedRoute.camera.openingFilmStop;
   const atFilm = filmStop && tour.seconds >= filmStop.start && tour.seconds <= filmStop.end;
   const exhibitStop = orderedRoute.camera.exhibitStops?.find((stop) => tour.seconds >= stop.start && tour.seconds <= stop.end);
-  hallTextStation = introduction ? hallTexts?.entry(introduction.id) ?? null : null;
+  const finalDaysStop = orderedRoute.camera.exhibitStops?.find((stop) => stop.id === 'final-days');
+  const afterlifeIntroduction = orderedRoute.camera.introductionStops?.find((stop) => stop.id === '08');
+  const enteringAfterlife = finalDaysStop && afterlifeIntroduction && tour.seconds > finalDaysStop.end && tour.seconds < afterlifeIntroduction.start;
+  setAfterlifeStation(exhibitStop?.kind === 'afterlife' ? 'overview' : null);
+  hallTextStation = exhibitStop?.kind === 'reading' ? hallTexts?.entry(exhibitStop.readerId) ?? null
+    : introduction ? hallTexts?.entry(introduction.id) ?? null : enteringAfterlife ? hallTexts?.entry('08') ?? null : null;
   setStoryStationActive(exhibitStop?.kind === 'story');
   stopDolly();
   const waypoints = orderedRoute.camera.waypoints;
@@ -971,10 +1014,12 @@ function positionOnRoute() {
   }
   if (hallTextStation) {
     guidedIndex = -1;
-    updateText(guidePosition, `Hall ${hallTextStation.id} · ${hallTextStation.title} · Introduction`);
+    hideCard();
+    updateText(guidePosition, enteringAfterlife ? 'Continue to Afterlife · Beyond Vincent’s lifetime'
+      : hallTextStation.readerId === 'auvers:final-days' ? 'The Final Days · Reading Station' : `Hall ${hallTextStation.id} · ${hallTextStation.title} · Introduction`);
     updateProperties(previousArtwork, { disabled: false });
     updateProperties(nextArtwork, { disabled: wallBusy });
-    updateText(nextArtwork, hallTextStation.id === '01' ? 'Searching for a Place →' : 'View the artworks →');
+    updateText(nextArtwork, hallTextStation.readerId === 'auvers:final-days' || hallTextStation.id === '08' ? 'Explore Afterlife →' : hallTextStation.id === '01' ? 'Searching for a Place →' : 'View the artworks →');
   } else if (storyStationActive) {
     guidedIndex = -1;
     hideCard();
@@ -982,6 +1027,9 @@ function positionOnRoute() {
     updateProperties(previousArtwork, { disabled: false });
     updateProperties(nextArtwork, { disabled: wallBusy });
     updateText(nextArtwork, 'Early Works →');
+  } else if (afterlifeStation) {
+    guidedIndex = -1;
+    hideCard();
   } else if (atFilm) {
     guidedIndex = -1;
     updateText(nextArtwork, 'Next →');
@@ -2015,13 +2063,16 @@ function clearWalkingSegment(start, end) {
 function render() {
   requestAnimationFrame(render);
   const delta = clock.getDelta();
+  const inFinalHall = orderedRoute?.walkableRegions.some((region) => region.chapter === '08'
+    && polygonContains(camera.position.x, camera.position.z, region.polygon));
+  galleryMusic.setChapter(afterlifeStation || hallTextStation?.id === 'departure' || inFinalHall ? '08' : '01');
   const filmStop = orderedRoute?.camera.openingFilmStop;
   visitGuide.update({
     ready: galleryReady,
     blocked: entry.isOpen() || openingFilm?.isOpen() || hallTexts?.isOpen() || afterlife?.isOpen() || yellowHouse?.isOpen() || story.isOpen() || !immersive.hidden || catalogue.classList.contains('open'),
     playing: tourMode === 'collection' ? collectionTour.state().playing : tour.playing,
     mode: tourMode, chapter: currentChapter, story: storyStationActive, afterlife: Boolean(afterlifeStation),
-    introduction: hallTextStation?.kind === 'hall', artwork: guidedIndex >= 0,
+    introduction: hallTextStation?.kind === 'hall', finalDays: hallTextStation?.readerId === 'auvers:final-days', artwork: guidedIndex >= 0,
     atFilm: Boolean(filmStop && tour.seconds >= filmStop.start && tour.seconds <= filmStop.end),
   });
   if (visitGuide.isHelpOpen() || openingFilm?.isOpen() || hallTexts?.isOpen() || afterlife?.isOpen() || yellowHouse?.isOpen()) return;
@@ -2080,7 +2131,7 @@ async function loadGallery() {
   let authoredCards;
   let auversData;
   [metadata, chapters, orderedRoute, collection, storyData, storyLayout, hallTextData, authoredCards, afterlifeData, yellowHouseData, auversData] = await Promise.all([
-    `./data/artworks_en.json?v=${layoutRevision}`, `./data/chapters_en.json?v=${layoutRevision}`, `./data/ordered_route_v28.json?v=${layoutRevision}`, `./data/collection_en.json?v=${layoutRevision}`,
+    `./data/artworks_en.json?v=${layoutRevision}`, `./data/chapters_en.json?v=${layoutRevision}`, `./data/ordered_route_v30.json?v=${layoutRevision}`, `./data/collection_en.json?v=${layoutRevision}`,
     `./data/story_exhibit_en.json?v=${layoutRevision}`, `./data/story_transition_layout.json?v=${layoutRevision}`,
     `./data/hall_introductions_en.json?v=${layoutRevision}`,
     `./data/artwork_cards_en.json?v=${layoutRevision}`,
@@ -2098,7 +2149,7 @@ async function loadGallery() {
   validateYellowHouse(yellowHouseData, collection);
   validateAuvers(auversData, collection);
   registerExhibitionTranslations({ hallTexts: hallTextData, story: storyData, afterlife: afterlifeData, yellowHouse: yellowHouseData, auvers: auversData, artworkCards: authoredCards, chapters });
-  orderedRoute = retimeHighlightTour(addFirstHallTourStops(orderedRoute, storyData.station), totalSeconds);
+  orderedRoute = retimeHighlightTour(addAfterlifeTourSegment(addFirstHallTourStops(orderedRoute, storyData.station), afterlifeData, auversData), totalSeconds);
   storyData.station.routeTime = orderedRoute.camera.exhibitStops.find((stop) => stop.kind === 'story').start;
   for (const chapter of chapters) {
     const listed = new Set(chapter.groups.flatMap((group) => group.items.map((item) => item.workId).filter(Boolean)));
@@ -2144,7 +2195,7 @@ async function loadGallery() {
     hall.pages[0].forEach((id, index) => { metadata[hall.slots[index]] = { ...collection.works[id], collectionId: id }; });
   }
   updateCameraFraming();
-  const gltf = await new GLTFLoader().loadAsync(`./assets/gallery_v29.glb?v=${layoutRevision}`, (event) => {
+  const gltf = await new GLTFLoader().loadAsync(`./assets/gallery_v30.glb?v=${layoutRevision}`, (event) => {
     if (event.total) loadProgress.textContent = `${Math.floor((event.loaded / event.total) * 100)}%`;
   });
   const curatedSlots = new Set(Object.entries(metadata).filter(([, entry]) => entry.image).map(([slot]) => slot));
@@ -2225,6 +2276,7 @@ async function loadGallery() {
     onExplore() { guideToStory({ immediate: true }); story.open(); },
     onWorks() { visitGuide.recordAction('navigate'); enterEarlyDrawings(); },
     onOpen() {
+      galleryMusic.suspend('film');
       leaveAfterlife();
       hallTexts?.close();
       story.close();
@@ -2256,6 +2308,7 @@ async function loadGallery() {
     onStory: (id) => yellowHouse.open(id),
     onAfterlife: () => afterlife.open('overview'),
     onContinueAfterlife: () => guideToAfterlife(),
+    onReturn: returnToEntrance,
     onArtwork: (id, returnToStory) => showCollectionWork(id, true, { returnToStory }),
     onOpen() {
       visitGuide.recordAction('introduction');
@@ -2317,7 +2370,7 @@ async function loadGallery() {
   });
   yellowHouse = createYellowHouseStory({
     data: yellowHouseData, collection, hallData: hallTextData, scene, renderer, pickMeshes,
-    onArtwork: (id) => showCollectionWork(id, true),
+    onArtwork: (id, returnToStory) => showCollectionWork(id, true, { returnToStory }),
     onContinue: (id) => guideToHallText(hallTexts.entry(id)),
     onOpen() {
       visitGuide.recordAction('yellow-house');

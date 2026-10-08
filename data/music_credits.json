@@ -1,0 +1,34 @@
+{
+  "artist": "Scott Buckley",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "verifiedOn": "2026-10-07",
+  "defaultVolume": 0.2,
+  "transitionSeconds": 1.6,
+  "tracks": [
+    {
+      "id": "wildflowers",
+      "title": "Wildflowers",
+      "file": "./assets/wildflowers-scott-buckley.mp3",
+      "originalFilename": "Wildflowers.mp3",
+      "source": "https://www.scottbuckley.com.au/library/wildflowers/",
+      "officialDownload": "https://www.scottbuckley.com.au/library/wp-content/uploads/2025/12/Wildflowers.mp3",
+      "attribution": "'Wildflowers' by Scott Buckley - released under CC-BY 4.0. www.scottbuckley.com.au",
+      "durationSeconds": 322.22,
+      "chapters": ["01", "02", "03", "04", "05", "06", "07"]
+    },
+    {
+      "id": "hope",
+      "title": "A Kind Of Hope",
+      "file": "./assets/a-kind-of-hope-scott-buckley.mp3",
+      "originalFilename": "AKindOfHope.mp3",
+      "source": "https://www.scottbuckley.com.au/library/a-kind-of-hope/",
+      "officialDownload": "https://www.scottbuckley.com.au/library/wp-content/uploads/2022/10/AKindOfHope.mp3",
+      "attribution": "'A Kind Of Hope' by Scott Buckley - released under CC-BY 4.0. www.scottbuckley.com.au",
+      "durationSeconds": 342.65,
+      "chapters": ["08"],
+      "gallery": "Afterlife and closing reflection"
+    }
+  ],
+  "use": "Visitor-initiated exhibition background music. Original MP3 files are unchanged. Room changes select the soundtrack with a soft crossfade; each track loops and retains its position when revisited. Both pause during the opening film and while the tab is hidden."
+}

@@ -26,6 +26,11 @@ export function visitGuidance(context) {
     text: 'Use the highlighted reading button to open the Afterlife story. Closing reflection takes you to the final question; close a story to return to the gallery.',
     target: '#afterlife-read',
   };
+  if (context.finalDays) return {
+    id: 'final-days', label: 'HALL 07 · THE FINAL DAYS', title: 'Pause here before entering Afterlife',
+    text: 'Read The Final Days to follow his last days in Auvers. When you are ready, continue into Afterlife.',
+    target: '#hall-intro-toggle',
+  };
   if (context.introduction) return {
     id: 'introduction', label: 'A NEW CHAPTER', title: 'Begin with this hall’s introduction',
     text: 'Read this introduction opens the room’s story. Then use the forward button to continue through the hall.',

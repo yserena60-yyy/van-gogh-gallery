@@ -23,7 +23,7 @@ export async function assembleMedia(directory) {
   const root = await realpath(directory);
   const manifest = JSON.parse(await readFile(path.join(root, 'data/media_manifest.json'), 'utf8'));
   assert.equal(manifest.version, 1);
-  const allowed = new Set(['assets/gallery_v29.glb', 'assets/van-gogh-early-years.mp4']);
+  const allowed = new Set(['assets/gallery_v30.glb', 'assets/van-gogh-early-years.mp4']);
   assert.equal(manifest.files.length, allowed.size);
   for (const media of manifest.files) {
     assert.ok(allowed.delete(media.path), `Unexpected media target: ${media.path}`);

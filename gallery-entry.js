@@ -1,10 +1,11 @@
-export function createGalleryEntry({ onBegin }) {
+export function createGalleryEntry({ onBegin, onStart }) {
   const dialog = document.querySelector('#gallery-entry');
   const panel = document.querySelector('#entry-panel');
   const start = document.querySelector('#entry-start');
+  const prologue = document.querySelector('#entry-prologue');
   const quote = document.querySelector('#entry-quote');
-  const hall = document.querySelector('#entry-hall');
   const skip = document.querySelector('#entry-skip');
+  const viewer = document.querySelector('#viewer');
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   let ready = false;
   let running = false;
@@ -31,12 +32,15 @@ export function createGalleryEntry({ onBegin }) {
 
   function enter(playFilm) {
     if (!ready || completed) return;
+    if (!running) onStart?.();
     completed = true;
     sequence += 1;
     window.clearTimeout(timer);
     animation?.cancel();
     releaseWait?.();
     releaseWait = null;
+    dialog.dataset.stage = 'complete';
+    viewer.classList.remove('entry-view');
     dialog.close();
     onBegin({ playFilm });
   }
@@ -44,37 +48,44 @@ export function createGalleryEntry({ onBegin }) {
   async function begin() {
     if (!ready || running || completed) return;
     running = true;
+    onStart?.();
     const token = ++sequence;
     start.disabled = true;
     if (!await fade(1, 0, 550) || token !== sequence) return;
     start.hidden = true;
-    quote.hidden = false;
-    dialog.setAttribute('aria-label', 'We know who he would become. As you enter, set that knowledge aside.');
-    dialog.removeAttribute('aria-labelledby');
+    prologue.hidden = false;
+    dialog.dataset.stage = 'prologue';
+    dialog.setAttribute('aria-labelledby', 'entry-prologue-text');
+    dialog.setAttribute('aria-describedby', 'entry-prologue-note');
     skip.focus({ preventScroll: true });
-    if (!await fade(0, 1, 800) || token !== sequence) return;
-    await hold(4600);
-    if (token !== sequence || !await fade(1, 0, 1100)) return;
-    if (token !== sequence) return;
-    quote.hidden = true;
-    hall.hidden = false;
-    dialog.setAttribute('aria-label', 'Hall 01: Origins and Uncertainty');
     if (!await fade(0, 1, 750) || token !== sequence) return;
-    await hold(2500);
+    await hold(4000);
     if (token !== sequence || !await fade(1, 0, 900)) return;
+    if (token !== sequence) return;
+    prologue.hidden = true;
+    quote.hidden = false;
+    dialog.dataset.stage = 'reflection';
+    dialog.setAttribute('aria-labelledby', 'entry-quote');
+    dialog.removeAttribute('aria-describedby');
+    if (!await fade(0, 1, 750) || token !== sequence) return;
+    await hold(4000);
+    if (token !== sequence || !await fade(1, 0, 1100)) return;
     if (token === sequence) enter(true);
   }
 
   start.addEventListener('click', begin);
-  document.querySelector('#entry-watch').addEventListener('click', () => enter(true));
   skip.addEventListener('click', () => enter(false));
   dialog.addEventListener('cancel', (event) => { event.preventDefault(); enter(false); });
   dialog.addEventListener('click', (event) => {
-    if (ready && !running && event.target !== skip) begin();
+    const control = event.target.closest('button, a, input, select, textarea, #language-switch');
+    if (!control || control === start) begin();
   });
+  dialog.dataset.stage = 'title';
+  viewer.classList.add('entry-view');
   dialog.showModal();
   return {
     setReady() {
+      if (ready || completed) return;
       ready = true;
       start.disabled = false;
       skip.disabled = false;
@@ -87,6 +98,9 @@ export function createGalleryEntry({ onBegin }) {
       window.clearTimeout(timer);
       animation?.cancel();
       releaseWait?.();
+      releaseWait = null;
+      dialog.dataset.stage = 'failed';
+      viewer.classList.remove('entry-view');
       dialog.close();
     },
     isOpen: () => dialog.open,

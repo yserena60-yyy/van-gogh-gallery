@@ -47,6 +47,8 @@ export function validateAfterlife(data) {
     if (![source.title, source.kind, source.note].every(english) || !https(source.url)) throw new Error(`Invalid Afterlife source: ${source.id}`);
   }
   const wall = data.wall;
+  if (!Array.isArray(data.arrivalPath) || data.arrivalPath.length < 2 || data.arrivalPath.some((position) =>
+    position.length !== 3 || !position.every(Number.isFinite))) throw new Error('Afterlife needs a complete arrival path from Hall 07');
   if (wall.position?.length !== 3 || wall.normal?.length !== 3 || ![...wall.position, ...wall.normal].every(Number.isFinite)
       || Math.abs(Math.hypot(...wall.normal) - 1) > 0.001 || wall.normal[1] !== 0
       || !['inset', 'cardWidth', 'cardHeight', 'spacing', 'centerHeight', 'headerWidth', 'headerHeight', 'headerCenterHeight', 'overviewDistance', 'readingDistance']

@@ -7,7 +7,7 @@ import { assembleMedia } from './assemble-media.mjs';
 import { validateHallTexts } from './hall-texts.js';
 import { validateArtworkCards } from './artwork-cards.js';
 import { validateAfterlife } from './afterlife.js';
-import { addFirstHallTourStops, FIRST_HALL_TOUR_SECONDS, HIGHLIGHT_TOUR_SECONDS, retimeHighlightTour } from './highlight-route.js';
+import { addAfterlifeTourSegment, addFirstHallTourStops, FIRST_HALL_TOUR_SECONDS, HIGHLIGHT_TOUR_SECONDS, retimeHighlightTour } from './highlight-route.js';
 import { validateYellowHouse } from './yellow-house-data.js';
 import { validateAuvers } from './auvers-data.js';
 
@@ -23,19 +23,23 @@ const artworkChapterCount = Object.values(artworkCards.cards).reduce((count, car
 const artworkSeriesChapterCount = Object.values(artworkCards.cards).reduce((count, card) => count + (card.seriesReading?.stories.length ?? 0), 0);
 const story = JSON.parse(await readFile(path.join(root, 'data/story_exhibit_en.json'), 'utf8'));
 const storyCounts = validateStoryExhibit(story);
-const highlightRoute = retimeHighlightTour(addFirstHallTourStops(JSON.parse(await readFile(path.join(root, 'data/ordered_route_v28.json'), 'utf8')), story.station));
-if (highlightRoute.duration !== HIGHLIGHT_TOUR_SECONDS || highlightRoute.camera.waypoints.at(-1).time !== HIGHLIGHT_TOUR_SECONDS || highlightRoute.camera.exhibitStops.length !== 2) throw new Error('Invalid Highlights tour duration or first-hall stops.');
+const afterlife = JSON.parse(await readFile(path.join(root, 'data/afterlife_en.json'), 'utf8'));
+const afterlifeCount = validateAfterlife(afterlife);
+const auvers = JSON.parse(await readFile(path.join(root, 'data/auvers_en.json'), 'utf8'));
+const auversCount = validateAuvers(auvers, collection);
+const highlightRoute = retimeHighlightTour(addAfterlifeTourSegment(addFirstHallTourStops(JSON.parse(await readFile(path.join(root, 'data/ordered_route_v30.json'), 'utf8')), story.station), afterlife, auvers));
+if (highlightRoute.duration !== HIGHLIGHT_TOUR_SECONDS || highlightRoute.camera.waypoints.at(-1).time !== HIGHLIGHT_TOUR_SECONDS
+  || highlightRoute.camera.exhibitStops.filter((stop) => ['early-life', 'early-drawing'].includes(stop.id)).length !== 2
+  || !highlightRoute.camera.exhibitStops.some((stop) => stop.readerId === 'auvers:final-days')
+  || highlightRoute.camera.exhibitStops.find((stop) => stop.kind === 'afterlife')?.end !== HIGHLIGHT_TOUR_SECONDS
+  || highlightRoute.camera.introductionStops.at(-1)?.id !== '08') throw new Error('Invalid Highlights tour duration or first-hall/Afterlife stops.');
 if (highlightRoute.camera.waypoints.find((point) => point.chapter === '02')?.time !== FIRST_HALL_TOUR_SECONDS
   || highlightRoute.camera.waypoints.some((point, index, points) => !Number.isFinite(point.time) || point.time < 0
     || point.time > HIGHLIGHT_TOUR_SECONDS || (index > 0 && point.time < points[index - 1].time))) throw new Error('Invalid Highlights tour pacing.');
 const wallTexts = JSON.parse(await readFile(path.join(root, 'data/hall_introductions_en.json'), 'utf8'));
 const wallTextCount = validateHallTexts(wallTexts);
-const afterlife = JSON.parse(await readFile(path.join(root, 'data/afterlife_en.json'), 'utf8'));
-const afterlifeCount = validateAfterlife(afterlife);
 const yellowHouse = JSON.parse(await readFile(path.join(root, 'data/yellow_house_en.json'), 'utf8'));
 const yellowHouseCount = validateYellowHouse(yellowHouse, collection);
-const auvers = JSON.parse(await readFile(path.join(root, 'data/auvers_en.json'), 'utf8'));
-const auversCount = validateAuvers(auvers, collection);
 const yellowHouseImages = (yellowHouse.media ?? []).map((media) => media.image);
 const storyImages = [...new Set([story.image, story.poster, ...story.topics.map((topic) => topic.image), ...story.chapters.map((chapter) => chapter.image), ...story.materials.map((material) => material.image), ...story.sources.map((source) => source.localImage)].filter(Boolean))];
 const images = [...new Set([...Object.values(artworks), ...Object.values(collection.works)].map((artwork) => artwork.image))];
@@ -54,7 +58,12 @@ const siteFiles = [
   'locale-zh-auvers.js',
   'locale-zh-titles.js',
   'locale-zh-artwork-labels.js',
+  'locale-zh-artwork-stories.js',
   'gallery-entry.js',
+  'gallery-music.js',
+  'data/music_credits.json',
+  'assets/wildflowers-scott-buckley.mp3',
+  'assets/a-kind-of-hope-scott-buckley.mp3',
   'artwork-cards.js',
   'data/artwork_cards_en.json',
   'opening-film.js',
@@ -84,10 +93,10 @@ const siteFiles = [
   ...storyImages,
   'data/artworks_en.json',
   'data/chapters_en.json',
-  'data/ordered_route_v28.json',
+  'data/ordered_route_v30.json',
   'data/collection_en.json',
   'data/collection_audit.json',
-  'assets/gallery_v29.glb',
+  'assets/gallery_v30.glb',
   'assets/van-gogh-early-years.mp4',
   ...images,
 ];

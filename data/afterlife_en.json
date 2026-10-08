@@ -9,11 +9,11 @@
   "intro": [
     "Vincent’s paintings and letters passed into the care of others. Through exhibitions and publication, they reached new audiences. Artists explored their possibilities; musicians and filmmakers responded in their own forms. This gallery follows those encounters and invites you to consider your own.",
     "Begin with the people who cared for the collection. Jo van Gogh-Bonger’s exhibition and editorial work, and Vincent Willem’s later stewardship, helped paintings and letters reach future viewers. The surviving photographs, catalogues and books let you follow that work through particular objects.",
-    "Then follow a museum-curated connection to later painting, a song by Don McLean and an imagined encounter in Akira Kurosawa’s cinema. These are responses to Vincent’s work, not new evidence about his life. A named viewer’s account opens the final section, which ends by asking what stays with you from Vincent’s life."
+    "Then follow a museum-curated connection to later painting, a song by Don McLean and an imagined encounter in Akira Kurosawa’s cinema. These are responses to Vincent’s work, not new evidence about his life. His story now reaches you. As you leave, what will you carry with you from Vincent’s life?"
   ],
   "wall": {
-    "position": [70, 0, 40],
-    "normal": [-1, 0, 0],
+    "position": [16.1, 0, 71],
+    "normal": [0, 0, -1],
     "inset": 0.11,
     "cardWidth": 2.55,
     "cardHeight": 4.3,
@@ -25,13 +25,14 @@
     "overviewDistance": 11.5,
     "readingDistance": 5.3,
     "cardPlacements": [
-      { "position": [70, 0, 35], "normal": [-1, 0, 0] },
-      { "position": [70, 0, 40], "normal": [-1, 0, 0] },
-      { "position": [70, 0, 45], "normal": [-1, 0, 0] },
-      { "position": [62.7, 0, 53], "normal": [0, 0, -1] },
-      { "position": [55.5, 0, 53], "normal": [0, 0, -1] }
+      { "position": [21.1, 0, 71], "normal": [0, 0, -1] },
+      { "position": [16.1, 0, 71], "normal": [0, 0, -1] },
+      { "position": [11.1, 0, 71], "normal": [0, 0, -1] },
+      { "position": [3.1, 0, 63.7], "normal": [1, 0, 0] },
+      { "position": [3.1, 0, 56.5], "normal": [1, 0, 0] }
     ]
   },
+  "arrivalPath": [[13.7, 1.85, 40.8], [13.7, 1.85, 47.6], [13.7, 1.85, 53.4]],
   "sections": [
     {
       "id": "carrying-forward",

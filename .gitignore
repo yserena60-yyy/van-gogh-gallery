@@ -23,6 +23,7 @@ Thumbs.db
 !/data/ordered_route_v24.json
 !/data/ordered_route_v25.json
 !/data/ordered_route_v28.json
+!/data/ordered_route_v30.json
 !/data/collection_en.json
 !/data/collection_audit.json
 !/data/story_exhibit_en.json
@@ -30,4 +31,5 @@ Thumbs.db
 !/data/story_source_audit.json
 !/data/story_transition_layout.json
 !/data/film_credits.json
+!/data/music_credits.json
 !/data/media_manifest.json

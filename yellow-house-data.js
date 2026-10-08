@@ -58,6 +58,32 @@ export function validateYellowHouse(data, collection) {
     if (!work || !/^\.\/assets\/[a-z0-9-]+\.jpg$/.test(work.image)) throw new Error(`Yellow House: unknown or invalid artwork ${id}`);
     imageDimensions(data.imageSizes?.[id], id);
   };
+  const narrativeSections = (values, location) => {
+    const ids = uniqueIds(values, `${location}.sections`);
+    if (!ids.size) throw new Error(`Yellow House: empty narrative sections at ${location}`);
+    for (const section of values) {
+      requiredText(section.title, `${location}.${section.id}.title`);
+      for (const field of ['subtitle', 'badge']) {
+        if (section[field] !== undefined) requiredText(section[field], `${location}.${section.id}.${field}`);
+      }
+      paragraphs(section.paragraphs, `${location}.${section.id}`);
+      referenceSources(section.sources, `${location}.${section.id}`);
+      if (section.voices !== undefined) {
+        if (!Array.isArray(section.voices) || section.voices.length !== 2) throw new Error(`Yellow House: narrative comparison requires two voices at ${location}`);
+        for (const voice of section.voices) {
+          for (const field of ['title', 'badge']) requiredText(voice[field], `${location}.${section.id}.voices.${field}`);
+          paragraphs(voice.paragraphs, `${location}.${section.id}.voices`);
+          referenceSources(voice.sources, `${location}.${section.id}.voices`);
+        }
+      }
+      if (section.link !== undefined) {
+        requiredText(section.link.label, `${location}.${section.id}.link.label`);
+        if (!chapterIds.has(section.link.chapterId)) throw new Error(`Yellow House: unknown narrative chapter link at ${location}`);
+        const target = data.chapters.find((chapter) => chapter.id === section.link.chapterId);
+        if (section.link.readingId !== undefined && !target.readings.some((reading) => reading.id === section.link.readingId)) throw new Error(`Yellow House: unknown narrative reading link at ${location}`);
+      }
+    }
+  };
   for (const source of data.sources) {
     for (const field of ['title', 'date', 'type', 'note']) requiredText(source[field], `sources.${source.id}.${field}`);
     httpsUrl(source.url, 'sources.' + source.id);
@@ -78,6 +104,10 @@ export function validateYellowHouse(data, collection) {
     if (!['04', '05', '06'].includes(chapter.hall)) throw new Error(`Yellow House: invalid hall ${chapter.id}`);
     paragraphs(chapter.paragraphs, chapter.id);
     referenceSources(chapter.sources, chapter.id);
+    for (const field of ['subtitle', 'contentNote', 'worksTitle', 'worksIntroduction']) {
+      if (chapter[field] !== undefined) requiredText(chapter[field], `${chapter.id}.${field}`);
+    }
+    if (chapter.sections !== undefined) narrativeSections(chapter.sections, chapter.id);
     if (chapter.readingsLabel !== undefined) requiredText(chapter.readingsLabel, `${chapter.id}.readingsLabel`);
     if (chapter.skipChapter !== undefined) {
       if (!chapterIds.has(chapter.skipChapter) || chapter.skipChapter === chapter.id) throw new Error(`Yellow House: invalid chapter skip at ${chapter.id}`);
@@ -96,6 +126,7 @@ export function validateYellowHouse(data, collection) {
       for (const field of ['label', 'title', 'date']) requiredText(reading[field], `${chapter.id}.${reading.id}.${field}`);
       paragraphs(reading.paragraphs, reading.id);
       referenceSources(reading.sources, reading.id);
+      if (reading.sections !== undefined) narrativeSections(reading.sections, `${chapter.id}.${reading.id}`);
       if (reading.badge !== undefined) requiredText(reading.badge, `${chapter.id}.${reading.id}.badge`);
       if (reading.people !== undefined) {
         peopleRecords(reading.people, chapter.id + '.' + reading.id + '.people');

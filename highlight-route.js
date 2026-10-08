@@ -57,6 +57,101 @@ export function addFirstHallTourStops(route, station, holdSeconds = 2.6) {
   };
 }
 
+export function addAfterlifeTourSegment(route, afterlife, auvers) {
+  const lastArtwork = route.artworks.at(-1);
+  const wall = afterlife?.wall;
+  const readingWall = auvers?.wall;
+  const sourceWaypoints = route.camera.waypoints;
+  const viewingPosition = lastArtwork?.tourViewpoint ?? lastArtwork?.viewpoint;
+  const viewingTarget = lastArtwork?.tourViewTarget ?? lastArtwork?.viewTarget;
+  if (lastArtwork?.chapter !== '07' || !Number.isFinite(lastArtwork.routeTime) || lastArtwork.routeTime <= 0 || lastArtwork.routeTime >= route.duration
+    || afterlife?.gallery !== '08' || wall.position?.length !== 3 || wall.normal?.length !== 3
+    || !Number.isFinite(wall.overviewDistance) || wall.overviewDistance <= 0
+    || !Array.isArray(afterlife.arrivalPath) || afterlife.arrivalPath.length < 2
+    || afterlife.arrivalPath.some((point) => point.length !== 3 || !point.every(Number.isFinite))
+    || [viewingPosition, viewingTarget, lastArtwork.approach, readingWall?.position, readingWall?.normal].some((point) => point?.length !== 3 || !point.every(Number.isFinite))
+    || !Number.isFinite(readingWall.viewDistance) || readingWall.viewDistance <= 0
+    || Math.abs(Math.hypot(...readingWall.normal) - 1) > 0.001) throw new Error('Invalid Afterlife tour segment.');
+  const distance = (first, second) => Math.hypot(first[0] - second[0], first[2] - second[2]);
+  const precedingTime = route.artworks.at(-2)?.routeTime ?? 0;
+  const candidates = sourceWaypoints.filter((point) => point.time > precedingTime && point.time < lastArtwork.routeTime);
+  if (!candidates.length) throw new Error('The final artwork must lie within the Highlights route.');
+  const splice = candidates.reduce((nearest, point) => distance(point.position, lastArtwork.approach) < distance(nearest.position, lastArtwork.approach) ? point : nearest);
+  const waypoints = sourceWaypoints.filter((point) => point.time <= splice.time).map((point) => ({ ...point }));
+  let time = splice.time;
+  const heading = (position, target) => Math.atan2(target[2] - position[2], target[0] - position[0]);
+  const angleDifference = (first, second) => Math.atan2(Math.sin(second - first), Math.cos(second - first));
+  const facing = (position, angle) => [position[0] + Math.cos(angle) * 8, route.eyeHeight, position[2] + Math.sin(angle) * 8];
+  const move = (position, target, chapter, ease = true) => {
+    const previous = waypoints.at(-1);
+    const fromAngle = heading(previous.position, previous.target);
+    const turn = angleDifference(fromAngle, heading(position, target));
+    const duration = Math.max(0.8, distance(previous.position, position) / 3.2, Math.abs(turn));
+    const start = time;
+    for (let index = 1; index <= 16; index += 1) {
+      const fraction = index / 16;
+      const progress = ease ? fraction * fraction * (3 - 2 * fraction) : fraction;
+      const location = previous.position.map((value, axis) => value + (position[axis] - value) * progress);
+      waypoints.push({ time: start + duration * fraction, position: location,
+        target: index === 16 ? [...target] : facing(location, fromAngle + turn * progress), chapter });
+    }
+    time = start + duration;
+  };
+  move(viewingPosition, viewingTarget, '07');
+  const finalArtworkStop = { id: 'final-artwork', kind: 'artwork', title: lastArtwork.title, slot: lastArtwork.slot,
+    start: time, end: time + 1.2, position: [...viewingPosition], target: [...viewingTarget] };
+  time = finalArtworkStop.end;
+  waypoints.push({ time, position: [...viewingPosition], target: [...viewingTarget], chapter: '07' });
+  const readingNormalLength = Math.hypot(...readingWall.normal);
+  const readingTarget = [readingWall.position[0], route.eyeHeight, readingWall.position[2]];
+  const readingPosition = readingTarget.map((value, axis) => value + readingWall.normal[axis] / readingNormalLength * readingWall.viewDistance);
+  move(readingPosition, readingTarget, '07');
+  const reading = { id: 'final-days', kind: 'reading', readerId: 'auvers:final-days', title: 'The Final Days',
+    start: time, end: time + 3.6, position: [...readingPosition], target: [...readingTarget] };
+  time = reading.end;
+  waypoints.push({ time, position: [...readingPosition], target: [...readingTarget], chapter: '07' });
+  const bend = afterlife.arrivalPath[0];
+  const doorway = [afterlife.arrivalPath[1][0], route.eyeHeight, afterlife.arrivalPath[1][2]];
+  const controls = [readingPosition, [bend[0], route.eyeHeight, readingPosition[2]], [doorway[0], route.eyeHeight, bend[2]], doorway];
+  move(readingPosition, facing(readingPosition, heading(controls[0], controls[1])), '07');
+  for (let index = 1; index <= 32; index += 1) {
+    const fraction = index / 32;
+    const inverse = 1 - fraction;
+    const weights = [inverse ** 3, 3 * inverse ** 2 * fraction, 3 * inverse * fraction ** 2, fraction ** 3];
+    const location = controls[0].map((value, axis) => controls.reduce((sum, point, control) => sum + point[axis] * weights[control], 0));
+    const tangent = controls[0].map((value, axis) => 3 * inverse ** 2 * (controls[1][axis] - value)
+      + 6 * inverse * fraction * (controls[2][axis] - controls[1][axis]) + 3 * fraction ** 2 * (controls[3][axis] - controls[2][axis]));
+    const angle = Math.atan2(tangent[2], tangent[0]);
+    const previous = waypoints.at(-1);
+    time += Math.max(distance(previous.position, location) / 3.2, Math.abs(angleDifference(heading(previous.position, previous.target), angle)));
+    waypoints.push({ time, position: location, target: facing(location, angle), chapter: location[2] < 45 ? '07' : '08' });
+  }
+  const target = wall.position.map((value, axis) => axis === 1 ? route.eyeHeight : value + wall.normal[axis] * wall.inset);
+  const position = target.map((value, axis) => value + wall.normal[axis] * wall.overviewDistance);
+  for (const location of [...afterlife.arrivalPath.slice(2).map((point) => [point[0], route.eyeHeight, point[2]]), position]) {
+    move(location, location.map((value, axis) => value - wall.normal[axis] * wall.overviewDistance), '08', location === position);
+  }
+  waypoints.at(-1).target = [...target];
+  const introduction = { id: '08', title: afterlife.title, start: time, end: time + 3.2, position: [...position], target: [...target] };
+  time = introduction.end;
+  waypoints.push({ time, position: [...position], target: [...target], chapter: '08' });
+  const exhibit = { id: 'afterlife-overview', kind: 'afterlife', title: afterlife.title, start: time, end: time + 4.5, position: [...position], target: [...target] };
+  time = exhibit.end;
+  waypoints.push({ time, position: [...position], target: [...target], chapter: '08' });
+  return {
+    ...route,
+    duration: time,
+    camera: {
+      ...route.camera,
+      waypoints,
+      introductionStops: [...route.camera.introductionStops, introduction],
+      exhibitStops: [...(route.camera.exhibitStops ?? []), finalArtworkStop, reading, exhibit],
+      routeLengthMetres: waypoints.reduce((length, point, index) => index === 0 ? length : length + Math.hypot(...point.position.map((value, axis) => value - waypoints[index - 1].position[axis])), 0),
+    },
+    artworks: route.artworks.map((entry) => entry === lastArtwork ? { ...entry, approachTime: splice.time, routeTime: (finalArtworkStop.start + finalArtworkStop.end) / 2 } : entry),
+  };
+}
+
 export function retimeHighlightTour(route, duration = HIGHLIGHT_TOUR_SECONDS) {
   const originalDuration = route.duration;
   const waypoints = route.camera.waypoints;
@@ -70,7 +165,7 @@ export function retimeHighlightTour(route, duration = HIGHLIGHT_TOUR_SECONDS) {
     { start: 0, end: route.camera.openingHoldSeconds, duration: 1.2 * scale },
     { ...route.camera.openingFilmStop, duration: 2.8 * scale },
     ...route.camera.introductionStops.filter((stop) => stop.id === '01').map((stop) => ({ ...stop, duration: 4 * scale })),
-    ...(route.camera.exhibitStops ?? []).map((stop) => ({ ...stop, duration: (stop.kind === 'story' ? 3.8 : 4.2) * scale })),
+    ...(route.camera.exhibitStops ?? []).filter((stop) => stop.end <= firstHallEnd).map((stop) => ({ ...stop, duration: (stop.kind === 'story' ? 3.8 : 4.2) * scale })),
   ].sort((first, second) => first.start - second.start);
   if (stops.some((stop, index) => stop.end <= stop.start || stop.start < 0 || stop.end > firstHallEnd
     || (index > 0 && stop.start < stops[index - 1].end))) throw new Error('Invalid first-hall pause intervals.');

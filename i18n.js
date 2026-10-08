@@ -1,4 +1,4 @@
-import { ui, terms, titles, content } from './locale-zh.js?v=2026-10-06-final-months-shortcut';
+import { ui, terms, titles, content } from './locale-zh.js?v=2026-10-07-final-days-pause';
 
 export const languageStorageKey = 'van-gogh-gallery.language.v1';
 const dictionary = new Map([...Object.entries(terms), ...Object.entries(titles), ...Object.entries(ui)]);
@@ -218,7 +218,7 @@ export function mountLanguageSwitch(root = document.body) {
 
   refreshDom = () => {
     document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
-    document.title = translate('Vincent van Gogh · A Life Through Art');
+    document.title = translate('Vincent van Gogh · A Life Behind the Name');
     for (const button of buttons) button.setAttribute('aria-pressed', String(button.dataset.language === language));
     control.setAttribute('aria-label', language === 'zh' ? '语言选择' : 'Choose language');
     localizeTree(root);

@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vincent van Gogh · A Life Through Art</title>
-  <link rel="stylesheet" href="./style.css?v=2026-10-06-film-intro-route">
+  <title>Vincent van Gogh · A Life Behind the Name</title>
+  <meta name="description" content="Meet Vincent as a person: his family, relationships, work, faith, hopes, difficulties and choices. An interactive exhibition with stories and clearly identified sources.">
+  <link rel="stylesheet" href="./style.css?v=2026-10-07-opening-scene">
   <script type="importmap">
     {
       "imports": {
@@ -18,8 +19,8 @@
   <main id="viewer" aria-label="Interactive Van Gogh gallery">
     <div id="loading" role="status">Loading the gallery… <span id="load-progress">0%</span></div>
     <div class="masthead">
-      <span class="eyebrow">VINCENT VAN GOGH · INTERACTIVE STUDY</span>
-      <strong>A Life Through Art</strong>
+      <span class="eyebrow">VINCENT VAN GOGH · AN INTERACTIVE EXHIBITION</span>
+      <strong>A Life Behind the Name</strong>
       <span id="exhibit-status" class="disclaimer">Loading the exhibition…</span>
     </div>
     <button id="catalog-toggle" class="catalog-toggle" type="button" aria-controls="catalogue" aria-expanded="false">Eight Halls · Catalogue</button>
@@ -32,7 +33,7 @@
       <header class="catalog-header">
         <span class="eyebrow">CHAPTERS &amp; WORKS</span>
         <button id="catalog-close" class="close" type="button" aria-label="Close catalogue">×</button>
-        <h2>A Life Through Art</h2>
+        <h2>A Life Behind the Name</h2>
         <p id="catalog-count"></p>
         <p class="catalog-note">Verified individual works are installed in switchable wall sets. Select a title to bring its wall set into the hall. Unresolved series and archive leads remain clearly marked; this is not a complete catalogue raisonné.</p>
       </header>
@@ -44,6 +45,25 @@
       <div id="catalog-content" class="catalog-content" aria-live="polite"></div>
     </aside>
     <div class="gallery-sidebar">
+    <section id="gallery-music-controls" class="gallery-music-controls" aria-label="Background music" hidden>
+      <div class="music-buttons">
+        <button id="music-toggle" type="button" aria-pressed="false" aria-label="Play background music">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13M9 9l11-2"/><ellipse cx="6" cy="18" rx="3" ry="2"/><ellipse cx="17" cy="16" rx="3" ry="2"/><path class="music-off-mark" d="m3 3 18 18"/></svg>
+          <span id="music-label">Music</span>
+        </button>
+        <button id="music-settings-toggle" type="button" aria-label="Music volume and credits" title="Music volume and credits" aria-controls="music-settings" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16M9 4v6M15 14v6"/></svg>
+        </button>
+      </div>
+      <div id="music-settings" class="music-settings" hidden>
+        <div class="music-volume-label"><label for="music-volume">Volume</label><output id="music-volume-value" for="music-volume">20%</output></div>
+        <input id="music-volume" type="range" min="0" max="100" step="1" value="20" aria-label="Background music volume">
+        <p id="music-status" role="status">Quiet background music · Your volume is remembered.</p>
+        <p class="music-credit"><a id="music-track-title" href="https://www.scottbuckley.com.au/library/wildflowers/" target="_blank" rel="noopener noreferrer" translate="no">Wildflowers</a><br><span translate="no">Scott Buckley</span> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" translate="no">CC BY 4.0</a><br><a href="https://www.scottbuckley.com.au" target="_blank" rel="noopener noreferrer" translate="no">www.scottbuckley.com.au</a></p>
+      </div>
+    </section>
+    <audio id="gallery-music" data-gallery-track="wildflowers" data-title="Wildflowers" data-source="https://www.scottbuckley.com.au/library/wildflowers/" src="./assets/wildflowers-scott-buckley.mp3" preload="none" hidden></audio>
+    <audio id="gallery-music-final" data-gallery-track="hope" data-title="A Kind Of Hope" data-source="https://www.scottbuckley.com.au/library/a-kind-of-hope/" src="./assets/a-kind-of-hope-scott-buckley.mp3" preload="none" hidden></audio>
     <section id="wall-controls" class="wall-controls" aria-label="Switch the current hall's exhibition walls" hidden>
       <label for="wall-set" id="wall-hall">Hall 01 · Exhibition walls</label>
       <div class="wall-buttons">
@@ -135,7 +155,13 @@
         <button id="afterlife-wall-overview" type="button">Gallery overview</button>
         <button id="afterlife-wall-sources" type="button">Sources &amp; Images</button>
         <button id="afterlife-wall-exit" type="button">Closing reflection →</button>
+        <button id="afterlife-return" type="button">Return to entrance →</button>
       </div>
+    </section>
+    <section id="departure-controls" class="afterlife-stop-controls departure-controls" aria-label="Exhibition exit" hidden>
+      <span class="eyebrow">AS YOU LEAVE</span>
+      <strong>Carry his story with you.</strong>
+      <div><button id="departure-return" type="button">Return to entrance →</button></div>
     </section>
     <section id="afterlife-invitation" class="afterlife-invitation" aria-label="Continue beyond the artworks" hidden>
       <span class="eyebrow">THE STORY CONTINUES · 1890 ONWARD</span>
@@ -227,7 +253,7 @@
           <h2 id="immersive-title"></h2>
           <p id="immersive-date" class="immersive-date"></p>
           <div class="immersive-rule"></div>
-          <p id="artwork-language-note" class="artwork-language-note" hidden>The main labels are available in Chinese. Detailed artwork stories and some source notes currently retain the English original.</p>
+          <p id="artwork-language-note" class="artwork-language-note" hidden>Artwork labels and stories are available in Chinese. Original documents and linked source pages retain their source language.</p>
           <button id="artwork-explore" class="artwork-action" type="button" aria-expanded="false" aria-controls="artwork-story-reader" hidden>Explore the Story →</button>
           <div id="artwork-overview">
             <h3 id="artwork-label-title" class="artwork-label-title" hidden></h3>
@@ -324,6 +350,7 @@
         <button id="hall-reader-back" type="button">Back to gallery</button>
         <button id="hall-reader-story" type="button" hidden>A Room for Gauguin →</button>
         <button id="hall-reader-afterlife" type="button" hidden>Continue to Afterlife →</button>
+        <button id="hall-reader-return" type="button" hidden>Return to entrance →</button>
         <button id="hall-reader-explore-auvers" type="button" hidden>Explore the Gallery →</button>
         <button id="hall-reader-final-days" type="button" hidden>The Final Days →</button>
         <button id="auvers-previous" type="button" hidden>Previous chapter</button>
@@ -423,20 +450,21 @@
     </dialog>
     <dialog id="gallery-entry" class="gallery-entry" aria-labelledby="entry-title">
       <div id="entry-panel" class="entry-panel">
-        <button id="entry-start" class="entry-start" type="button" disabled>
-          <span class="eyebrow">A LIFE THROUGH ART</span>
+        <button id="entry-start" class="entry-start" type="button" aria-describedby="entry-prompt" disabled>
           <h1 id="entry-title">Vincent van Gogh</h1>
+          <span class="eyebrow">A LIFE BEHIND THE NAME</span>
           <span id="entry-prompt">Preparing the exhibition…</span>
         </button>
+        <div id="entry-prologue" class="entry-prologue" hidden aria-live="polite">
+          <p id="entry-prologue-text" class="entry-prologue-text">
+            <span>After my death,</span>
+            <span>the world began to love me.</span>
+          </p>
+          <span id="entry-prologue-note" class="entry-prologue-note">Curatorial prologue · not a quotation from Vincent</span>
+        </div>
         <div id="entry-quote" class="entry-quote" hidden aria-live="polite">
           <p>We know who he would become.</p>
           <p>As you enter, set that knowledge aside.</p>
-        </div>
-        <div id="entry-hall" class="entry-hall" hidden>
-          <span class="eyebrow">01 · 1853–1881</span>
-          <h2>Origins and Uncertainty</h2>
-          <p>Before the paintings, a life in search of direction.</p>
-          <button id="entry-watch" type="button">Watch the opening film →</button>
         </div>
       </div>
       <button id="entry-skip" class="entry-skip" type="button" disabled>Enter without the film</button>
@@ -547,7 +575,7 @@
     </dialog>
     <div id="error" role="alert" hidden></div>
   </main>
-  <script type="module" src="./viewer.js?v=2026-10-06-film-intro-route"></script>
+    <script type="module" src="./viewer.js?v=2026-10-07-closing-wall"></script>
 </body>
 </html>
 

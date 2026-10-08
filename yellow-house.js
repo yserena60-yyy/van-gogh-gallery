@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { wallGeometry } from './hall-texts.js?v=2026-10-05-yellow-house-story';
-import { validateYellowHouse } from './yellow-house-data.js?v=2026-10-06-shared-studio';
+import { validateYellowHouse } from './yellow-house-data.js?v=2026-10-07-crisis-accounts';
 
 function textElement(tag, text, className) {
   const element = document.createElement(tag);
@@ -65,6 +65,57 @@ export function createYellowHouseStory({ data, collection, hallData, scene, rend
     return values.map((value) => textElement('p', value));
   }
 
+  function sectionSources(ids) {
+    const details = document.createElement('details');
+    details.className = 'yellow-house-section-sources';
+    details.append(textElement('summary', 'Sources for this section'), sourceLinks(ids, true));
+    return details;
+  }
+
+  function narrativeSections(sections) {
+    const container = document.createElement('div');
+    container.className = 'yellow-house-story-sections';
+    for (const [index, section] of sections.entries()) {
+      const card = document.createElement('section');
+      card.className = 'yellow-house-story-section';
+      card.dataset.storySection = section.id;
+      const heading = document.createElement('div');
+      heading.className = 'yellow-house-section-heading';
+      const number = textElement('span', String(index + 1).padStart(2, '0'), 'yellow-house-section-number');
+      number.setAttribute('aria-hidden', 'true');
+      const title = document.createElement('div');
+      if (section.badge) title.append(textElement('span', section.badge, 'eyebrow'));
+      title.append(textElement('h4', section.title));
+      if (section.subtitle) title.append(textElement('p', section.subtitle, 'yellow-house-section-subtitle'));
+      heading.append(number, title);
+      card.append(heading, ...paragraphNodes(section.paragraphs));
+      if (section.voices) {
+        const comparison = document.createElement('div');
+        comparison.className = 'yellow-house-voices';
+        for (const voice of section.voices) {
+          const account = document.createElement('article');
+          account.append(textElement('span', voice.badge, 'eyebrow'), textElement('h5', voice.title), ...paragraphNodes(voice.paragraphs), sectionSources(voice.sources));
+          comparison.append(account);
+        }
+        card.append(comparison);
+      }
+      if (section.link) {
+        const link = button(section.link.label, () => {
+          if (section.link.readingId) readingSelections.set(section.link.chapterId, section.link.readingId);
+          show(section.link.chapterId);
+          if (section.link.readingId) content.querySelector('.yellow-house-readings')?.scrollIntoView({ block: 'start' });
+        }, 'yellow-house-text-button');
+        link.dataset.storyChapter = section.link.chapterId;
+        card.append(link);
+      }
+      const voiceSources = new Set((section.voices ?? []).flatMap((voice) => voice.sources));
+      const additionalSources = section.sources.filter((id) => !voiceSources.has(id));
+      if (additionalSources.length) card.append(sectionSources(additionalSources));
+      container.append(card);
+    }
+    return container;
+  }
+
   function artworkImage(work) {
     const image = document.createElement('img');
     [image.width, image.height] = data.imageSizes[work.id];
@@ -75,8 +126,18 @@ export function createYellowHouseStory({ data, collection, hallData, scene, rend
   }
 
   function visitArtwork(id) {
+    const returnScroll = scroll.scrollTop;
+    const returnFocus = document.activeElement;
+    const galleryFocus = focusBefore;
     close();
-    onArtwork(id);
+    onArtwork(id, () => {
+      onOpen();
+      focusBefore = galleryFocus;
+      if (!dialog.open) dialog.showModal();
+      scroll.scrollTop = returnScroll;
+      if (returnFocus?.isConnected) returnFocus.focus({ preventScroll: true });
+      else select('close').focus({ preventScroll: true });
+    });
   }
 
   function artworkLinks(ids) {
@@ -265,6 +326,7 @@ export function createYellowHouseStory({ data, collection, hallData, scene, rend
       }
       if (!reading) return;
       panel.append(textElement('span', reading.badge ?? 'EDITORIAL READING · NOT A TRANSCRIPT OR FACSIMILE', 'eyebrow'), textElement('h4', reading.title), textElement('p', reading.date, 'yellow-house-date'), ...paragraphNodes(reading.paragraphs));
+      if (reading.sections) panel.append(narrativeSections(reading.sections));
       if (reading.people) panel.append(textElement('span', reading.peopleLabel, 'eyebrow yellow-house-reading-label'), peopleCards(reading.people, true));
       if (reading.figures) {
         if (reading.figuresLabel) panel.append(textElement('span', reading.figuresLabel, 'eyebrow yellow-house-reading-label'));
@@ -277,7 +339,9 @@ export function createYellowHouseStory({ data, collection, hallData, scene, rend
         } else panel.append(figures);
       }
       if (reading.evidenceId) panel.append(button(reading.evidenceLabel, () => openSources(reading.evidenceId), 'yellow-house-text-button'));
-      panel.append(textElement('span', 'Sources for this reading', 'eyebrow yellow-house-reading-label'), sourceLinks(reading.sources));
+      const sectionSourceIds = new Set((reading.sections ?? []).flatMap((section) => section.sources));
+      const additionalSources = reading.sources.filter((id) => !sectionSourceIds.has(id));
+      if (additionalSources.length) panel.append(textElement('span', 'Sources for this reading', 'eyebrow yellow-house-reading-label'), sourceLinks(additionalSources));
     }
     for (const [index, reading] of chapter.readings.entries()) {
       const control = button(tabbed ? '' : reading.label + ' +', () => choose(!tabbed && readingSelections.get(chapter.id) === reading.id ? null : reading));
@@ -351,10 +415,13 @@ export function createYellowHouseStory({ data, collection, hallData, scene, rend
     } else {
       const index = data.chapters.indexOf(chapter);
       content.append(textElement('span', `${String(index + 1).padStart(2, '0')} / ${chapter.label} · HALL ${chapter.hall}`, 'eyebrow'), textElement('h3', chapter.title), textElement('p', chapter.date, 'yellow-house-date'));
+      if (chapter.subtitle) content.append(textElement('p', chapter.subtitle, 'yellow-house-chapter-subtitle'));
+      if (chapter.contentNote) content.append(textElement('p', chapter.contentNote, 'yellow-house-content-note'));
       const layout = document.createElement('div');
       layout.className = chapter.hotspots ? 'yellow-house-recovery-layout' : 'yellow-house-chapter-copy';
       const copy = document.createElement('div');
       copy.append(...paragraphNodes(chapter.paragraphs));
+      if (chapter.sections) copy.append(narrativeSections(chapter.sections));
       if (chapter.skipChapter) copy.append(button(chapter.skipLabel, () => show(chapter.skipChapter), 'yellow-house-text-button'));
       if (chapter.timeline) {
         const timeline = document.createElement('div');
@@ -366,7 +433,7 @@ export function createYellowHouseStory({ data, collection, hallData, scene, rend
         }
         copy.append(timeline);
       }
-      if (chapter.readingMode !== 'tabs') copy.append(sourceLinks(chapter.sources));
+      if (chapter.readingMode !== 'tabs' && !chapter.sections) copy.append(sourceLinks(chapter.sources));
       if (chapter.hotspots) layout.append(recoveryFigure(chapter), copy);
       else layout.append(copy);
       content.append(layout);
@@ -374,7 +441,11 @@ export function createYellowHouseStory({ data, collection, hallData, scene, rend
       if (chapter.readings.length) content.append(readings(chapter));
       const illustratedWorks = new Set(chapter.readings.flatMap((reading) => (reading.figures ?? []).map((figure) => figure.workId)));
       const linkedWorks = chapter.workIds.filter((id) => !illustratedWorks.has(id));
-      if (!chapter.hotspots && linkedWorks.length) content.append(textElement('h4', 'Works Connected to This Chapter'), artworkLinks(linkedWorks));
+      if (!chapter.hotspots && linkedWorks.length) {
+        content.append(textElement('h4', chapter.worksTitle ?? 'Works Connected to This Chapter'));
+        if (chapter.worksIntroduction) content.append(textElement('p', chapter.worksIntroduction));
+        content.append(artworkLinks(linkedWorks));
+      }
     }
   }
 

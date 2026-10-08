@@ -1,13 +1,32 @@
-import yellowHouse from './locale-zh-yellow-house.js?v=2026-10-06-shared-studio';
+import yellowHouse from './locale-zh-yellow-house.js?v=2026-10-07-crisis-accounts';
 import collectionTitles from './locale-zh-titles.js';
 import artworkLabels from './locale-zh-artwork-labels.js';
+import artworkStories, { artworkStoryUi } from './locale-zh-artwork-stories.js';
 import { minersChapters, minersTopic, minersUi } from './locale-zh-miners.js';
 import { drawingChapters, drawingMaterials, drawingTopic, drawingUi } from './locale-zh-drawing.js';
 import { attachmentChapter, attachmentSourceChapter, attachmentMemoryChapter, attachmentUi } from './locale-zh-attachment.js';
-import visitUi from './locale-zh-visit.js?v=2026-10-06-final-months-shortcut';
+import visitUi from './locale-zh-visit.js?v=2026-10-07-final-days-pause';
 import auvers, { auversUi } from './locale-zh-auvers.js?v=2026-10-06-auvers-final-days';
 
 export const ui = {
+  ...artworkStoryUi,
+  'Sources for this section': '本节来源',
+  'Background music': '背景音乐',
+  'Music': '音乐',
+  'Music on': '音乐已开启',
+  'Music off': '音乐已关闭',
+  'Play music': '播放音乐',
+  'Play background music': '播放背景音乐',
+  'Turn background music off': '关闭背景音乐',
+  'Turn background music on': '开启背景音乐',
+  'Music volume and credits': '音乐音量与署名',
+  'Background music volume': '背景音乐音量',
+  'Volume': '音量',
+  'Music unavailable. Try again.': '音乐暂时无法播放，请重试。',
+  'Background music is off.': '背景音乐已关闭。',
+  'Music pauses while the opening film is open.': '开场影片打开时，背景音乐会暂停。',
+  'Select the music button to start playback.': '点击音乐按钮开始播放。',
+  'Quiet background music · Your volume is remembered.': '轻柔的背景音乐 · 会记住你的音量设置。',
   'Preparing display…': '正在准备展厅画面…',
   ...visitUi,
   ...auversUi,
@@ -114,7 +133,6 @@ export const ui = {
   'A Wide Field Under a Changing Sky': '变幻天空下的辽阔田野',
   'A Field Surrounded by Stories': '被故事环绕的田野',
   'A Painting Found in a Landscape': '在风景中找到一幅画',
-  'The main labels are available in Chinese. Detailed artwork stories and some source notes currently retain the English original.': '作品简介已提供中文；详细作品故事与部分资料说明暂保留英文原文。',
   'Collection': '收藏作品',
   'Change sets to explore more': '切换墙组，探索更多作品',
   'The Art Trade': '艺术品贸易',
@@ -139,7 +157,7 @@ export const ui = {
   'Read the Attribution History': '阅读作品归属的变化',
   'View the Reproduction · Note 3': '查看复制图 · 注释3',
   'Vincent van Gogh · English version as published by WebExhibits': '文森特·梵高 · WebExhibits刊载的英文版本',
-  'Vincent van Gogh · A Life Through Art': '文森特·梵高 · 在艺术中走过一生',
+  'Vincent van Gogh · A Life Behind the Name': '文森特·梵高 · 名字背后的一生',
   'Vincent van Gogh': '文森特·梵高',
   'VINCENT VAN GOGH': '文森特·梵高',
   'VINCENT': '文森特',
@@ -147,9 +165,13 @@ export const ui = {
   'Loading the gallery…': '正在加载展厅…',
   'Loading the exhibition…': '正在加载展览…',
   'Loading verified artwork images…': '正在加载已核实的作品图像…',
-  'VINCENT VAN GOGH · INTERACTIVE STUDY': '文森特·梵高 · 互动展览',
-  'A Life Through Art': '在艺术中走过一生',
-  'A LIFE THROUGH ART': '在艺术中走过一生',
+  'VINCENT VAN GOGH · AN INTERACTIVE EXHIBITION': '文森特·梵高 · 互动展览',
+  'VINCENT VAN GOGH · A LIFE BEHIND THE NAME': '文森特·梵高 · 名字背后的一生',
+  'A Life Behind the Name': '名字背后的一生',
+  'A LIFE BEHIND THE NAME': '名字背后的一生',
+  'After my death,': '当我死后，',
+  'the world began to love me.': '世界开始爱我。',
+  'Curatorial prologue · not a quotation from Vincent': '策展开场文字 · 非文森特原话',
   'Eight Halls': '八个展厅',
   'Eight halls': '八个展厅',
   'Catalogue': '作品目录',
@@ -192,6 +214,10 @@ export const ui = {
   'Gallery overview': '展厅全景',
   'Sources & Images': '来源与图像',
   'Closing reflection →': '离开展览前 →',
+  'Return to entrance →': '返回展览入口 →',
+  'Exhibition exit': '展览出口',
+  'AS YOU LEAVE': '离开展览时',
+  'Carry his story with you.': '带着他的故事离开。',
   'THE STORY CONTINUES': '故事仍在继续',
   '1890 ONWARD': '1890年以后',
   'Enter Afterlife →': '进入身后回响 →',
@@ -543,7 +569,7 @@ export const titles = {
 export const content = {
   yellowHouse,
   auvers,
-  artworkCards: artworkLabels,
+  artworkCards: { cards: Object.fromEntries(Object.entries(artworkLabels.cards).map(([id, card]) => [id, { ...card, ...artworkStories.cards[id] }])) },
   chapters: chapterTranslations,
   story: {
     timeline: timelineTranslations,
@@ -637,7 +663,7 @@ export const content = {
       { tourLead: '文森特的绘画和书信交由他人守护。展览与出版让它们遇见新的观众。艺术家探索其中的可能，音乐家与电影导演以自己的形式回应。沿着这些相遇，想一想你自己的感受。', paragraphs: [
         '文森特的绘画和书信交由他人守护。通过展览与出版，它们抵达新的观众。艺术家探索其中的可能，音乐家与电影导演以自己的形式回应。这一厅沿着这些相遇展开，也邀请你想一想自己的相遇。',
         '先从守护收藏的人开始。乔·梵高-邦格的展览与编辑工作，以及文森特·威廉后来的管理，帮助绘画和书信抵达未来的观众。留存的照片、目录和书籍，让你通过具体的物件了解这些工作。',
-        '接着走向博物馆策划的后世绘画关联、唐·麦克林的一首歌，以及黑泽明电影中想象的相遇。这些是对文森特作品的回应，不是关于他生平的新证据。最后一节由一位具名观众的讲述开启，以一个问题收束：文森特的人生中，什么留在了你的心里？',
+        '接着走向博物馆策划的后世绘画关联、唐·麦克林的一首歌，以及黑泽明电影中想象的相遇。这些是对文森特作品的回应，不是关于他生平的新证据。如今，他的故事来到你面前。离开时，你会从文森特的一生中带走什么？',
       ] },
     ],
     departure: { paragraphs: ['我们知道他最终成为了谁。', '离开展览时，文森特的人生', '有什么会留在你的心里？'] },
