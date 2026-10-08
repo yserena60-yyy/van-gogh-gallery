@@ -1,17 +1,18 @@
 # Vincent van Gogh · A Life Behind the Name
 
-
-An interactive exhibition about Vincent as a person: his family, relationships, work, faith, hopes, difficulties, and the choices through which he lived.
+An interactive exhibition tracing Vincent van Gogh’s life through his relationships, work, faith, and hopes for the future.
 
 [Visit the exhibition](https://yserena60-yyy.github.io/van-gogh-gallery/)
 
 ## The Exhibition
 
-We recognise the name Vincent van Gogh. This exhibition asks us to look beyond that recognition and encounter the person behind it.
+**Vincent: A Life Behind the Name** is an interactive exhibition tracing Vincent van Gogh’s life through the places he lived, the relationships he formed, and the futures he imagined. Bringing together artworks, letters, and historical documents, it invites visitors to explore his work and faith, his search for belonging, and the choices he faced within the circumstances of his time. The final section follows the people who preserved and shared his work and letters, asking how his story reaches us today—and what we carry with us from his life.
 
-The exhibition follows his life through the places he inhabited, the people around him, the work he pursued, and the futures he imagined. Paintings and drawings remain important, but they are not the organising framework of an art-history survey. They sit alongside letters, recollections, documents, and accounts of daily life.
+### Curatorial Approach
 
-The aim is not to explain every decision through a famous painting, or to reduce his life to a story of suffering and posthumous success. It is to give visitors ways to understand how Vincent lived, what mattered to him, and what remains uncertain.
+We know who Vincent would become. At each moment of his life, he was still searching for who he could become. The exhibition invites visitors to approach his experiences from the possibilities, pressures, and uncertainties he faced at the time. His turns towards preaching and drawing, his relationships, and his hopes for a shared studio each open onto a future he could not yet know.
+
+Family, friends, and companions give these experiences their emotional, financial, and social context. Moving through the gallery and opening its artworks, stories, and supporting documents offers different ways to explore those connections. The journey continues in **Afterlife**, tracing how others preserved, shared, and interpreted his work and letters. Together, these chapters ask how Vincent lived, how his life came to be remembered, and what visitors take from encountering it.
 
 ## Narrative and Evidence
 
@@ -216,6 +217,6 @@ Browser preferences, such as language and sound settings, are stored locally whe
 
 ## Project Purpose
 
-This exhibition is an invitation to encounter a life, not only a name.
+This exhibition invites visitors to consider the life Vincent hoped to build, the circumstances he encountered, and the choices he faced.
 
-Its central question is not simply how Vincent became a famous artist, but what we can come to understand about the person who lived before that fame.
+It connects his lived experiences with the people who carried his work and letters forward, inviting each visitor to reflect on what stays with them from his life.
